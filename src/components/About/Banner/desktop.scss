@@ -62,7 +62,7 @@
             height: px(680);
             margin-top: -3vw;
             transform: rotate(2.9deg);
-            background: url($componentRoot + 'banner.jpg') no-repeat;
+            background: url($componentRoot + 'banner.jpg') no-repeat fixed;
             background-size: cover;
         }
     }
