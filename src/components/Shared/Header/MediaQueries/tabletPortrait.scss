@@ -1,0 +1,137 @@
+& {
+    background-color: $color1;
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: px(190);
+        padding: 0 px(50);
+
+        .logo {
+            i {
+                width: px(290);
+            }
+        }
+
+        .main {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+            padding: 0 px(108) px(8) px(136);
+
+            li {
+                a {
+                    display: block;
+                    color: $color9;
+                    font-family: 'PT Sans Narrow', Arial, sans-serif;
+                    font-size: px(44);
+                    text-decoration: none;
+                }
+
+                &:first-child {
+                    a {
+                        margin-right: px(12);
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        position: relative;
+                        top: px(2);
+                        padding-left: px(32);
+                        background: url($componentRoot + 'menuLive-bg.svg') no-repeat left center;
+                        background-size: px(24);
+                    }
+                }
+
+                &:hover {
+                    a {
+                        color: $color10;
+                    }
+                }
+            }
+        }
+
+        .menu {
+            i {
+                width: px(50);
+            }
+        }
+    }
+
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 px(100);
+
+        .sub {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: px(42);
+            border-top: 1px solid $color4;
+
+            li {
+                a {
+                    color: $color11;
+                    font-size: px(34);
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $color6;
+                    }
+                }
+            }
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50%;
+            margin-top: px(68);
+            padding: 0 px(106) px(50) 0;
+
+            a {
+                i {
+                    width: px(60);
+                }
+            }
+        }
+
+        .languages {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50%;
+            margin-top: px(16);
+            padding-left: px(100);
+
+            span {
+                color: $color7;
+                font-size: px(30);
+                font-style: italic;
+            }
+
+            a {
+                display: block;
+                padding: px(14) px(18) px(16);
+                border-radius: 6px;
+
+                color: $color7;
+                font-size: px(30);
+                text-decoration: none;
+
+                &:hover {
+                    background-color: $color5;
+                    color: $color6;
+                }
+            }
+
+            .ru {
+                margin-left: px(18);
+            }
+        }
+    }
+}

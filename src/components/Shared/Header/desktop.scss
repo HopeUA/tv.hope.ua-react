@@ -1,0 +1,214 @@
+& {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: px(84);
+        padding: 0 px(78);
+        background-color: $color2;
+
+        .world {
+            display: flex;
+            align-items: center;
+            color: $color7;
+            font-size: px(24);
+            font-style: italic;
+            text-decoration: none;
+
+            i {
+                width: px(34);
+                margin-right: px(24);
+                padding: px(24) 0 px(22);
+                border-bottom: 2px solid transparent;
+            }
+
+            &:hover {
+                color: $color6;
+
+                i {
+                    border-bottom-color: $color10;
+
+                    svg {
+                        path {
+                            fill: $color6;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sub {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+            padding: px(4) px(112) 0 px(172);
+
+            li {
+                color: $color7;
+                font-size: px(26);
+
+                a {
+                    padding: px(26) 0 px(20);
+                    border-bottom: 2px solid transparent;
+                    color: $color7;
+                    font-size: px(26);
+                    text-decoration: none;
+
+                    span {
+                        color: $color9;
+                    }
+
+                    :first-child {
+                        text-decoration: underline;
+                    }
+
+                    &:hover {
+                        span {
+                            color: $color10;
+                        }
+                    }
+                }
+
+                &:hover:not(:first-child) {
+                    a {
+                        border-bottom: 2px solid $color10;
+                        color: $color6;
+                    }
+                }
+            }
+        }
+
+        .social {
+            display: flex;
+            justify-content: space-between;
+            width: px(196);
+
+            a {
+                padding: px(26) 0;
+                border-bottom: 2px solid transparent;
+
+                &:hover {
+                    border-bottom: 2px solid $color10;
+
+                    i {
+                        svg {
+                            path {
+                                fill: $color6;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .youtube {
+                width: px(38);
+            }
+
+            .twitter {
+                width: px(34);
+            }
+
+            .vk {
+                width: px(44);
+            }
+
+            .fb {
+                width: px(14);
+            }
+        }
+    }
+
+    .wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: px(124);
+        padding: 0 px(118) 0 px(120);
+        border-top: 1px solid $color4;
+        background-color: $color1;
+
+        .logo {
+            padding-bottom: px(4);
+
+            i {
+                width: px(284);
+            }
+        }
+
+        .main {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+            padding: 0 px(164) px(34) px(160);
+
+            li {
+                a {
+                    padding-bottom: px(4);
+                    color: $color9;
+                    font-family: 'PT Sans Narrow', Arial, sans-serif;
+                    font-size: px(36);
+                    text-decoration: none;
+                }
+
+                &:last-child {
+                    a {
+                        position: relative;
+                        top: px(4);
+                        margin-left: px(12);
+                        padding-left: px(42);
+                        background: url($componentRoot + 'menuLive-bg.svg') no-repeat left px(10);
+                        background-size: px(28);
+                    }
+                }
+
+                &:hover {
+                    a {
+                        border-bottom: 2px solid $color10;
+                        color: $color6;
+                    }
+                }
+            }
+        }
+
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: px(104);
+
+            i {
+                width: px(24);
+                opacity: .6;
+            }
+
+            .topArrow {
+                margin-right: px(12);
+            }
+
+            .bottomArrow {
+                margin: 0 0 px(2) px(28);
+                transform: rotate(180deg);
+            }
+
+            .ru {
+                display: block;
+                width: px(54);
+                height: px(54);
+                margin-bottom: px(-14);
+                border: px(6) solid $color9;
+                border-radius: 50%;
+                background: url($componentRoot + 'flagRU-bg.svg') no-repeat center;
+            }
+
+            .ua {
+                display: block;
+                width: px(40);
+                height: px(40);
+                margin: px(-4) 0 px(14);
+                border: px(6) solid $color3;
+                border-radius: 50%;
+                background: url($componentRoot + 'flagUA-bg.svg') no-repeat center;
+            }
+        }
+    }
+}
