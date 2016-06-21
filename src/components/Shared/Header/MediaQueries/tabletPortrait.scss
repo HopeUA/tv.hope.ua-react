@@ -45,7 +45,7 @@
                     }
                 }
 
-                &:hover {
+                &:active {
                     a {
                         color: $color10;
                     }
@@ -54,6 +54,14 @@
         }
 
         .menu {
+            i {
+                width: px(50);
+            }
+        }
+
+        .close {
+            display: none;
+
             i {
                 width: px(50);
             }
@@ -78,8 +86,8 @@
                     font-size: px(34);
                     text-decoration: none;
 
-                    &:hover {
-                        color: $color6;
+                    &:active {
+                        color: $color8;
                     }
                 }
             }
@@ -123,7 +131,7 @@
                 font-size: px(30);
                 text-decoration: none;
 
-                &:hover {
+                &:active {
                     background-color: $color5;
                     color: $color6;
                 }

@@ -18,6 +18,14 @@
                 width: px(42);
             }
         }
+
+        .close {
+            display: none;
+
+            i {
+                width: px(42);
+            }
+        }
     }
 
     .wrap {
@@ -40,7 +48,7 @@
                     text-decoration: none;
                 }
 
-                &:hover {
+                &:active {
                     padding-left: px(30);
                     border-left: px(10) solid $color5;
 
@@ -71,7 +79,7 @@
                     }
                 }
 
-                &:hover {
+                &:active {
                     padding-left: px(30);
                     border-left: px(10) solid $color5;
 
@@ -121,7 +129,7 @@
                 font-size: px(26);
                 text-decoration: none;
 
-                &:hover {
+                &:active {
                     background-color: $color5;
                     color: $color6;
                 }

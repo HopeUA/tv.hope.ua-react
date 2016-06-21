@@ -69,10 +69,20 @@
                     }
                 }
 
+                .selected {
+                    color: $color10;
+                }
+
                 &:hover:not(:first-child) {
                     a {
                         border-bottom: 2px solid $color10;
                         color: $color6;
+                    }
+
+                    .selected {
+                        border: 0;
+                        color: $color10;
+                        cursor: default;
                     }
                 }
             }
@@ -87,12 +97,26 @@
                 padding: px(26) 0;
                 border-bottom: 2px solid transparent;
 
+                i {
+                    transition: all .4s linear;
+
+                    svg {
+                        path {
+                            transition: all .4s linear;
+                        }
+                    }
+                }
+
                 &:hover {
                     border-bottom: 2px solid $color10;
 
                     i {
+                        transform: rotateY(360deg);
+                        transition: all .4s linear;
+
                         svg {
                             path {
+                                transition: all .4s linear;
                                 fill: $color6;
                             }
                         }
@@ -150,6 +174,10 @@
                     text-decoration: none;
                 }
 
+                .selected {
+                    color: $color10;
+                }
+
                 &:last-child {
                     a {
                         position: relative;
@@ -165,6 +193,12 @@
                     a {
                         border-bottom: 2px solid $color10;
                         color: $color6;
+                    }
+
+                    .selected {
+                        border: 0;
+                        color: $color10;
+                        cursor: default;
                     }
                 }
             }

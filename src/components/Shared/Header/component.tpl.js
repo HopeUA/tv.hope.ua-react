@@ -6,6 +6,7 @@ import InlineSvg from 'components/InlineSvg/component';
 
 import SvgLogo from 'components/Shared/Header/Assets/logo.svg';
 import SvgMenuHamburger from 'components/Shared/Header/Assets/menuHamburger.svg';
+import SvgMenuClose from 'components/Shared/Header/Assets/menuClose.svg';
 import SvgSocialFacebook from 'components/Shared/Header/Assets/socialFacebook.svg';
 import SvgSocialInstagram from 'components/Shared/Header/Assets/socialInstagram.svg';
 import SvgSocialOk from 'components/Shared/Header/Assets/socialOk.svg';
@@ -44,6 +45,9 @@ export default function Header(props) {
                             </a>
                             <a className={ Styles.menu }>
                                 <InlineSvg content={ SvgMenuHamburger }/>
+                            </a>
+                            <a href="" className={ Styles.close }>
+                                <InlineSvg content={ SvgMenuClose }/>
                             </a>
                         </header>
                         <div className={ Styles.wrap }>
@@ -107,6 +111,9 @@ export default function Header(props) {
                             <a className={ Styles.menu }>
                                 <InlineSvg content={ SvgMenuHamburger }/>
                             </a>
+                            <a href="" className={ Styles.close }>
+                                <InlineSvg content={ SvgMenuClose }/>
+                            </a>
                         </header>
                         <div className={ Styles.wrap }>
                             <ul className={ Styles.sub }>
@@ -163,7 +170,7 @@ export default function Header(props) {
                                 <li><a href="#">О Телеканале</a></li>
                                 <li><a href="#">Изучение Библии</a></li>
                                 <li><a href="#">Новости</a></li>
-                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#" className={ Styles.selected }>Контакты</a></li>
                             </ul>
                             <div className={ Styles.social }>
                                 <a href="#" className={ Styles.youtube }>
@@ -185,7 +192,7 @@ export default function Header(props) {
                                 <InlineSvg content={ SvgLogo }/>
                             </a>
                             <ul className={ Styles.main }>
-                                <li><a href="#">Все программы</a></li>
+                                <li><a href="#" className={ Styles.selected }>Все программы</a></li>
                                 <li><a href="#">ТВ Программа</a></li>
                                 <li><a href="#">Пожертвовать</a></li>
                                 <li><a href="#">ТВ Онлайн</a></li>
