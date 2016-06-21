@@ -6,7 +6,7 @@ import InlineSvg from 'components/InlineSvg/component';
 
 import SvgLogo from 'components/Shared/Header/Assets/logo.svg';
 import SvgMenuHamburger from 'components/Shared/Header/Assets/menuHamburger.svg';
-import SvgMenuClose from 'components/Shared/Header/Assets/menuClose.svg';
+// import SvgMenuClose from 'components/Shared/Header/Assets/menuClose.svg';
 import SvgSocialFacebook from 'components/Shared/Header/Assets/socialFacebook.svg';
 import SvgSocialInstagram from 'components/Shared/Header/Assets/socialInstagram.svg';
 import SvgSocialOk from 'components/Shared/Header/Assets/socialOk.svg';
@@ -46,9 +46,9 @@ export default function Header(props) {
                             <a className={ Styles.menu }>
                                 <InlineSvg content={ SvgMenuHamburger }/>
                             </a>
-                            <a href="" className={ Styles.close }>
+                            {/* <a href="" className={ Styles.close }>
                                 <InlineSvg content={ SvgMenuClose }/>
-                            </a>
+                            </a> */}
                         </header>
                         <div className={ Styles.wrap }>
                             <ul className={ Styles.main }>
@@ -111,9 +111,9 @@ export default function Header(props) {
                             <a className={ Styles.menu }>
                                 <InlineSvg content={ SvgMenuHamburger }/>
                             </a>
-                            <a href="" className={ Styles.close }>
+                            {/* <a href="" className={ Styles.close }>
                                 <InlineSvg content={ SvgMenuClose }/>
-                            </a>
+                            </a> */}
                         </header>
                         <div className={ Styles.wrap }>
                             <ul className={ Styles.sub }>
