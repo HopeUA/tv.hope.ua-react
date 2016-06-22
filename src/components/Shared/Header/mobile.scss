@@ -15,13 +15,13 @@
 
         .menu {
             i {
-                width: px(42);
+                width: px(40);
             }
         }
 
         .close {
             i {
-                width: px(42);
+                width: px(40);
             }
         }
     }
@@ -39,6 +39,7 @@
                 a {
                     display: block;
                     padding: px(50) 0 px(44) px(18);
+                    transition: color, border $transitionDuration;
                     border-bottom: 1px solid $color4;
                     color: $color3;
                     font-size: px(34);
@@ -64,6 +65,7 @@
                 a {
                     display: block;
                     padding: px(52) 0 px(48) px(18);
+                    transition: color, border $transitionDuration;
                     border-bottom: 1px solid $color4;
                     color: $color7;
                     font-size: px(30);
@@ -120,9 +122,9 @@
 
             a {
                 display: block;
-                padding: px(18) px(20) px(16);
+                padding: px(14) px(20) px(20);
+                transition: color, background-color $transitionDuration;
                 border-radius: 6px;
-
                 color: $color7;
                 font-size: px(26);
                 text-decoration: none;

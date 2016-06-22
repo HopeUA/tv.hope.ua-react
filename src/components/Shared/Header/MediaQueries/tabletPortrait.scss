@@ -10,7 +10,11 @@
 
         .logo {
             i {
-                width: px(290);
+                svg {
+                    width: px(288);
+                    height: px(90);
+                }
+
             }
         }
 
@@ -23,6 +27,7 @@
             li {
                 a {
                     display: block;
+                    transition: color $transitionDuration;
                     color: $color9;
                     font-family: 'PT Sans Narrow', Arial, sans-serif;
                     font-size: px(44);
@@ -39,9 +44,18 @@
                     a {
                         position: relative;
                         top: px(2);
-                        padding-left: px(32);
-                        background: url($componentRoot + 'menuLive-bg.svg') no-repeat left center;
-                        background-size: px(24);
+                        margin-left: px(28);
+
+                        &::before {
+                            position: absolute;
+                            top: px(12);
+                            left: px(-36);
+                            width: px(24);
+                            height: px(24);
+                            background: url($componentRoot + 'menuLive-bg.svg') no-repeat;
+                            content: '';
+                            opacity: .6;
+                        }
                     }
                 }
 
@@ -80,6 +94,7 @@
 
             li {
                 a {
+                    transition: color $transitionDuration;
                     color: $color11;
                     font-size: px(34);
                     text-decoration: none;
@@ -97,7 +112,7 @@
             justify-content: space-between;
             width: 50%;
             margin-top: px(68);
-            padding: 0 px(106) px(50) 0;
+            padding: 0 px(106) px(54) 0;
 
             a {
                 i {
@@ -123,8 +138,8 @@
             a {
                 display: block;
                 padding: px(14) px(18) px(16);
+                transition: color, background-color $transitionDuration;
                 border-radius: 6px;
-
                 color: $color7;
                 font-size: px(30);
                 text-decoration: none;
