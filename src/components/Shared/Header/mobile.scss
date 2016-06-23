@@ -1,0 +1,143 @@
+& {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: px(140);
+        padding: 0 px(40);
+        background-color: $color1;
+
+        .logo {
+            i {
+                width: px(256);
+            }
+        }
+
+        .menu {
+            i {
+                width: px(40);
+            }
+        }
+
+        .close {
+            i {
+                width: px(40);
+            }
+        }
+    }
+
+    .wrap {
+        background-color: $color2;
+
+        .main {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                padding-left: px(40);
+
+                a {
+                    display: block;
+                    padding: px(50) 0 px(44) px(18);
+                    transition: color, border $transitionDuration;
+                    border-bottom: 1px solid $color4;
+                    color: $color3;
+                    font-size: px(34);
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+
+                &:active {
+                    padding-left: px(30);
+                    border-left: px(10) solid $color5;
+
+                    a {
+                        color: $color6;
+                    }
+                }
+            }
+        }
+
+        .sub {
+            li {
+                padding-left: px(40);
+
+                a {
+                    display: block;
+                    padding: px(52) 0 px(48) px(18);
+                    transition: color, border $transitionDuration;
+                    border-bottom: 1px solid $color4;
+                    color: $color7;
+                    font-size: px(30);
+                    text-decoration: none;
+
+                }
+
+                &:last-child {
+                    a {
+                        border-bottom: 0;
+                    }
+                }
+
+                &:active {
+                    padding-left: px(30);
+                    border-left: px(10) solid $color5;
+
+                    a {
+                        color: $color8;
+                    }
+                }
+            }
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: px(142);
+            padding: 0 px(40);
+            border-top: 1px solid $color4;
+
+            a {
+                i {
+                    width: px(60);
+                }
+            }
+        }
+
+        .languages {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: px(144);
+            margin: 0 px(40);
+            padding: 0 px(16) 0 px(34);
+            border-top: 1px solid $color4;
+
+            span {
+                color: $color13;
+                font-size: px(26);
+                font-style: italic;
+            }
+
+            a {
+                display: block;
+                padding: px(14) px(20) px(20);
+                transition: color, background-color $transitionDuration;
+                border-radius: 6px;
+                color: $color7;
+                font-size: px(26);
+                text-decoration: none;
+
+                &:active {
+                    background-color: $color5;
+                    color: $color6;
+                }
+            }
+
+            .ru {
+                margin-left: px(18);
+            }
+        }
+    }
+}

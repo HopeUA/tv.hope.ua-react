@@ -1,0 +1,86 @@
+@import '../mobile';
+
+& {
+    header {
+        padding: 0 px(60);
+    }
+
+    .wrap {
+        .main {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid $color4;
+
+            li {
+                padding-left: px(60);
+
+                &:active {
+                    padding-left: px(50);
+                }
+            }
+
+            .donation {
+                order: 1;
+
+                a {
+                    padding: px(52) 0 px(48) px(18);
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        .sub {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 px(60);
+            padding: 0 px(36) 0 px(20);
+            border-bottom: 1px solid $color4;
+
+            li {
+                padding-left: 0;
+
+                a {
+                    padding: px(46) 0 px(52);
+                    border-bottom: 1.5px solid transparent;
+                }
+
+                &:active {
+                    padding-left: 0;
+                    border-left: 0;
+
+                    a {
+                        border-bottom: 1.5px solid $color5;
+                        color: $color6;
+                    }
+                }
+            }
+        }
+
+        .social {
+            height: px(138);
+            margin: 0 px(180);
+            padding: 0;
+            border-top: 0;
+            border-bottom: 1px solid $color4;
+        }
+
+        .languages {
+            height: px(136);
+            margin: 0 px(284);
+            padding: 0 px(22) 0 px(36);
+            border-top: 0;
+
+            span {
+                margin-bottom: px(2);
+            }
+
+            a {
+                padding: px(16) px(18) px(18);
+            }
+
+            .ru {
+                margin-left: px(20);
+            }
+        }
+    }
+}
