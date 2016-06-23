@@ -26,6 +26,9 @@ export default function Html(props) {
                 { head.link.toComponent() }
                 { head.script.toComponent() }
 
+                <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+                <script src="/parallax/parallax.js"></script>
+
                 <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico"/>
                 <link rel="apple-touch-icon" type="image/png" href="/favicon.png"/>
                 <link
