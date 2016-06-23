@@ -67,8 +67,20 @@
         .languages {
             height: px(136);
             margin: 0 px(284);
-            padding: 0 px(20) px(4) px(36);
+            padding: 0 px(22) 0 px(36);
             border-top: 0;
+
+            span {
+                margin-bottom: px(2);
+            }
+
+            a {
+                padding: px(16) px(18) px(18);
+            }
+
+            .ru {
+                margin-left: px(20);
+            }
         }
     }
 }

@@ -2,7 +2,7 @@
     header {
         display: flex;
         justify-content: space-between;
-        height: px(84);
+        height: px(80);
         padding: 0 px(78);
         background-color: $color2;
 
@@ -52,8 +52,13 @@
                 color: $color7;
                 font-size: px(26);
 
+                &:first-child {
+                    position: relative;
+                    top: px(-2);
+                }
+
                 a {
-                    padding-bottom: px(20);
+                    padding-bottom: px(16);
                     transition: color, border $transitionDuration;
                     border-bottom: 2px solid transparent;
                     color: $color7;
@@ -72,7 +77,11 @@
                     }
 
                     :last-child {
+                        position: relative;
+                        top: px(2);
                         padding-right: px(10);
+                        font-family: Arial, sans-serif;
+                        font-size: px(26);
                     }
 
                     &:hover {
@@ -93,7 +102,7 @@
                     }
 
                     .selected {
-                        border: 0;
+                        border-color: transparent;
                         color: $color10;
                         cursor: default;
                     }
@@ -207,7 +216,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
-        height: px(124);
+        height: px(128);
         padding: 0 px(118) 0 px(120);
         border-top: 1px solid $color12;
         background-color: $color1;
@@ -255,6 +264,7 @@
                             width: px(28);
                             height: px(28);
                             background: url($componentRoot + 'menuLive-bg.svg') no-repeat;
+                            background-size: cover;
                             content: '';
                             opacity: .6;
                         }
@@ -268,7 +278,7 @@
                     }
 
                     .selected {
-                        border: 0;
+                        border-color: transparent;
                         color: $color10;
                         cursor: default;
                     }

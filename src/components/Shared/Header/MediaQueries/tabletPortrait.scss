@@ -53,6 +53,7 @@
                             width: px(24);
                             height: px(24);
                             background: url($componentRoot + 'menuLive-bg.svg') no-repeat;
+                            background-size: cover;
                             content: '';
                             opacity: .6;
                         }
