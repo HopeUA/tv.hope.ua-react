@@ -84,7 +84,7 @@
                     border-left: px(10) solid $color5;
 
                     a {
-                        color: $color8;
+                        color: $color6;
                     }
                 }
             }
@@ -122,7 +122,7 @@
 
             a {
                 display: block;
-                padding: px(14) px(20) px(20);
+                padding: px(14) px(20) px(18);
                 transition: color, background-color $transitionDuration;
                 border-radius: 6px;
                 color: $color7;
