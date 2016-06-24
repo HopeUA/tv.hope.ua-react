@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Styles from './main.scss';
+import Grids from 'theme/Grid.scss';
 import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 import InlineSvg from 'components/InlineSvg/component';
@@ -158,39 +159,43 @@ export default function Header(props) {
         ].indexOf(mediaType) !== -1 ? (
             <div>
                 <header>
-                    <a href="#" className={ Styles.world }>
-                        <InlineSvg content={ SvgWorldwide }/>
-                        <span>Всемирный HopeChannel</span>
-                    </a>
-                    <ul className={ Styles.sub }>
-                        <li>Где нас <a href="#"><span>смотреть</span><span> →</span></a></li>
-                        <li><a href="#">О телеканале</a></li>
-                        <li><a href="#">Изучение Библии</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#" className={ Styles.selected }>Контакты</a></li>
-                    </ul>
-                    <ul className={ Styles.social }>
-                        <li><a href="#" className={ Styles.youtube }></a></li>
-                        <li><a href="#" className={ Styles.twitter }></a></li>
-                        <li><a href="#" className={ Styles.vk }></a></li>
-                        <li><a href="#" className={ Styles.fb }></a></li>
-                    </ul>
+                    <div className={ Grids.container }>
+                        <a href="#" className={ Styles.world }>
+                            <InlineSvg content={ SvgWorldwide }/>
+                            <span>Всемирный HopeChannel</span>
+                        </a>
+                        <ul className={ Styles.sub }>
+                            <li>Где нас <a href="#"><span>смотреть</span><span> →</span></a></li>
+                            <li><a href="#">О телеканале</a></li>
+                            <li><a href="#">Изучение Библии</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#" className={ Styles.selected }>Контакты</a></li>
+                        </ul>
+                        <ul className={ Styles.social }>
+                            <li><a href="#" className={ Styles.youtube }></a></li>
+                            <li><a href="#" className={ Styles.twitter }></a></li>
+                            <li><a href="#" className={ Styles.vk }></a></li>
+                            <li><a href="#" className={ Styles.fb }></a></li>
+                        </ul>
+                    </div>
                 </header>
                 <div className={ Styles.wrap }>
-                    <a className={ Styles.logo }>
-                        <InlineSvg content={ SvgLogo }/>
-                    </a>
-                    <ul className={ Styles.main }>
-                        <li><a href="#" className={ Styles.selected }>Все программы</a></li>
-                        <li><a href="#">ТВ Программа</a></li>
-                        <li><a href="#">Пожертвовать</a></li>
-                        <li><a href="#">ТВ Онлайн</a></li>
-                    </ul>
-                    <div className={ Styles.languages }>
-                        <a href="#" className={ Styles.ru }></a>
-                        <InlineSvg className={ Styles.topArrow } content={ SvgLangArrow }/>
-                        <InlineSvg className={ Styles.bottomArrow } content={ SvgLangArrow }/>
-                        <a href="#" className={ Styles.ua }></a>
+                    <div className={ Grids.container }>
+                        <a className={ Styles.logo }>
+                            <InlineSvg content={ SvgLogo }/>
+                        </a>
+                        <ul className={ Styles.main }>
+                            <li><a href="#" className={ Styles.selected }>Все программы</a></li>
+                            <li><a href="#">ТВ Программа</a></li>
+                            <li><a href="#">Пожертвовать</a></li>
+                            <li><a href="#">ТВ Онлайн</a></li>
+                        </ul>
+                        <div className={ Styles.languages }>
+                            <a href="#" className={ Styles.ru }></a>
+                            <InlineSvg className={ Styles.topArrow } content={ SvgLangArrow }/>
+                            <InlineSvg className={ Styles.bottomArrow } content={ SvgLangArrow }/>
+                            <a href="#" className={ Styles.ua }></a>
+                        </div>
                     </div>
                 </div>
             </div>
