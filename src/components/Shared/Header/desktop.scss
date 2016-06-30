@@ -22,6 +22,13 @@
                     margin-right: px(24);
                     transition: color, border $transitionDuration;
                     border-bottom: 2px solid transparent;
+
+                    svg {
+                        path {
+                            transition: fill $transitionDuration;
+                            fill: $color7;
+                        }
+                    }
                 }
 
                 span {
@@ -68,7 +75,7 @@
                         text-decoration: none;
 
                         span {
-                            transition: color, border $transitionDuration;
+                            transition: color $transitionDuration;
                             color: $color9;
                             text-decoration: none;
                         }
@@ -80,7 +87,7 @@
 
                         :last-child {
                             position: relative;
-                            top: px(2);
+                            top: 0;
                             padding-right: px(10);
                             font-family: Arial, sans-serif;
                             font-size: px(26);
@@ -128,6 +135,16 @@
 
                         a {
                             transform: rotateY(180deg);
+
+                            i {
+                                transform: rotateY(180deg);
+
+                                svg {
+                                    path {
+                                        fill: $color6;
+                                    }
+                                }
+                            }
                         }
                     }
 
@@ -135,42 +152,20 @@
                         display: block;
                         height: px(32);
                         padding-bottom: px(24);
-                        transform-style: preserve-3d;
-                        transition: all .2s linear;
+                        transition: transform .6s;
                         border-bottom: solid 2px transparent;
-                        backface-visibility: hidden;
-
-                        &::before {
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            transform-style: preserve-3d;
-                            content: '';
-                            backface-visibility: hidden;
-
-                        }
-
-                        &::after {
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            transform: rotateY(180deg);
-                            content: '';
-                            backface-visibility: hidden;
-                        }
                     }
 
                     .youtube {
                         width: px(38);
 
-                        &::before {
-                            background: url($componentRoot + 'topYoutube-bg.svg') no-repeat;
-                        }
-
-                        &::after {
-                            background: url($componentRoot + 'topYoutubeHover-bg.svg') no-repeat;
+                        i {
+                            svg {
+                                path {
+                                    transition: fill .6s;
+                                    fill: $color14;
+                                }
+                            }
                         }
                     }
 
@@ -178,36 +173,39 @@
                         width: px(34);
                         margin-left: px(2);
 
-                        &::before {
-                            background: url($componentRoot + 'topTwitter-bg.svg') no-repeat;
-                        }
-
-                        &::after {
-                            background: url($componentRoot + 'topTwitterHover-bg.svg') no-repeat;
+                        i {
+                            svg {
+                                path {
+                                    transition: fill .6s;
+                                    fill: $color14;
+                                }
+                            }
                         }
                     }
 
                     .vk {
                         width: px(44);
 
-                        &::before {
-                            background: url($componentRoot + 'topVk-bg.svg') no-repeat;
-                        }
-
-                        &::after {
-                            background: url($componentRoot + 'topVkHover-bg.svg') no-repeat;
+                        i {
+                            svg {
+                                path {
+                                    transition: fill .6s;
+                                    fill: $color14;
+                                }
+                            }
                         }
                     }
 
                     .fb {
                         width: px(14);
 
-                        &::before {
-                            background: url($componentRoot + 'topFb-bg.svg') no-repeat;
-                        }
-
-                        &::after {
-                            background: url($componentRoot + 'topFbHover-bg.svg') no-repeat;
+                        i {
+                            svg {
+                                path {
+                                    transition: fill .6s;
+                                    fill: $color14;
+                                }
+                            }
                         }
                     }
                 }
@@ -232,6 +230,20 @@
 
                 i {
                     width: px(284);
+
+                    svg {
+                        path {
+                            fill: $color9;
+                        }
+
+                        rect {
+                            fill: $color9;
+                        }
+
+                        polygon {
+                            fill: $color9;
+                        }
+                    }
                 }
             }
 
@@ -262,17 +274,20 @@
                             top: px(4);
                             margin-left: px(54);
 
-
-                            &::before {
+                            i {
                                 position: absolute;
-                                top: px(10);
+                                top: px(6);
                                 left: px(-42);
-                                width: px(28);
-                                height: px(28);
-                                background: url($componentRoot + 'menuLive-bg.svg') no-repeat;
-                                background-size: cover;
-                                content: '';
                                 opacity: .6;
+
+                                svg {
+                                    width: px(28);
+                                    height: px(28);
+
+                                    path {
+                                        fill: $color10;
+                                    }
+                                }
                             }
                         }
                     }
@@ -301,17 +316,24 @@
 
                 i {
                     width: px(26);
-                    opacity: .6;
+
+                    svg {
+                        path {
+                            fill: $color9;
+                        }
+                    }
                 }
 
                 .topArrow {
                     margin-right: px(12);
                     margin-bottom: px(14);
+                    opacity: .6;
                 }
 
                 .bottomArrow {
                     margin: 0 0 px(2) px(26);
                     transform: rotate(180deg);
+                    opacity: .6;
                 }
 
                 .ru {
@@ -319,9 +341,27 @@
                     width: px(54);
                     height: px(54);
                     margin-bottom: px(-14);
-                    border: px(6) solid $color9;
-                    border-radius: 50%;
-                    background: url($componentRoot + 'flagRU-bg.svg') no-repeat;
+
+                    i {
+                        width: 100%;
+
+                        svg {
+                            border: px(6) solid $color9;
+                            border-radius: 50%;
+
+                            :global(.white) {
+                                fill: $color6;
+                            }
+
+                            :global(.blue) {
+                                fill: $color5;
+                            }
+
+                            :global(.red) {
+                                fill: $color15;
+                            }
+                        }
+                    }
                 }
 
                 .ua {
@@ -329,9 +369,23 @@
                     width: px(40);
                     height: px(40);
                     margin: px(-4) 0 px(14);
-                    border: px(6) solid $color3;
-                    border-radius: 50%;
-                    background: url($componentRoot + 'flagUA-bg.svg') no-repeat;
+
+                    i {
+                        width: 100%;
+
+                        svg {
+                            border: px(6) solid $color3;
+                            border-radius: 50%;
+
+                            :global(.blue) {
+                                fill: $color5;
+                            }
+
+                            :global(.yellow) {
+                                fill: $color10;
+                            }
+                        }
+                    }
                 }
             }
         }

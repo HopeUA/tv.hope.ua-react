@@ -10,18 +10,44 @@
         .logo {
             i {
                 width: px(256);
+
+                svg {
+                    path {
+                        fill: $color9;
+                    }
+
+                    rect {
+                        fill: $color9;
+                    }
+
+                    polygon {
+                        fill: $color9;
+                    }
+                }
             }
         }
 
         .menu {
             i {
                 width: px(40);
+
+                svg {
+                    path {
+                        fill: $color9;
+                    }
+                }
             }
         }
 
         .close {
             i {
                 width: px(40);
+
+                svg {
+                    path {
+                        fill: $color9;
+                    }
+                }
             }
         }
     }
@@ -101,6 +127,70 @@
             a {
                 i {
                     width: px(60);
+                }
+            }
+
+            .youtube {
+                i {
+                    svg {
+                        path {
+                            fill: $color16;
+                        }
+
+                        polygon {
+                            fill: $color16;
+                        }
+                    }
+                }
+            }
+
+            .instagram {
+                i {
+                    svg {
+                        path {
+                            fill: $color17;
+                        }
+                    }
+                }
+            }
+
+            .twitter {
+                i {
+                    svg {
+                        path {
+                            fill: $color18;
+                        }
+                    }
+                }
+            }
+
+            .vk {
+                i {
+                    svg {
+                        path {
+                            fill: $color19;
+                        }
+                    }
+                }
+            }
+
+            .fb {
+                i {
+                    svg {
+                        path {
+                            fill: $color20;
+                        }
+                    }
+                }
+            }
+
+            .ok {
+                i {
+                    svg {
+                        path {
+                            fill: $color21;
+                        }
+                    }
                 }
             }
         }

@@ -16,6 +16,13 @@ import SvgSocialVk from 'components/Shared/Header/Assets/socialVk.svg';
 import SvgSocialYoutube from 'components/Shared/Header/Assets/socialYoutube.svg';
 import SvgWorldwide from 'components/Shared/Header/Assets/worldwide.svg';
 import SvgLangArrow from 'components/Shared/Header/Assets/langArrow.svg';
+import SvgTopFb from 'components/Shared/Header/Assets/topFb.svg';
+import SvgTopTwitter from 'components/Shared/Header/Assets/topTwitter.svg';
+import SvgTopVk from 'components/Shared/Header/Assets/topVk.svg';
+import SvgTopYoutube from 'components/Shared/Header/Assets/topYoutube.svg';
+import SvgMenuLive from 'components/Shared/Header/Assets/menuLive.svg';
+import SvgFlagRU from 'components/Shared/Header/Assets/flagRU.svg';
+import SvgFlagUA from 'components/Shared/Header/Assets/flagUA.svg';
 
 export default function Header(props) {
     const templates = [
@@ -102,7 +109,11 @@ export default function Header(props) {
                     <ul className={ Styles.main }>
                         <li><a href="#">Все программы</a></li>
                         <li><a href="#">ТВ Программа</a></li>
-                        <li><a href="#">ТВ Онлайн</a></li>
+                        <li>
+                            <a href="#">ТВ Онлайн
+                                <InlineSvg content={ SvgMenuLive }/>
+                            </a>
+                        </li>
                     </ul>
                     <a className={ Styles.menu }>
                         <InlineSvg content={ SvgMenuHamburger }/>
@@ -172,10 +183,26 @@ export default function Header(props) {
                             <li><a href="#" className={ Styles.selected }>Контакты</a></li>
                         </ul>
                         <ul className={ Styles.social }>
-                            <li><a href="#" className={ Styles.youtube }></a></li>
-                            <li><a href="#" className={ Styles.twitter }></a></li>
-                            <li><a href="#" className={ Styles.vk }></a></li>
-                            <li><a href="#" className={ Styles.fb }></a></li>
+                            <li>
+                                <a href="#" className={ Styles.youtube }>
+                                    <InlineSvg content={ SvgTopYoutube }/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className={ Styles.twitter }>
+                                    <InlineSvg content={ SvgTopTwitter }/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className={ Styles.vk }>
+                                    <InlineSvg content={ SvgTopVk }/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className={ Styles.fb }>
+                                    <InlineSvg content={ SvgTopFb }/>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </header>
@@ -188,13 +215,21 @@ export default function Header(props) {
                             <li><a href="#" className={ Styles.selected }>Все программы</a></li>
                             <li><a href="#">ТВ Программа</a></li>
                             <li><a href="#">Пожертвовать</a></li>
-                            <li><a href="#">ТВ Онлайн</a></li>
+                            <li>
+                                <a href="#">ТВ Онлайн
+                                    <InlineSvg content={ SvgMenuLive }/>
+                                </a>
+                            </li>
                         </ul>
                         <div className={ Styles.languages }>
-                            <a href="#" className={ Styles.ru }></a>
+                            <a href="#" className={ Styles.ru }>
+                                <InlineSvg content={ SvgFlagRU }/>
+                            </a>
                             <InlineSvg className={ Styles.topArrow } content={ SvgLangArrow }/>
                             <InlineSvg className={ Styles.bottomArrow } content={ SvgLangArrow }/>
-                            <a href="#" className={ Styles.ua }></a>
+                            <a href="#" className={ Styles.ua }>
+                                <InlineSvg content={ SvgFlagUA }/>
+                            </a>
                         </div>
                     </div>
                 </div>
