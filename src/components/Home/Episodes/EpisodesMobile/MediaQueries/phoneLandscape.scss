@@ -1,0 +1,40 @@
+@import '../mobile';
+
+.cover {
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: px(60);
+
+    .episodeItem {
+        flex-direction: row;
+        width: px(1016);
+        margin-top: px(50);
+
+        .image {
+            width: px(508);
+        }
+
+        .info {
+            height: px(302);
+            width: px(508);
+            padding-top: px(32);
+            padding-left: px(34);
+
+            p {
+                margin-left: px(4);
+            }
+
+            h1 {
+                margin-top: px(36);
+                line-height: px(38);
+            }
+
+            a {
+                &::after {
+                    margin-left: px(12);
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,7 @@
+@import '../mobile';
+
+@media #{$phonePortrait} {
+    $scaleFactor: .1562500;
+
+    @import '../mobile';
+}

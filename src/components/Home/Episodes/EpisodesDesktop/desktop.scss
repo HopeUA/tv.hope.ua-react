@@ -1,0 +1,114 @@
+& {
+    .header {
+        width: 100vw;
+        padding-top: px(86);
+        padding-left: px(108);
+        padding-bottom: px(54);
+
+        h1 {
+            font-size: px(48);
+            font-weight: 100;
+            color: #606b6d;
+        }
+    }
+
+    .wrap {
+        display: flex;
+        position: relative;
+
+        .arrowLeft {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: px(108);
+            height: px(520);
+
+            &::after {
+                display: block;
+                width: px(26);
+                height: px(50);
+                margin-right: px(30);
+                background: url($componentRoot + 'arrow-bg.svg') no-repeat;
+                transform: rotate(180deg);
+                content: "";
+            }
+        }
+
+        .arrowRight {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: px(108);
+            height: px(520);
+            right: 0;
+
+            &::after {
+                display: block;
+                width: px(26);
+                height: px(50);
+                margin-left: px(26);
+                background: url($componentRoot + 'arrow-bg.svg') no-repeat;
+                content: "";
+            }
+        }
+
+        .list {
+            display: flex;
+            width: px(1832);
+            overflow: hidden;
+
+            .large {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                width: px(896);
+                height: px(520);
+                margin-right: px(40);
+                padding-left: px(38);
+                padding-bottom: px(24);
+                background-size: cover;
+                border-radius: px(6);
+
+                h3 {
+                    font-size: px(44);
+                    color: #fff;
+                }
+
+                h4 {
+                    margin-top: px(2);
+                    font-size: px(30);
+                    font-weight: 100;
+                    color: #e6e7e8;
+                }
+            }
+
+            .row {
+                height: px(520);
+                column-width: px(428);
+                column-gap: px(40);
+
+                .small {
+                    display: flex;
+                    align-items: flex-end;
+                    width: px(428);
+                    height: px(238);
+                    margin-bottom: px(42);
+                    background-size: cover;
+                    border-radius: px(6);
+
+                    &:nth-last-child(1) {
+                        margin-bottom: 0;
+                    }
+
+                    h3 {
+                        margin-left: px(20);
+                        margin-bottom: px(20);
+                        font-size: px(28);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
