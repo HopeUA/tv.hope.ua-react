@@ -1,103 +1,78 @@
-/**
- * Created by jenya on 22.09.16.
- */
-import React, { Component } from 'react';
- import Styles from './main.scss';
-
-// let App = React.createClass({
-//
-//     getInitialState: function() {
-//
-//         return {
-//             current: 0
-//         };
-//     },
-//
-//     prev: function(){
-//         this.setState({
-//             current : this.state.current+100
-//         });
-//     },
-//
-//     next: function(){
-//         this.setState({
-//             current : this.state.current-100
-//         });
-//     },
-//
-//     render: function(){
-//         const current = this.state.current
-//         const selection = Content.map(function(el){
-//             return <BlockContent
-//                 key={el.id}
-//                 src={el.image}
-//                 text={el.text}
-//                 count={current}
-//             />;
-//         });
-//
-//         const deviation = `translateX(${this.state.current}%)`;
-//
-//         let styles = {
-//             background: 'red',
-//             transform: deviation,
-//             transition: 'all 2s'
-//         };
-//
-//         const overHid = {
-//             overflow: 'hidden'
-//         };
-//
-//         return (
-//             <div className="slider">
-//                 <span className="arrowLeft" onClick={ this.next }></span>
-//                 <div style={overHid}>
-//                     <div className="cover" style={styles}>
-//                         { selection }
-//                     </div>
-//                 </div>
-//                 <span className="arrowRight" onClick={ this.prev }></span>
-//             </div>
-//         );
-//     }
-// });
+import React, { Component, PropTypes } from 'react';
 
 export default class Slider extends Component {
-    state = {
-        current: 0
+    static propTypes = {
+        children: PropTypes.object
     };
 
+    state = {
+        indexCurrent: 0,
+        containerWidth: 0
+    };
+
+    listContainer = null;
+
     next = () => {
-        this.setState({current: this.state.current + 100});
+        this.setState({indexCurrent: this.state.indexCurrent + 1});
     };
 
     prev = () => {
-        this.setState({current: this.state.current - 100});
+        this.setState({indexCurrent: this.state.indexCurrent - 1});
     };
 
-    render(){
-        const deviation = `translateX(${this.state.current}%)`;
+    getDeviation = () => {
+        const { indexCurrent } = this.state;
 
-        let styles = {
-            background: 'red',
-            transform: deviation,
-            transition: 'all 2s'
+        if (indexCurrent === 0) {
+            return 0;
+        }
+
+        const containerStyles = window.getComputedStyle(this.listContainer);
+        const containerMargin = parseInt(containerStyles.backgroundSize, 10);
+        const containerWidth = parseInt(this.listContainer.offsetWidth, 10);
+
+        return indexCurrent * (containerWidth + containerMargin);
+
+    };
+
+    componentDidMount() {
+        this.lastIndex = this.listContainer.scrollWidth / this.listContainer.offsetWidth
+    }
+
+    render(){
+        const {
+            children
+        } = this.props;
+
+        const styles = {
+            transform: `translateX(-${this.getDeviation()}px)`
         };
 
         const overHid = {
             overflow: 'hidden'
         };
-        
+
+        const isArrowLeftVisible  = this.state.indexCurrent !== 0;
+        const isArrowRightVisible = this.state.indexCurrent !== this.lastIndex;
+
+        const arrowLeftStyle = {
+            visibility: isArrowLeftVisible ? 'visible' : 'hidden'
+        };
+
+        const arrowRightStyle = {
+            visibility: isArrowRightVisible ? 'visible' : 'hidden'
+        };
+
         return (
-            <section className={ Styles.slider }>
-                <div className={ Styles.arrowLeft } onClick={ this.prev }></div>
-                <div style={overHid}>
-                    <div className={Styles.list} style={styles}>
+            <section className={ this.props.slider }>
+                <div className={ this.props.arrowLeft } onClick={ this.prev } style={ arrowLeftStyle }></div>
+                    <div style={overHid} className={ this.props.wrap }>
+                        <div ref={ (ref) => this.listContainer = ref } className={this.props.list} style={styles}>
+                            { children }
+                        </div>
                     </div>
-                </div>
-                <div className={ Styles.arrowRight } onClick={ this.next }></div>
+                <div className={ this.props.arrowRight } onClick={ this.next } style={ arrowRightStyle }></div>
             </section>
         );
     }
-
 }

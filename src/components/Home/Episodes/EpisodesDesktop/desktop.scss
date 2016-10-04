@@ -1,4 +1,7 @@
 & {
+    display: flex;
+    flex-direction: column;
+
     .header {
         width: 100vw;
         padding-top: px(86);
@@ -12,9 +15,8 @@
         }
     }
 
-    .wrap {
+    .slider {
         display: flex;
-        position: relative;
 
         .arrowLeft {
             display: flex;
@@ -22,6 +24,7 @@
             align-items: center;
             width: px(108);
             height: px(520);
+            cursor: pointer;
 
             &::after {
                 display: block;
@@ -38,10 +41,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
             width: px(108);
             height: px(520);
-            right: 0;
+            cursor: pointer;
 
             &::after {
                 display: block;
@@ -53,59 +55,65 @@
             }
         }
 
-        .list {
+        .wrap {
             display: flex;
-            width: px(1832);
-            overflow: hidden;
+            position: relative;
 
-            .large {
+            .list {
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                width: px(896);
-                height: px(520);
-                margin-right: px(40);
-                padding-left: px(38);
-                padding-bottom: px(24);
-                background-size: cover;
-                border-radius: px(6);
+                width: px(1832);
+                background-size: px(40);
+                transition: all .3s cubic-bezier(.15,.46,.61,1);
 
-                h3 {
-                    font-size: px(44);
-                    color: #fff;
-                }
-
-                h4 {
-                    margin-top: px(2);
-                    font-size: px(30);
-                    font-weight: 100;
-                    color: #e6e7e8;
-                }
-            }
-
-            .row {
-                height: px(520);
-                column-width: px(428);
-                column-gap: px(40);
-
-                .small {
+                .large {
                     display: flex;
-                    align-items: flex-end;
-                    width: px(428);
-                    height: px(238);
-                    margin-bottom: px(42);
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    width: px(896);
+                    height: px(520);
+                    margin-right: px(40);
+                    padding-left: px(38);
+                    padding-bottom: px(24);
                     background-size: cover;
                     border-radius: px(6);
 
-                    &:nth-last-child(1) {
-                        margin-bottom: 0;
+                    h3 {
+                        font-size: px(44);
+                        color: #fff;
                     }
 
-                    h3 {
-                        margin-left: px(20);
-                        margin-bottom: px(20);
-                        font-size: px(28);
-                        color: #fff;
+                    h4 {
+                        margin-top: px(2);
+                        font-size: px(30);
+                        font-weight: 100;
+                        color: #e6e7e8;
+                    }
+                }
+
+                .row {
+                    height: px(520);
+                    column-width: px(428);
+                    column-gap: px(40);
+
+                    .small {
+                        display: flex;
+                        align-items: flex-end;
+                        width: px(428);
+                        height: px(238);
+                        margin-bottom: px(42);
+                        background-size: cover;
+                        border-radius: px(6);
+
+                        &:nth-last-child(1) {
+                            margin-bottom: 0;
+                        }
+
+                        h3 {
+                            margin-left: px(20);
+                            margin-bottom: px(20);
+                            font-size: px(28);
+                            color: #fff;
+                        }
                     }
                 }
             }

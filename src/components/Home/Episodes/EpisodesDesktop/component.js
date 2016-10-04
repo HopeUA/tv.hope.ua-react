@@ -16,8 +16,6 @@ export default function EpisodesDesktop(props) {
         items: PropTypes.array
     };
 
-    console.log(items);
-
     const episodes = items.map((el) => {
         const background = {
             backgroundImage: `url(${el.image})`
@@ -28,39 +26,30 @@ export default function EpisodesDesktop(props) {
         </div>);
     });
 
+    const properties = {
+        slider: Styles.slider,
+        arrowLeft: Styles.arrowLeft,
+        arrowRight: Styles.arrowRight,
+        list: Styles.list,
+        wrap: Styles.wrap
+    };
+
     return (
         <section className={ Grids.container }>
             <section className={ Styles.episodesComponent }>
                 <div className={ Styles.header }>
                     <h1>Новые выпуски</h1>
                 </div>
-                <Slider>
-                    <div className={ Styles.wrap }>
-                        <div className={ Styles.arrowLeft }></div>
-                        <div className={ Styles.list }>
-                            <div className={ Styles.large } style={ styles }>
-                                <h3>{ large[0].title }</h3>
-                                <h4>{ large[0].show.title }</h4>
-                            </div>
-                            <div className={ Styles.row }>
-                                { episodes }
-                            </div>
-                        </div>
-                        <div className={ Styles.arrowRight }></div>
+                <Slider { ...properties }>
+                    <div className={ Styles.large } style={ styles }>
+                        <h3>{ large[0].title }</h3>
+                        <h4>{ large[0].show.title }</h4>
+                    </div>
+                    <div className={ Styles.row }>
+                        { episodes }
                     </div>
                 </Slider>
             </section>
         </section>
     );
 }
-
-
-// <Slider>
-//     <div className={ Styles.large } style={ styles }>
-//         <h3>{ large[0].title }</h3>
-//         <h4>{ large[0].show.title }</h4>
-//     </div>
-//     <div className={ Styles.row }>
-//         { episodes }
-//     </div>
-// </Slider>

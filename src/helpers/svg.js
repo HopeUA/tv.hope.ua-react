@@ -1,7 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
-const svg = (Component, { width = 0, height = 0} = {}) => {
+/* eslint-disable react/prefer-stateless-function */
+const svg = (Component, { width = 0, height = 0 } = {}) => {
     return class Svg extends Component {
+        static propTypes = {
+            className: PropTypes.object
+        };
         render() {
             const { className } = this.props;
             const rootStyle = {
@@ -17,9 +21,9 @@ const svg = (Component, { width = 0, height = 0} = {}) => {
                 </i>
             );
         }
-    }
+    };
 };
 
 export default (params) => {
     return (Component) => svg(Component, params);
-}
+};
