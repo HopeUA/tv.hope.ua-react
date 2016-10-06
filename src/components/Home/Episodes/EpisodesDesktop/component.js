@@ -22,6 +22,7 @@ export default function EpisodesDesktop(props) {
         };
 
         return (<div className={ Styles.small } style={ background } key={ el.uid }>
+            <div className={ Styles.goTo }></div>
             <h3>{ el.title }</h3>
         </div>);
     });
@@ -42,6 +43,7 @@ export default function EpisodesDesktop(props) {
                 </div>
                 <Slider { ...properties }>
                     <div className={ Styles.large } style={ styles }>
+                        <div className={ Styles.goTo }></div>
                         <h3>{ large[0].title }</h3>
                         <h4>{ large[0].show.title }</h4>
                     </div>
