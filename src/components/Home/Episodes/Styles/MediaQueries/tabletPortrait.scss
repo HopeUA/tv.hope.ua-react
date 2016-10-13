@@ -8,11 +8,11 @@
 
     .slider {
         .arrowLeft {
-            width: px(100);
+            width: px(98);
             height: px(510);
 
-            &::after {
-                margin-right: px(8);
+            .arrow {
+                margin-right: px(4);
             }
         }
 
@@ -20,19 +20,20 @@
             width: px(98);
             height: px(510);
 
-            &::after {
-                margin-left: 0;
+            .arrow {
+                margin-left: px(4);
             }
         }
+
         .wrap {
             .list {
-                width: px(1334);
+                width: px(1340);
 
                 .large {
-                    height: px(510);
-                    width: px(894);
-                    padding-left: px(40);
+                    width: px(880);
+                    height: px(520);
                     padding-bottom: px(28);
+                    padding-left: px(40);
 
                     h4 {
                         margin-top: px(2);
@@ -40,15 +41,14 @@
                 }
 
                 .row {
-                    height: px(510);
+                    height: px(520);
+
                     .small {
-                        height: px(232);
-                        width: px(418);
-                        margin-bottom: px(44);
+                        width: px(420);
+                        height: px(240);
                     }
                 }
             }
-
         }
     }
 }

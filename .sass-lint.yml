@@ -7,7 +7,8 @@ linters:
     convention: camel_case
 
   NameFormat:
-    convention: camel_case
+#    convention: camel_case
+    enabled: false
 
   Indentation:
     width: 4

@@ -1,4 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import Arrow from 'components/Assets/Icons/Arrow';
+
+import Palette from 'components/Assets/Palette';
 
 export default class Slider extends Component {
     static propTypes = {
@@ -65,14 +68,28 @@ export default class Slider extends Component {
 
         return (
             <section className={ this.props.slider }>
-                <div className={ this.props.arrowLeft } onClick={ this.prev } style={ arrowLeftStyle }></div>
+                <div className={ this.props.arrowLeft } onClick={ this.prev } style={ arrowLeftStyle }>
+                    <Arrow color={ Palette.paletteColor3 } hoverColor={ Palette.paletteColor5 } isStatic={false} className={ this.props.arrow }/>
+                </div>
                     <div style={overHid} className={ this.props.wrap }>
                         <div ref={ (ref) => this.listContainer = ref } className={this.props.list} style={styles}>
                             { children }
                         </div>
                     </div>
-                <div className={ this.props.arrowRight } onClick={ this.next } style={ arrowRightStyle }></div>
+                <div className={ this.props.arrowRight } onClick={ this.next } style={ arrowRightStyle }>
+                    <Arrow color={ Palette.paletteColor3 } hoverColor={ Palette.paletteColor5 } isStatic={false} className={ this.props.arrow }/>
+                </div>
             </section>
         );
     }
 }
+
+// <section className={ this.props.slider }>
+//     <Arrow className={ this.props.arrowLeft } onClick={ this.prev } style={ arrowLeftStyle }/>
+//     <div style={overHid} className={ this.props.wrap }>
+//         <div ref={ (ref) => this.listContainer = ref } className={this.props.list} style={styles}>
+//             { children }
+//         </div>
+//     </div>
+//     <Arrow className={ this.props.arrowRight } onClick={ this.next } style={ arrowRightStyle }/>
+// </section>

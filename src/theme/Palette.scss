@@ -1,10 +1,33 @@
+$mainColor1: #fff;     // White
+$mainColor2: #000;     // Black
+$mainColor3: #f8d449;  // Yellow
+$mainColor4: #2793b2;  // Blue
+$mainColor5: #ab493c;  // Red
+$mainColor6: #0b2226;  // Bottle
+
+$commonColor1: #606b6d;  // Text primary
+$commonColor2: #6d7c7c;  // Text secondary
+// $commonColor3: #a5a8aa; // Text on dark background
+$commonColor3: rgba(255, 255, 255, .7); // Text on dark background
+$commonColor4: #f3f4f4;  // Background main
+$commonColor5: #dfe0e1; // Divider
+$commonColor6: #b7c3c5; // Divider bold (Arrow hint)
+$commonColor7: #d1dddd; // Divider 1px
+$commonColor8: rgba(6, 18, 20, .8);  // Banner mask
+$commonColor9: rgba(0, 0, 0, .4);  // Block mask
+
+//
+// Deprecated
+//
 $paletteColor1: #f8d449;  // Yellow
 $paletteColor2: #2793b2;  // Blue
-$paletteColor3: #516569;  // Text primary
+$paletteColor3: #606b6d;  // Text primary
 $paletteColor4: #f3f4f4;  // Background main
 $paletteColor5: #0b2226;  // Bottle
 $paletteColor6: #fff;     // White
 $paletteColor7: rgba(6, 18, 20, .8);  // Banner mask
+$paletteColor29: rgba(0, 0, 0, .4);  // Block mask
+$paletteColor30: rgba(255, 255, 255, .7);
 $paletteColor8: #ab493c;  // Red
 $paletteColor9: #6d7c7c;  // Text secondary
 $paletteColor10: #dfe0e1; // Divider

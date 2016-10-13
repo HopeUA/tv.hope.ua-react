@@ -1,1 +1,1 @@
-export Episodes from './Episodes/component.tpl';
+export Episodes from './Episodes/component';

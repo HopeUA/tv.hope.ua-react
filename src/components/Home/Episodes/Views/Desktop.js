@@ -1,19 +1,18 @@
 import React, { PropTypes } from 'react';
-import Styles from './main.scss';
-import Grids from 'theme/Grid.scss';
 import Slider from 'vendor/Slider/SliderComponent';
 
-// убрал имя функции Banner
+import Styles from '../main.scss';
+import Grids from 'theme/Grid.scss';
+
+import Palette from 'components/Assets/Palette';
+import GoTo from 'components/Assets/Icons/GoTo';
+
 export default function EpisodesDesktop(props) {
     const { items } = props;
-    const large = items.splice(0, 1);
-    const styles = {
-        backgroundImage: `url(${large[0].image})`
-    };
-    items.shift();
 
-    EpisodesDesktop.propTypes = {
-        items: PropTypes.array
+    const large = items.shift();
+    const styles = {
+        backgroundImage: `url(${large.image})`
     };
 
     const episodes = items.map((el) => {
@@ -21,10 +20,12 @@ export default function EpisodesDesktop(props) {
             backgroundImage: `url(${el.image})`
         };
 
-        return (<div className={ Styles.small } style={ background } key={ el.uid }>
-            <div className={ Styles.goTo }></div>
-            <h3>{ el.title }</h3>
-        </div>);
+        return (
+            <div className={ Styles.small } style={ background } key={ el.uid }>
+                <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                <h3>{ el.title }</h3>
+            </div>
+        );
     });
 
     const properties = {
@@ -32,7 +33,8 @@ export default function EpisodesDesktop(props) {
         arrowLeft: Styles.arrowLeft,
         arrowRight: Styles.arrowRight,
         list: Styles.list,
-        wrap: Styles.wrap
+        wrap: Styles.wrap,
+        arrow: Styles.arrow
     };
 
     return (
@@ -43,9 +45,9 @@ export default function EpisodesDesktop(props) {
                 </div>
                 <Slider { ...properties }>
                     <div className={ Styles.large } style={ styles }>
-                        <div className={ Styles.goTo }></div>
-                        <h3>{ large[0].title }</h3>
-                        <h4>{ large[0].show.title }</h4>
+                        <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                        <h3>{ large.title }</h3>
+                        <h4>{ large.show.title }</h4>
                     </div>
                     <div className={ Styles.row }>
                         { episodes }
@@ -55,3 +57,7 @@ export default function EpisodesDesktop(props) {
         </section>
     );
 }
+
+EpisodesDesktop.propTypes = {
+    items: PropTypes.array
+};

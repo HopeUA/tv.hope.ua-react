@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import MobileView from './Views/Mobile.tpl';
-import DesktopView from './Views/Desktop.tpl';
+import MobileView from './Views/Mobile';
+import DesktopView from './Views/Desktop';
 
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
@@ -11,12 +11,13 @@ export default function Episodes(props) {
     ].indexOf(props.mediaType) !== -1;
 
     return isMobile ? (
-        <MobileView mediaType={ props.mediaType }/>
+        <MobileView mediaType={ props.mediaType } items={ props.items }/>
     ) : (
-        <DesktopView/>
+        <DesktopView items={ props.items }/>
     );
 }
 
 Episodes.propTypes = {
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    items: PropTypes.array
 };
