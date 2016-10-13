@@ -1,0 +1,54 @@
+@import '../desktop';
+
+& {
+    .header {
+        padding-top: px(62);
+        padding-left: px(98);
+    }
+
+    .slider {
+        .arrowLeft {
+            width: px(98);
+            height: px(510);
+
+            .arrow {
+                margin-right: px(4);
+            }
+        }
+
+        .arrowRight {
+            width: px(98);
+            height: px(510);
+
+            .arrow {
+                margin-left: px(4);
+            }
+        }
+
+        .wrap {
+            .list {
+                width: px(1340);
+
+                .large {
+                    width: px(880);
+                    height: px(520);
+                    padding-bottom: px(28);
+                    padding-left: px(40);
+
+                    h4 {
+                        margin-top: px(2);
+                    }
+                }
+
+                .row {
+                    height: px(520);
+
+                    .small {
+                        width: px(420);
+                        height: px(240);
+                    }
+                }
+            }
+        }
+    }
+}

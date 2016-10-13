@@ -1,0 +1,83 @@
+
+.title {
+    display: inline-flex; // TODO пофиксить PixelPerfect
+    margin-top: px(46);
+    margin-left: px(60);
+    color: $color4;
+    font-size: px(44);
+    font-weight: normal;
+}
+
+.cover {
+    display: flex;
+    margin-top: px(52);
+
+    .episodeItem {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        width: px(520);
+        margin-right: px(26);
+        border-radius: 6px;
+        overflow: hidden;
+
+        .image {
+            width: 100%;
+            height: px(300);
+            background-size: cover;
+        }
+
+        .info {
+            height: px(330);
+            padding: px(36) px(47) 0;
+            background-color: $color2;
+
+            .blockDate {
+                display: flex;
+
+                .bubble {
+                    width: px(48);
+                    margin-right: px(18);
+                }
+
+                p {
+                    display: flex;
+                    align-items: flex-end;
+                    color: $color10;
+                    font-size: px(26);
+                }
+            }
+
+            h1 {
+                height: px(80);
+                margin-top: px(42);
+                margin-left: px(2);
+                color: $color4;
+                font-size: px(36);
+                line-height: px(38);
+            }
+
+            .link {
+                display: flex;
+                align-items: flex-start;
+                height: px(90);
+                margin-top: px(34);
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    margin-left: px(2);
+                    color: $color9;
+                    font-size: px(30);
+                    text-decoration: none;
+                }
+
+                .arrow {
+                    width: px(10);
+                    margin-top: px(8);
+                    margin-left: px(8);
+                }
+            }
+        }
+    }
+}

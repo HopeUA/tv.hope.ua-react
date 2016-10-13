@@ -1,0 +1,226 @@
+& {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        padding-top: px(86);
+        padding-bottom: px(54);
+        padding-left: px(108);
+
+        h1 {
+            color: $color4;
+            font-size: px(48);
+            font-weight: 100;
+        }
+    }
+
+    .slider {
+        display: flex;
+
+        .arrowLeft {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: px(108);
+            height: px(520);
+            cursor: pointer;
+
+            .arrow {
+                width: px(26);
+                margin-right: px(38);
+                transform: rotate(180deg);
+            }
+        }
+
+        .arrowRight {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: px(108);
+            height: px(520);
+            cursor: pointer;
+
+            .arrow {
+                width: px(26);
+                margin-left: px(30);
+            }
+        }
+
+        .wrap {
+            display: flex;
+            position: relative;
+
+            .list {
+                display: flex;
+                width: px(1832);
+                transition: all .3s cubic-bezier(.15, .46, .61, 1);
+                background-size: px(40);
+
+                .large {
+                    display: flex;
+                    position: relative;
+                    flex-direction: column;
+                    flex-shrink: 0;
+                    justify-content: flex-end;
+                    width: px(896);
+                    height: px(520);
+                    margin-right: px(40);
+                    padding-bottom: px(24);
+                    padding-left: px(38);
+                    border-radius: 3px;
+                    background-size: cover;
+                    cursor: pointer;
+                    overflow: hidden;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transition: opacity .3s;
+                        background: $color5;
+                        content: '';
+                        opacity: 0;
+                    }
+
+                    &:hover {
+                        .goTo {
+                            opacity: 1;
+                        }
+
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+
+                    .goTo {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: px(136);
+                        margin-top: px(-68);
+                        margin-left: px(-68);
+                        transition: opacity .3s;
+                        cursor: pointer;
+                        opacity: 0;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: px(150);
+                        background: $gradient1;
+                        content: '';
+                        z-index: 0;
+                    }
+
+                    h3 {
+                        max-width: 70%;
+                        color: $color2;
+                        font-size: px(44);
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        z-index: 1;
+                    }
+
+                    h4 {
+                        margin-top: px(2);
+                        color: $color6;
+                        font-size: px(30);
+                        font-weight: 100;
+                        z-index: 1;
+                    }
+                }
+
+                .row {
+                    height: px(520);
+                    column-gap: px(40);
+                    column-width: px(428);
+
+                    .small {
+                        display: flex;
+                        position: relative;
+                        align-items: flex-end;
+                        width: px(428);
+                        height: px(240);
+                        margin-bottom: px(40);
+                        border-radius: 3px;
+                        background-size: cover;
+                        cursor: pointer;
+                        overflow: hidden;
+
+                        &:nth-child(2n) {
+                            margin-bottom: 0;
+                        }
+
+                        &::before {
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            transition: opacity .3s;
+                            background: $color5;
+                            content: '';
+                            opacity: 0;
+                        }
+
+                        &:hover {
+                            .goTo {
+                                opacity: 1;
+                            }
+
+                            &::before {
+                                opacity: 1;
+                            }
+                        }
+
+                        .goTo {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: px(100);
+                            margin-top: px(-50);
+                            margin-left: px(-50);
+                            transition: all .3s;
+                            cursor: pointer;
+                            opacity: 0;
+                            z-index: 10;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: px(100);
+                            background: $gradient1;
+                            content: '';
+                            z-index: 0;
+                        }
+
+                        &:nth-last-child(1) {
+                            margin-bottom: 0;
+                        }
+
+                        h3 {
+                            margin: 0 px(10) px(20) px(20);
+                            color: $color2;
+                            font-size: px(28);
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
