@@ -14,5 +14,9 @@
     "webpackIsomorphicTools": true,
     "fetch": true
   },
-  "rules": {}
+  "rules": {
+    "react/jsx-no-bind": ["error", {
+      "ignoreRefs": true
+    }]
+  }
 }
