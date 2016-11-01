@@ -1,0 +1,107 @@
+& {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+
+    .large {
+        width: px(520);
+
+        h1 {
+            margin-top: px(46);
+            color: $commonColor1;
+            font-size: px(44);
+            font-weight: normal;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            margin-top: px(50);
+            border-radius: 6px;
+            overflow: hidden;
+
+            .image {
+                width: 100%;
+                height: px(302);
+                background-size: cover;
+                z-index: 2;
+            }
+
+            .container {
+                position: relative;
+                width: 100%;
+                height: px(330);
+
+                .blur {
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(1.4);
+                    background-size: cover;
+                    z-index: 1;
+                    filter: blur(15px) grayscale(30%) brightness(80%);
+
+                    &::before {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background: $mainColor1;
+                        content: '';
+                        opacity: .3;
+                    }
+                }
+
+                .info {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    padding: px(28) px(50) 0;
+
+                    .date {
+                        display: flex;
+                        align-items: flex-end;
+                        color: $mainColor1;
+                        font-size: px(26);
+
+                        span {
+                            margin-top: px(6);
+                        }
+
+                        .bubble {
+                            width: px(48);
+                            margin-right: px(16);
+                        }
+                    }
+
+                    .titleLink {
+                        display: -webkit-box;
+                        margin-top: px(42);
+                        color: $mainColor1;
+                        font-size: px(36);
+                        font-weight: bold;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                    }
+
+                    .link {
+                        display: flex;
+                        align-items: center;
+                        margin-top: px(36);
+
+                        a {
+                            margin-right: px(10);
+                            color: $mainColor1;
+                            font-size: px(30);
+                            font-weight: bold;
+                        }
+
+                        .arrow {
+                            width: px(10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
