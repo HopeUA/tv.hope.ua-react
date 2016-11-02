@@ -29,20 +29,26 @@ export default class PixelPerfect extends Component {
         children: PropTypes.object,
         opacity: PropTypes.number,
         breakPoints: PropTypes.object,
-        templates: PropTypes.array
+        templates: PropTypes.array,
+        state: PropTypes.string
     };
 
     static defaultProps = {
         opacity: 80,
         breakPoints: BreakPoints,
-        templates: []
+        templates: [],
+        state: 'Default'
     };
 
     componentDidMount = () => {
         this.setState({
             width: global.window.innerWidth,
             currentBreakpoint: getCurrentBreakpoint(global.window.innerWidth, this.props.breakPoints),
-            opacity: this.props.opacity
+            opacity: this.props.opacity,
+            state: {
+                isMenuVisible: false,
+                current: this.props.state
+            }
         });
 
         global.window.onresize = this.onResize;
@@ -52,10 +58,7 @@ export default class PixelPerfect extends Component {
         super();
         this.state = {
             currentBreakpoint: '',
-            state: {
-                isMenuVisible: false,
-                current: 'Default'
-            },
+            state: {},
             width: null,
             opacity: null,
             visible: true
