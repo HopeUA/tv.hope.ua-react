@@ -44,7 +44,6 @@ export default class Home extends Component {
                 <Helmet { ...Seo.Home }/>
                 <Episodes
                     mediaType={ browser.mediaType }
-                    items={ items }
                     title={ "Новые выпуски" }
                     dynamic={ false }
                     canRefresh={ false }

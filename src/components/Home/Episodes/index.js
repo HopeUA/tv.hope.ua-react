@@ -5,6 +5,7 @@ import DesktopRow from './Views/DesktopRow/index';
 
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
+// TODO Забирать данные по api
 import items from './Mock/data.json';
 
 export default function Episodes(props) {
