@@ -1,13 +1,13 @@
 import React from 'react';
 import Slider from 'vendor/Slider/SliderComponent';
 
-import Styles from '../main.scss';
+import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 
 import Palette from 'components/Assets/Palette';
 import GoTo from 'components/Assets/Icons/GoTo';
 
-export default function EpisodesDesktop() {
+export default function DesktopGrid() {
     const styles = {
         backgroundImage: 'url(https://cdn.hope.ua/media/shows/CLMU/episodes/09615/CLMU09615-cover.jpg)'
     };

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
-import Mobile from './Views/Mobile.tpl';
-import DesktopGrid from './Views/DesktopGrid.tpl';
-import DesktopRow from './Views/DesktopRow.tpl';
+import Mobile from './Views/Mobile/tpl';
+import DesktopGrid from './Views/DesktopGrid/tpl';
+import DesktopRow from './Views/DesktopRow/tpl';
 
 import PixelPerfect from 'vendor/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';

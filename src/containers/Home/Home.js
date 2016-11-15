@@ -48,7 +48,7 @@ export default class Home extends Component {
                     title={ "Новые выпуски" }
                     dynamic={ false }
                     canRefresh={ false }
-                    view="grid"
+                    view="row"
                 />
                 <Top
                     mediaType={ browser.mediaType }
