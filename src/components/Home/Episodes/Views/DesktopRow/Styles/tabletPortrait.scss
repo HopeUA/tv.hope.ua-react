@@ -1,4 +1,4 @@
-@import '../desktop';
+@import 'common';
 
 & {
     .header {
@@ -29,24 +29,8 @@
             .list {
                 width: px(1340);
 
-                .large {
-                    width: px(880);
-                    height: px(520);
-                    padding-bottom: px(28);
-                    padding-left: px(40);
-
-                    h4 {
-                        margin-top: px(2);
-                    }
-                }
-
-                .row {
-                    height: px(520);
-
-                    .small {
-                        width: px(420);
-                        height: px(240);
-                    }
+                .item {
+                    width: px(420);
                 }
             }
         }

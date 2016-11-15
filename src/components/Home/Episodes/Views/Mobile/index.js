@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Moment from 'moment';
 import SwipeableViews from 'vendor/Swipeable';
 
-import Styles from '../main.scss';
+import Styles from './Styles/main.scss';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
 import BubbleVideo from 'components/Assets/Icons/BubbleVideo';

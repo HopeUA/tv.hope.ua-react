@@ -23,6 +23,13 @@ export default class Slider extends Component {
         this.setState({indexCurrent: this.state.indexCurrent - 1});
     };
 
+    refreshLastIndex = () => {
+        setTimeout(() => {
+            const margin = parseInt(window.getComputedStyle(this.listContainer).backgroundSize, 10);
+            this.lastIndex = Math.ceil((this.listContainer.scrollWidth - margin) / this.listContainer.offsetWidth);
+        }, 0);
+    };
+
     getDeviation = () => {
         const { indexCurrent } = this.state;
 
@@ -31,15 +38,14 @@ export default class Slider extends Component {
         }
 
         const containerStyles = window.getComputedStyle(this.listContainer);
-        const containerMargin = parseInt(containerStyles.backgroundSize, 10);
+        const containerMargin = parseInt(containerStyles.backgroundSize, 10); // Margin между items
         const containerWidth = parseInt(this.listContainer.offsetWidth, 10);
 
         return indexCurrent * (containerWidth + containerMargin);
-
     };
 
     componentDidMount() {
-        this.lastIndex = this.listContainer.scrollWidth / this.listContainer.offsetWidth
+        this.refreshLastIndex();
     }
 
     render(){
@@ -56,7 +62,7 @@ export default class Slider extends Component {
         };
 
         const isArrowLeftVisible  = this.state.indexCurrent !== 0;
-        const isArrowRightVisible = this.state.indexCurrent !== this.lastIndex;
+        const isArrowRightVisible = this.state.indexCurrent !== (this.lastIndex - 1);
 
         const arrowLeftStyle = {
             visibility: isArrowLeftVisible ? 'visible' : 'hidden'

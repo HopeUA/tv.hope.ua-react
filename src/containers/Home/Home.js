@@ -42,6 +42,13 @@ export default class Home extends Component {
         return (
             <div>
                 <Helmet { ...Seo.Home }/>
+                <Episodes
+                    mediaType={ browser.mediaType }
+                    title={ "Новые выпуски" }
+                    dynamic={ false }
+                    canRefresh={ false }
+                    view="row"
+                />
                 <Top
                     mediaType={ browser.mediaType }
                     items={ items.slice(0, 3) }
@@ -51,13 +58,6 @@ export default class Home extends Component {
                     items={ liveItems }
                     url={ liveUrl }
                     currentTime="2016-10-24T09:23:30.000Z"
-                />
-                <Episodes
-                    mediaType={ browser.mediaType }
-                    items={ items }
-                    title={ "Новые выпуски" }
-                    dynamic={ false }
-                    canRefresh={ false }
                 />
             </div>
         );

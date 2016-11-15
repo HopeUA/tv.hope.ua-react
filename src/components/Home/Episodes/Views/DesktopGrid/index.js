@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Slider from 'vendor/Slider/SliderComponent';
 
-import Styles from '../main.scss';
+import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 
 import Palette from 'components/Assets/Palette';
