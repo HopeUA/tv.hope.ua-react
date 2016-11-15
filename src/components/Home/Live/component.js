@@ -4,16 +4,19 @@ import DesktopView from './Views/Desktop';
 
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
+// TODO получать через api
+import items from './Mock/data.json';
+const liveUrl = 'https://live-tv.hope.ua/nadia-publish/smil:nadia.smil/playlist.m3u8';
+const currentTime = '2016-10-24T09:23:30.000Z';
+
 export default function Live(props) {
     const isMobile = [
         BreakPoints.phonePortrait.name,
         BreakPoints.phoneLandscape.name
     ].indexOf(props.mediaType) !== -1;
 
-    const { url, items, currentTime } = props;
-
     return isMobile ? (
-        <MobileView url={ url }/>
+        <MobileView url={ liveUrl }/>
     ) : (
         <DesktopView
             mediaType={ props.mediaType }
