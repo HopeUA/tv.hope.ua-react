@@ -7,6 +7,8 @@ import Grids from 'theme/Grid.scss';
 
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
+import items from './Mock/data.json';
+
 export default function Top(props) {
     const isSmallVisible = [
         BreakPoints.phonePortrait.name,
@@ -17,8 +19,8 @@ export default function Top(props) {
     return (
         <section className={ Grids.container }>
             <section className={ Styles.topComponent }>
-                <Large mediaType={ props.mediaType } item={ props.items[0] }/>
-                { isSmallVisible ? <Small item={ props.items[1] }/> : null }
+                <Large mediaType={ props.mediaType } item={ items[0] }/>
+                { isSmallVisible ? <Small item={ items[1] }/> : null }
             </section>
         </section>
     );
