@@ -1,0 +1,150 @@
+[
+  {
+    "uid": "HDVU01714",
+    "title": "Знову в подорож",
+    "description": "Місцеві жителі називають цю країну Бхарат, інколи Хіндустан. Що це за країна, та яке яскраве свято є в цій країні розповість Добрячок.",
+    "tags": [
+      "дитяча історія",
+      "історія для дітей",
+      "повчальна історія",
+      "поучительная история",
+      "детская история",
+      "история для детей",
+      "Індія",
+      "Индия",
+      "корова",
+      "священна корова",
+      "холи",
+      "холі",
+      "свято фарб",
+      "праздник красок"
+    ],
+    "publish": "2016-04-03T11:20:00.000Z",
+    "language": "uk",
+    "author": "Стангеліні Ж.",
+    "hd": false,
+    "views": 0,
+    "source": {
+      "local": {
+        "url": "https://cdn.hope.ua/media/shows/HDVU/episodes/01714/HDVU01714-hopeua.mov"
+      },
+      "youtube": {
+        "id": "IoaOqwHjJWI",
+        "channel": "hopeua"
+      }
+    },
+    "image": "https://cdn.hope.ua/media/shows/HDVU/episodes/01714/HDVU01714-cover.jpg",
+    "links": {
+      "prev": "HDVU01815"
+    },
+    "trailers": {
+      "main": {
+        "local": {
+          "url": "https://cdn.hope.ua/media/shows/HDVU/episodes/01714/HDVU01714-trailer-main.mov"
+        }
+      },
+      "today": {
+        "local": {
+          "url": "https://cdn.hope.ua/media/shows/HDVU/episodes/01714/HDVU01714-trailer-today.mov"
+        }
+      }
+    },
+    "show": {
+      "uid": "HDVU",
+      "title": "В гостях у Добрячка",
+      "description": {
+        "short": "Завітайте до нас неодмінно!",
+        "medium": "Добрячок завжди радий вас вітати і в школі добрих порад буде вас навчати.",
+        "days": "",
+        "time": "",
+        "long": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/HDVU/HDVU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/HDVU/HDVU-background.jpg"
+      },
+      "category": {
+        "uid": "child",
+        "title": {
+          "ru": "Детские",
+          "uk": "Дитячі"
+        },
+        "sort": 5
+      }
+    }
+  },
+  {
+    "uid": "HDVU01815",
+    "title": "Що робити з горобцем?",
+    "description": "Де краще жити горобцю? На волі чи в неволі? Складне питання. Давайте спробуємо розібратись в ньому протягом цієї програми. А ще спробуємо виготовити птаха у клітці своїми руками.",
+    "tags": [
+      "горобець",
+      "птахи на волі",
+      "птахи в неволі",
+      "клітка для папуги",
+      "довгожителі серед птахів",
+      "папуга",
+      "чим годувати горобців",
+      "долгожители среди птиц",
+      "Добрячок про птахів",
+      "папугаи",
+      "канарейки",
+      "домашние питомцы",
+      "птички"
+    ],
+    "publish": "2016-03-27T11:20:00.000Z",
+    "language": "uk",
+    "author": "Шкаліков М.",
+    "hd": false,
+    "views": 0,
+    "source": {
+      "local": {
+        "url": "https://cdn.hope.ua/media/shows/HDVU/episodes/01815/HDVU01815-hopeua.mov"
+      },
+      "youtube": {
+        "id": "olYPE5z1Ggs",
+        "channel": "hopeua"
+      }
+    },
+    "image": "https://cdn.hope.ua/media/shows/HDVU/episodes/01815/HDVU01815-cover.jpg",
+    "links": {
+      "prev": "HDVU02315",
+      "next": "HDVU01714"
+    },
+    "trailers": {
+      "main": {
+        "local": {
+          "url": "https://cdn.hope.ua/media/shows/HDVU/episodes/01815/HDVU01815-trailer-main.mov"
+        }
+      },
+      "today": {
+        "local": {
+          "url": "https://cdn.hope.ua/media/shows/HDVU/episodes/01815/HDVU01815-trailer-today.mov"
+        }
+      }
+    },
+    "show": {
+      "uid": "HDVU",
+      "title": "В гостях у Добрячка",
+      "description": {
+        "short": "Завітайте до нас неодмінно!",
+        "medium": "Добрячок завжди радий вас вітати і в школі добрих порад буде вас навчати.",
+        "days": "",
+        "time": "",
+        "long": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/HDVU/HDVU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/HDVU/HDVU-background.jpg"
+      },
+      "category": {
+        "uid": "child",
+        "title": {
+          "ru": "Детские",
+          "uk": "Дитячі"
+        },
+        "sort": 5
+      }
+    }
+  }
+]
