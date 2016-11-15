@@ -1,0 +1,86 @@
+[
+  {
+    "id": "5809f6da3e12111000b36470",
+    "date": "2016-10-24T09:00:00.000Z",
+    "show": {
+      "uid": "PNTR",
+      "title": "Познавая непостижимое",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/PNTR/PNTR-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "PNTR"
+    },
+    "episode": {
+      "uid": "PNTR02613",
+      "title": "Программа № 35 — Книга Иисуса Навина (3)",
+      "description": "Чью землю захватывали Израильтяне? Что книга Иисуса Навина говорит о следственном суде? И чем он хорош? Как в Писании представлена идея справедливости? Как Господь предостерегает Свой народ от формального подхода в служении Ему? Какое значение имеет любовь во взаимоотношениях с Богом? Каким образом Господь в точности исполнил обетование, данное Аврааму?",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/PNTR/episodes/02613/PNTR02613-cover.jpg",
+      "code": "PNTR02613"
+    }
+  },
+  {
+    "id": "5809f6da3e12111000b36471",
+    "date": "2016-10-24T09:30:00.000Z",
+    "show": {
+      "uid": "LLCU",
+      "title": "Лома линда 360°",
+      "description": {
+        "short": "Для Бога безвыходных ситуаций нет!"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/LLCU/LLCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/LLCU/LLCU-background.jpg"
+      },
+      "code": "LLCU"
+    },
+    "episode": {
+      "uid": "LLCU00109",
+      "title": "Следы неизвестного",
+      "description": "Эфиопы — прекрасные люди. Несмотря на безнадежные ситуации, через которые им приходится проходить, они все равно излучают любезность, имеют чувство гордости, и решают свои дела так, как могут.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/LLCU/episodes/00109/LLCU00109-cover.jpg",
+      "code": "LLCU00109"
+    }
+  },
+  {
+    "id": "5809f6da3e12111000b3647f",
+    "date": "2016-10-24T18:10:00.000Z",
+    "show": {
+      "uid": "NSCU",
+      "title": "Непростое состояние",
+      "description": {
+        "short": "Построй свою семью правильно!"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/NSCU/NSCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/NSCU/NSCU-background.jpg"
+      },
+      "code": "NSCU"
+    },
+    "episode": {
+      "uid": "NSCU01914",
+      "title": "Благодарность и здоровье",
+      "description": "Говорят, благодарность способна сделать нашу жизнь приятней и радостней. Кроме того чувство благодарности способствует успеху в жизни. Из «спасибо» ведь шубу не сошьешь — есть такая народная пословица. Как благодарность по отношению к другим влияет на качество нашей жизни? Тема нашей  программы — благодарность.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/NSCU/episodes/01914/NSCU01914-cover.jpg",
+      "trailers": {
+        "today": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/NSCU/episodes/01914/NSCU01914-trailer-today.mov"
+          }
+        },
+        "main": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/NSCU/episodes/01914/NSCU01914-trailer-main.mov"
+          }
+        }
+      },
+      "code": "NSCU01914"
+    }
+  }
+]

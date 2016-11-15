@@ -10,12 +10,12 @@ import GoTo from 'components/Assets/Icons/GoTo';
 export default function EpisodesDesktop(props) {
     const { items } = props;
 
-    const large = items.shift();
+    const large = items.slice(0, 1)[0];
     const styles = {
         backgroundImage: `url(${large.image})`
     };
 
-    const episodes = items.map((el) => {
+    const episodes = items.slice(1).map((el) => {
         const background = {
             backgroundImage: `url(${el.image})`
         };
