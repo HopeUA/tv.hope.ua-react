@@ -1,0 +1,63 @@
+@import 'common';
+
+& {
+    padding-top: px(66);
+}
+
+.title {
+    margin-left: px(100);
+}
+
+.slider {
+    .arrowLeft {
+        width: px(100);
+        height: px(510);
+
+        .arrow {
+            margin-right: px(4);
+        }
+    }
+
+    .arrowRight {
+        width: px(100);
+        height: px(510);
+
+        .arrow {
+            margin-left: px(4);
+        }
+    }
+
+    .wrap {
+        .list {
+            width: px(1340);
+
+            article {
+                width: px(420);
+                height: px(510);
+                margin-right: px(38);
+                border-radius: 3px;
+
+                .image {
+                    height: px(244);
+                }
+
+                .info {
+                    height: px(266);
+
+                    .date {
+                        align-items: baseline;
+                    }
+
+                    h1 {
+                        margin-top: px(16);
+                    }
+
+                    .description {
+                        line-height: px(32);
+                    }
+                }
+            }
+        }
+    }
+}
+

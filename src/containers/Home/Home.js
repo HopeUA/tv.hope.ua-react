@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import Helmet from 'react-helmet';
 import Seo from 'data/seo.json';
-import { Episodes, Live, Top } from 'components/Home';
+import { Episodes, Live, Top, Articles } from 'components/Home';
 
 // @asyncConnect([{
 //     deferred: true,
@@ -34,6 +34,7 @@ export default class Home extends Component {
         return (
             <div>
                 <Helmet { ...Seo.Home }/>
+                <Articles mediaType={ browser.mediaType }/>
                 <Live
                     mediaType={ browser.mediaType }
                 />
