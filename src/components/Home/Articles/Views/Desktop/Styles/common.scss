@@ -1,0 +1,147 @@
+& {
+    padding-top: px(90);
+}
+
+.title {
+    margin-left: px(108);
+    color: $commonColor1;
+    font-size: px(48);
+    font-weight: normal;
+}
+
+.slider {
+    display: flex;
+    margin-top: px(50);
+
+    .arrowLeft {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: px(108);
+        height: px(520);
+        cursor: pointer;
+
+        .arrow {
+            width: px(26);
+            margin-right: px(38);
+            transform: rotate(180deg);
+        }
+    }
+
+    .arrowRight {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: px(108);
+        height: px(520);
+        cursor: pointer;
+
+        .arrow {
+            width: px(26);
+            margin-left: px(30);
+        }
+    }
+
+    .wrap {
+        display: flex;
+        position: relative;
+
+        .list {
+            display: flex;
+            width: px(1832);
+            transition: all .3s cubic-bezier(.15, .46, .61, 1);
+            background-size: px(40);
+
+            article {
+                position: relative;
+                flex-shrink: 0;
+                width: px(428);
+                height: px(520);
+                margin-right: px(40);
+                border-bottom: 1px solid $commonColor7;
+                border-radius: 6px;
+                cursor: pointer;
+                overflow: hidden;
+
+                &:hover {
+                    .info {
+                        height: px(392);
+
+                        .description {
+                            height: px(164);
+                            -webkit-line-clamp: 5;
+                        }
+
+                        h1 {
+                            color: $mainColor4;
+                        }
+                    }
+
+                    .image {
+                        background-size: 140%;
+                        filter: blur(3px);
+                    }
+                }
+
+                .image {
+                    height: px(248);
+                    transition: filter, background-size .3s;
+                    background-position: center;
+                    background-size: 110%;
+                }
+
+                .info {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: px(272);
+                    padding: px(30) px(40) 0;
+                    transition: height .4s;
+                    background-color: $mainColor1;
+
+                    .date {
+                        display: flex;
+                        align-items: flex-end;
+
+                        i {
+                            width: px(40);
+                            margin-right: px(14);
+                        }
+
+                        p {
+                            color: $commonColor1;
+                            font-size: px(24);
+                        }
+                    }
+
+                    a {
+                        h1 {
+                            margin-top: px(22);
+                            color: $commonColor1;
+                            font-size: px(28);
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                    }
+
+
+                    .description {
+                        display: -webkit-box;
+                        height: px(100);
+                        margin-top: px(24);
+                        transition: height .3s;
+                        font-size: px(26);
+                        line-height: px(32);
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                    }
+                }
+            }
+        }
+    }
+}
+
