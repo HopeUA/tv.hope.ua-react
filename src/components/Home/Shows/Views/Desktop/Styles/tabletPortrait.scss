@@ -1,0 +1,43 @@
+@import 'common';
+
+.title {
+    margin-top: px(68);
+    margin-left: px(96);
+}
+
+.slider {
+    .arrowLeft {
+        width: px(98);
+        height: px(510);
+
+        .arrow {
+            margin-right: px(4);
+        }
+    }
+
+    .arrowRight {
+        width: px(98);
+        height: px(510);
+
+        .arrow {
+            margin-left: px(4);
+        }
+    }
+
+    .wrap {
+        .list {
+            width: px(1340);
+
+            .row {
+                height: px(520);
+                column-gap: px(40);
+                column-width: px(420);
+
+                .item {
+                    width: px(420);
+                    height: px(240);
+                }
+            }
+        }
+    }
+}
