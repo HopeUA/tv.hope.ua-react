@@ -1,0 +1,25 @@
+& {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: px(220);
+    background: $mainColor6;
+
+    a {
+        display: flex;
+        align-items: center;
+        width: px(518);
+        height: px(100);
+        border-radius: 6px;
+        background: $mainColor4;
+        color: $mainColor1;
+        font-size: px(30);
+
+        .play {
+            width: px(38);
+            margin-right: px(28);
+            margin-left: px(30);
+        }
+    }
+}

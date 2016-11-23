@@ -34,10 +34,9 @@ export default class Home extends Component {
         return (
             <div>
                 <Helmet { ...Seo.Home }/>
-                <Banner/>
+                <Live mediaType={ browser.mediaType }/>
                 <Shows mediaType={ browser.mediaType }/>
                 <Articles mediaType={ browser.mediaType }/>
-                <Live mediaType={ browser.mediaType }/>
                 <Top mediaType={ browser.mediaType }/>
                 <Episodes
                     mediaType={ browser.mediaType }

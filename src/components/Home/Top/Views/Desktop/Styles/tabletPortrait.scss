@@ -1,0 +1,47 @@
+@import 'common';
+
+& {
+    .item {
+        width: max-content;
+        margin-right: 0;
+
+        h1 {
+            margin-top: px(62);
+            font-size: px(48);
+        }
+
+        .main {
+            .image {
+                width: px(876);
+                height: px(510);
+            }
+
+            .container {
+                width: px(456);
+                height: px(510);
+
+                .info {
+                    padding: px(44) px(58) 0;
+
+                    .date {
+                        .bubble {
+                            margin-bottom: px(4);
+                        }
+                    }
+
+                    .titleLink {
+                        margin-top: px(58);
+                    }
+
+                    .link {
+                        margin-top: px(10);
+                    }
+
+                    p {
+                        margin-top: px(46);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -31,7 +31,7 @@ export default function Desktop(props) {
     return (
         <section className={ Grids.container }>
             <section className={ Styles.showsComponent }>
-                <h1 className={ Styles.title }>Анонсы</h1>
+                <h1 className={ Styles.title }>Популярные программы</h1>
                 <Slider { ...properties }>
                     <div className={ Styles.row }>
                     { articles }
