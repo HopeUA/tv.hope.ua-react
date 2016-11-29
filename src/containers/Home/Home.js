@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import Seo from 'data/seo.json';
 import { Episodes, Live, Top, Articles, Shows } from 'components/Home';
+import { Banners } from 'components/Footer';
 
 // @asyncConnect([{
 //     deferred: true,
@@ -52,6 +53,7 @@ export default class Home extends Component {
                     canRefresh={ false }
                     view="row"
                 />
+                <Banners mediaType={ browser.mediaType }/>
             </div>
         );
     }

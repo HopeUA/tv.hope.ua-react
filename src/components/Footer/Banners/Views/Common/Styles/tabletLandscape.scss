@@ -1,0 +1,11 @@
+@import 'common';
+
+& {
+    margin-top: px(148);
+}
+
+.item {
+    &::after {
+        display: block;
+    }
+}

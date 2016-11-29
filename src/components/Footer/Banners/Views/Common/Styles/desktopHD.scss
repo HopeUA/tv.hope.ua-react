@@ -1,0 +1,7 @@
+@import 'common';
+
+.item {
+    &::after {
+        display: block;
+    }
+}

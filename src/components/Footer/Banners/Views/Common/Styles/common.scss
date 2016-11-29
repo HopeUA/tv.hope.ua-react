@@ -1,0 +1,58 @@
+& {
+    margin-top: px(148);
+}
+
+.item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: px(260);
+    background-size: cover;
+
+    &::after {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: px(8);
+        background-image: url('../../../Assets/divider-bg.svg');
+        content: '';
+    }
+
+    .info {
+        display: flex;
+        opacity: .9;
+
+        i {
+            width: px(84);
+            margin-right: px(38);
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+
+            .row1 {
+                margin-bottom: px(10);
+                color: $mainColor1;
+                font-size: px(28);
+                font-weight: bold;
+            }
+
+            .row2 {
+                color: $commonColor3;
+                font-size: px(28);
+            }
+
+            .row3 {
+                color: $mainColor1;
+                font-size: px(40);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

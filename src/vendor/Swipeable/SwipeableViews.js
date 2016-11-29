@@ -132,6 +132,7 @@ class SwipeableViews extends Component {
     
     containerWidth: PropTypes.number, // Hope
     containerMargin: PropTypes.number, // Hope
+    initialAlign: PropTypes.string, // Hope
     /**
      * If `true`, it will disable touch events.
      * This is useful when you want to prohibit the user from changing slides.
@@ -212,7 +213,8 @@ class SwipeableViews extends Component {
       damping: 30,
     },
     containerWidth: 100, // Hope
-    containerMargin: 0 // Hope
+    containerMargin: 0, // Hope
+    initialAlign: 'center' // Hope
   };
 
   state = {};
@@ -233,6 +235,7 @@ class SwipeableViews extends Component {
 
   componentDidMount() {
     /* eslint-disable react/no-did-mount-set-state */
+
     this.setState({
       isFirstRender: false,
     });
@@ -428,7 +431,8 @@ class SwipeableViews extends Component {
       }
     }
 
-    const indexMax = Children.count(this.props.children) - 1;
+    // const indexMax = 4; //Children.count(this.props.children) - 1;
+    const indexMax = Children.count(this.props.children) - Math.floor(100 / (this.props.containerWidth + this.props.containerMargin));
 
     if (indexNew < 0) {
       indexNew = 0;
@@ -504,6 +508,7 @@ class SwipeableViews extends Component {
       containerStyle,
       containerWidth,
       containerMargin,
+      initialAlign,
       slideStyle,
       disabled,
       springConfig,
@@ -519,8 +524,12 @@ class SwipeableViews extends Component {
       displaySameSlide,
     } = this.state;
 
-    const initialTranslate = (100 - containerWidth) / 2;
+    const initialTranslate = initialAlign === 'center' ? (100 - containerWidth) / 2 : 0;
+    // const maxTranslate = isDragging ? 10000 : 118;
     const translate = indexCurrent * (containerWidth + containerMargin) - initialTranslate;
+    // if (translate > maxTranslate) {
+    //   translate = maxTranslate;
+    // }
     const height = heightLatest;
 
     const motionStyle = (isDragging || !animateTransitions || displaySameSlide) ? {
