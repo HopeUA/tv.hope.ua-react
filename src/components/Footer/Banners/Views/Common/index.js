@@ -3,33 +3,17 @@ import SwipeableViews from 'vendor/Swipeable';
 
 import Styles from './Styles/main.scss';
 
-import Palette from 'components/Assets/Palette';
-import Android from 'components/Assets/Icons/Android';
-import Apple from 'components/Assets/Icons/Apple';
-import Donate from 'components/Assets/Icons/Donate';
+// import Palette from 'components/Assets/Palette';
 
 import BreakPoints from 'vendor/PixelPerfect/breakpoints';
+
+import items from '../../Mock/data.json';
+import InlineSvg from 'vendor/InlineSvg/component';
 
 export default function Banners(props) {
     const {
         mediaType
     } = props;
-
-    const androidBg = {
-        backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/assets/banners/android.jpg)'
-    };
-
-    const appleBg = {
-        backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/assets/banners/apple.jpg)'
-    };
-
-    const donateBg = {
-        backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/assets/banners/donate.jpg)'
-    };
-
-    const volonteersBg = {
-        backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/assets/banners/volonteers.jpg)'
-    };
 
     const isSwipeable = [
         BreakPoints.phonePortrait.name,
@@ -63,49 +47,29 @@ export default function Banners(props) {
         disabled: !isSwipeable
     };
 
+    const articles = items.map((el) => {
+        const background = {
+            backgroundImage: `url(${el.image})`
+        };
+
+        return (
+            <article className={ Styles.item } style={ background } key={ el.text[2] }>
+                <a href="#" className={ Styles.info }>
+                    <InlineSvg content={ el.icon } className={ Styles.svg }/>
+                    <div className={ Styles.text }>
+                        <span className={ Styles.row1 }>{ el.text[0] }</span>
+                        <span className={ Styles.row2 }>{ el.text[1] }</span>
+                        <span className={ Styles.row3 }>{ el.text[2] }</span>
+                    </div>
+                </a>
+            </article>
+        );
+    });
+
     return (
         <section className={ Styles.bannersComponent }>
             <SwipeableViews { ...swipeParams }>
-                <article className={ Styles.item } style={ androidBg }>
-                    <a href="#" className={ Styles.info }>
-                        <Android color={ Palette.paletteColor6 }/>
-                        <div className={ Styles.text }>
-                            <span className={ Styles.row1 }>Приложения</span>
-                            <span className={ Styles.row2 }>для системы</span>
-                            <span className={ Styles.row3 }>android</span>
-                        </div>
-                    </a>
-                </article>
-                <article className={ Styles.item } style={ appleBg }>
-                    <a href="#" className={ Styles.info }>
-                        <Apple color={ Palette.paletteColor6 }/>
-                        <div className={ Styles.text }>
-                            <span className={ Styles.row1 }>Приложения</span>
-                            <span className={ Styles.row2 }>для системы</span>
-                            <span className={ Styles.row3 }>ios</span>
-                        </div>
-                    </a>
-                </article>
-                <article className={ Styles.item } style={ donateBg }>
-                    <a href="#" className={ Styles.info }>
-                        <Donate color={ Palette.paletteColor6 }/>
-                        <div className={ Styles.text }>
-                            <span className={ Styles.row1 }>Поддержка</span>
-                            <span className={ Styles.row2 }>через проект</span>
-                            <span className={ Styles.row3 }>donate</span>
-                        </div>
-                    </a>
-                </article>
-                <article className={ Styles.item } style={ volonteersBg }>
-                    <a href="#" className={ Styles.info }>
-                        <Android color={ Palette.paletteColor6 }/>
-                        <div className={ Styles.text }>
-                            <span className={ Styles.row1 }>Я очень хочу</span>
-                            <span className={ Styles.row2 }>помагать как</span>
-                            <span className={ Styles.row3 }>волонтер</span>
-                        </div>
-                    </a>
-                </article>
+                { articles }
             </SwipeableViews>
         </section>
     );

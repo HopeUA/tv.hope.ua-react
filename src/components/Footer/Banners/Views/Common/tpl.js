@@ -4,9 +4,9 @@ import SwipeableViews from 'vendor/Swipeable';
 import Styles from './Styles/main.scss';
 
 import Palette from 'components/Assets/Palette';
-import Android from 'components/Assets/Icons/Android';
-import Apple from 'components/Assets/Icons/Apple';
-import Donate from 'components/Assets/Icons/Donate';
+import Android from '../../Mock/Icons/Android';
+import Apple from '../../Mock/Icons/Apple';
+import Donate from '../../Mock/Icons/Donate';
 
 import BreakPoints from 'vendor/PixelPerfect/breakpoints';
 import PixelPerfect from 'vendor/PixelPerfect/component';
