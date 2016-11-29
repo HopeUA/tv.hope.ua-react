@@ -28,8 +28,8 @@ export default function Banners(props) {
         backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/assets/banners/donate.jpg)'
     };
 
-    const volonteersBg = {
-        backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/assets/banners/volonteers.jpg)'
+    const volunteersBg = {
+        backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/assets/banners/volunteers.jpg)'
     };
 
     const isSwipeable = [
@@ -56,7 +56,9 @@ export default function Banners(props) {
             margin: 0.4
         }
     };
-    const currentSizes = containerSizes[mediaType] || {};
+    const currentSizes = containerSizes[mediaType] || { width: 24.7,
+                                                        margin: 0.4 }
+    ;
 
     const swipeParams = {
         containerWidth: currentSizes.width,
@@ -107,7 +109,7 @@ export default function Banners(props) {
                             </div>
                         </a>
                     </article>
-                    <article className={ Styles.item } style={ volonteersBg }>
+                    <article className={ Styles.item } style={ volunteersBg }>
                         <a href="#" className={ Styles.info }>
                             <Android color={ Palette.paletteColor6 }/>
                             <div className={ Styles.text }>

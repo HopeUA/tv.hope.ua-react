@@ -3,16 +3,14 @@ import SwipeableViews from 'vendor/Swipeable';
 
 import Styles from './Styles/main.scss';
 
-// import Palette from 'components/Assets/Palette';
-
 import BreakPoints from 'vendor/PixelPerfect/breakpoints';
 
-import items from '../../Mock/data.json';
 import InlineSvg from 'vendor/InlineSvg/component';
 
 export default function Banners(props) {
     const {
-        mediaType
+        mediaType,
+        items
     } = props;
 
     const isSwipeable = [
@@ -47,19 +45,19 @@ export default function Banners(props) {
         disabled: !isSwipeable
     };
 
-    const articles = items.map((el) => {
+    const articles = items.map((item) => {
         const background = {
-            backgroundImage: `url(${el.image})`
+            backgroundImage: `url(${item.image})`
         };
 
         return (
-            <article className={ Styles.item } style={ background } key={ el.text[2] }>
-                <a href="#" className={ Styles.info }>
-                    <InlineSvg content={ el.icon } className={ Styles.svg }/>
+            <article className={ Styles.item } style={ background } key={ item.id }>
+                <a href={ item.url } className={ Styles.info }>
+                    <InlineSvg content={ item.icon }/>
                     <div className={ Styles.text }>
-                        <span className={ Styles.row1 }>{ el.text[0] }</span>
-                        <span className={ Styles.row2 }>{ el.text[1] }</span>
-                        <span className={ Styles.row3 }>{ el.text[2] }</span>
+                        <span className={ Styles.row1 }>{ item.text[0] }</span>
+                        <span className={ Styles.row2 }>{ item.text[1] }</span>
+                        <span className={ Styles.row3 }>{ item.text[2] }</span>
                     </div>
                 </a>
             </article>
@@ -76,5 +74,6 @@ export default function Banners(props) {
 }
 
 Banners.propTypes = {
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    items: PropTypes.array
 };
