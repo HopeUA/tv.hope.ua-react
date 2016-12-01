@@ -1,4 +1,4 @@
-@import '../desktop';
+@import './common';
 
 & {
     padding-top: px(84);
@@ -22,7 +22,6 @@
         }
 
         .col1 {
-            width: px(528);
             margin-top: px(84);
 
             div {
@@ -47,12 +46,9 @@
         }
 
         .col2 {
-            width: px(362);
             margin-top: px(84);
 
             div {
-                margin-bottom: px(110);
-
                 h2 {
                     margin-bottom: px(36);
                     font-size: px(34);
@@ -74,12 +70,9 @@
         }
 
         .col3 {
-            width: px(210);
             margin-top: px(84);
 
             div {
-                margin-bottom: px(112);
-
                 h2 {
                     font-size: px(34);
                 }
