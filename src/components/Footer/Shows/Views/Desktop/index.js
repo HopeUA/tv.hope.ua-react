@@ -80,8 +80,6 @@ export default function Shows(props) {
     );
 
     const about = [
-        BreakPoints.phoneLandscape.name,
-        BreakPoints.phonePortrait.name,
         BreakPoints.tabletPortrait.name
     ].indexOf(mediaType) === -1 ? (
         <section className={ Styles.about } >
