@@ -1,5 +1,8 @@
 import React, { PropTypes } from 'react';
-import Styles from './main.scss';
+
+import Grids from 'theme/Grid.scss';
+import Styles from './Styles/main.scss';
+
 import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
@@ -136,9 +139,11 @@ export default function Shows(props) {
 
     return (
         <PixelPerfect templates={ templates } component="shows">
-            <section className={ Styles.showsComponent }>
-                { shows }
-                { about }
+            <section className={ Grids.container }>
+                <section className={ Styles.showsComponent }>
+                    { shows }
+                    { about }
+                </section>
             </section>
         </PixelPerfect>
     );

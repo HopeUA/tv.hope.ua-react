@@ -1,7 +1,7 @@
 & {
     display: flex;
     padding: px(68) px(100) 0 px(122);
-    color: $color1;
+    color: $commonColor1;
 
     .shows {
         display: flex;
@@ -23,9 +23,9 @@
                 position: relative;
                 height: px(26);
                 margin-top: px(12);
-                transition: border-bottom $transitionDuration;
-                border-bottom: 1px solid $color2;
-                color: $color2;
+                transition: border-bottom .2s;
+                border-bottom: 1px solid $mainColor4;
+                color: $mainColor4;
                 font-size: px(26);
                 font-weight: 900;
                 text-decoration: none;
@@ -47,7 +47,6 @@
 
         .col1 {
             flex: 1 auto;
-            width: px(382);
             margin-top: px(76);
 
             div {
@@ -64,13 +63,13 @@
                         margin-bottom: px(20);
 
                         a {
-                            transition: color $transitionDuration;
-                            color: $color1;
+                            transition: color .2s;
+                            color: $commonColor1;
                             font-size: px(26);
                             text-decoration: none;
 
                             &:hover {
-                                color: $color2;
+                                color: $mainColor4;
                                 cursor: pointer;
                             }
                         }
@@ -81,7 +80,6 @@
 
         .col2 {
             flex: 1 auto;
-            width: px(394);
             margin-top: px(76);
 
             div {
@@ -99,13 +97,13 @@
                         margin-bottom: px(20);
 
                         a {
-                            transition: color $transitionDuration;
-                            color: $color1;
+                            transition: color .2s;
+                            color: $commonColor1;
                             font-size: px(26);
                             text-decoration: none;
 
                             &:hover {
-                                color: $color2;
+                                color: $mainColor4;
                                 cursor: pointer;
                             }
                         }
@@ -116,7 +114,6 @@
 
         .col3 {
             flex: 1 auto;
-            width: px(270);
             margin-top: px(76);
 
             div {
@@ -135,13 +132,13 @@
                         margin-bottom: px(20);
 
                         a {
-                            transition: color $transitionDuration;
-                            color: $color1;
+                            transition: color .2s;
+                            color: $commonColor1;
                             font-size: px(26);
                             text-decoration: none;
 
                             &:hover {
-                                color: $color2;
+                                color: $mainColor4;
                                 cursor: pointer;
                             }
                         }
@@ -152,8 +149,8 @@
                             left: px(88);
                             padding: 0 px(6) px(2);
                             border-radius: 3px;
-                            background-color: $color3;
-                            color: $color4;
+                            background-color: $mainColor5;
+                            color: $mainColor1;
                             font-size: px(22);
                             font-weight: 900;
                         }
@@ -173,7 +170,7 @@
         }
 
         p {
-            color: $color5;
+            color: $commonColor2;
             font-size: px(26);
             line-height: px(32);
         }
@@ -185,9 +182,9 @@
             height: px(26);
             margin-top: px(44);
             margin-left: px(4);
-            transition: border-bottom $transitionDuration;
-            border-bottom: 1px solid $color2;
-            color: $color2;
+            transition: border-bottom .2s;
+            border-bottom: 1px solid $mainColor4;
+            color: $mainColor4;
             font-size: px(26);
             font-weight: 900;
             text-decoration: none;
