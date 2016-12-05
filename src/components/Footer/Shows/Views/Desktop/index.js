@@ -79,9 +79,7 @@ export default function Shows(props) {
         </section>
     );
 
-    const about = [
-        BreakPoints.tabletPortrait.name
-    ].indexOf(mediaType) === -1 ? (
+    const about = BreakPoints.tabletPortrait.name !== mediaType ? (
         <section className={ Styles.about } >
             <h1>О телеканале</h1>
             <p><strong>Телеканал</strong> предлагает большое разнообразие программ — для детей и молодежи, о
