@@ -17,6 +17,7 @@
   "rules": {
     "react/jsx-no-bind": ["error", {
       "ignoreRefs": true
-    }]
+    }],
+    "react/no-set-state": "off"
   }
 }
