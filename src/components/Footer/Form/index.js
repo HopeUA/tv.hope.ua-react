@@ -25,12 +25,10 @@ export default class extends Component {
         this.setState({
             [el.name]: el.value
         });
-        console.log(event);
     };
 
     handleSubmit = async (event) => { // eslint-disable-line arrow-parens
         const form = event.target.parentNode;
-        console.log(form.checkValidity());
 
         if (this.state.form !== STATE_NORMAL || !form.checkValidity()) {
             return;

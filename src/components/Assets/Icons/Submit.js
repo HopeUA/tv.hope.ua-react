@@ -95,8 +95,6 @@ export default class letter extends Component {
                 return error;
             case TYPE_SUCCESS:
                 return success;
-            case TYPE_NORMAL:
-                return normal;
             default:
                 return normal;
         }
