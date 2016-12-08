@@ -55,6 +55,7 @@ export default class Home extends Component {
                 />
                 <Footer.Banners mediaType={ browser.mediaType }/>
                 <Footer.Shows mediaType={ browser.mediaType }/>
+                <Footer.Form mediaType={ browser.mediaType }/>
             </div>
         );
     }

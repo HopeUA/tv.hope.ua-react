@@ -1,0 +1,131 @@
+& {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: px(62) px(118) px(62) px(120);
+    background-color: $mainColor1;
+    color: $commonColor6;
+
+    header {
+        flex: 1 100%;
+        margin-bottom: px(100);
+
+        h1 {
+            position: relative;
+            color: $commonColor1;
+            font-size: px(44);
+            text-align: center;
+
+            &::after {
+                display: block;
+                position: absolute;
+                top: px(84);
+                left: 50%;
+                width: px(50);
+                height: px(6);
+                margin-left: px(-25);
+                background-color: $mainColor3;
+                content: '';
+            }
+        }
+
+    }
+
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+
+        .name {
+            flex: 1 auto;
+            margin-right: px(54);
+            padding: px(14) px(20) px(20) px(24);
+            border: 1px solid $commonColor7;
+            border-radius: 4px;
+            outline: none;
+            color: $commonColor1;
+            font-size: px(32);
+
+            &:focus {
+                box-shadow: 0 0 0 1px $commonColor7;
+            }
+        }
+
+        .email {
+            flex: 1 auto;
+            padding: px(14) px(20) px(20) px(24);
+            border: 1px solid $commonColor7;
+            border-radius: 4px;
+            outline: none;
+            color: $commonColor1;
+            font-size: px(32);
+
+            &:focus {
+                box-shadow: 0 0 0 1px $commonColor7;
+            }
+        }
+
+        textarea {
+            flex: 1 100%;
+            height: px(320);
+            margin-top: px(52);
+            padding: px(18) px(18) px(20) px(22);
+            border: 1px solid $commonColor7;
+            border-radius: 4px;
+            outline: none;
+            color: $commonColor1;
+            font-size: px(32);
+            resize: none;
+
+            &:focus {
+                box-shadow: 0 0 0 1px $commonColor7;
+            }
+        }
+
+        button {
+            position: relative;
+            width: px(400);
+            height: px(80);
+            margin-top: px(52);
+            padding-left: px(60);
+            transition: background-color .2s, color .2s;
+            border: 1px solid $mainColor4;
+            border-radius: 4px;
+            outline: 0;
+            color: $mainColor4;
+            font-size: px(32);
+            text-align: center;
+            text-decoration: none;
+
+            i {
+                position: absolute;
+                top: px(20);
+                left: px(24);
+                width: px(50);
+
+                svg {
+                    width: px(46);
+
+                    path {
+                        transition: fill .2s;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: $mainColor4;
+                color: $mainColor1;
+
+                i {
+                    svg {
+                        path {
+                            fill: $mainColor1;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
