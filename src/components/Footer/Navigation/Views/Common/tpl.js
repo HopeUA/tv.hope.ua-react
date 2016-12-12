@@ -1,17 +1,16 @@
 import React, { PropTypes } from 'react';
-import Styles from './main.scss';
+import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
-import InlineSvg from 'components/InlineSvg/component';
 
-import Instagram from 'components/Footer/Navigation/Assets/socialInstagram.svg';
-import Facebook from 'components/Footer/Navigation/Assets/socialFacebook.svg';
-import Twitter from 'components/Footer/Navigation/Assets/socialTwitter.svg';
-import YouTube from 'components/Footer/Navigation/Assets/socialYoutube.svg';
-import Ok from 'components/Footer/Navigation/Assets/socialOk.svg';
-import Vk from 'components/Footer/Navigation/Assets/socialVk.svg';
-import Top from 'components/Footer/Navigation/Assets/toTop.svg';
+import Instagram from 'components/Assets/Social/instagram';
+import Facebook from 'components/Assets/Social/Fb';
+import Twitter from 'components/Assets/Social/Tw';
+import YouTube from 'components/Assets/Social/YouTube';
+import Ok from 'components/Assets/Social/Ok';
+import Vk from 'components/Assets/Social/Vk';
+import Top from 'components/Assets/Icons/Top';
 
 export default function Navigation(props) {
     const templates = [
@@ -38,22 +37,18 @@ export default function Navigation(props) {
     const networks = (
         <section className={ Styles.networks }>
             { [
-                BreakPoints.tabletPortrait.name,
-                BreakPoints.tabletLandscape.name,
-                BreakPoints.desktop.name,
-                BreakPoints.desktopHD.name,
-                BreakPoints.desktopMega.name,
-                BreakPoints.desktopWide.name
-            ].indexOf(mediaType) !== -1 ? (
+                BreakPoints.phonePortrait.name,
+                BreakPoints.phoneLandscape.name
+            ].indexOf(mediaType) === -1 ? (
                 <h1>Соц. сети</h1>
             ) : null }
             <div>
-                <a href="#" className={ Styles.twitterIcon }><InlineSvg content={ Twitter }/></a>
-                <a href="#" className={ Styles.facebookIcon }><InlineSvg content={ Facebook }/></a>
-                <a href="#" className={ Styles.okIcon }><InlineSvg content={ Ok }/></a>
-                <a href="#" className={ Styles.youtubeIcon }><InlineSvg content={ YouTube }/></a>
-                <a href="#" className={ Styles.vkIcon }><InlineSvg content={ Vk }/></a>
-                <a href="#" className={ Styles.instagramIcon }><InlineSvg content={ Instagram }/></a>
+                <a href="#" className={ Styles.twitterIcon }><Twitter/></a>
+                <a href="#" className={ Styles.facebookIcon }><Facebook/></a>
+                <a href="#" className={ Styles.okIcon }><Ok/></a>
+                <a href="#" className={ Styles.youtubeIcon }><YouTube/></a>
+                <a href="#" className={ Styles.vkIcon }><Vk/></a>
+                <a href="#" className={ Styles.instagramIcon }><Instagram/></a>
             </div>
         </section>
     );
@@ -67,20 +62,16 @@ export default function Navigation(props) {
 
     const copyright = (
         <footer>
-            <div>
-                <p><strong><span>&copy;</span> 2009-2016</strong> Телеканал
-                    <strong> «Надія»</strong>. Всі права захищені.</p>
-                <span>Дизайн: Мирослав Джулай</span>
+            <div className={ Styles.container }>
+                <div className={ Styles.copyright }><strong>2009-2016</strong> Телеканал
+                    <strong> «Надія»</strong>. Всі права захищені.</div>
+                <div className={ Styles.designer }>Дизайн: Мирослав Джулай</div>
             </div>
             { [
-                BreakPoints.tabletPortrait.name,
-                BreakPoints.tabletLandscape.name,
-                BreakPoints.desktop.name,
-                BreakPoints.desktopHD.name,
-                BreakPoints.desktopMega.name,
-                BreakPoints.desktopWide.name
-            ].indexOf(mediaType) !== -1 ? (
-                <a href="#"><InlineSvg className={ Styles.arrow } content={ Top }/></a>
+                BreakPoints.phonePortrait.name,
+                BreakPoints.phoneLandscape.name
+            ].indexOf(mediaType) === -1 ? (
+                <a href="#"><Top/></a>
             ) : null }
         </footer>
     );
@@ -102,14 +93,8 @@ export default function Navigation(props) {
                         </section>
 
                         { [
-                            BreakPoints.phoneLandscape.name,
-                            BreakPoints.tabletPortrait.name,
-                            BreakPoints.tabletLandscape.name,
-                            BreakPoints.desktop.name,
-                            BreakPoints.desktopHD.name,
-                            BreakPoints.desktopMega.name,
-                            BreakPoints.desktopWide.name
-                        ].indexOf(mediaType) !== -1 ? (
+                            BreakPoints.phonePortrait.name
+                        ].indexOf(mediaType) === -1 ? (
                             info
                         ) : null }
 
@@ -122,14 +107,8 @@ export default function Navigation(props) {
                         </section>
 
                         { [
-                            BreakPoints.phonePortrait.name,
-                            BreakPoints.tabletPortrait.name,
-                            BreakPoints.tabletLandscape.name,
-                            BreakPoints.desktop.name,
-                            BreakPoints.desktopHD.name,
-                            BreakPoints.desktopMega.name,
-                            BreakPoints.desktopWide.name
-                        ].indexOf(mediaType) !== -1 ? (
+                            BreakPoints.phoneLandscape.name
+                        ].indexOf(mediaType) === -1 ? (
                             networks
                         ) : null }
 
@@ -139,25 +118,15 @@ export default function Navigation(props) {
                         </section>
 
                         { [
-                            BreakPoints.phoneLandscape.name,
-                            BreakPoints.tabletPortrait.name,
-                            BreakPoints.tabletLandscape.name,
-                            BreakPoints.desktop.name,
-                            BreakPoints.desktopHD.name,
-                            BreakPoints.desktopMega.name,
-                            BreakPoints.desktopWide.name
-                        ].indexOf(mediaType) !== -1 ? (
+                            BreakPoints.phonePortrait.name
+                        ].indexOf(mediaType) === -1 ? (
                             rights
                         ) : null }
 
                         { [
-                            BreakPoints.tabletPortrait.name,
-                            BreakPoints.tabletLandscape.name,
-                            BreakPoints.desktop.name,
-                            BreakPoints.desktopHD.name,
-                            BreakPoints.desktopMega.name,
-                            BreakPoints.desktopWide.name
-                        ].indexOf(mediaType) !== -1 ? (
+                            BreakPoints.phonePortrait.name,
+                            BreakPoints.phoneLandscape.name
+                        ].indexOf(mediaType) === -1 ? (
                             copyright
                         ) : null }
                     </div>
