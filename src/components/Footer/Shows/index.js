@@ -5,7 +5,7 @@ import BreakPoints from 'components/PixelPerfect/breakpoints';
 import items from './Mock/data.json';
 
 export default function Component(props) {
-    const { mediaType } = props.mediaType;
+    const { mediaType } = props;
 
     return [BreakPoints.phonePortrait.name,
             BreakPoints.phoneLandscape.name
