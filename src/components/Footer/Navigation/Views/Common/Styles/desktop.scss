@@ -1,6 +1,7 @@
 & {
     width: 100%;
-    background-color: $color1;
+    border-top: solid 2px $commonColor4;
+    background-color: $mainColor1;
 
     .mainContent {
         display: flex;
@@ -8,12 +9,12 @@
         flex-flow: row wrap;
         align-items: flex-start;
         justify-content: space-between;
-        padding: px(74) px(78) 0 px(80);
+        padding: px(74) px(80) 0;
 
         section {
             h1 {
                 margin-bottom: px(32);
-                color: $color2;
+                color: $commonColor1;
                 font-size: px(32);
             }
 
@@ -24,13 +25,13 @@
             }
 
             a {
-                transition: color $transitionDuration;
-                color: $color2;
+                transition: color .2s;
+                color: $commonColor1;
                 font-size: px(26);
                 text-decoration: none;
 
                 &:hover {
-                    color: $color11;
+                    color: $mainColor4;
                 }
             }
 
@@ -72,7 +73,7 @@
 
                     i {
                         path {
-                            fill: $color3;
+                            fill: $tempColor12;
                         }
                     }
                 }
@@ -82,7 +83,7 @@
 
                     i {
                         path {
-                            fill: $color4;
+                            fill: $tempColor6;
                         }
                     }
                 }
@@ -92,7 +93,7 @@
 
                     i {
                         path {
-                            fill: $color5;
+                            fill: $tempColor7;
                         }
                     }
                 }
@@ -103,7 +104,7 @@
                     i {
                         path,
                         polygon {
-                            fill: $color6;
+                            fill: $tempColor8;
                         }
                     }
                 }
@@ -115,7 +116,7 @@
                         width: px(46);
 
                         path {
-                            fill: $color7;
+                            fill: $tempColor9;
                         }
                     }
                 }
@@ -125,7 +126,7 @@
 
                     i {
                         path {
-                            fill: $color8;
+                            fill: $tempColor10;
                         }
                     }
                 }
@@ -176,30 +177,45 @@
             margin-top: px(78);
             margin-bottom: px(56);
 
-            p {
-                margin-top: px(6);
-                margin-bottom: px(-2);
-                font-size: px(26);
+            .container {
+                position: relative;
+                margin-left: px(36);
 
-                span {
-                    padding: 0 px(6) 0 0;
-                    color: $color2;
+                &::before {
+                    display: block;
+                    position: absolute;
+                    top: px(6);
+                    left: px(-36);
+                    color: $tempColor5;
                     font-size: px(26);
-                    font-weight: bold;
+                    content: '©';
+                }
+
+                .copyright {
+                    margin-top: px(6);
+                    margin-bottom: px(-2);
+                    font-size: px(26);
+
+                    span {
+                        padding: 0 px(6) 0 0;
+                        color: $commonColor1;
+                        font-size: px(26);
+                        font-weight: bold;
+                    }
+                }
+
+                .designer {
+                    margin-top: px(8);
+                    color: $tempColor11;
+                    font-size: px(22);
                 }
             }
 
-            span {
-                padding-left: px(38);
-                color: $color10;
-                font-size: px(22);
-            }
-
-            .arrow {
+            i {
                 width: px(80);
 
                 path {
-                    fill: $color9;
+                    fill: $commonColor7;
                 }
             }
         }
