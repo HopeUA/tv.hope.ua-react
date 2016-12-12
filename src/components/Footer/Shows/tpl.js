@@ -4,7 +4,7 @@ import Shows from './Views/Desktop/tpl';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
 export default function Component(props) {
-    const { mediaType } = props.mediaType;
+    const { mediaType } = props;
 
     return [BreakPoints.phonePortrait.name,
         BreakPoints.phoneLandscape.name
