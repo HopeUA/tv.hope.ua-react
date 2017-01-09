@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import Styles from './Styles/main.scss';
-import cx from 'classnames';
 
 import Instagram from 'components/Assets/Social/instagram';
 import Facebook from 'components/Assets/Social/Fb';
@@ -14,47 +13,11 @@ import Hamburger from 'components/Assets/Icons/Hamburger';
 import Palette from 'components/Assets/Palette';
 
 export default function Header(props) {
-    const { handleMenu, isMenuVisible, language, socialLinks, menu } = props;
+    const { handleMenu, isMenuVisible } = props;
 
     const style = {
         visibility: isMenuVisible ? 'visible' : 'hidden'
     };
-
-    const ukClass = cx({
-        [Styles.active]: language === 'uk',
-        [Styles.language]: true
-    });
-
-    const ruClass = cx({
-        [Styles.active]: language === 'ru',
-        [Styles.language]: true
-    });
-
-    const itemsMenu1 = menu.main.map((el) => {
-        const target = el.external ? {
-            'target': '_blank',
-            'rel': 'noopener noreferrer'
-        } : null;
-
-        return (
-            <li key={ el.id }>
-                <a { ...target } href={ el.url }>{ el.title }</a>
-            </li>
-        );
-    });
-
-    const itemsMenu2 = menu.sub.map((el) => {
-        const target = el.external ? {
-            'target': '_blank',
-            'rel': 'noopener noreferrer'
-        } : null;
-
-        return (
-            <li key={ el.id }>
-                <a target={ target } href={ el.url }>{ el.title }</a>
-            </li>
-        );
-    });
 
     return (
         <section className={ Styles.headerComponent }>
@@ -67,25 +30,47 @@ export default function Header(props) {
             <div className={ Styles.dynamicPart } style={ style }>
                 <div className={ Styles.lists }>
                     <ul className={ Styles.menu1 }>
-                        { itemsMenu1 }
+                        <li>
+                            <a href="#">Все программы</a>
+                        </li>
+                        <li>
+                            <a href="#">ТВ программа</a>
+                        </li>
+                        <li>
+                            <a href="#">Пожертвовать</a>
+                        </li>
+                        <li>
+                            <a href="#">ТВ Онлайн</a>
+                        </li>
                     </ul>
                     <ul className={ Styles.menu2 }>
-                        { itemsMenu2 }
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#">Где нас смотреть?</a>
+                        </li>
+                        <li>
+                            <a href="#">О Телеканале</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
                     </ul>
                 </div>
                 <div className={ Styles.footer }>
                     <div className={ Styles.social }>
-                        <a href={ socialLinks.youtube } className={ Styles.youtubeIcon }><YouTube/></a>
-                        <a href={ socialLinks.instagram } className={ Styles.instagramIcon }><Instagram/></a>
-                        <a href={ socialLinks.twitter } className={ Styles.twitterIcon }><Twitter/></a>
-                        <a href={ socialLinks.vk } className={ Styles.vkIcon }><Vk/></a>
-                        <a href={ socialLinks.facebook } className={ Styles.facebookIcon }><Facebook/></a>
-                        <a href={ socialLinks.ok } className={ Styles.okIcon }><Ok/></a>
+                        <a href="#" className={ Styles.youtubeIcon }><YouTube/></a>
+                        <a href="#" className={ Styles.instagramIcon }><Instagram/></a>
+                        <a href="#" className={ Styles.twitterIcon }><Twitter/></a>
+                        <a href="#" className={ Styles.vkIcon }><Vk/></a>
+                        <a href="#" className={ Styles.facebookIcon }><Facebook/></a>
+                        <a href="#" className={ Styles.okIcon }><Ok/></a>
                     </div>
                     <div className={ Styles.languages }>
                         <span className={ Styles.choose }>Язык сайта:</span>
-                        <span className={ ruClass }>Русский</span>
-                        <span className={ ukClass }>Украинский</span>
+                        <span className={ Styles.active }>Русский</span>
+                        <span className={ Styles.language }>Украинский</span>
                     </div>
                 </div>
             </div>
