@@ -51,7 +51,7 @@ export default function Header(props) {
 
         return (
             <li key={ el.id }>
-                <a target={ target } href={ el.url }>{ el.title }</a>
+                <a { ...target } href={ el.url }>{ el.title }</a>
             </li>
         );
     });
