@@ -1,0 +1,86 @@
+@import 'common';
+
+& {
+    .head {
+        padding: 0 px(60);
+    }
+
+    .dynamicPart {
+        .lists {
+            .menu1 {
+                li {
+                    padding: 0 0 0 px(57);
+                }
+            }
+
+            .menu2 {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 px(78);
+
+                li {
+                    flex-grow: 1;
+                    width: auto;
+                    padding: 0;
+                    border-bottom: 1px solid #17272b;
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        padding: 0;
+                        border: none;
+                    }
+                }
+
+                .active {
+                    border-bottom: 2px solid $mainColor4;
+
+                    &::before {
+                        top: auto;
+                        bottom: -2px;
+                        left: -3px;
+                        width: 6px;
+                        height: 4px;
+                        background: $commonColor10;
+                    }
+
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        bottom: -2px;
+                        right: -3px;
+                        width: 6px;
+                        height: 4px;
+                        background: $commonColor10;
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        .footer {
+            border-top: none;
+
+            .social {
+                position: relative;
+                padding: 0 px(140);
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    width: px(776);
+                    height: 1px;
+                    background: #17272b;
+                    content: '';
+                }
+            }
+
+            .languages {
+                height: px(130);
+                padding: 0 px(284);
+                border-top: none;
+            }
+        }
+    }
+}

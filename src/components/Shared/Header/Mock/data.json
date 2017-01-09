@@ -1,0 +1,65 @@
+{
+  "menu": {
+    "main": [
+      {
+        "id": "menu1",
+        "title": "Все программы",
+        "url": "#",
+        "external": true
+      },
+      {
+        "id": "menu2",
+        "title": "ТВ программа",
+        "url": "#",
+        "external": false
+      },
+      {
+        "id": "menu3",
+        "title": "Пожертвовать",
+        "url": "#",
+        "external": false
+      },
+      {
+        "id": "menu4",
+        "title": "ТВ Онлайн",
+        "url": "#",
+        "external": false
+      }
+    ],
+    "sub": [
+      {
+        "id": "menu1",
+        "title": "Новости",
+        "url": "#",
+        "external": true
+      },
+      {
+        "id": "menu2",
+        "title": "Где нас смотреть",
+        "url": "#",
+        "external": true
+      },
+      {
+        "id": "menu3",
+        "title": "О телеканале",
+        "url": "#",
+        "external": true
+      },
+      {
+        "id": "menu4",
+        "title": "Контакты",
+        "url": "#",
+        "external": true
+      }
+    ]
+  },
+  "language": "uk",
+  "socialLinks": {
+      "youtube": "#",
+      "vk": "#",
+      "ok": "#",
+      "facebook": "#",
+      "instagram": "#",
+      "twitter": "#"
+  }
+}
