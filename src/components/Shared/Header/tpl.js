@@ -4,7 +4,6 @@ import Mobile from './Views/Mobile/tpl';
 //
 // import PixelPerfect from 'vendor/PixelPerfect/component';
 // import BreakPoints from 'components/PixelPerfect/breakpoints';
-import Data from './Mock/data.json';
 
 export default class Header extends Component {
     state = {
@@ -29,12 +28,9 @@ export default class Header extends Component {
 
         return (
             <Mobile
-                language={ Data.language }
                 mediaType={ mediaType }
                 isMenuVisible={ this.state.isMenuVisible }
                 handleMenu={ this.handleMenu }
-                socialLinks={ Data.socialLinks }
-                menu={ Data.menu }
             />
         );
     }
