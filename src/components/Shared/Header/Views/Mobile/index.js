@@ -32,9 +32,9 @@ export default function Header(props) {
 
     const itemsMenu1 = menu.main.map((el) => {
         const target = el.external ? {
-                'target': '_blank',
-                'rel': 'noopener noreferrer'
-            } : null;
+            'target': '_blank',
+            'rel': 'noopener noreferrer'
+        } : null;
 
         return (
             <li key={ el.id }>
@@ -45,9 +45,9 @@ export default function Header(props) {
 
     const itemsMenu2 = menu.sub.map((el) => {
         const target = el.external ? {
-                'target': '_blank',
-                'rel': 'noopener noreferrer'
-            } : null;
+            'target': '_blank',
+            'rel': 'noopener noreferrer'
+        } : null;
 
         return (
             <li key={ el.id }>
