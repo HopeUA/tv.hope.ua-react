@@ -1,0 +1,21 @@
+.headerComponent {
+    @import 'theme/MediaQueries';
+    @import 'theme/PxFunction';
+    @import 'theme/Palette';
+
+    @function px($px) {
+        @return pxMedia($px, phonePortrait)
+    }
+
+    @media #{$phonePortrait} {
+        @import 'phonePortrait';
+    }
+
+    @function px($px) {
+        @return pxMedia($px, phoneLandscape)
+    }
+
+    @media #{$phoneLandscape} {
+        @import 'phoneLandscape';
+    }
+}

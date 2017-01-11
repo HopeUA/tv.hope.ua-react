@@ -1,0 +1,216 @@
+& {
+    width: 100%;
+    background: $commonColor10;
+    position: relative;
+    bottom: 0;
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: px(140);
+        padding: 0 px(40);
+        background: #0b2327;
+        border-bottom: 1px solid #17272b;
+
+        a {
+            width: px(256);
+        }
+
+        span {
+            width: px(40);
+        }
+    }
+
+    .dynamicPart {
+        position: absolute;
+        width: 100%;
+        background: $commonColor10;
+        z-index: 10;
+
+        .lists {
+            width: 100%;
+
+            .menu1 {
+                li {
+                    width: 100%;
+                    height: px(130);
+                    padding: 0 0 0 px(38);
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        padding-left: px(20);
+                        color: $commonColor11;
+                        font-size: px(34);
+                        font-weight: bold;
+                        border-bottom: 1px solid #17272b;
+                    }
+                }
+
+                .active {
+                    position: relative;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: px(10);
+                        height: 100%;
+                        background: $mainColor4;
+                        content: '';
+                    }
+
+                    a {
+                        color: $mainColor1;
+                    }
+                }
+            }
+
+            .menu2 {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                    height: px(130);
+                    padding: 0 0 0 px(38);
+
+                    &:last-child {
+                        a {
+                            border: none;
+                        }
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        padding-left: px(20);
+                        color: $commonColor12;
+                        font-size: px(30);
+                        border-bottom: 1px solid #17272b;
+                    }
+                }
+
+                .active {
+                    position: relative;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: px(10);
+                        height: 100%;
+                        background: $mainColor4;
+                        content: '';
+                    }
+
+                    a {
+                        color: $mainColor1;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            padding: 0 px(40);
+            border-top: 1px solid #17272b;
+
+            .social {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: px(140);
+
+                i {
+                    width: px(60);
+
+                }
+
+                .twitterIcon {
+                    i {
+                        path {
+                            fill: $tempColor12;
+                        }
+                    }
+                }
+
+                .facebookIcon {
+                    i {
+                        path {
+                            fill: $tempColor6;
+                        }
+                    }
+                }
+
+                .okIcon {
+                    i {
+                        path {
+                            fill: $tempColor7;
+                        }
+                    }
+                }
+
+                .youtubeIcon {
+                    i {
+                        path,
+                        polygon {
+                            fill: $tempColor8;
+                        }
+                    }
+                }
+
+                .vkIcon {
+                    i {
+                        path {
+                            fill: $tempColor9;
+                        }
+                    }
+                }
+
+                .instagramIcon {
+                    i {
+                        path {
+                            fill: $tempColor10;
+                        }
+                    }
+                }
+            }
+
+            .languages {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: px(140);
+                padding: 0 px(36) 0 px(30);
+                border-top: 1px solid #17272b;
+
+                .choose {
+                    font-size: px(26);
+                    font-style: italic;
+                    color: $tempColor13;
+                }
+
+                .language {
+                    font-size: px(26);
+                    color: $commonColor12;
+                }
+
+                .active {
+                    padding: px(16) px(18);
+                    border-radius: px(12);
+                    background: $mainColor4;
+                    color: $mainColor1;
+                    font-size: px(26);
+                }
+            }
+        }
+    }
+}
