@@ -1,0 +1,15 @@
+@import 'common';
+
+& {
+    .wrap {
+        .content {
+            .controlBlock {
+                padding: 0 px(36);
+            }
+
+            .text {
+                left: px(230);
+            }
+        }
+    }
+}

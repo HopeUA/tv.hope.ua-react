@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ban1",
+    "image": {
+      "mobile": "https://cdn.hope.ua/web/tv.hope.ua/banners/ban1-mobile.jpg",
+      "desktop": "https://cdn.hope.ua/web/tv.hope.ua/banners/ban1-desktop.jpg"
+    },
+    "url": "https://tv.hope.ua/",
+    "text": {
+      "time": "22:30",
+      "day": "воскресенье",
+      "title": "Счастливой субботы",
+      "subtitle": "В гостях сегодня семья Киналы"
+    },
+    "averageColor": "#c1c1c1"
+  },
+  {
+    "id": "ban2",
+    "image": {
+      "mobile": "https://cdn.hope.ua/web/tv.hope.ua/banners/ban2-mobile.jpg",
+      "desktop": "https://cdn.hope.ua/web/tv.hope.ua/banners/ban2-desktop.jpg"
+    },
+    "url": "https://donate.hope.ua/",
+    "text": {
+      "time": "12:25",
+      "day": "понедельник",
+      "title": "Закон Божий и закон Христов",
+      "subtitle": "В гостях сегодня Олег Харламов"
+    },
+    "averageColor": "#ff0000"
+  },
+  {
+    "id": "ban3",
+    "image": {
+      "mobile": "https://cdn.hope.ua/web/tv.hope.ua/banners/ban3-mobile.jpg",
+      "desktop": "https://cdn.hope.ua/web/tv.hope.ua/banners/ban3-desktop.jpg"
+    },
+    "url": "http://lifesource.com.ua/",
+    "text": {
+      "time": "08:55",
+      "day": "понедельник",
+      "title": "Закон Божий и закон Христов",
+      "subtitle": "В гостях сегодня Олег Харламов"
+    },
+    "averageColor": "#00ff00"
+  }
+]
