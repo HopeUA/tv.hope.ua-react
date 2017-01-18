@@ -3,3 +3,4 @@ export Episodes from './Episodes';
 export Top from './Top';
 export Live from './Live';
 export Shows from './Shows';
+export Banner from './Banner';

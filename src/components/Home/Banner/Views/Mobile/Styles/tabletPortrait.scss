@@ -1,0 +1,37 @@
+@import 'common';
+
+& {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+
+    .image {
+        height: px(700);
+    }
+
+    .dots {
+        display: flex;
+        position: absolute;
+        bottom: px(30);
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .item {
+            width: px(16);
+            height: px(16);
+            margin-right: px(22);
+            border: 2px solid $mainColor1;
+            border-radius: 50%;
+            opacity: .7;
+        }
+
+        .activeItem {
+            width: px(20);
+            height: px(20);
+            margin-right: px(22);
+            border-radius: 50%;
+            background: $mainColor3;
+        }
+    }
+}

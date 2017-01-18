@@ -8,16 +8,13 @@ export const STATE_ACTIVE = 'active';
 const svg = (Component, { width = 0, height = 0 } = {}) => {
     return class Svg extends Component {
         static propTypes = {
-            className: PropTypes.object
+            className: PropTypes.object,
+            onClick: PropTypes.func
         };
 
-        constructor(props) {
-            super(props);
-
-            this.state = {
-                state: STATE_NORMAL
-            };
-        }
+        state = {
+            state: STATE_NORMAL
+        };
 
         onMouseEnter = () => {
             this.setState({
@@ -41,7 +38,7 @@ const svg = (Component, { width = 0, height = 0 } = {}) => {
         };
 
         render() {
-            const { className } = this.props;
+            const { className, onClick } = this.props;
             const rootStyle = {
                 display: 'block',
                 lineHeight: 0
@@ -60,6 +57,7 @@ const svg = (Component, { width = 0, height = 0 } = {}) => {
                     onMouseLeave={ this.onMouseLeave }
                     onMouseDown={ this.onMouseDown }
                     onMouseUp={ this.onMouseUp }
+                    onClick={ onClick }
                 >
                     <svg version="1.1" viewBox={ `0 0 ${width} ${height}` }>
                         <Component { ...componentProps }/>

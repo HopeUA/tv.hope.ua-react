@@ -1,0 +1,15 @@
+@import 'common';
+
+& {
+    .wrap {
+        .content {
+            .controls {
+                padding: 0 px(100);
+            }
+
+            .text {
+                left: px(380);
+            }
+        }
+    }
+}
