@@ -73,7 +73,7 @@ export default class Desktop extends Component {
             transform: `translateX(${progress - 100}%)`
         };
 
-        const arrow = [
+        const showCircle = [
             BreakPoints.tabletLandscape.name,
             BreakPoints.desktop.name,
             BreakPoints.desktopWide.name].indexOf(mediaType) !== -1
@@ -95,7 +95,7 @@ export default class Desktop extends Component {
             );
         });
 
-        const slide = items[this.state.index];
+        const slide = items[index];
         const text = slide.text;
 
         const imageStyle = {
@@ -121,14 +121,14 @@ export default class Desktop extends Component {
                             <ArrowBanner
                                 className={ Styles.arrowLeft }
                                 color={ Palette.paletteColor6 }
-                                showCircle={ arrow }
+                                showCircle={ showCircle }
                                 onClick={ this.togglePrevSlide }
                             />
                             <Play className={ Styles.play } color={ Palette.paletteColor6 }/>
                             <ArrowBanner
                                 className={ Styles.arrowRight }
                                 color={ Palette.paletteColor6 }
-                                showCircle={ arrow }
+                                showCircle={ showCircle }
                                 onClick={ this.toggleNextSlide }
                             />
                         </div>

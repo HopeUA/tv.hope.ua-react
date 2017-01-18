@@ -18,15 +18,15 @@ export default class BannerArrow extends Component {
     };
 
     render() {
-        const { color, state } = this.props;
+        const { color, state, showCircle } = this.props;
         const hoverStyles = {
             opacity: state === STATE_ACTIVE ? 0.8 : 1
         };
         const circleStyles = {
-            display: this.props.showCircle ? 'none' : 'block'
+            display: showCircle ? 'none' : 'block'
         };
 
-        const hover = this.props.showCircle ? (
+        const hover = showCircle ? (
             <path
                 fill={ color } style={ hoverStyles } d="M87.9,63c-0.8-0.8-2.1-0.8-2.9,0c-0.8,0.8-0.8,2.1,0,2.9l33.6,
                 33.6L85,133c-0.8,0.8-0.8,2.1,0,2.9c0.8,0.8,2.1,0.8,2.9,0l35-35c0.4-0.4,0.6-0.9,
