@@ -81,8 +81,8 @@ export default class Desktop extends Component {
 
         const dots = items.map((item, index) => {
             const className = cx({
-                [Styles.activeItem]: this.state.index === index,
-                [Styles.item]: this.state.index !== index
+                [Styles.item]: true,
+                [Styles.active]: this.state.index === index
             });
 
             return (

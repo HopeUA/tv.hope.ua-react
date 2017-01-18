@@ -42,16 +42,13 @@
         justify-content: center;
         width: 100%;
 
-        span {
+        .item {
             &:last-child {
                 margin-right: 0;
             }
         }
 
         .item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: px(20);
             height: px(20);
             margin-right: px(20);
@@ -66,13 +63,15 @@
             }
         }
 
-        .activeItem {
-            width: px(20);
-            height: px(20);
-            margin-right: px(20);
-            border-radius: 50%;
+        .active {
             background: $mainColor3;
-            cursor: pointer;
+            border: none;
+            transform: scale(1);
+            opacity: 1;
+
+            &:hover {
+                background: $mainColor3;
+            }
         }
     }
 

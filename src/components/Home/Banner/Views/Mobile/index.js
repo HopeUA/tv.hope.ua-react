@@ -40,10 +40,10 @@ export default class Mobile extends Component {
             );
         });
 
-        const dots = items.map((item, i) => {
+        const dots = items.map((item, index) => {
             const className = cx({
-                [Styles.activeItem]: this.state.index === i,
-                [Styles.item]: this.state.index !== i
+                [Styles.item]: true,
+                [Styles.active]: this.state.index === index
             });
 
             return (

@@ -11,8 +11,8 @@ export default function Mobile() {
 
     for (let i = 0; i < 5; i++) {
         const className = cx({
-            [Styles.activeItem]: i === 3,
-            [Styles.item]: i !== 3
+            [Styles.item]: true,
+            [Styles.active]: i === 3
         });
         dots.push(
             <span key={ i } className={ className }/>

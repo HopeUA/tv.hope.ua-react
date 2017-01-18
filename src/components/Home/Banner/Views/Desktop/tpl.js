@@ -25,8 +25,8 @@ export default function Desktop(props) {
 
     for (let i = 0; i < 5; i++) {
         const className = cx({
-            [Styles.activeItem]: i === 1,
-            [Styles.item]: i !== 1
+            [Styles.item]: true,
+            [Styles.active]: i === 1
         });
         dots.push(
             <span key={ i } className={ className }/>
