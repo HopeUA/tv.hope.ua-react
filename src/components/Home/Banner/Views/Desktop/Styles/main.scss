@@ -4,10 +4,6 @@
 
 .bannerComponent {
     @function px($px) {
-        @return pxMedia($px, phonePortrait)
-    }
-
-    @function px($px) {
         @return pxMedia($px, tabletLandscape)
     }
 

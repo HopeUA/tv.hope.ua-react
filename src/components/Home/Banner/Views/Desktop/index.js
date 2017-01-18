@@ -13,7 +13,7 @@ const TRANSITION_DURATION = 5000;
 const ITERATION_DURATION = 10;
 
 export default class Desktop extends Component {
-    propTypes = {
+    static propTypes = {
         mediaType: PropTypes.string,
         items: PropTypes.array
     };
@@ -121,14 +121,14 @@ export default class Desktop extends Component {
                             <ArrowBanner
                                 className={ Styles.arrowLeft }
                                 color={ Palette.paletteColor6 }
-                                isShowCircle={ arrow }
+                                showCircle={ arrow }
                                 onClick={ this.togglePrevSlide }
                             />
                             <Play className={ Styles.play } color={ Palette.paletteColor6 }/>
                             <ArrowBanner
                                 className={ Styles.arrowRight }
                                 color={ Palette.paletteColor6 }
-                                isShowCircle={ arrow }
+                                showCircle={ arrow }
                                 onClick={ this.toggleNextSlide }
                             />
                         </div>

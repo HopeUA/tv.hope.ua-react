@@ -11,7 +11,7 @@ import ArrowBanner from 'components/Assets/Icons/BannerArrow';
 export default function Desktop(props) {
     const { mediaType } = props;
 
-    const background = {
+    const imageStyle = {
         backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/banners/ban1-desktop.jpg)'
     };
 
@@ -21,14 +21,14 @@ export default function Desktop(props) {
         BreakPoints.desktopWide.name].indexOf(mediaType) !== -1
     ;
 
-    const controlItems = [];
+    const dots = [];
 
     for (let i = 0; i < 5; i++) {
         const className = cx({
             [Styles.activeItem]: i === 1,
             [Styles.item]: i !== 1
         });
-        controlItems.push(
+        dots.push(
             <span key={ i } className={ className }/>
         );
     }
@@ -36,7 +36,7 @@ export default function Desktop(props) {
     return (
         <section className={ Styles.bannerComponent }>
             <div className={ Styles.cover }>
-                <div className={ Styles.image } style={ background }></div>
+                <div className={ Styles.image } style={ imageStyle }></div>
             </div>
             <div className={ Styles.wrap }>
                 <div className={ Styles.content }>
@@ -46,7 +46,7 @@ export default function Desktop(props) {
                         <h1 className={ Styles.title }>Закон Божий и закон Христов</h1>
                         <h2 className={ Styles.subTitle }>В гостях сегодня<br/>Олег Харламов</h2>
                     </div>
-                    <div className={ Styles.controlBlock }>
+                    <div className={ Styles.controls }>
                         { arrow }
                         <ArrowBanner
                             className={ Styles.arrowLeft }
@@ -65,8 +65,8 @@ export default function Desktop(props) {
             <div className={ Styles.loader }>
                 <div className={ Styles.progress }></div>
             </div>
-            <div className={ Styles.controlPanel }>
-                { controlItems }
+            <div className={ Styles.dots }>
+                { dots }
             </div>
         </section>
     );

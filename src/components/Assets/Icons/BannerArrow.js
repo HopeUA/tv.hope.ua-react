@@ -13,7 +13,7 @@ export default class BannerArrow extends Component {
         color: PropTypes.string,
         state: PropTypes.string,
         isPlaying: PropTypes.boolean,
-        isShowCircle: PropTypes.boolean,
+        showCircle: PropTypes.boolean,
         index: PropTypes.index
     };
 
@@ -23,10 +23,10 @@ export default class BannerArrow extends Component {
             opacity: state === STATE_ACTIVE ? 0.8 : 1
         };
         const circleStyles = {
-            display: this.props.isShowCircle ? 'none' : 'block'
+            display: this.props.showCircle ? 'none' : 'block'
         };
 
-        const hover = this.props.isShowCircle ? (
+        const hover = this.props.showCircle ? (
             <path
                 fill={ color } style={ hoverStyles } d="M87.9,63c-0.8-0.8-2.1-0.8-2.9,0c-0.8,0.8-0.8,2.1,0,2.9l33.6,
                 33.6L85,133c-0.8,0.8-0.8,2.1,0,2.9c0.8,0.8,2.1,0.8,2.9,0l35-35c0.4-0.4,0.6-0.9,

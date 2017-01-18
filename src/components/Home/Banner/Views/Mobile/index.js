@@ -7,7 +7,7 @@ import Swipeable from 'vendor/Swipeable/index';
 
 export default class Mobile extends Component {
 
-    propTypes = {
+    static propTypes = {
         items: PropTypes.array,
         mediaType: PropTypes.string
     };
@@ -16,7 +16,7 @@ export default class Mobile extends Component {
         index: 0
     };
 
-    handleChangeIndex = (index) => {
+    toggleSlide = (index) => {
         this.setState({
             index
         });
@@ -25,22 +25,22 @@ export default class Mobile extends Component {
     render() {
         const { items, mediaType } = this.props;
 
-        const bannerItems = items.map((el) => {
-            const background = {
+        const slides = items.map((el) => {
+            const imageStyle = {
                 backgroundImage: `url(${el.image.mobile})`
             };
 
             return (
                 <a
                     className={ Styles.image }
-                    style={ background }
+                    style={ imageStyle }
                     key={ el.id }
                     href={ el.url }
                 />
             );
         });
 
-        const controlItems = items.map((item, i) => {
+        const dots = items.map((item, i) => {
             const className = cx({
                 [Styles.activeItem]: this.state.index === i,
                 [Styles.item]: this.state.index !== i
@@ -53,15 +53,15 @@ export default class Mobile extends Component {
 
         return (
             <section className={ Styles.bannerComponent }>
-                <Swipeable onChangeIndex={ this.handleChangeIndex }>
-                    { bannerItems }
+                <Swipeable onChangeIndex={ this.toggleSlide }>
+                    { slides }
                 </Swipeable>
                 {
                     [BreakPoints.phonePortrait.name,
                         BreakPoints.phoneLandscape.name
                     ].indexOf(mediaType) !== -1 ? null : (
                         <div className={ Styles.controlPanel }>
-                            { controlItems }
+                            { dots }
                         </div>
                     )
                 }
