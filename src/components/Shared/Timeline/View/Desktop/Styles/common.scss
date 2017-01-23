@@ -1,13 +1,11 @@
 & {
     position: absolute;
     width: 100%;
-    margin-top: px(-15);
+    margin-top: px(-14);
     overflow: hidden;
     z-index: 2;
 
     .scheduler {
-        //background-color: $mainColor6;
-
         .clock {
             display: flex;
             position: absolute;
@@ -57,7 +55,7 @@
                         flex-shrink: 0;
                         height: px(6);
                         border-radius: 2px;
-                        background-color: $commonColor14;
+                        background-color: $tempColor18;
                     }
 
                     .next {
@@ -72,7 +70,7 @@
 
                     .time {
                         transition: color .2s;
-                        color: $commonColor13;
+                        color: $tempColor17;
                         font-size: px(26);
                         font-weight: 700;
                     }
@@ -105,7 +103,7 @@
                     }
 
                     .title {
-                        color: $commonColor13;
+                        color: $tempColor17;
                     }
                 }
             }
