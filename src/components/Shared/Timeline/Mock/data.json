@@ -1,0 +1,578 @@
+[
+    {
+      "id": "5877eeb50077ef11005086b7",
+      "date": "2017-01-23T09:00:00.000Z",
+      "show": {
+        "uid": "MHKU",
+        "title": "Ранок Надії",
+        "description": {
+          "short": "Почніть день з надією!"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/MHKU/MHKU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "MHKU"
+      },
+      "episode": {
+        "language": "",
+        "image": "",
+        "description": "",
+        "title": "23 січня, 2017 р.",
+        "code": "MHKU23012017",
+        "uid": ""
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086b8",
+      "date": "2017-01-23T10:00:00.000Z",
+      "show": {
+        "uid": "NBIA",
+        "title": "Народ Библии: вчера, сегодня, завтра",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "NBIA"
+      },
+      "episode": {
+        "uid": "NBIA02015",
+        "title": "Станет ли Иерусалим центром мира? (вторая часть)",
+        "description": "Пророчество Исайи - это прекрасный план относительно Иерусалима. План начал осуществляться при правлении Соломона, но не был исполнен по причине отступления самого Соломона. Разрушительные последствия отступления царей. Пророчество о праведной отрасли.",
+        "language": "ru",
+        "image": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+        "code": "NBIA02015"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086b9",
+      "date": "2017-01-23T10:40:00.000Z",
+      "show": {
+        "uid": "SDKU",
+        "title": "Спасенні",
+        "description": {
+          "short": "Для тих, хто не хоче пропустити найважливіше"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/SDKU/SDKU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "SDKU"
+      },
+      "episode": {
+        "uid": "SDKU00313",
+        "title": "Людмила Калдаре. Исцеление",
+        "description": "История исцеления Людмила Калдаре от рака крови",
+        "language": "ru,uk",
+        "image": "https://cdn.hope.ua/media/shows/SDKU/episodes/00313/SDKU00313-cover.jpg",
+        "code": "SDKU00313"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086ba",
+      "date": "2017-01-23T11:10:00.000Z",
+      "show": {
+        "uid": "DSTR",
+        "title": "День седьмой",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/DSTR/DSTR-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/DSTR/DSTR-background.jpg"
+        },
+        "code": "DSTR"
+      },
+      "episode": {
+        "uid": "DSTR01010",
+        "title": "Откровения утерянных  страниц истории 10 ч.",
+        "description": "Суббота или воскресенье — правильный день для богослужения? Этот вопрос волнует многих, кто задумывается о соблюдении субботы.",
+        "language": "ru",
+        "image": "https://cdn.hope.ua/media/shows/DSTR/episodes/01010/DSTR01010-cover.jpg",
+        "code": "DSTR01010"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086bb",
+      "date": "2017-01-23T11:40:00.000Z",
+      "show": {
+        "uid": "TWTR",
+        "title": "О чем говорят женщины",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/TWTR/TWTR-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/TWTR/TWTR-background.jpg"
+        },
+        "code": "TWTR"
+      },
+      "episode": {
+        "uid": "TWTR02116",
+        "title": "Секреты",
+        "description": "Не всё и не всем хочется рассказывать. Ведь должно же быть какое-то личное пространство. Но нормально ли иметь секреты от своих близких и родных? Почему они появляются и к чему приводят? Как же быть с чужими секретами? Об этом и многом другой в передаче «О чем говорят женщины»",
+        "language": "ru",
+        "image": "https://cdn.hope.ua/media/shows/TWTR/TWTR-cover.jpg",
+        "code": "TWTR02116"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086bc",
+      "date": "2017-01-23T12:00:00.000Z",
+      "show": {
+        "uid": "LPCU",
+        "title": "Малюваки",
+        "description": {
+          "short": "Відкрий в собі нові таланти!"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/LPCU/LPCU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/LPCU/LPCU-background.jpg"
+        },
+        "code": "LPCU"
+      },
+      "episode": {
+        "uid": "LPCU01316",
+        "title": "Як Гошка мандрував до\" Експериментаріуму\"",
+        "description": "Гошка дізнався, що  у нього є страшні вороги, це — мікроби і бактерії. Невже і їх створив Господь? Чудова подорож до захоплюючого «Експериментаріуму». Мультфільм про чудове творіння Бога і мудрі поради Філіпштейна, як вести війну з мікробами.",
+        "language": "uk",
+        "image": "https://cdn.hope.ua/media/shows/LPCU/episodes/01316/LPCU01316-cover.jpg",
+        "code": "LPCU01316"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086bd",
+      "date": "2017-01-23T12:20:00.000Z",
+      "show": {
+        "uid": "JMLU",
+        "title": "ДЖЕМ",
+        "description": {
+          "short": "Жива християнська музика на будь-який смак"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/JMLU/JMLU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/JMLU/JMLU-background.jpg"
+        },
+        "code": "JMLU"
+      },
+      "episode": {
+        "uid": "JMLU03616",
+        "title": "The UNISON band",
+        "description": "Яскравий та веселий колектив The UNISON band в програмі \"ДЖЕМ\".",
+        "language": "uk",
+        "image": "https://cdn.hope.ua/media/shows/JMLU/JMLU-cover.jpg",
+        "code": "JMLU03616"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086be",
+      "date": "2017-01-23T13:10:00.000Z",
+      "show": {
+        "uid": "MBKZ",
+        "title": "Мессия: объективные доказательства (сурдоперевод)",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "MBKZ"
+      },
+      "episode": {
+        "uid": "MBKZ00216",
+        "title": "Роль Мессии",
+        "description": "Вторая тема семинара Александра Болотникова посвящена роли Мессии. Изучая книгу пророка Исаии, мы узнаем Его задачу и миссию.",
+        "language": "ru",
+        "image": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+        "code": "MBKZ00216"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086bf",
+      "date": "2017-01-23T13:40:00.000Z",
+      "show": {
+        "uid": "DHNZ",
+        "title": "Диагноз: здоровье (сурдоперевод)",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "DHNZ"
+      },
+      "episode": {
+        "uid": "DHNZ02415",
+        "title": "Вдохните поглубже! Учимся дышать правильно",
+        "description": "Хороший воздух и правильное дыхание предотвращают множество заболеваний! <br />Улучшают ли кондиционеры микроклимат в помещении? Какая температура воздуха оптимальна для нашего организма? Можно ли очистить воздух в домашних условиях? Как дышать правильно? Как недостаток кислорода влияет на человека? <br />Избавляемся от «синдрома ленивых легких» в программе \"DS Здоровье\".",
+        "language": "ru",
+        "image": "https://cdn.hope.ua/media/shows/DHNZ/episodes/02415/DHNZ02415-cover.jpg",
+        "code": "DHNZ02415"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086c0",
+      "date": "2017-01-23T14:00:00.000Z",
+      "show": {
+        "uid": "AFCU",
+        "title": "Удивительные факты",
+        "description": {
+          "short": "Удивительное рядом!"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/AFCU/AFCU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/AFCU/AFCU-background.jpg"
+        },
+        "code": "AFCU"
+      },
+      "episode": {
+        "uid": "AFCU00415",
+        "title": "Вселенская война",
+        "description": "Великая брань. <br />Появление дьявола — одно из самых труднообъяснимых событий в мире, который создал добрый Бог. Однако, именно оно может быть ключом для разгадки существующего зла на земле. Все, что нужно — это ответить на вопрос: как уживаются любовь Бога и ненависть дьявола во вселенной!?",
+        "language": "ru,uk",
+        "image": "https://cdn.hope.ua/media/shows/AFCU/episodes/00415/AFCU00415-cover.jpg",
+        "trailers": {
+          "today": {
+            "local": {
+              "url": "https://cdn.hope.ua/media/shows/AFCU/episodes/00415/AFCU00415-trailer-today.mov"
+            }
+          },
+          "main": {
+            "local": {
+              "url": "https://cdn.hope.ua/media/shows/AFCU/episodes/00415/AFCU00415-trailer-main.mov"
+            }
+          }
+        },
+        "code": "AFCU00415"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086c1",
+      "date": "2017-01-23T14:50:00.000Z",
+      "show": {
+        "uid": "FMLU",
+        "title": "5 хвилин для вічності",
+        "description": {
+          "short": "Чи знайдете ви трохи часу для спасіння?"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/FMLU/FMLU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/FMLU/FMLU-background.jpg"
+        },
+        "code": "FMLU"
+      },
+      "episode": {
+        "uid": "FMLU12516",
+        "title": "В образі мурашки",
+        "description": "Пам’ятайте, Голгофа — це вічний доказ того, що Бог є Любов і Він Бажає дати Вам спасіння. Cкористайтесь цим даром сьогодні.",
+        "language": "uk",
+        "image": "https://cdn.hope.ua/media/shows/FMLU/episodes/12516/FMLU12516-cover.jpg",
+        "code": "FMLU12516"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086c2",
+      "date": "2017-01-23T15:00:00.000Z",
+      "show": {
+        "uid": "IWLU",
+        "title": "Біблія продовжує говорити",
+        "description": {
+          "short": "Книга від наймудрішого Автора"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/IWLU/IWLU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/IWLU/IWLU-background.jpg"
+        },
+        "code": "IWLU"
+      },
+      "episode": {
+        "uid": "IWLU02016",
+        "title": "Найбільше Біблійне пророцтво",
+        "description": "Перш ніж наш Господь Ісус возніся до Свого Отця, Він залишив чудову обітницю, записана вона в євангелії від Івана в чотирнадцятому розділі: “Нехай серце вам не тривожиться! Віруйте в Бога, і в Мене віруйте! Багато осель у домі Мого Отця; а коли б то не так, то сказав би Я вам, що йду приготувати місце для вас? А коли відійду й приготую вам місце, Я знову прийду й заберу вас до Себе, щоб де Я були й ви.” Івана 14:1-3",
+        "language": "uk",
+        "image": "https://cdn.hope.ua/media/shows/IWLU/episodes/02016/IWLU02016-cover.jpg",
+        "code": "IWLU02016"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086c3",
+      "date": "2017-01-23T15:30:00.000Z",
+      "show": {
+        "uid": "ANYU",
+        "title": "Так чи Інакше",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/ANYU/ANYU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/ANYU/ANYU-background.jpg"
+        },
+        "code": "ANYU"
+      },
+      "episode": {
+        "uid": "ANYU00516",
+        "title": "Алкоголь \"в міру\"",
+        "description": "Алкоголь має низку негативних і позитивних якостей. Про це не соромляться говорити ані лікарі, ані спеціалісти по боротьбі з залежностями. Яка ж зі сторін виявиться сильнішою? Дивимося прямо зараз.",
+        "language": "ru,uk",
+        "image": "https://cdn.hope.ua/media/shows/ANYU/episodes/00516/ANYU00516-cover.jpg",
+        "code": "ANYU00516"
+      }
+    },
+    {
+      "id": "5877eeb50077ef11005086c4",
+      "date": "2017-01-23T16:30:00.000Z",
+      "show": {
+        "uid": "SDKU",
+        "title": "Спасенні",
+        "description": {
+          "short": "Для тих, хто не хоче пропустити найважливіше"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/SDKU/SDKU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "SDKU"
+      },
+      "episode": {
+        "uid": "SDKU00313",
+        "title": "Людмила Калдаре. Исцеление",
+        "description": "История исцеления Людмила Калдаре от рака крови",
+        "language": "ru,uk",
+        "image": "https://cdn.hope.ua/media/shows/SDKU/episodes/00313/SDKU00313-cover.jpg",
+        "code": "SDKU00313"
+      }
+    },
+    {
+      "id": "5877eeb60077ef11005086c5",
+      "date": "2017-01-23T17:00:00.000Z",
+      "show": {
+        "uid": "MSCU",
+        "title": "\"Кисть Мастера\" с Нилом Сколфилдом",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/MSCU/MSCU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/MSCU/MSCU-background.jpg"
+        },
+        "code": "MSCU"
+      },
+      "episode": {
+        "uid": "MSCU00116",
+        "title": "Портрет Бога",
+        "description": "На протяжении веков многие художники пытаются изобразить Бога. В юном возрасте Мартин Лютер посещал церковь Св. Георга, в городе Мансфельд в Германии. Каждый раз, когда он приходил в церковь, он смотрел на витражное окно, на котором был изображен портрет Бога. Бог представлялся Мартину строгим. Мальчик думал, что Бог вот-вот заберет его напуганную душу и Мартин будет мучатся в вечном аду. Посещая другую церковь, Мартин был восхищен, он увидел алтарь, на котором была огромная картина. На картине была нарисована деревянная лодка, которая плыла в направлении небес. В лодке сидели руководители церкви, они были в безопасности, но затем Мартин увидел обычных, простых людей, они были за бортом, отчаянные, они изо всех сил пытались спастись, они ждали помощи от людей в лодке. Мартин сделал вывод, что Бог, должно быть, очень суров, поэтому погибнуть намного легче, чем спастись.",
+        "language": "ru",
+        "image": "https://cdn.hope.ua/media/shows/MSCU/episodes/00116/MSCU00116-cover.jpg",
+        "code": "MSCU00116"
+      }
+    },
+    {
+      "id": "5877eeb60077ef11005086c6",
+      "date": "2017-01-23T17:30:00.000Z",
+      "show": {
+        "uid": "MBKU",
+        "title": "Мессия: объективные доказательства",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "MBKU"
+      },
+      "episode": {
+        "uid": "MBKU00816",
+        "title": "Да сбудется реченное Господом через пророков",
+        "description": "На этот раз Александр Болотников будет исследовать взаимосвязь Евангелия от Матфея и книги пророка Осии. О чем говорит Матф.2:15?",
+        "language": "ru",
+        "image": "https://cdn.hope.ua/media/shows/MBKU/episodes/00816/MBKU00816-cover.jpg",
+        "code": "MBKU00816"
+      }
+    },
+    {
+      "id": "5877eeb60077ef11005086c7",
+      "date": "2017-01-23T18:00:00.000Z",
+      "show": {
+        "uid": "SRKR",
+        "title": "Познаем истину",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/SRKR/SRKR-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/SRKR/SRKR-background.jpg"
+        },
+        "code": "SRKR"
+      },
+      "episode": {
+        "uid": "SRKR04516",
+        "title": "Личность Святого Духа",
+        "description": "Истина о личности Святого Духа поможет нам лучше понимать роль  Духа  Божьего  в нашей  жизни.  И это  усилит  осознание важности веры в личностный характер Святого Духа для нашей  духовной  жизни.  Только  при  условии,  что  мы имеем правильное понимание о Нем, мы можем обращаться к Нему, выражать Ему свою любовь, благоговение, доверие и подчинение.",
+        "language": "ru",
+        "image": "https://cdn.hope.ua/media/shows/SRKR/episodes/04516/SRKR04516-cover.jpg",
+        "code": "SRKR04516"
+      }
+    },
+    {
+      "id": "5877eeb60077ef11005086c8",
+      "date": "2017-01-23T18:50:00.000Z",
+      "show": {
+        "uid": "PMVU",
+        "title": "Пригоди Марка",
+        "description": {
+          "short": ""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "PMVU"
+      },
+      "episode": {
+        "uid": "PMVU00716",
+        "title": "Вірні друзі",
+        "description": "Друзі, ніколи не дивіться на бідність людини. У бідної людини, так само як і у багатої може бути добре серце.",
+        "language": "uk",
+        "image": "https://cdn.hope.ua/media/shows/PMVU/episodes/00716/PMVU00716-cover.jpg",
+        "code": "PMVU00716"
+      }
+    },
+    {
+      "id": "5877eeb60077ef11005086c9",
+      "date": "2017-01-23T19:00:00.000Z",
+      "show": {
+        "uid": "POCU",
+        "title": "Сила одного",
+        "description": {
+          "short": "Бог тот единственный, который может изменить все"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/POCU/POCU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "POCU"
+      },
+      "episode": {
+        "uid": "POCU01016",
+        "title": "Юлия Копанишина-Отепко",
+        "description": "Как пережить трудности и остаться счастливым? Что делает характер более сильным? И, Кто может помочь вырваться из кругооборота жизненной суеты? Об этом с нами поделится  гостья программы — Юлия Копанишина-Отепко. <br />Смотрите прямо сейчас!",
+        "language": "ru",
+        "image": "https://cdn.hope.ua/media/shows/POCU/episodes/01016/POCU01016-cover.jpg",
+        "code": "POCU01016"
+      }
+    },
+    {
+      "id": "5877eeb60077ef11005086ca",
+      "date": "2017-01-23T19:30:00.000Z",
+      "show": {
+        "uid": "EPLU",
+        "title": "Є проблема",
+        "description": {
+          "short": "Пошук вірного рішення"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/EPLU/EPLU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "EPLU"
+      },
+      "episode": {
+        "uid": "EPLU00213",
+        "title": "Секс-меньшинства та сімейні цінності",
+        "description": "14 травня, біля будівлі парламенту близько 300 осіб мітингували проти прийняття законопроекту про протидію дискримінації. Учасники акції скандували: \"Ні легалізації гомосексуалізму\", \"Нас більшість і ми проти гомосексуалізму\", \"Збережемо сім'ю, збережемо Україну\", \"Ні гомосексуалізму в Україні\". У чому суть законопроекту і чи криється у ньому якась небезпека? Гість студії — Олеся Жупник, голова комісії з питань сім'ї та молоді Громадської ради при Львівській обласній державній адміністрації.",
+        "language": "uk",
+        "image": "https://cdn.hope.ua/media/shows/EPLU/episodes/00213/EPLU00213-cover.jpg",
+        "code": "EPLU00213"
+      }
+    },
+    {
+      "id": "5877eeb60077ef11005086cb",
+      "date": "2017-01-23T20:00:00.000Z",
+      "show": {
+        "uid": "VKLU",
+        "title": "В контексті",
+        "description": {
+          "short": "\"Заглиблюйся в себе та у вчення...\""
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/VKLU/VKLU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "VKLU"
+      },
+      "episode": {
+        "uid": "VKLU00417",
+        "title": "4. В чому сенс мого життя?",
+        "description": "Кожна людина задається питанням: \"У чому сенс мого життя? Чи не дарма я живу? Яке моє покликання?\" <br />Питання про сенс життя та щастя часто вводиться у строку пошуку інтернету. <br />Поговоримо над цими важливими питаннями  у студії з нашими гостями.<br />Віталій Лєбедєв, Павло Дробаха, Анастасія Сембай,  Антон Яловик<br />/Урок 4. Особа Святого Духа/",
+        "language": "uk",
+        "image": "https://cdn.hope.ua/media/shows/VKLU/VKLU-cover.jpg",
+        "code": "VKLU00417"
+      }
+    },
+    {
+      "id": "5877eeb60077ef11005086cc",
+      "date": "2017-01-23T21:00:00.000Z",
+      "show": {
+        "uid": "FMLU",
+        "title": "5 хвилин для вічності",
+        "description": {
+          "short": "Чи знайдете ви трохи часу для спасіння?"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/FMLU/FMLU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/shows/FMLU/FMLU-background.jpg"
+        },
+        "code": "FMLU"
+      },
+      "episode": {
+        "uid": "FMLU12516",
+        "title": "В образі мурашки",
+        "description": "Пам’ятайте, Голгофа — це вічний доказ того, що Бог є Любов і Він Бажає дати Вам спасіння. Cкористайтесь цим даром сьогодні.",
+        "language": "uk",
+        "image": "https://cdn.hope.ua/media/shows/FMLU/episodes/12516/FMLU12516-cover.jpg",
+        "code": "FMLU12516"
+      }
+    },
+    {
+      "id": "5877eeb60077ef11005086cd",
+      "date": "2017-01-23T21:10:00.000Z",
+      "show": {
+        "uid": "ISLU",
+        "title": "Інша сторона",
+        "description": {
+          "short": "Знаєш, що приховано на звороті?"
+        },
+        "images": {
+          "cover": "https://cdn.hope.ua/media/shows/ISLU/ISLU-cover.jpg",
+          "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+        },
+        "code": "ISLU"
+      },
+      "episode": {
+        "uid": "ISLU01315",
+        "title": "Божа охорона",
+        "description": "Всі ми, в тій чи іншій мірі, хвилюємося про безпеку: свою, рідних, майна. Чим цінніший об'єкт, тим надійнішої безпеки ми хочемо. Саме з охоронною пов'язана праця гостя програми \"Інша сторона\" — Валерія Молодого",
+        "language": "uk",
+        "image": "https://cdn.hope.ua/media/shows/ISLU/episodes/01315/ISLU01315-cover.jpg",
+        "trailers": {
+          "today": {
+            "local": {
+              "url": "https://cdn.hope.ua/media/shows/ISLU/episodes/01315/ISLU01315-trailer-today.mov"
+            }
+          },
+          "main": {
+            "local": {
+              "url": "https://cdn.hope.ua/media/shows/ISLU/episodes/01315/ISLU01315-trailer-main.mov"
+            }
+          }
+        },
+        "code": "ISLU01315"
+      }
+    }
+  ]

@@ -1,36 +1,36 @@
 & {
-    position: relative;
+    position: absolute;
     width: 100%;
-    margin-top: px(-15);
+    margin-top: px(-14);
     overflow: hidden;
+    z-index: 2;
 
     .scheduler {
-        background-color: $color1;
-
         .clock {
+            display: flex;
             position: absolute;
             left: px(470);
-            width: px(75);
+            justify-content: center;
+            width: px(72);
             height: px(38);
-            padding-left: px(7);
             border-radius: 4px;
-            background-color: $color2;
+            background-color: $mainColor5;
 
             span {
                 display: block;
                 position: relative;
-                color: $color6;
-                font-size: px(24);
+                color: $mainColor1;
+                font-size: px(22);
                 line-height: px(38);
 
                 &::after {
                     display: block;
                     position: absolute;
                     top: px(44);
-                    left: px(28);
-                    width: px(5);
+                    left: px(26);
+                    width: px(4);
                     height: px(19);
-                    background-color: $color2;
+                    background-color: $mainColor5;
                     content: '';
                 }
             }
@@ -41,42 +41,43 @@
             width: 10000px;
             height: 100%;
             padding: px(50) 0 px(20);
-            transform: translateX(-196px);
+            transition: transform .6s;
 
             .episode {
-                margin-left: px(30);
+                margin-right: px(30);
 
                 .timeline {
                     display: flex;
                     width: 100%;
 
                     .prev {
+                        flex-grow: 0;
+                        flex-shrink: 0;
                         height: px(6);
-                        border-radius: 4px 2px 4px 2px / 2px 4px 2px 4px;
-                        background-color: $color7;
+                        border-radius: 2px;
+                        background-color: $tempColor18;
                     }
 
                     .next {
-                        width: 100%;
                         height: px(6);
-                        border-radius: 4px 2px 4px 2px / 2px 4px 2px 4px;
-                        background-color: $color5;
+                        border-radius: 2px;
+                        background-color: $mainColor4;
                     }
                 }
 
                 .info {
-                    margin: px(6) 0 0 px(4);
+                    margin: px(14) 0 0 px(4);
 
                     .time {
-                        transition: color $transitionDuration;
-                        color: $color3;
-                        font-size: px(28);
+                        transition: color .2s;
+                        color: $tempColor17;
+                        font-size: px(26);
                         font-weight: 700;
                     }
 
                     .label {
                         margin-left: px(14);
-                        color: $color2;
+                        color: $mainColor5;
                         font-size: px(28);
                         font-weight: 700;
                     }
@@ -84,9 +85,12 @@
 
                 .title {
                     margin: px(10) 0 0 px(4);
-                    transition: color $transitionDuration;
+                    transition: color .2s;
                     font-size: px(28);
                     font-style: italic;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
 
                 &:hover {
@@ -94,44 +98,43 @@
 
                     .info {
                         .time {
-                            color: $color6;
+                            color: $mainColor1;
                         }
                     }
 
                     .title {
-                        color: $color3;
+                        color: $tempColor17;
                     }
                 }
+            }
 
-                &:first-child {
-                    margin-left: 0;
-
-                    .timeline {
-                        .prev {
-                            width: px(832);
-                        }
-
-                        .next {
-                            width: 0;
-                        }
-                    }
-                }
-
-                &.active {
-                    .timeline {
-                        display: flex;
+            .past {
+                .timeline {
+                    .prev {
                         width: 100%;
+                    }
+                }
+            }
 
-                        .prev {
-                            width: px(193);
-                            border-radius: 4px 0 0 4px / 2px 0 0 2px;
-                        }
+            .future {
+                .timeline {
+                    .next {
+                        width: 100%;
+                    }
+                }
+            }
 
-                        .next {
-                            width: px(339);
-                            margin-left: px(12);
-                            border-radius: 0 4px 4px 0 / 0 2px 2px 0;
-                        }
+            .current {
+                .timeline {
+                    .prev {
+                        margin-right: px(12);
+                        transition: width .6s;
+                        border-radius: 2px 0 0 2px;
+                    }
+
+                    .next {
+                        transition: width .6s;
+                        border-radius: 0 2px 2px 0;
                     }
                 }
             }
