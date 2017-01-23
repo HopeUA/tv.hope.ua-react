@@ -1,23 +1,19 @@
 import React, { PropTypes } from 'react';
-import Styles from './main.scss';
+import Styles from './Styles/main.scss';
 import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 import cx from 'classnames';
 
 export default function Timeline(props) {
+    // const randomTime = Moment('2017-01-10T12:50+02:00');
+    // const randomTime2 = Moment('2017-01-10T19:50+02:00');
+    // console.log(Moment(randomTime).isAfter(randomTime2));
+
     const templates = [
-        BreakPoints.tabletLandscape.name,
-        BreakPoints.desktop.name
+        BreakPoints.tabletLandscape.name
     ];
 
     const { mediaType } =  props;
-
-    if ([
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name,
-        BreakPoints.tabletPortrait.name].indexOf(mediaType) !== -1) {
-        return null;
-    }
 
     const episode1Style = {
         width: 330
@@ -57,7 +53,7 @@ export default function Timeline(props) {
                             </div>
                             <div className={ Styles.info }>
                                 <span className={ Styles.time }>11:40</span>
-                                <span className={ Styles.label }></span>
+                                <span className={ Styles.label }/>
                             </div>
                             { [
                                 BreakPoints.desktop.name,
@@ -66,7 +62,7 @@ export default function Timeline(props) {
                                 BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>Богослужение в храме</p>
-                            ) : null }
+                                ) : null }
                         </div>
 
                         <div className={ episodeActiveClass } style={ episode2Style }>
@@ -84,7 +80,7 @@ export default function Timeline(props) {
                                 BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>В центре внимания</p>
-                            ) : null }
+                                ) : null }
                         </div>
 
                         <div className={ Styles.episode } style={ episode3Style }>
@@ -103,7 +99,7 @@ export default function Timeline(props) {
                                 BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>Богослужение в храме на</p>
-                            ) : null }
+                                ) : null }
                         </div>
 
                         <div className={ Styles.episode } style={ episode4Style }>
@@ -121,7 +117,7 @@ export default function Timeline(props) {
                                 BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>В центре внимания</p>
-                            ) : null }
+                                ) : null }
                         </div>
 
                         <div className={ Styles.episode } style={ episode5Style }>
@@ -139,7 +135,7 @@ export default function Timeline(props) {
                                 BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>Вечер молитвы</p>
-                            ) : null }
+                                ) : null }
                         </div>
 
                         <div className={ Styles.episode } style={ episode6Style }>
@@ -157,7 +153,7 @@ export default function Timeline(props) {
                                 BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>Богослужение в храме</p>
-                            ) : null }
+                                ) : null }
                         </div>
                     </div>
                 </div>

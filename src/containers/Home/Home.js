@@ -6,7 +6,7 @@ import Helmet from 'react-helmet';
 import Seo from 'data/seo.json';
 import { Episodes, Live, Top, Articles, Shows, Banner } from 'components/Home';
 import * as Footer from 'components/Footer';
-// import * as Shared from 'components/Shared';
+import * as Shared from 'components/Shared';
 
 // @asyncConnect([{
 //     deferred: true,
@@ -37,6 +37,8 @@ export default class Home extends Component {
             <div>
                 <Helmet { ...Seo.Home }/>
                 { /*    <Shared.Header mediaType={ browser.mediaType }/>    */ }
+                <Shared.Header mediaType={ browser.mediaType }/>
+                <Shared.Timeline mediaType={ browser.mediaType }/>
                 <Banner mediaType={ browser.mediaType }/>
                 <Live mediaType={ browser.mediaType }/>
                 <Shows mediaType={ browser.mediaType }/>

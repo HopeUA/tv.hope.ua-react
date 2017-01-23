@@ -7,7 +7,6 @@ $mainColor6: #0b2226;  // Bottle
 
 $commonColor1: #606b6d;  // Text primary
 $commonColor2: #6d7c7c;  // Text secondary
-// $commonColor3: #a5a8aa; // Text on dark background
 $commonColor3: rgba(255, 255, 255, .7); // Text on dark background
 $commonColor4: #f3f4f4;  // Background main
 $commonColor5: #dfe0e1; // Divider
@@ -18,6 +17,8 @@ $commonColor9: rgba(0, 0, 0, .4);  // Block mask
 $commonColor10: #091a1e; // Menu background
 $commonColor11: #7f8e91; // Menu text primary
 $commonColor12: #5e6b6e; // Menu text secondary
+$commonColor13: #a5a8aa; // Text on dark background
+$commonColor14: rgba(255, 255, 255, .2); // Header text
 
 // scss-lint:disable all
 $gradient1: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .21) 32%, rgba(0, 0, 0, .65) 100%);
