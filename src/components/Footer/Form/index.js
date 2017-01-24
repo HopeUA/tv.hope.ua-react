@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import Form from './Views/Desktop';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 import Fetch from 'isomorphic-fetch';
 
 export const STATE_NORMAL = 'normal';

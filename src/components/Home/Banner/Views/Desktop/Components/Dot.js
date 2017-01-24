@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 export default class Dot extends Component {
-    propTypes = {
+    static propTypes = {
         className: PropTypes.string,
         index: PropTypes.number.isRequired,
         onClick: PropTypes.func

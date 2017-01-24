@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './main.scss';
-import PixelPerfect from 'components/PixelPerfect/component';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import PixelPerfect from 'vendor/PixelPerfect/component';
+import BreakPoints from 'helpers/breakpoints';
 
 export default function Divider() {
     const templates = [

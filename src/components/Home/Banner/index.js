@@ -3,7 +3,7 @@ import Mobile from './Views/Mobile/';
 import Desktop from './Views/Desktop/';
 
 import items from './Mock/data.json';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 export default function Banner(props) {
     const { mediaType } = props;

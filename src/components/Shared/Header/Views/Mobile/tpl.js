@@ -80,7 +80,7 @@ export default function Header(props) {
 
 Header.propTypes = {
     mediaType: PropTypes.string.isRequired,
-    handleMenu: PropTypes.function,
+    handleMenu: PropTypes.func,
     isMenuVisible: PropTypes.boolean,
     language: PropTypes.string,
     socialLinks: PropTypes.string,

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Mobile from './Views/Mobile';
 import Desktop from './Views/Desktop';
 
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 import items from './Mock/data.json';
 

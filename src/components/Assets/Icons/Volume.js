@@ -12,7 +12,7 @@ export default class Volume extends Component {
     static propTypes = {
         color: PropTypes.string,
         state: PropTypes.string,
-        isMuted: PropTypes.boolean
+        isMuted: PropTypes.bool
     };
 
     render() {

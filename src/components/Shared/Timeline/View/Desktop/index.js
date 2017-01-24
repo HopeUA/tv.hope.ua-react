@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import Styles from './Styles/main.scss';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 import cx from 'classnames';
 import px from 'helpers/px';
 import Moment from 'moment';

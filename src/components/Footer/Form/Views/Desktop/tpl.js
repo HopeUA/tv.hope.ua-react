@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './Styles/main.scss';
-import PixelPerfect from 'components/PixelPerfect/component';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import PixelPerfect from 'vendor/PixelPerfect/component';
+import BreakPoints from 'helpers/breakpoints';
 
 import Palette from 'components/Assets/Palette';
 import Submit from 'components/Assets/Icons/Submit';

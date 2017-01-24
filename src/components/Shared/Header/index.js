@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import Mobile from './Views/Mobile';
 // import Desktop from './Views/Desktop';
 //
-// import BreakPoints from 'components/PixelPerfect/breakpoints';
+// import BreakPoints from 'helpers/breakpoints';
 import Data from './Mock/data.json';
 
 export default class Header extends Component {

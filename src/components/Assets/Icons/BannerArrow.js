@@ -12,9 +12,9 @@ export default class BannerArrow extends Component {
     static propTypes = {
         color: PropTypes.string,
         state: PropTypes.string,
-        isPlaying: PropTypes.boolean,
-        showCircle: PropTypes.boolean,
-        index: PropTypes.index
+        isPlaying: PropTypes.bool,
+        showCircle: PropTypes.bool,
+        index: PropTypes.number
     };
 
     render() {

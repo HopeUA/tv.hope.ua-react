@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 import Styles from './main.scss';
 
 /* eslint-disable react/prefer-stateless-function */

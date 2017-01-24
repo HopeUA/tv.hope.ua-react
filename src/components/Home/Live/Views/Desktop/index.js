@@ -15,8 +15,8 @@ export default class Desktop extends Component {
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
         currentTime: PropTypes.string.isRequired,
-        items: PropTypes.object,
-        isMuted: PropTypes.boolean
+        items: PropTypes.array,
+        isMuted: PropTypes.bool
     };
 
     videoContainer = null;

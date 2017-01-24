@@ -12,7 +12,7 @@ export default class PlayPause extends Component {
     static propTypes = {
         color: PropTypes.string,
         state: PropTypes.string,
-        isPlaying: PropTypes.boolean
+        isPlaying: PropTypes.bool
     };
 
     render() {

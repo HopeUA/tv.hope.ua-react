@@ -27,6 +27,10 @@ export default class Desktop extends Component {
         this.startTimer();
     };
 
+    componentWillUnmount = () => {
+        this.stopTimer();
+    };
+
     startTimer = () => {
         const delta = TRANSITION_DURATION / ITERATION_DURATION;
 

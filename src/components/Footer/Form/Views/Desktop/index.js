@@ -96,9 +96,9 @@ export default function Form(props) {
 }
 
 Form.propTypes = {
-    handleChange: PropTypes.function,
-    handleSubmit: PropTypes.function,
-    handleDefaultSubmit: PropTypes.function,
+    handleChange: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    handleDefaultSubmit: PropTypes.func,
     name: PropTypes.string,
     email: PropTypes.string,
     message: PropTypes.string,

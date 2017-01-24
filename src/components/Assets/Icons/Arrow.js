@@ -13,7 +13,7 @@ export default class Arrow extends Component {
         color: PropTypes.string,
         hoverColor: PropTypes.string,
         state: PropTypes.string,
-        isStatic: PropTypes.boolean
+        isStatic: PropTypes.bool
     };
 
     static defaultProps = {

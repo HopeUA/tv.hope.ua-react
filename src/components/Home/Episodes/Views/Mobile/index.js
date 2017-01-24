@@ -3,7 +3,7 @@ import Moment from 'moment';
 import SwipeableViews from 'vendor/Swipeable';
 
 import Styles from './Styles/main.scss';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 import BubbleVideo from 'components/Assets/Icons/BubbleVideo';
 import Arrow from 'components/Assets/Icons/Arrow';

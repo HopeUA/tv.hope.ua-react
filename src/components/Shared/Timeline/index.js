@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 import Desktop from './View/Desktop/index';
 import Moment from 'moment';
 import items from './Mock/data.json';
