@@ -28,7 +28,7 @@ export default function EpisodesMobile(props) {
                 BreakPoints.phonePortrait.name === props.mediaType ?
                     (<SwipeableViews { ...swipeParams }>
                         <article className={ Styles.episodeItem }>
-                            <div className={ Styles.image } style={ styles }></div>
+                            <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
                                     <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
@@ -42,7 +42,7 @@ export default function EpisodesMobile(props) {
                             </div>
                         </article>
                         <article className={ Styles.episodeItem }>
-                            <div className={ Styles.image } style={ styles }></div>
+                            <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
                                     <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
@@ -56,7 +56,7 @@ export default function EpisodesMobile(props) {
                             </div>
                         </article>
                         <article className={ Styles.episodeItem }>
-                            <div className={ Styles.image } style={ styles }></div>
+                            <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
                                     <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
@@ -70,7 +70,7 @@ export default function EpisodesMobile(props) {
                             </div>
                         </article>
                         <article className={ Styles.episodeItem }>
-                            <div className={ Styles.image } style={ styles }></div>
+                            <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
                                     <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
@@ -85,7 +85,7 @@ export default function EpisodesMobile(props) {
                         </article>
                     </SwipeableViews>) : [
                         <article className={ Styles.episodeItem } key={ 1 }>
-                            <div className={ Styles.image } style={ styles }></div>
+                            <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
                                     <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
@@ -99,7 +99,7 @@ export default function EpisodesMobile(props) {
                             </div>
                         </article>,
                         <article className={ Styles.episodeItem } key={ 2 }>
-                            <div className={ Styles.image } style={ styles }></div>
+                            <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
                                     <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>

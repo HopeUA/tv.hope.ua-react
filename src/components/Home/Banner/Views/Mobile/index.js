@@ -6,10 +6,12 @@ import cx from 'classnames';
 import Swipeable from 'vendor/Swipeable/index';
 
 export default class Mobile extends Component {
-
     static propTypes = {
         items: PropTypes.array,
-        mediaType: PropTypes.string
+        mediaType: PropTypes.string.isRequired
+    };
+    static defaultProps = {
+        items: []
     };
 
     state = {

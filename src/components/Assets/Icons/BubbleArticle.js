@@ -8,9 +8,8 @@ import svg from 'helpers/svg';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class BubbleArticle extends Component {
-
     static propTypes = {
-        color: PropTypes.string
+        color: PropTypes.string.isRequired
     };
 
     render() {

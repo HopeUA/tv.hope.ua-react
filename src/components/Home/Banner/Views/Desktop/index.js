@@ -14,9 +14,13 @@ const ITERATION_DURATION = 10;
 
 export default class Desktop extends Component {
     static propTypes = {
-        mediaType: PropTypes.string,
+        mediaType: PropTypes.string.isRequired,
         items: PropTypes.array
     };
+    static defaultProps = {
+        items: []
+    };
+
     state = {
         index: 0,
         progress: 0
@@ -100,7 +104,7 @@ export default class Desktop extends Component {
         });
 
         const slide = items[index];
-        const text = slide.text;
+        const { text } = slide;
 
         const imageStyle = {
             backgroundImage: `url(${slide.image.desktop})`
@@ -112,7 +116,7 @@ export default class Desktop extends Component {
                 onMouseEnter={ this.stopTimer }
                 onMouseLeave={ this.startTimer }
             >
-                <div className={ Styles.image } style={ imageStyle }></div>
+                <div className={ Styles.image } style={ imageStyle }/>
                 <div className={ Styles.wrap }>
                     <div className={ Styles.content }>
                         <div className={ Styles.text }>
@@ -142,7 +146,7 @@ export default class Desktop extends Component {
                     { dots }
                 </div>
                 <div className={ Styles.loader }>
-                    <div className={ Styles.progress } style={ loaderStyle }></div>
+                    <div className={ Styles.progress } style={ loaderStyle }/>
                 </div>
             </section>
         );

@@ -8,13 +8,14 @@ import svg, { STATE_NORMAL, STATE_ACTIVE } from 'helpers/svg';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class BannerArrow extends Component {
-
     static propTypes = {
-        color: PropTypes.string,
-        state: PropTypes.string,
-        isPlaying: PropTypes.bool,
-        showCircle: PropTypes.bool,
-        index: PropTypes.number
+        color: PropTypes.string.isRequired,
+        state: PropTypes.string.isRequired,
+        showCircle: PropTypes.bool
+    };
+
+    static defaultProps = {
+        showCircle: false
     };
 
     render() {
@@ -33,13 +34,14 @@ export default class BannerArrow extends Component {
                 0.6-1.5s-0.2-1.1-0.6-1.5L87.9,63z"
             />
             ) : (
-            <path
-                fill={ color }
-                style={ hoverStyles } d="M100,0C44.8,0,0,44.8,0,100s44.8,100,100,100c55.2,0,
-                100-44.8,100-100S155.2,0,100,0z M123,100.9l-35,35c-0.8,0.8-2.1,0.8-2.9,0c-0.8-0.8-0.8-2.1,
-                0-2.9l33.6-33.6L85,65.9c-0.8-0.8-0.8-2.1,0-2.9c0.8-0.8,2.1-0.8,2.9,0l35,35c0.4,0.4,0.6,0.9,0.6,
-                1.5S123.4,100.5,123,100.9z"
-            />);
+                <path
+                    fill={ color }
+                    style={ hoverStyles } d="M100,0C44.8,0,0,44.8,0,100s44.8,100,100,100c55.2,0,
+                    100-44.8,100-100S155.2,0,100,0z M123,100.9l-35,35c-0.8,0.8-2.1,0.8-2.9,0c-0.8-0.8-0.8-2.1,
+                    0-2.9l33.6-33.6L85,65.9c-0.8-0.8-0.8-2.1,0-2.9c0.8-0.8,2.1-0.8,2.9,0l35,35c0.4,0.4,0.6,0.9,0.6,
+                    1.5S123.4,100.5,123,100.9z"
+                />
+            );
 
         const arrow = state === STATE_NORMAL ? (
             <g>

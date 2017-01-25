@@ -21,7 +21,7 @@ export default function Form() {
                 <form>
                     <input type="text" className={ Styles.name } placeholder="Ваше имя"/>
                     <input type="email" className={ Styles.email } placeholder="Ваш E-MAIL:"/>
-                    <textarea placeholder="Текст сообщения..."></textarea>
+                    <textarea placeholder="Текст сообщения..."/>
                     <button><Submit color={ Palette.paletteColor2 }/>Отправить письмо</button>
                 </form>
             </section>

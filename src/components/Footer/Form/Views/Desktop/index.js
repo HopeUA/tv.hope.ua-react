@@ -7,7 +7,7 @@ export default function Form(props) {
     const { handleChange, name, email, message, handleSubmit, handleDefaultSubmit, state } = props;
 
     let submitProps = {};
-    let styles = {
+    const styles = {
         background: '',
         color: '',
         borderColor: ''
@@ -96,11 +96,11 @@ export default function Form(props) {
 }
 
 Form.propTypes = {
-    handleChange: PropTypes.func,
-    handleSubmit: PropTypes.func,
-    handleDefaultSubmit: PropTypes.func,
-    name: PropTypes.string,
-    email: PropTypes.string,
-    message: PropTypes.string,
-    state: PropTypes.string
+    handleChange: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    handleDefaultSubmit: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired
 };

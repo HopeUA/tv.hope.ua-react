@@ -101,8 +101,11 @@ export default function Shows(props) {
         </section>
     );
 }
+
 Shows.propTypes = {
     mediaType: PropTypes.string.isRequired,
     items: PropTypes.array
 };
-
+Shows.defaultProps = {
+    items: []
+};

@@ -36,7 +36,7 @@ export default function Desktop(props) {
     return (
         <section className={ Styles.bannerComponent }>
             <div className={ Styles.cover }>
-                <div className={ Styles.image } style={ imageStyle }></div>
+                <div className={ Styles.image } style={ imageStyle }/>
             </div>
             <div className={ Styles.wrap }>
                 <div className={ Styles.content }>
@@ -63,7 +63,7 @@ export default function Desktop(props) {
                 </div>
             </div>
             <div className={ Styles.loader }>
-                <div className={ Styles.progress }></div>
+                <div className={ Styles.progress }/>
             </div>
             <div className={ Styles.dots }>
                 { dots }
@@ -73,5 +73,5 @@ export default function Desktop(props) {
 }
 
 Desktop.propTypes = {
-    mediaType: PropTypes.string
+    mediaType: PropTypes.string.isRequired
 };

@@ -1,13 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import BreakPoints from 'helpers/breakpoints';
-import Desktop from './View/Desktop/index';
+import Desktop from './Views/Desktop';
 import Moment from 'moment';
 import items from './Mock/data.json';
 
 export default class TimeLine extends Component {
     static propTypes = {
-        mediaType: PropTypes.string,
-        serverTime: PropTypes.string
+        mediaType: PropTypes.string.isRequired
     };
 
     state = {

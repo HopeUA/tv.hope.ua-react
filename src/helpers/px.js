@@ -10,5 +10,5 @@ const k = {
 };
 
 export default (px, mediaType) => {
-    return px * k[mediaType];
+    return k[mediaType] ? px * k[mediaType] : 0;
 };

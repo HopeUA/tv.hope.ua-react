@@ -11,7 +11,7 @@ Moment.locale('ru');
 
 export default function Mobile(props) {
     const { items } = props;
-    const item = items[0];
+    const [item] = items;
     const Date = Moment(item.publish);
 
     const imageStyle = {
@@ -23,17 +23,15 @@ export default function Mobile(props) {
             <section className={ Styles.item }>
                 <h1>Актуально</h1>
                 <article className={ Styles.main }>
-                    <div className={ Styles.image } style={ imageStyle }></div>
+                    <div className={ Styles.image } style={ imageStyle }/>
                     <div className={ Styles.container }>
-                        <div className={ Styles.blur } style={ imageStyle }></div>
+                        <div className={ Styles.blur } style={ imageStyle }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
                                 <BubbleVideo color={ Palette.paletteColor6 } className={ Styles.bubble }/>
                                 <span>
                                     <strong>
-                                           {
-                                               `${Date.format('D')} ${Date.format('MMM')},`
-                                           }
+                                        { `${Date.format('D')} ${Date.format('MMM')},` }
                                     </strong>
                                     &nbsp;{ `${Date.format('YYYY')}` }
                                 </span>
@@ -55,4 +53,7 @@ export default function Mobile(props) {
 
 Mobile.propTypes = {
     items: PropTypes.array
+};
+Mobile.defaultProps = {
+    items: []
 };

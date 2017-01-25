@@ -27,8 +27,5 @@ export default function Live(props) {
 }
 
 Live.propTypes = {
-    mediaType: PropTypes.string.isRequired,
-    items: PropTypes.array,
-    url: PropTypes.string,
-    currentTime: PropTypes.string
+    mediaType: PropTypes.string.isRequired
 };

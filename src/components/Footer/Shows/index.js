@@ -7,8 +7,9 @@ import items from './Mock/data.json';
 export default function Component(props) {
     const { mediaType } = props;
 
-    return [BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name
+    return [
+        BreakPoints.phonePortrait.name,
+        BreakPoints.phoneLandscape.name
     ].indexOf(mediaType) !== -1 ? null : (<Shows mediaType={ props.mediaType } items={ items }/>);
 }
 

@@ -4,7 +4,11 @@ export default class Dot extends Component {
     static propTypes = {
         className: PropTypes.string,
         index: PropTypes.number.isRequired,
-        onClick: PropTypes.func
+        onClick: PropTypes.func.isRequired
+    };
+
+    static defaultProps = {
+        className: null
     };
 
     _onClick = () => {

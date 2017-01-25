@@ -22,7 +22,7 @@ export default function Large(props) {
                 <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
             </div>
             <div className={ Styles.container }>
-                <div className={ Styles.blur } style={ imageStyle }></div>
+                <div className={ Styles.blur } style={ imageStyle }/>
                 <div className={ Styles.info }>
                     <div className={ Styles.date }>
                         <BubbleArticle color={ Palette.paletteColor6 } className={ Styles.bubble }/>
@@ -47,7 +47,7 @@ export default function Large(props) {
                             <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
                         </div>
                         <div className={ Styles.container }>
-                            <div className={ Styles.blur } style={ imageStyle }></div>
+                            <div className={ Styles.blur } style={ imageStyle }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.date }>
                                     <BubbleVideo color={ Palette.paletteColor6 } className={ Styles.bubble }/>

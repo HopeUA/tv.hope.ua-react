@@ -26,7 +26,7 @@ export default function Desktop() {
                 <h1 className={ Styles.title }>Анонсы</h1>
                 <Slider { ...properties }>
                     <article className={ Styles.item }>
-                        <div className={ Styles.image } style={ styles }></div>
+                        <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
                                 <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -40,7 +40,7 @@ export default function Desktop() {
                         </div>
                     </article>
                     <article>
-                        <div className={ Styles.image } style={ styles }></div>
+                        <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
                                 <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -53,7 +53,7 @@ export default function Desktop() {
                         </div>
                     </article>
                     <article>
-                        <div className={ Styles.image } style={ styles }></div>
+                        <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
                                 <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -66,7 +66,7 @@ export default function Desktop() {
                         </div>
                     </article>
                     <article>
-                        <div className={ Styles.image } style={ styles }></div>
+                        <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
                                 <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -79,7 +79,7 @@ export default function Desktop() {
                         </div>
                     </article>
                     <article>
-                        <div className={ Styles.image } style={ styles }></div>
+                        <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
                                 <BubbleArticle color={ Palette.paletteColor1 }/>

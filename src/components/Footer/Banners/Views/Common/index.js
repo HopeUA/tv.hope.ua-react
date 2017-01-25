@@ -33,9 +33,10 @@ export default function Banners(props) {
             margin: 0.4
         }
     };
-    const currentSizes = containerSizes[mediaType] || { width: 24.7,
-                                                        margin: 0.4 }
-    ;
+    const currentSizes = containerSizes[mediaType] || {
+        width: 24.7,
+        margin: 0.4
+    };
 
     const swipeParams = {
         containerWidth: currentSizes.width,
@@ -76,4 +77,8 @@ export default function Banners(props) {
 Banners.propTypes = {
     mediaType: PropTypes.string.isRequired,
     items: PropTypes.array
+};
+
+Banners.defaultProps = {
+    items: []
 };

@@ -42,14 +42,14 @@ export default class HomePage extends Component {
                 <Home.Top mediaType={ browser.mediaType }/>
                 <Home.Episodes
                     mediaType={ browser.mediaType }
-                    title={ "Новые выпуски" }
+                    title={ 'Новые выпуски' }
                     dynamic={ false }
                     canRefresh={ false }
                     view="grid"
                 />
                 <Home.Episodes
                     mediaType={ browser.mediaType }
-                    title={ "Новые выпуски" }
+                    title={ 'Новые выпуски' }
                     dynamic={ false }
                     canRefresh={ false }
                     view="row"

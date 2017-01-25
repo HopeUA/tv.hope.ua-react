@@ -21,6 +21,5 @@ export default function Top(props) {
 }
 
 Top.propTypes = {
-    mediaType: PropTypes.string.isRequired,
-    items: PropTypes.object
+    mediaType: PropTypes.string.isRequired
 };

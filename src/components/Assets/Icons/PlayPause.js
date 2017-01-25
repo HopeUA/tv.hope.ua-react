@@ -8,11 +8,14 @@ import svg, { STATE_NORMAL, STATE_ACTIVE } from 'helpers/svg';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class PlayPause extends Component {
-
     static propTypes = {
-        color: PropTypes.string,
-        state: PropTypes.string,
+        color: PropTypes.string.isRequired,
+        state: PropTypes.string.isRequired,
         isPlaying: PropTypes.bool
+    };
+
+    static defaultProps = {
+        isPlaying: false
     };
 
     render() {

@@ -74,8 +74,8 @@ export default function Timeline(props) {
         return (
             <div key={ element.id } className={ episodeClass } style={ episodeStyle }>
                 <div className={ Styles.timeline }>
-                    <div className={ Styles.prev } style={ prevStyle }></div>
-                    <div className={ Styles.next } style={ nextStyle }></div>
+                    <div className={ Styles.prev } style={ prevStyle }/>
+                    <div className={ Styles.next } style={ nextStyle }/>
                 </div>
                 <div className={ Styles.info }>
                     <span className={ Styles.time }>{ Moment(element.date).format('LT') }</span>
@@ -108,6 +108,9 @@ export default function Timeline(props) {
 
 Timeline.propTypes = {
     mediaType: PropTypes.string.isRequired,
-    serverTime: PropTypes.string,
+    serverTime: PropTypes.string.isRequired,
     items: PropTypes.array
+};
+Timeline.defaultProps = {
+    items: []
 };

@@ -11,7 +11,7 @@ import Palette from 'components/Assets/Palette';
 
 Moment.locale('ru');
 
-export default function EpisodesMobile(props) {
+export default function Mobile(props) {
     const { items, mediaType } = props;
     const episodes = items.map((el) => {
         const background = {
@@ -22,7 +22,7 @@ export default function EpisodesMobile(props) {
 
         return (
             <article className={ Styles.episodeItem } key={ el.uid }>
-                <div className={ Styles.image } style={ background }></div>
+                <div className={ Styles.image } style={ background }/>
                 <div className={ Styles.info }>
                     <div className={ Styles.blockDate }>
                         <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
@@ -63,7 +63,10 @@ export default function EpisodesMobile(props) {
     );
 }
 
-EpisodesMobile.propTypes = {
+Mobile.propTypes = {
     items: PropTypes.array,
     mediaType: PropTypes.string.isRequired
+};
+Mobile.defaultProps = {
+    items: []
 };
