@@ -14,7 +14,7 @@ import Hamburger from 'components/Assets/Icons/Hamburger';
 import Palette from 'components/Assets/Palette';
 
 export default function Header(props) {
-    const { handleMenu, isMenuVisible, language, socialLinks, menu } = props;
+    const { handleMenu, isMenuVisible, language, socialLinks, menu, priorityFilter } = props;
 
     const style = {
         visibility: isMenuVisible ? 'visible' : 'hidden'
@@ -43,18 +43,19 @@ export default function Header(props) {
         );
     });
 
-    const itemsMenu2 = menu.sub.map((el) => {
-        const target = el.external ? {
-            'target': '_blank',
-            'rel': 'noopener noreferrer'
-        } : null;
+    const itemsMenu2 = menu.sub
+        .filter(priorityFilter).map((el) => {
+            const target = el.external ? {
+                'target': '_blank',
+                'rel': 'noopener noreferrer'
+            } : null;
 
-        return (
-            <li key={ el.id }>
-                <a { ...target } href={ el.url }>{ el.title }</a>
-            </li>
-        );
-    });
+            return (
+                <li key={ el.id }>
+                    <a { ...target } href={ el.url }>{ el.title }</a>
+                </li>
+            );
+        });
 
     return (
         <section className={ Styles.headerComponent }>
@@ -64,7 +65,7 @@ export default function Header(props) {
                     <Hamburger isOpened={ isMenuVisible } color={ Palette.paletteColor6 }/>
                 </span>
             </div>
-            <div className={ Styles.dynamicPart } style={ style }>
+            <div className={ Styles.popup } style={ style }>
                 <div className={ Styles.lists }>
                     <ul className={ Styles.menu1 }>
                         { itemsMenu1 }
@@ -99,5 +100,6 @@ Header.propTypes = {
     isMenuVisible: PropTypes.boolean,
     language: PropTypes.string,
     socialLinks: PropTypes.string,
-    menu: PropTypes.object
+    menu: PropTypes.object,
+    priorityFilter: PropTypes.function
 };

@@ -1,0 +1,174 @@
+& {
+    background: $mainColor6;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: px(188);
+        padding: 0 px(50);
+
+        .logo {
+            width: px(288);
+            margin-right: px(122);
+        }
+
+        .hamburger {
+            width: px(50);
+        }
+
+        .menu {
+            display: flex;
+            margin-right: px(110);
+
+            li {
+                display: flex;
+                position: relative;
+                align-items: center;
+                margin-right: px(102);
+
+                .liveIcon {
+                    position: absolute;
+                    left: px(-40);
+                    width: px(24);
+                    opacity: .7;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    color: #c8d9dd;
+                    font-family: PTSans-Narrow;
+                    font-size: px(44);
+                }
+            }
+        }
+    }
+
+    .popup {
+        display: flex;
+        justify-content: center;
+        padding-bottom: px(50);
+
+        .content {
+            width: px(1336);
+            border-top: 1px solid $tempColor20;
+
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: px(46);
+
+                li {
+                    a {
+                        color: rgba(200, 217, 221, .6);
+                        font-size: px(34);
+                    }
+                }
+            }
+
+            .footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: px(66);
+
+                .social {
+                    display: flex;
+
+                    a {
+                        margin-right: px(40);
+
+                        i {
+                            width: px(60);
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    // TODO перенести цвета в js
+                    .twitter {
+                        i {
+                            path {
+                                fill: $tempColor12;
+                            }
+                        }
+                    }
+
+                    .facebook {
+                        i {
+                            path {
+                                fill: $tempColor6;
+                            }
+                        }
+                    }
+
+                    .ok {
+                        i {
+                            path {
+                                fill: $tempColor7;
+                            }
+                        }
+                    }
+
+                    .youtube {
+                        i {
+                            path,
+                            polygon {
+                                fill: $tempColor8;
+                            }
+                        }
+                    }
+
+                    .vk {
+                        i {
+                            path {
+                                fill: $tempColor9;
+                            }
+                        }
+                    }
+
+                    .instagram {
+                        i {
+                            path {
+                                fill: $tempColor10;
+                            }
+                        }
+                    }
+                }
+
+                .languages {
+                    .choose {
+                        margin-right: px(30);
+                        font-size: px(30);
+                        font-style: italic;
+                        color: $tempColor19;
+                    }
+
+                    .language {
+                        margin-right: px(50);
+                        padding: px(14) px(18);
+                        font-size: px(30);
+                        color: $tempColor21;
+                        opacity: .6;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                    .active {
+                        border-radius: px(12);
+                        background: $mainColor4;
+                        color: $mainColor1;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
