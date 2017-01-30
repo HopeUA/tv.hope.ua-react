@@ -4,11 +4,11 @@
 
 .bannersComponent {
     @function px($px) {
-        @return pxMedia($px, phonePortrait)
+        @return pxMedia($px, phonePortrait);
     }
 
     @function px($px) {
-        @return pxMedia($px, tabletPortrait)
+        @return pxMedia($px, tabletPortrait);
     }
 
     @media #{$tabletPortrait} {
@@ -16,7 +16,7 @@
     }
 
     @function px($px) {
-        @return pxMedia($px, tabletLandscape)
+        @return pxMedia($px, tabletLandscape);
     }
 
     @media #{$tabletLandscape} {
@@ -24,7 +24,7 @@
     }
 
     @function px($px) {
-        @return pxMedia($px, desktop)
+        @return pxMedia($px, desktop);
     }
 
     @media #{$desktop} {
@@ -32,7 +32,7 @@
     }
 
     @function px($px) {
-        @return pxMedia($px, desktopWide)
+        @return pxMedia($px, desktopWide);
     }
 
     @media #{$desktopWide} {
@@ -40,7 +40,7 @@
     }
 
     @function px($px) {
-        @return pxMedia($px, desktopHD)
+        @return pxMedia($px, desktopHD);
     }
 
     @media #{$desktopHD} {
@@ -48,7 +48,7 @@
     }
 
     @function px($px) {
-        @return pxMedia($px, desktopMega)
+        @return pxMedia($px, desktopMega);
     }
 
     @media #{$desktopMega} {
@@ -56,7 +56,7 @@
     }
 
     @function px($px) {
-        @return pxMedia($px, phonePortrait)
+        @return pxMedia($px, phonePortrait);
     }
 
     @media #{$phonePortrait} {
@@ -64,7 +64,7 @@
     }
 
     @function px($px) {
-        @return pxMedia($px, phoneLandscape)
+        @return pxMedia($px, phoneLandscape);
     }
 
     @media #{$phoneLandscape} {

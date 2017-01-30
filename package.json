@@ -17,6 +17,7 @@
     "lint": "npm run lint-js && npm run lint-css",
     "lint-js": "eslint src",
     "lint-css": "scss-lint -c .sass-lint.yml",
+    "lint-css2": "stylelint --syntax scss src/**/**/**/*.scss",
     "start-dev": "better-npm-run start-dev",
     "watch-client": "better-npm-run watch-client",
     "dev": "concurrently --kill-others \"npm run watch-client\" \"npm run start-dev\"",
@@ -116,7 +117,6 @@
     "react-router": "^3.0.2",
     "react-router-redux": "^4.0.2",
     "redux": "^3.4.0",
-    "redux-async-connect": "1.0.0-rc4",
     "redux-connect": "^5.0.0",
     "redux-responsive": "^4.1.1",
     "redux-thunk": "^2.0.1",
@@ -139,12 +139,15 @@
     "concurrently": "^3.1.0",
     "eslint-config-hope": "^3.1.0",
     "eslint-loader": "^1.0.0",
+    "postcss-scss": "^0.4.0",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.1.1",
     "redux-devtools": "^3.1.1",
-    "webpack-hot-middleware": "^2.5.0",
+    "stylelint": "^7.7.1",
+    "stylelint-scss": "^1.4.1",
     "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.5.0",
     "webpack-isomorphic-tools": "^2.2.44"
   }
 }
