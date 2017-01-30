@@ -43,12 +43,6 @@
         width: 100%;
 
         .item {
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-
-        .item {
             width: px(20);
             height: px(20);
             margin-right: px(20);
@@ -58,15 +52,19 @@
             cursor: pointer;
             opacity: .7;
 
+            &:last-child {
+                margin-right: 0;
+            }
+
             &:hover {
                 background: $mainColor1;
             }
         }
 
         .active {
-            background: $mainColor3;
-            border: none;
             transform: scale(1);
+            border: 0;
+            background: $mainColor3;
             opacity: 1;
 
             &:hover {

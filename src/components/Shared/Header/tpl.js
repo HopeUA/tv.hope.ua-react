@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import Mobile from './Views/Mobile/tpl';
 import Tablet from './Views/Tablet/tpl';
-// import Desktop from './Views/Desktop/tpl';
+import Desktop from './Views/Desktop/tpl';
 //
 import PixelPerfect from 'vendor/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
@@ -41,7 +41,7 @@ export default class Header extends Component {
                 <Tablet mediaType={ mediaType }/>
             );
         } else {
-            view = null;
+            view = <Desktop/>;
         }
 
         return (

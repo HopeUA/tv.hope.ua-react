@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import Mobile from './Views/Mobile';
 import Tablet from './Views/Tablet';
-// import Desktop from './Views/Desktop';
+import Desktop from './Views/Desktop';
 import Data from './Mock/data.json';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
@@ -44,7 +44,14 @@ export default class Header extends Component {
                 <Tablet { ...viewProps }/>
             );
         } else {
-            view = null;
+            view = (
+                <Desktop
+                    language={ Data.language }
+                    socialLinks={ Data.socialLinks }
+                    menu={ Data.menu }
+                    priorityFilter={ this.priorityFilter }
+                />
+            );
         }
 
         return view;

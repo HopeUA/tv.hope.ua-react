@@ -25,6 +25,13 @@
         "title": "ТВ Онлайн",
         "url": "#",
         "external": false
+      },
+      {
+        "id": "about",
+        "title": "О телеканале",
+        "url": "#",
+        "external": true,
+        "priority": "low"
       }
     ],
     "sub": [
@@ -38,20 +45,21 @@
         "id": "watch-us",
         "title": "Где нас смотреть",
         "url": "#",
-        "external": true
+        "external": true,
+        "priority": "low"
       },
       {
         "id": "donate",
         "title": "Пожертвовать",
         "url": "#",
-        "external": false,
-        "priority": "low"
+        "external": false
       },
       {
         "id": "about",
         "title": "О телеканале",
         "url": "#",
-        "external": true
+        "external": true,
+        "priority": "low"
       },
       {
         "id": "contacts",

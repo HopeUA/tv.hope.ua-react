@@ -4,14 +4,6 @@
     @import 'theme/Palette';
 
     @function px($px) {
-        @return pxMedia($px, tabletPortrait)
-    }
-
-    @media #{$tabletPortrait} {
-        @import 'tabletPortrait';
-    }
-
-    @function px($px) {
         @return pxMedia($px, tabletLandscape)
     }
 

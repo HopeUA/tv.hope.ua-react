@@ -39,7 +39,7 @@
                 }
 
                 a {
-                    color: #c8d9dd;
+                    color: $tempColor21;
                     font-family: PTSans-Narrow;
                     font-size: px(44);
                 }
@@ -64,7 +64,7 @@
 
                 li {
                     a {
-                        color: rgba(200, 217, 221, .6);
+                        color: $tempColor25;
                         font-size: px(34);
                     }
                 }
@@ -72,8 +72,8 @@
 
             .footer {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
+                justify-content: space-between;
                 margin-top: px(66);
 
                 .social {
@@ -144,16 +144,16 @@
                 .languages {
                     .choose {
                         margin-right: px(30);
+                        color: $tempColor19;
                         font-size: px(30);
                         font-style: italic;
-                        color: $tempColor19;
                     }
 
                     .language {
                         margin-right: px(50);
                         padding: px(14) px(18);
-                        font-size: px(30);
                         color: $tempColor21;
+                        font-size: px(30);
                         opacity: .6;
 
                         &:last-child {

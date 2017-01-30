@@ -1,88 +1,93 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Styles from './Styles/main.scss';
+import Grids from 'theme/Grid.scss';
+import cx from 'classnames';
 
-import Instagram from 'components/Assets/Social/instagram';
-import Facebook from 'components/Assets/Social/Fb';
-import Twitter from 'components/Assets/Social/Tw';
-import YouTube from 'components/Assets/Social/YouTube';
-import Ok from 'components/Assets/Social/Ok';
-import Vk from 'components/Assets/Social/Vk';
+import Instagram from 'components/Assets/SocialFlat/instagram';
+import Facebook from 'components/Assets/SocialFlat/Fb';
+import Twitter from 'components/Assets/SocialFlat/Tw';
+import YouTube from 'components/Assets/SocialFlat/YouTube';
+import Vk from 'components/Assets/SocialFlat/Vk';
 import Logo from 'components/Assets/Icons/Logo';
-import Hamburger from 'components/Assets/Icons/Hamburger';
-
 import Palette from 'components/Assets/Palette';
+import MenuLive from 'components/Assets/Icons/menuLive';
+import Earth from 'components/Assets/Icons/Worldwide';
 
-export default function Header(props) {
-    const { handleMenu, isMenuVisible } = props;
+export default function Header() {
+    const ukClass = cx({
+        [Styles.active]: true,
+        [Styles.language]: true
+    });
 
-    const style = {
-        visibility: isMenuVisible ? 'visible' : 'hidden'
-    };
+    const ruClass = cx({
+        [Styles.active]: false,
+        [Styles.language]: true
+    });
 
     return (
-        <section className={ Styles.headerComponent }>
-            <div className={ Styles.head }>
-                <a href="#"><Logo color={ Palette.paletteColor6 }/></a>
-                <span onClick={ handleMenu }>
-                    <Hamburger isOpened={ isMenuVisible } color={ Palette.paletteColor6 }/>
-                </span>
-            </div>
-            <div className={ Styles.dynamicPart } style={ style }>
-                <div className={ Styles.lists }>
-                    <ul className={ Styles.menu1 }>
+        <section className={ Grids.container }>
+            <section className={ Styles.headerComponent }>
+                <div className={ Styles.top }>
+                    <a href="#" className={ Styles.worldwideChannel }>
+                        <Earth/>
+                        Всемирный HopeChannel
+                    </a>
+                    <ul className={ Styles.subMenu }>
+                        <li>
+                            <a href="#">Где нас смотреть</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="#">О нас</a>
+                        </li>
+                    </ul>
+                    <div className={ Styles.social }>
+                        <a href="#">
+                            <YouTube className={ Styles.youTube }/>
+                        </a>
+                        <a href="#">
+                            <Facebook className={ Styles.fb }/>
+                        </a>
+                        <a href="#">
+                            <Vk className={ Styles.vk }/>
+                        </a>
+                        <a href="#">
+                            <Twitter className={ Styles.twitter }/>
+                        </a>
+                        <a href="#">
+                            <Instagram className={ Styles.instagram }/>
+                        </a>
+                    </div>
+                    <div className={ Styles.languages }>
+                        <span className={ ruClass }>Рус</span>
+                        <span className={ Styles.slash }>/</span>
+                        <span className={ ukClass }>Укр</span>
+                    </div>
+                </div>
+                <div className={ Styles.main }>
+                    <Logo className={ Styles.logo } color={ Palette.paletteColor6 }/>
+                    <ul className={ Styles.menu }>
                         <li>
                             <a href="#">Все программы</a>
                         </li>
                         <li>
-                            <a href="#">ТВ программа</a>
+                            <a href="#">ТВ Программа</a>
                         </li>
                         <li>
                             <a href="#">Пожертвовать</a>
                         </li>
                         <li>
-                            <a href="#">ТВ Онлайн</a>
-                        </li>
-                    </ul>
-                    <ul className={ Styles.menu2 }>
-                        <li>
                             <a href="#">Новости</a>
                         </li>
                         <li>
-                            <a href="#">Где нас смотреть?</a>
-                        </li>
-                        <li>
-                            <a href="#">О Телеканале</a>
-                        </li>
-                        <li>
-                            <a href="#">Контакты</a>
+                            <MenuLive color={ Palette.paletteColor1 }/>
+                            <a href="#">ТВ Онлайн</a>
                         </li>
                     </ul>
                 </div>
-                <div className={ Styles.footer }>
-                    <div className={ Styles.social }>
-                        <a href="#" className={ Styles.youtubeIcon }><YouTube/></a>
-                        <a href="#" className={ Styles.instagramIcon }><Instagram/></a>
-                        <a href="#" className={ Styles.twitterIcon }><Twitter/></a>
-                        <a href="#" className={ Styles.vkIcon }><Vk/></a>
-                        <a href="#" className={ Styles.facebookIcon }><Facebook/></a>
-                        <a href="#" className={ Styles.okIcon }><Ok/></a>
-                    </div>
-                    <div className={ Styles.languages }>
-                        <span className={ Styles.choose }>Язык сайта:</span>
-                        <span className={ Styles.active }>Русский</span>
-                        <span className={ Styles.language }>Украинский</span>
-                    </div>
-                </div>
-            </div>
+            </section>
         </section>
     );
 }
-
-Header.propTypes = {
-    mediaType: PropTypes.string.isRequired,
-    handleMenu: PropTypes.function,
-    isMenuVisible: PropTypes.boolean,
-    language: PropTypes.string,
-    socialLinks: PropTypes.string,
-    menu: PropTypes.object
-};
