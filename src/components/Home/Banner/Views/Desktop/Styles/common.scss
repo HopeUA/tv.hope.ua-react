@@ -9,7 +9,8 @@
         width: 100%;
         height: px(806);
         background-image: url('../../../Assets/gradient.png');
-        background-size: contain;
+        background-size: px(40) px(808);
+        background-repeat: repeat-x;
         content: '';
     }
 
