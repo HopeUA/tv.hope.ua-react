@@ -2,6 +2,6 @@ export App from './App/App';
 export Home from './Home/Home';
 export NotFound from './NotFound/NotFound';
 
-export WatchUs from './WatchUs/WatchUs';
-export Contacts from './Contacts/Contacts';
-export About from './About/About';
+// export WatchUs from '../../old-src/containers/WatchUs/WatchUs';
+// export Contacts from '../../old-src/containers/Contacts/Contacts';
+// export About from '../../old-src/containers/About/About';

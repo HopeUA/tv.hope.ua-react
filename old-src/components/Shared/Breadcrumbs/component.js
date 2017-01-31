@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Styles from './main.scss';
 import Grids from 'theme/Grid.scss';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 export default function Breadcrumbs(props) {
     const { mediaType } =  props;

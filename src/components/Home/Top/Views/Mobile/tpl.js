@@ -16,10 +16,9 @@ export default function Large() {
             <section className={ Styles.item }>
                 <h1>Актуальное видео</h1>
                 <article className={ Styles.main }>
-                    <div className={ Styles.image } style={ imageStyle }>
-                    </div>
+                    <div className={ Styles.image } style={ imageStyle }/>
                     <div className={ Styles.container }>
-                        <div className={ Styles.blur } style={ imageStyle }></div>
+                        <div className={ Styles.blur } style={ imageStyle }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
                                 <BubbleVideo color={ Palette.paletteColor6 } className={ Styles.bubble }/>

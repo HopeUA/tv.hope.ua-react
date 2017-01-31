@@ -1,5 +1,5 @@
 import LocatorApi from 'api/Locator';
-import { routerActions, LOCATION_CHANGE } from 'react-router-redux';
+import { routerActions/* , LOCATION_CHANGE */ } from 'react-router-redux';
 
 const basePath = 'watch-us';
 const initialState = {
@@ -10,7 +10,6 @@ const initialState = {
 };
 
 function buildUrl(state) {
-    console.log(state);
     const parts = [''];
     parts.push(basePath);
 
@@ -33,48 +32,47 @@ function buildUrl(state) {
             }
         }
     }
-    console.log(parts);
 
     return parts.join('/');
 }
 
 export default function reducer(state = initialState, action = {}) {
     switch (action.type) {
-        case LOCATION_CHANGE:
-            const [
-                ,
-                page = null,
-                locator = false,
-                regionName = null,
-                cityName = null,
-                providerShortId = null
-            ] = action.payload.pathname.split('/');
-
-            if (page !== basePath) {
-                return state;
-            }
-
-            const region = LocatorApi.getRegion({
-                name: decodeURIComponent(regionName)
-            });
-
-            const city = region ? LocatorApi.getCity({
-                regionId: region.id,
-                name: decodeURIComponent(cityName)
-            }) : null;
-
-            const provider = city ? LocatorApi.getProvider({
-                regionId: region.id,
-                cityId: city.id,
-                shortId: providerShortId
-            }) : null;
-
-            return {
-                locatorActive: locator === 'locator',
-                region: region ? region.id : null,
-                city: city ? city.id : null,
-                provider: provider ? provider.id : null
-            };
+        // case LOCATION_CHANGE:
+        //     const [
+        //         ,
+        //         page = null,
+        //         locator = false,
+        //         regionName = null,
+        //         cityName = null,
+        //         providerShortId = null
+        //     ] = action.payload.pathname.split('/');
+        //
+        //     if (page !== basePath) {
+        //         return state;
+        //     }
+        //
+        //     const region = LocatorApi.getRegion({
+        //         name: decodeURIComponent(regionName)
+        //     });
+        //
+        //     const city = region ? LocatorApi.getCity({
+        //         regionId: region.id,
+        //         name: decodeURIComponent(cityName)
+        //     }) : null;
+        //
+        //     const provider = city ? LocatorApi.getProvider({
+        //         regionId: region.id,
+        //         cityId: city.id,
+        //         shortId: providerShortId
+        //     }) : null;
+        //
+        //     return {
+        //         locatorActive: locator === 'locator',
+        //         region: region ? region.id : null,
+        //         city: city ? city.id : null,
+        //         provider: provider ? provider.id : null
+        //     };
         default:
             return state;
     }

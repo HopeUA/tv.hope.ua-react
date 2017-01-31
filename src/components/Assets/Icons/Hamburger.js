@@ -8,10 +8,13 @@ import svg from 'helpers/svg';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class Hamburger extends Component {
-
     static propTypes = {
-        color: PropTypes.string,
-        isOpened: PropTypes.boolean
+        color: PropTypes.string.isRequired,
+        isOpened: PropTypes.bool
+    };
+
+    static defaultProps = {
+        isOpened: false
     };
 
     render() {

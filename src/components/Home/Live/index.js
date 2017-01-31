@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import MobileView from './Views/Mobile/index';
 import DesktopView from './Views/Desktop/index';
 
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 // TODO получать через api
 import items from './Mock/data.json';
@@ -27,8 +27,5 @@ export default function Live(props) {
 }
 
 Live.propTypes = {
-    mediaType: PropTypes.string.isRequired,
-    items: PropTypes.array,
-    url: PropTypes.string.isRequired,
-    currentTime: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired
 };

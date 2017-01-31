@@ -7,10 +7,10 @@ import Grids from 'theme/Grid.scss';
 import Palette from 'components/Assets/Palette';
 import GoTo from 'components/Assets/Icons/GoTo';
 
-export default function EpisodesDesktop(props) {
+export default function DesktopGrid(props) {
     const { items } = props;
 
-    const large = items.slice(0, 1)[0];
+    const [large] = items;
     const styles = {
         backgroundImage: `url(${large.image})`
     };
@@ -58,6 +58,9 @@ export default function EpisodesDesktop(props) {
     );
 }
 
-EpisodesDesktop.propTypes = {
+DesktopGrid.propTypes = {
     items: PropTypes.array
+};
+DesktopGrid.defaultProps = {
+    items: []
 };

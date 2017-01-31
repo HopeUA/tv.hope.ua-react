@@ -16,9 +16,10 @@ export default class Header extends Component {
             isMenuVisible: !this.state.isMenuVisible
         });
     };
+
     render() {
         const { mediaType } = this.props;
-        console.log(mediaType);
+
         const templates = [
             BreakPoints.phonePortrait.name,
             BreakPoints.phoneLandscape.name,

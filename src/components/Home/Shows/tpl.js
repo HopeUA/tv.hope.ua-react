@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Desktop from './Views/Desktop/tpl';
 
 import PixelPerfect from 'vendor/PixelPerfect/component';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 export default function Shows(props) {
     const { mediaType } = props;

@@ -8,11 +8,14 @@ import svg, { STATE_NORMAL, STATE_ACTIVE } from 'helpers/svg';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class Volume extends Component {
-
     static propTypes = {
-        color: PropTypes.string,
-        state: PropTypes.string,
-        isMuted: PropTypes.boolean
+        color: PropTypes.string.isRequired,
+        state: PropTypes.string.isRequired,
+        isMuted: PropTypes.bool
+    };
+
+    static defaultProps = {
+        isMuted: false
     };
 
     render() {

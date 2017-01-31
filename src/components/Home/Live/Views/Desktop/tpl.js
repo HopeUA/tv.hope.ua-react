@@ -35,11 +35,11 @@ export default function Desktop(props) {
     ) : (<section className={ Styles.nextContainer }>
         <h1>Дальше в эфире</h1>
         <div className={ Styles.nextVideo }>
-            <div className={ Styles.image } style={ style2 }></div>
+            <div className={ Styles.image } style={ style2 }/>
             <div className={ Styles.info }>
                 <div className={ Styles.bar }>
                     <span className={ Styles.startTime }>15:35</span>
-                    <span className={ Styles.timeLine }> </span>
+                    <span className={ Styles.timeLine }/>
                     <span className={ Styles.endTime }>15:55</span>
                 </div>
                 <h2>Ох уже ці італійці</h2>
@@ -60,7 +60,7 @@ export default function Desktop(props) {
                         <h1 className={ Styles.label }>в эфире</h1>
                         <div className={ Styles.live }>
                             <div className={ Styles.videoContainer }>
-                                <div className={ Styles.video } style={ style }></div>
+                                <div className={ Styles.video } style={ style }/>
                                 <div className={ Styles.iconsBlock }>
                                     <div className={ Styles.icons }>
                                         <Volume color={ Palette.paletteColor6 } isMuted={ test }/>

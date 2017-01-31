@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 import Styles from './main.scss';
 
 export default function PageHead(props) {

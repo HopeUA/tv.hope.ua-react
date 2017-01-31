@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import Styles from './Styles/main.scss';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 import cx from 'classnames';
 import px from 'helpers/px';
 import Moment from 'moment';
@@ -89,8 +89,8 @@ export default function Timeline(props) {
         return (
             <div key={ element.id } className={ episodeClass } style={ episodeStyle }>
                 <div className={ Styles.timeline }>
-                    <div className={ Styles.prev } style={ prevStyle }></div>
-                    <div className={ Styles.next } style={ nextStyle }></div>
+                    <div className={ Styles.prev } style={ prevStyle }/>
+                    <div className={ Styles.next } style={ nextStyle }/>
                 </div>
                 <div className={ Styles.info }>
                     <span className={ Styles.time }>{ Moment(element.date).format('LT') }</span>
@@ -123,6 +123,9 @@ export default function Timeline(props) {
 
 Timeline.propTypes = {
     mediaType: PropTypes.string.isRequired,
-    serverTime: PropTypes.string,
+    serverTime: PropTypes.string.isRequired,
     items: PropTypes.array
+};
+Timeline.defaultProps = {
+    items: []
 };
