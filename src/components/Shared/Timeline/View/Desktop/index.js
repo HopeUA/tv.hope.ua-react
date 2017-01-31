@@ -5,17 +5,32 @@ import cx from 'classnames';
 import px from 'helpers/px';
 import Moment from 'moment';
 
-const sizes = {
-    hourWidth: 600,
-    minWidth: 200,
-    episodesMargin: 30,
-    timelineStart: 470,
-    timelineOffset: 5,
-    clockWidth: 72
-};
-
 export default function Timeline(props) {
     const { mediaType, serverTime, items } =  props;
+
+    let timelineStart;
+
+    if (BreakPoints.tabletLandscape.name === mediaType) {
+        timelineStart = 470;
+    } else if (BreakPoints.desktop.name === mediaType) {
+        timelineStart = 516;
+    } else if (BreakPoints.desktopWide.name === mediaType) {
+        timelineStart = 586;
+    } else if (BreakPoints.desktopHD.name === mediaType) {
+        timelineStart = 730;
+    } else if (BreakPoints.desktopMega.name === mediaType) {
+        timelineStart = 910;
+    }
+
+    const sizes = {
+        hourWidth: 600,
+        minWidth: 200,
+        episodesMargin: 30,
+        timelineStart,
+        timelineOffset: 5,
+        clockWidth: 72
+    };
+
     const currentTime = Moment(serverTime);
     const isDesktop = [
         BreakPoints.desktop.name,

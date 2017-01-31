@@ -1,9 +1,9 @@
 import React, { PropTypes, Component } from 'react';
 import Mobile from './Views/Mobile';
-// import Desktop from './Views/Desktop';
-//
-// import BreakPoints from 'components/PixelPerfect/breakpoints';
+import Tablet from './Views/Tablet';
+import Desktop from './Views/Desktop';
 import Data from './Mock/data.json';
+import BreakPoints from 'components/PixelPerfect/breakpoints';
 
 export default class Header extends Component {
     state = {
@@ -16,19 +16,45 @@ export default class Header extends Component {
         });
     };
 
+    priorityFilter = (obj) => {
+        return obj.priority !== 'low';
+    };
+
     render() {
         const { mediaType } = this.props;
 
-        return (
-            <Mobile
-                language={ Data.language }
-                mediaType={ mediaType }
-                isMenuVisible={ this.state.isMenuVisible }
-                handleMenu={ this.handleMenu }
-                socialLinks={ Data.socialLinks }
-                menu={ Data.menu }
-            />
-        );
+        let view;
+
+        const viewProps = {
+            language: Data.language,
+            mediaType,
+            isMenuVisible: this.state.isMenuVisible,
+            handleMenu: this.handleMenu,
+            socialLinks: Data.socialLinks,
+            menu: Data.menu,
+            priorityFilter: this.priorityFilter
+        };
+
+        if ([BreakPoints.phonePortrait.name, BreakPoints.phoneLandscape.name].indexOf(mediaType) !== -1) {
+            view = (
+                <Mobile { ...viewProps }/>
+            );
+        } else if (BreakPoints.tabletPortrait.name === mediaType) {
+            view = (
+                <Tablet { ...viewProps }/>
+            );
+        } else {
+            view = (
+                <Desktop
+                    language={ Data.language }
+                    socialLinks={ Data.socialLinks }
+                    menu={ Data.menu }
+                    priorityFilter={ this.priorityFilter }
+                />
+            );
+        }
+
+        return view;
     }
 }
 

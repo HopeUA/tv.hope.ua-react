@@ -2,51 +2,67 @@
   "menu": {
     "main": [
       {
-        "id": "menu1",
+        "id": "shows",
         "title": "Все программы",
         "url": "#",
         "external": true
       },
       {
-        "id": "menu2",
+        "id": "scheduler",
         "title": "ТВ программа",
         "url": "#",
         "external": false
       },
       {
-        "id": "menu3",
+        "id": "donate",
         "title": "Пожертвовать",
+        "url": "#",
+        "external": false,
+        "priority": "low"
+      },
+      {
+        "id": "live",
+        "title": "ТВ Онлайн",
         "url": "#",
         "external": false
       },
       {
-        "id": "menu4",
-        "title": "ТВ Онлайн",
+        "id": "about",
+        "title": "О телеканале",
         "url": "#",
-        "external": false
+        "external": true,
+        "priority": "low"
       }
     ],
     "sub": [
       {
-        "id": "menu1",
+        "id": "news",
         "title": "Новости",
         "url": "#",
         "external": true
       },
       {
-        "id": "menu2",
+        "id": "watch-us",
         "title": "Где нас смотреть",
         "url": "#",
-        "external": true
+        "external": true,
+        "priority": "low"
       },
       {
-        "id": "menu3",
+        "id": "donate",
+        "title": "Пожертвовать",
+        "url": "#",
+        "external": false
+      },
+      {
+        "id": "about",
         "title": "О телеканале",
         "url": "#",
-        "external": true
+        "external": true,
+        "priority": "low"
       },
       {
-        "id": "menu4",
+        "id": "contacts",
         "title": "Контакты",
         "url": "#",
         "external": true

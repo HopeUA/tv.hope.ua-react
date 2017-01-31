@@ -36,7 +36,6 @@ export default class Home extends Component {
         return (
             <div>
                 <Helmet { ...Seo.Home }/>
-                { /*    <Shared.Header mediaType={ browser.mediaType }/>    */ }
                 <Shared.Header mediaType={ browser.mediaType }/>
                 <Shared.Timeline mediaType={ browser.mediaType }/>
                 <Banner mediaType={ browser.mediaType }/>

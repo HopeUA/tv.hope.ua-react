@@ -5,7 +5,7 @@
         padding: 0 px(60);
     }
 
-    .dynamicPart {
+    .popup {
         .lists {
             .menu1 {
                 li {
@@ -22,13 +22,13 @@
                     flex-grow: 1;
                     width: auto;
                     padding: 0;
-                    border-bottom: 1px solid #17272b;
+                    border-bottom: 1px solid $tempColor24;
 
                     a {
                         display: flex;
                         justify-content: center;
                         padding: 0;
-                        border: none;
+                        border: 0;
                     }
                 }
 
@@ -47,8 +47,8 @@
                     &::after {
                         display: block;
                         position: absolute;
-                        bottom: -2px;
                         right: -3px;
+                        bottom: -2px;
                         width: 6px;
                         height: 4px;
                         background: $commonColor10;
@@ -59,7 +59,7 @@
         }
 
         .footer {
-            border-top: none;
+            border-top: 0;
 
             .social {
                 position: relative;
@@ -71,7 +71,7 @@
                     bottom: 0;
                     width: px(776);
                     height: 1px;
-                    background: #17272b;
+                    background: $tempColor24;
                     content: '';
                 }
             }
@@ -79,7 +79,7 @@
             .languages {
                 height: px(130);
                 padding: 0 px(284);
-                border-top: none;
+                border-top: 0;
             }
         }
     }

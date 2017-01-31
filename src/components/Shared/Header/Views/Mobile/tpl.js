@@ -15,7 +15,8 @@ import Palette from 'components/Assets/Palette';
 export default function Header(props) {
     const { handleMenu, isMenuVisible } = props;
 
-    const style = {
+    const popupStyle = {
+        position: 'static',
         visibility: isMenuVisible ? 'visible' : 'hidden'
     };
 
@@ -27,7 +28,7 @@ export default function Header(props) {
                     <Hamburger isOpened={ isMenuVisible } color={ Palette.paletteColor6 }/>
                 </span>
             </div>
-            <div className={ Styles.dynamicPart } style={ style }>
+            <div className={ Styles.popup } style={ popupStyle }>
                 <div className={ Styles.lists }>
                     <ul className={ Styles.menu1 }>
                         <li>
