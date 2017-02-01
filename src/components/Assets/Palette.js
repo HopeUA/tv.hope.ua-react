@@ -5,5 +5,6 @@ export default {
     paletteColor4: '#f3f4f4',  // Background main
     paletteColor5: '#0b2226',  // Bottle
     paletteColor6: '#fff',     // White
-    paletteColor9: '#6d7c7c'   // Text secondary
+    paletteColor9: '#6d7c7c', // Text secondary
+    paletteColor10: '#aeb3b4'   // Text secondary
 };

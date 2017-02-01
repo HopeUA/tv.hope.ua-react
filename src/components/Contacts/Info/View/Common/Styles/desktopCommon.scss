@@ -1,0 +1,271 @@
+& {
+    @import 'mobile';
+
+    & {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section {
+        flex-basis: 33%;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .contacts {
+        order: 1;
+        margin-left: px(88);
+
+        header {
+            i {
+                width: px(130);
+                margin-left: px(4);
+            }
+
+            h1 {
+                margin-top: px(36);
+                margin-left: px(4);
+
+                &::after {
+                    width: px(50);
+                    margin-top: px(38);
+                }
+            }
+        }
+
+        >div {
+            margin-left: px(40);
+        }
+
+        .phone {
+            margin-top: px(40);
+
+            .row {
+                margin-right: px(54);
+
+                i {
+                    width: px(44);
+                }
+
+                span {
+                    margin-top: px(2);
+                    margin-left: px(50);
+                    font-size: px(40);
+
+                    &::before {
+                        left: px(-26);
+                        height: px(36);
+                    }
+                }
+            }
+
+            div {
+                p {
+                    margin-top: 0;
+                    margin-left: px(32);
+                    font-size: px(28);
+                    line-height: px(36);
+                }
+            }
+        }
+
+        .skype {
+            margin-top: px(28);
+
+            .row {
+                margin-top: px(4);
+                margin-right: px(50);
+
+                i {
+                    width: px(44);
+                }
+
+                a {
+                    margin-top: px(2);
+                    margin-left: px(50);
+                    font-size: px(40);
+
+                    &::before {
+                        left: px(-26);
+                        height: px(36);
+                    }
+                }
+            }
+
+            div {
+                p {
+                    margin-top: px(6);
+                    margin-left: px(32);
+                    font-size: px(28);
+                    line-height: px(36);
+                }
+            }
+        }
+
+        .mail {
+            margin-top: px(10);
+
+            .row {
+                margin-top: px(4);
+                margin-right: 0;
+
+                i {
+                    width: px(44);
+                }
+
+                a {
+                    margin-top: px(2);
+                    margin-left: px(52);
+                    font-size: px(40);
+
+                    &::before {
+                        left: px(-26);
+                        height: px(36);
+                    }
+                }
+            }
+
+            div {
+                margin-right: px(52);
+
+                p {
+                    margin-top: px(6);
+                    margin-right: 0;
+                    margin-left: px(32);
+                    font-size: px(28);
+                    line-height: px(36);
+                }
+            }
+        }
+    }
+
+    .live {
+        order: 2;
+
+        header {
+            i {
+                width: px(162);
+                margin-top: px(80);
+                margin-right: px(8);
+            }
+
+            h1 {
+                margin-top: px(36);
+                margin-right: px(4);
+
+                &::after {
+                    width: px(50);
+                    margin-top: px(38);
+                }
+            }
+        }
+
+        .chat {
+            p {
+                margin-top: px(24);
+                font-size: px(28);
+                line-height: px(36);
+            }
+
+            a {
+                width: px(420);
+                height: px(80);
+                margin-top: px(26);
+                border-radius: px(8);
+                font-size: px(28);
+            }
+
+            &::after {
+                width: px(50);
+                margin-top: px(36);
+            }
+        }
+
+        .call {
+            margin-top: px(24);
+
+            p {
+                margin-top: px(0);
+                font-size: px(28);
+                line-height: px(36);
+            }
+
+            a {
+                width: px(420);
+                height: px(80);
+                margin-top: px(28);
+                border-radius: px(8);
+                font-size: px(28);
+            }
+
+            div {
+                a {
+                    i {
+                        width: px(38);
+                    }
+                }
+            }
+        }
+    }
+
+    .social {
+        order: 3;
+        margin-right: px(88);
+
+        header {
+            i {
+                width: px(158);
+                margin-top: px(80);
+                margin-right: px(38);
+            }
+
+            h1 {
+                margin-top: px(36);
+                margin-right: px(32);
+
+                &::after {
+                    width: px(50);
+                    margin-top: px(38);
+                }
+            }
+        }
+
+        .list {
+            width: px(404);
+            margin-right: px(124);
+
+            .item {
+                margin-top: px(68);
+                margin-bottom: px(4);
+
+                i {
+                    width: px(88);
+                }
+
+                span {
+                    width: px(60);
+                    height: px(56);
+                    margin-top: px(26);
+                    font-size: px(28);
+
+                    &::before {
+                        top: px(-10);
+                        left: 50%;
+                        width: px(14);
+                        height: px(14);
+                        margin-left: px(-8);
+                        border-radius: 0 px(2) 0 0;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::after {
+                        bottom: px(-40);
+                    }
+                }
+            }
+        }
+    }
+}

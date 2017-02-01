@@ -1,2 +1,2 @@
-export Info from './Info/component';
+export Info from './Info';
 export Special from './Special/component.tpl';
