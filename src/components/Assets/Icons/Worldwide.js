@@ -10,7 +10,7 @@ import svg from 'helpers/svg';
 export default class Worldwide extends Component {
 
     static propTypes = {
-        color: PropTypes.string
+        color: PropTypes.string.isRequired
     };
 
     render() {

@@ -106,8 +106,8 @@ export default function Header(props) {
 }
 
 Header.propTypes = {
-    language: PropTypes.string,
-    socialLinks: PropTypes.object,
-    menu: PropTypes.object,
-    priorityFilter: PropTypes.function
+    language: PropTypes.string.isRequired,
+    socialLinks: PropTypes.object.isRequired,
+    menu: PropTypes.object.isRequired,
+    priorityFilter: PropTypes.function.isRequired
 };

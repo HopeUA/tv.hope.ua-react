@@ -11,7 +11,7 @@ import svg from 'helpers/svg';
 export default class Top extends Component {
 
     static propTypes = {
-        color: PropTypes.string
+        color: PropTypes.string.isRequired
     };
 
     render() {

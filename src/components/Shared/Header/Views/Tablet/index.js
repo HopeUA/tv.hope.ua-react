@@ -109,11 +109,14 @@ export default function Header(props) {
 }
 
 Header.propTypes = {
-    mediaType: PropTypes.string.isRequired,
-    handleMenu: PropTypes.function,
+    handleMenu: PropTypes.func.isRequired,
     isMenuVisible: PropTypes.boolean,
-    language: PropTypes.string,
-    socialLinks: PropTypes.string,
-    menu: PropTypes.object,
-    priorityFilter: PropTypes.function
+    language: PropTypes.string.isRequired,
+    socialLinks: PropTypes.object.isRequired,
+    menu: PropTypes.object.isRequired,
+    priorityFilter: PropTypes.function.isRequired
+};
+
+Header.defaultProps = {
+    isMenuVisible: false
 };
