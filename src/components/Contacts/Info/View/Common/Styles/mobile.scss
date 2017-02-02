@@ -3,7 +3,7 @@
         width: px(560);
         height: 3px;
         margin: px(80) auto 0;
-        background-image: url($componentRoot + 'divider-bg.svg');
+        background-image: url('../../../Assets/divider-bg.svg');
         content: '';
     }
 
@@ -23,7 +23,7 @@
 
             h1 {
                 margin-top: px(46);
-                color: $color1;
+                color: $commonColor1;
                 font-size: px(44);
 
                 &::after {
@@ -31,7 +31,7 @@
                     width: px(60);
                     height: px(6);
                     margin: px(52) auto 0;
-                    background-color: $color2;
+                    background-color: $mainColor3;
                     content: '';
                 }
             }
@@ -61,18 +61,24 @@
                 width: px(450);
                 height: px(100);
                 margin: auto;
-                border: 1px solid $color3;
+                border: 1px solid $mainColor4;
                 border-radius: px(12);
-                color: $color3;
+                color: $mainColor4;
                 font-size: px(30);
                 text-decoration: none;
 
+                i {
+                    order: -1;
+                    width: px(42);
+                    margin: 0 px(24);
+                }
+
                 &::before {
                     display: block;
-                    width: px(92);
+                    width: 1px;
                     height: 100%;
                     margin-right: px(30);
-                    border-right: 1px solid $color3;
+                    background: $mainColor4;
                     content: '';
                 }
             }
@@ -84,18 +90,12 @@
                 width: px(60);
                 height: 1px;
                 margin-top: px(52);
-                background: $color4;
+                background: $commonColor5;
                 content: '';
             }
 
             a {
                 margin-top: px(40);
-
-                &::before {
-                    background: url($componentRoot + 'writeButton-bg.svg') no-repeat;
-                    background-position: center;
-                    background-size: px(44);
-                }
             }
 
             p {
@@ -109,12 +109,6 @@
 
             a {
                 margin-top: px(40);
-
-                &::before {
-                    background: url($componentRoot + 'phoneButton-bg.svg') no-repeat;
-                    background-position: center;
-                    background-size: px(44);
-                }
             }
 
             p {
@@ -145,7 +139,7 @@
 
             h1 {
                 margin-top: px(56);
-                color: $color1;
+                color: $commonColor1;
                 font-size: px(44);
 
                 &::after {
@@ -153,7 +147,7 @@
                     width: px(60);
                     height: px(6);
                     margin: px(51) auto 0;
-                    background-color: $color2;
+                    background-color: $mainColor3;
                     content: '';
                 }
             }
@@ -180,8 +174,9 @@
                 >span {
                     position: relative;
                     margin-left: px(54);
-                    color: $color1;
+                    color: $commonColor1;
                     font-size: px(42);
+                    font-weight: bold;
 
                     &::before {
                         display: block;
@@ -190,7 +185,7 @@
                         left: px(-30);
                         width: 1px;
                         height: px(35);
-                        background: $color4;
+                        background: $commonColor5;
                         content: '';
                     }
                 }
@@ -198,7 +193,7 @@
                 p {
                     margin-top: px(14);
                     margin-left: px(24);
-                    color: $color5;
+                    color: $commonColor2;
                     font-size: px(30);
                     font-style: italic;
                     line-height: px(34);
@@ -210,8 +205,9 @@
 
                 a {
                     position: relative;
-                    color: $color3;
+                    color: $mainColor4;
                     font-size: px(42);
+                    font-weight: bold;
                     text-decoration: none;
 
                     &::before {
@@ -221,7 +217,7 @@
                         left: px(-8);
                         width: 1px;
                         height: px(35);
-                        background: $color4;
+                        background: $commonColor5;
                         content: '';
                     }
                 }
@@ -266,13 +262,13 @@
                 margin-left: 0;
 
                 i {
-                    fill: $color3;
+                    fill: $mainColor4;
                 }
 
                 a {
-                    position: relative;
+                    display: flex;
+                    align-items: center;
                     margin-top: px(2);
-                    margin-right: px(42);
                     margin-left: px(54);
                     font-size: px(42);
 
@@ -281,9 +277,9 @@
                     }
 
                     &::after {
-                        position: absolute;
-                        top: px(4);
-                        right: px(-54);
+                        font-family: Arial;
+                        font-size: px(30);
+                        margin-left: px(12);
                         content: '→';
                     }
                 }
@@ -311,7 +307,7 @@
                     margin-top: px(2);
                     margin-right: px(36);
                     margin-left: px(54);
-                    color: $color1;
+                    color: $commonColor1;
                     font-size: px(42);
 
                     &::before {
@@ -350,7 +346,7 @@
 
             h1 {
                 margin-top: px(56);
-                color: $color1;
+                color: $commonColor1;
                 font-size: px(44);
 
                 &::after {
@@ -358,7 +354,7 @@
                     width: px(60);
                     height: px(6);
                     margin: px(52) auto 0;
-                    background-color: $color2;
+                    background-color: $mainColor3;
                     content: '';
                 }
             }
@@ -378,6 +374,32 @@
                 align-items: center;
                 margin: px(88) 0 0;
 
+                .twitter {
+                    fill: $tempColor12;
+                }
+
+                .fb {
+                    fill: $tempColor6;
+                }
+
+                .ok {
+
+                    fill: $tempColor7;
+
+                }
+
+                .youTube {
+                    fill: $tempColor8;
+                }
+
+                .vk {
+                    fill: $tempColor9;
+                }
+
+                .instagram {
+                    fill: $tempColor10;
+                }
+
                 &:nth-child(2) {
                     position: relative;
 
@@ -389,7 +411,7 @@
                         width: px(60);
                         height: 1px;
                         margin-left: px(-30);
-                        background: $color4;
+                        background: $commonColor5;
                         content: '';
                     }
                 }
@@ -406,8 +428,9 @@
                     width: px(70);
                     height: px(66);
                     margin: px(24) 0 0;
-                    border: 1px solid $color4;
+                    border: 1px solid $commonColor5;
                     border-radius: 5px;
+                    color: $tempColor3;
 
                     &::before {
                         display: block;
@@ -418,10 +441,10 @@
                         height: px(16);
                         margin-left: px(-8);
                         transform: rotate(-45deg);
-                        border-top: 1px solid $color4;
-                        border-right: 1px solid $color4;
+                        border-top: 1px solid $commonColor5;
+                        border-right: 1px solid $commonColor5;
                         border-radius: 0 px(2) 0 0;
-                        background: $color6;
+                        background: $commonColor4;
                         content: '';
                     }
                 }

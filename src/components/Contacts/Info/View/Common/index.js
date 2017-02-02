@@ -1,22 +1,25 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
-import InlineSvg from 'components/InlineSvg/component';
-import Styles from './main.scss';
+import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 
-import SvgLive from 'components/Contacts/Info/Assets/contactUs.svg';
-import SvgContacts from 'components/Contacts/Info/Assets/phoneAndInternet.svg';
-import SvgPhone from 'components/Contacts/Info/Assets/phoneContact.svg';
-import SvgSkype from 'components/Contacts/Info/Assets/skypeContact.svg';
-import SvgMail from 'components/Contacts/Info/Assets/mailContact.svg';
-import SvgSocial from 'components/Contacts/Info/Assets/socialNetworks.svg';
-import SvgTwitter from 'components/Contacts/Info/Assets/twitterIcon.svg';
-import SvgVk from 'components/Contacts/Info/Assets/vkIcon.svg';
-import SvgFacebook from 'components/Contacts/Info/Assets/facebookIcon.svg';
-import SvgOk from 'components/Contacts/Info/Assets/odnoklassnikiIcon.svg';
-import SvgYouTube from 'components/Contacts/Info/Assets/youtubeIcon.svg';
-import SvgInstgram from 'components/Contacts/Info/Assets/instagramIcon.svg';
+import Palette from 'components/Assets/Palette';
+
+import ContactUs from '../../Assets/ContactUs';
+import Mail from '../../Assets/Mail';
+import PhoneAndInternet from '../../Assets/PhoneAndInternet';
+import PhoneButton from '../../Assets/PhoneButton';
+import PhoneContact from '../../Assets/PhoneContact';
+import Skype from '../../Assets/Skype';
+import SocialNetworks from '../../Assets/SocialNetworks';
+import WriteButton from '../../Assets/WriteButton';
+import Instagram from 'components/Assets/Social/instagram';
+import Facebook from 'components/Assets/Social/Fb';
+import Twitter from 'components/Assets/Social/Tw';
+import YouTube from 'components/Assets/Social/YouTube';
+import Ok from 'components/Assets/Social/Ok';
+import Vk from 'components/Assets/Social/Vk';
 
 /* eslint-disable react/prefer-stateless-function */
 @connect(({ browser }) => {
@@ -66,26 +69,32 @@ export default class Info extends Component {
                 <section className={ Styles.infoComponent }>
                     <section className={ Styles.live }>
                         <header>
-                            <InlineSvg content={ SvgLive }/>
+                            <ContactUs color1={ Palette.paletteColor9 } color2={ Palette.paletteColor1 }/>
                             <h1>Общайтесь онлайн</h1>
                         </header>
                         <div className={ Styles.chat }>
                             <p>Онлайн чат работает каждый день с <b>9:00 до 17:00</b></p>
-                            <a href="#" onClick={ this.startChat }>Написать в онлайн чат</a>
+                            <a href="#" onClick={ this.startChat }>
+                                <WriteButton color={ Palette.paletteColor2 }/>
+                                Написать в онлайн чат
+                            </a>
                         </div>
                         <div className={ Styles.call }>
                             <p>Контакт-центр работает каждый день с <b>9:00 до 21:00</b></p>
-                            <a href="skype:contact-hope?call">Позвонить нам сейчас</a>
+                            <a href="skype:contact-hope?call">
+                                <PhoneButton color={ Palette.paletteColor2 }/>
+                                Позвонить нам сейчас
+                            </a>
                         </div>
                     </section>
                     <section className={ Styles.contacts }>
                         <header>
-                            <InlineSvg content={ SvgContacts }/>
+                            <PhoneAndInternet color1={ Palette.paletteColor9 } color2={ Palette.paletteColor1 }/>
                             <h1>Задайте вопрос</h1>
                         </header>
                         <div className={ Styles.phone }>
                             <div className={ Styles.row }>
-                                <InlineSvg content={ SvgPhone }/>
+                                <PhoneContact color={ Palette.paletteColor10 }/>
                                 <span>0 800 30 20 20</span>
                             </div>
                             <div>
@@ -94,7 +103,7 @@ export default class Info extends Component {
                         </div>
                         <div className={ Styles.skype }>
                             <div className={ Styles.row }>
-                                <InlineSvg content={ SvgSkype }/>
+                                <Skype/>
                                 <a href="skype:contact-hope?chat">contact-hope</a>
                             </div>
                             <div>
@@ -103,7 +112,7 @@ export default class Info extends Component {
                         </div>
                         <div className={ Styles.mail }>
                             <div className={ Styles.row }>
-                                <InlineSvg content={ SvgMail }/>
+                                <Mail color={ Palette.paletteColor10 }/>
                                 <a href="mailto:contact@hope.ua">contact@hope.ua</a>
                             </div>
                             <div>
@@ -113,32 +122,32 @@ export default class Info extends Component {
                     </section>
                     <section className={ Styles.social }>
                         <header>
-                            <InlineSvg content={ SvgSocial }/>
+                            <SocialNetworks color1={ Palette.paletteColor1 } color2={ Palette.paletteColor9 }/>
                             <h1>{ socialTitle }</h1>
                         </header>
                         <div className={ Styles.list }>
                             <a href="https://twitter.com/ua_hope" className={ Styles.item }>
-                                <InlineSvg content={ SvgTwitter }/>
+                                <Twitter className={ Styles.twitter }/>
                                 <span>1k</span>
                             </a>
                             <a href="https://vk.com/hopechannel" className={ Styles.item }>
-                                <InlineSvg content={ SvgVk }/>
+                                <Vk className={ Styles.vk }/>
                                 <span>5k</span>
                             </a>
                             <a href="https://www.facebook.com/hope.ua/" className={ Styles.item }>
-                                <InlineSvg content={ SvgFacebook }/>
+                                <Facebook className={ Styles.fb }/>
                                 <span>2k</span>
                             </a>
                             <a href="https://ok.ru/hopechannel" className={ Styles.item }>
-                                <InlineSvg content={ SvgOk }/>
+                                <Ok className={ Styles.ok }/>
                                 <span>3k</span>
                             </a>
                             <a href="https://www.youtube.com/user/HopeChannelUkraine" className={ Styles.item }>
-                                <InlineSvg content={ SvgYouTube }/>
+                                <YouTube className={ Styles.youTube }/>
                                 <span>7k</span>
                             </a>
                             <a href="https://www.instagram.com/ua_hope/" className={ Styles.item }>
-                                <InlineSvg content={ SvgInstgram }/>
+                                <Instagram className={ Styles.instagram }/>
                                 <span>1k</span>
                             </a>
                         </div>

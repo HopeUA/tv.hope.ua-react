@@ -175,12 +175,6 @@
                 margin-top: px(26);
                 border-radius: px(8);
                 font-size: px(28);
-
-                &::before {
-                    width: px(84);
-                    margin-right: px(28);
-                    background-size: px(38);
-                }
             }
 
             &::after {
@@ -204,11 +198,14 @@
                 margin-top: px(28);
                 border-radius: px(8);
                 font-size: px(28);
+            }
+        }
 
-                &::before {
-                    width: px(84);
-                    margin-right: px(28);
-                    background-size: px(38);
+        div {
+            a {
+                i {
+                    width: px(38);
+                    margin: 0 px(22);
                 }
             }
         }

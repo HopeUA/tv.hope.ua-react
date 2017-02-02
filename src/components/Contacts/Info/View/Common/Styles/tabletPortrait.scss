@@ -1,4 +1,4 @@
-@import '../mobile';
+@import './mobile';
 
 & {
     display: flex;
@@ -40,11 +40,6 @@
 
         a {
             margin-top: px(48);
-
-            &::before {
-                margin-right: px(36);
-                background-size: px(50);
-            }
         }
 
         &::after {
@@ -62,11 +57,6 @@
 
         a {
             margin-top: px(48);
-
-            &::before {
-                margin-right: px(38);
-                background-size: px(50);
-            }
         }
     }
 
@@ -84,8 +74,9 @@
             height: px(112);
             font-size: px(34);
 
-            &::before {
-                width: px(105);
+            i {
+                width: px(50);
+                margin: 0 px(26);
             }
         }
     }
@@ -257,7 +248,7 @@
                 right: px(-590);
                 width: px(500);
                 height: 3px;
-                background-image: url($componentRoot + 'divider-bg.svg');
+                background-image: url('../../../Assets/divider-bg.svg');
                 content: '';
 
             }
@@ -269,7 +260,7 @@
                 left: px(-580);
                 width: px(500);
                 height: 3px;
-                background-image: url($componentRoot + 'divider-bg.svg');
+                background-image: url('../../../Assets/divider-bg.svg');
                 content: '';
             }
         }
