@@ -8,10 +8,9 @@ import svg, { STATE_HOVER, STATE_ACTIVE } from 'helpers/svg';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class GoTo extends Component {
-
     static propTypes = {
-        color: PropTypes.string,
-        state: PropTypes.string
+        color: PropTypes.string.isRequired,
+        state: PropTypes.string.isRequired
     };
 
     render() {

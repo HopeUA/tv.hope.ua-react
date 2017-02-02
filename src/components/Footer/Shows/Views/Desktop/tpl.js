@@ -3,8 +3,8 @@ import React, { PropTypes } from 'react';
 import Grids from 'theme/Grid.scss';
 import Styles from './Styles/main.scss';
 
-import PixelPerfect from 'components/PixelPerfect/component';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import PixelPerfect from 'vendor/PixelPerfect/component';
+import BreakPoints from 'helpers/breakpoints';
 
 export default function Shows(props) {
     const templates = [

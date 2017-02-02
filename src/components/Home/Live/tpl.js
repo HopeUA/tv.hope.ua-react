@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import MobileView from './Views/Mobile/tpl';
 import DesktopView from './Views/Desktop/tpl';
 
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 export default function Live(props) {
     const isMobile = [

@@ -15,8 +15,12 @@ export default class Desktop extends Component {
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
         currentTime: PropTypes.string.isRequired,
-        items: PropTypes.object,
-        isMuted: PropTypes.boolean
+        items: PropTypes.array,
+        isMuted: PropTypes.bool
+    };
+    static defaultProps = {
+        items: [],
+        isMuted: false
     };
 
     videoContainer = null;
@@ -38,11 +42,9 @@ export default class Desktop extends Component {
     };
 
     render() {
-        const { mediaType, currentTime, items } = this.props;
+        const { mediaType, currentTime, items, isMuted } = this.props;
 
-        const current = items[0];
-        const next = items[1];
-        const third = items[2];
+        const [current, next, third] = items;
 
         // TODO Добавить обработку клика на кнопки
         const test = true;
@@ -77,18 +79,18 @@ export default class Desktop extends Component {
 
         const timeStyles = { transform: `translateX(${progress}%)` };
         const timelineStyles = { width: `${episodeProgress}%` };
-        const nextImageStyles = { backgroundImage: `url(${nextImage})` };
+        const nextImageStyle = { backgroundImage: `url(${nextImage})` };
 
         const nextVideo = BreakPoints.tabletPortrait.name === mediaType ? (
             null
         ) : (<section className={ Styles.nextContainer }>
             <h1>Дальше в эфире</h1>
             <div className={ Styles.nextVideo }>
-                <div className={ Styles.image } style={ nextImageStyles }></div>
+                <div className={ Styles.image } style={ nextImageStyle }/>
                 <div className={ Styles.info }>
                     <div className={ Styles.bar }>
                         <span className={ Styles.startTime }>{ Moment(next.date).format('LT') }</span>
-                        <span className={ Styles.timeLine }> </span>
+                        <span className={ Styles.timeLine }/>
                         <span className={ Styles.endTime }>{ Moment(third.date).format('LT') }</span>
                     </div>
                     <h2>{ next.show.title }</h2>
@@ -110,11 +112,11 @@ export default class Desktop extends Component {
                             <div className={ Styles.videoContainer }>
                                 <div
                                     className={ Styles.video }
-                                    style={ nextImageStyles } ref={ (ref) => { this.videoContainer = ref; } }
+                                    style={ nextImageStyle } ref={ (ref) => { this.videoContainer = ref; } }
                                 />
                                 <div className={ Styles.iconsBlock }>
                                     <div className={ Styles.icons }>
-                                        <Volume color={ Palette.paletteColor6 } isMuted={ test }/>
+                                        <Volume color={ Palette.paletteColor6 } isMuted={ isMuted }/>
                                         <PlayPause color={ Palette.paletteColor6 } isPlaying={ test }/>
                                         <FullScreen color={ Palette.paletteColor6 }/>
                                     </div>

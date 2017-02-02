@@ -8,12 +8,11 @@ import svg, { STATE_HOVER, STATE_ACTIVE } from 'helpers/svg';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class Arrow extends Component {
-
     static propTypes = {
-        color: PropTypes.string,
-        hoverColor: PropTypes.string,
-        state: PropTypes.string,
-        isStatic: PropTypes.boolean
+        color: PropTypes.string.isRequired,
+        hoverColor: PropTypes.string.isRequired,
+        state: PropTypes.string.isRequired,
+        isStatic: PropTypes.bool
     };
 
     static defaultProps = {

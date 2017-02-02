@@ -3,7 +3,7 @@ import Mobile from './Views/Mobile/';
 import DesktopGrid from './Views/DesktopGrid';
 import DesktopRow from './Views/DesktopRow/index';
 
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 // TODO Забирать данные по api
 import items from './Mock/data.json';

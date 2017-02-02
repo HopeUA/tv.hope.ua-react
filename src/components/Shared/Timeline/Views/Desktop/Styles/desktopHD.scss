@@ -1,0 +1,9 @@
+@import './common';
+
+& {
+    .scheduler {
+        .clock {
+            left: px(730);
+        }
+    }
+}

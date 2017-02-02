@@ -25,7 +25,7 @@ export default function Mobile(props) {
                 BreakPoints.phonePortrait.name === props.mediaType ?
                     (<SwipeableViews { ...swipeParams }>
                         <article>
-                            <div className={ Styles.image } style={ styles }></div>
+                            <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.date }>
                                     <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -37,7 +37,7 @@ export default function Mobile(props) {
                             </div>
                         </article>
                         <article>
-                            <div className={ Styles.image } style={ styles }></div>
+                            <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.date }>
                                     <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -49,7 +49,7 @@ export default function Mobile(props) {
                             </div>
                         </article>
                         <article>
-                            <div className={ Styles.image } style={ styles }></div>
+                            <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.date }>
                                     <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -63,7 +63,7 @@ export default function Mobile(props) {
                     </SwipeableViews>
                 ) : [
                     <article key={ 1 }>
-                        <div className={ Styles.image } style={ styles }></div>
+                        <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
                                 <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -74,7 +74,7 @@ export default function Mobile(props) {
                         </div>
                     </article>,
                     <article key={ 2 }>
-                        <div className={ Styles.image } style={ styles }></div>
+                        <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
                                 <BubbleArticle color={ Palette.paletteColor1 }/>

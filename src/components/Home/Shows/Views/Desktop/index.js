@@ -34,7 +34,7 @@ export default function Desktop(props) {
                 <h1 className={ Styles.title }>Популярные программы</h1>
                 <Slider { ...properties }>
                     <div className={ Styles.row }>
-                    { articles }
+                        { articles }
                     </div>
                 </Slider>
             </section>
@@ -44,4 +44,7 @@ export default function Desktop(props) {
 
 Desktop.propTypes = {
     items: PropTypes.array
+};
+Desktop.defaultProps = {
+    items: []
 };

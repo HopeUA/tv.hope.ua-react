@@ -8,11 +8,9 @@ import svg, { STATE_ACTIVE, STATE_NORMAL } from 'helpers/svg';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class FullScreen extends Component {
-
     static propTypes = {
-        color: PropTypes.string,
-        state: PropTypes.string,
-        hoverColor: PropTypes.string
+        color: PropTypes.string.isRequired,
+        state: PropTypes.string.isRequired
     };
 
     render() {

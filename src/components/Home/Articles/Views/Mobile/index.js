@@ -3,7 +3,7 @@ import Moment from 'moment';
 import SwipeableViews from 'vendor/Swipeable';
 
 import Styles from './Styles/main.scss';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 import Palette from 'components/Assets/Palette';
 import BubbleArticle from 'components/Assets/Icons/BubbleArticle';
@@ -22,7 +22,7 @@ export default function Mobile(props) {
 
         return (
             <article className={ Styles.item } key={ el.code }>
-                <div className={ Styles.image } style={ background }></div>
+                <div className={ Styles.image } style={ background }/>
                 <div className={ Styles.info }>
                     <div className={ Styles.date }>
                         <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -62,5 +62,9 @@ export default function Mobile(props) {
 
 Mobile.propTypes = {
     items: PropTypes.array,
-    mediaType: PropTypes.string
+    mediaType: PropTypes.string.isRequired
+};
+
+Mobile.defaultProps = {
+    items: []
 };

@@ -23,21 +23,21 @@ export default function Desktop() {
                 <h1 className={ Styles.title }>Популярные программы</h1>
                 <Slider { ...properties }>
                     <div className={ Styles.row }>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
-                        <div className={ Styles.item } style={ styles }></div>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
+                        <div className={ Styles.item } style={ styles }/>
                     </div>
                 </Slider>
             </section>

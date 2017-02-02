@@ -41,11 +41,9 @@ export default function DesktopRow(props) {
                         <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
                         <span>
                             <strong>
-                                {
-                                    `${date.format('D')} ${date.format('MMM')},`
-                                }
+                                { `${date.format('D')} ${date.format('MMM')},` }
                             </strong>
-                                &nbsp;{ `${date.format('YYYY')}` }
+                            &nbsp;{ `${date.format('YYYY')}` }
                         </span>
                     </div>
                     <h1><a href="#">{ el.title }</a></h1>
@@ -57,8 +55,6 @@ export default function DesktopRow(props) {
             </article>
         );
     });
-
-    // console.log(item);
 
     return (
         <section className={ Grids.container }>
@@ -76,4 +72,7 @@ export default function DesktopRow(props) {
 
 DesktopRow.propTypes = {
     items: PropTypes.array
+};
+DesktopRow.defaultProps = {
+    items: []
 };

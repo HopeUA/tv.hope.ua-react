@@ -3,8 +3,8 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import Helmet from 'react-helmet';
-import Seo from 'data/seo.json';
-import { Episodes, Live, Top, Articles, Shows, Banner } from 'components/Home';
+import Meta from './Meta';
+import * as Home from 'components/Home';
 import * as Footer from 'components/Footer';
 import * as Shared from 'components/Shared';
 
@@ -21,13 +21,9 @@ import * as Shared from 'components/Shared';
     return { browser };
 })
 /* eslint-disable react/prefer-stateless-function */
-export default class Home extends Component {
+export default class HomePage extends Component {
     static propTypes = {
-        browser: PropTypes.object.isRequired,
-        items: PropTypes.array.isRequired,
-        dynamic: PropTypes.boolean,
-        canRefresh: PropTypes.boolean,
-        title: PropTypes.string.isRequired
+        browser: PropTypes.object.isRequired
     };
 
     render() {
@@ -35,25 +31,25 @@ export default class Home extends Component {
 
         return (
             <div>
-                <Helmet { ...Seo.Home }/>
+                <Helmet { ...Meta() }/>
                 { /*    <Shared.Header mediaType={ browser.mediaType }/>    */ }
-                <Shared.Header mediaType={ browser.mediaType }/>
+                { /* <Shared.Header mediaType={ browser.mediaType }/> */ }
                 <Shared.Timeline mediaType={ browser.mediaType }/>
-                <Banner mediaType={ browser.mediaType }/>
-                <Live mediaType={ browser.mediaType }/>
-                <Shows mediaType={ browser.mediaType }/>
-                <Articles mediaType={ browser.mediaType }/>
-                <Top mediaType={ browser.mediaType }/>
-                <Episodes
+                <Home.Banner mediaType={ browser.mediaType }/>
+                <Home.Live mediaType={ browser.mediaType }/>
+                <Home.Shows mediaType={ browser.mediaType }/>
+                <Home.Articles mediaType={ browser.mediaType }/>
+                <Home.Top mediaType={ browser.mediaType }/>
+                <Home.Episodes
                     mediaType={ browser.mediaType }
-                    title={ "Новые выпуски" }
+                    title={ 'Новые выпуски' }
                     dynamic={ false }
                     canRefresh={ false }
                     view="grid"
                 />
-                <Episodes
+                <Home.Episodes
                     mediaType={ browser.mediaType }
-                    title={ "Новые выпуски" }
+                    title={ 'Новые выпуски' }
                     dynamic={ false }
                     canRefresh={ false }
                     view="row"

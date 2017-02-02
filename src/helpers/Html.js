@@ -36,10 +36,10 @@ export default function Html(props) {
                 />
 
                 { /* styles (will be present only in production with webpack extract text plugin) */ }
-                { Object.keys(assets.styles).map((style, key) =>
+                { Object.keys(assets.styles).map((style) =>
                     <link
                         href={ assets.styles[style] }
-                        key={ key }
+                        key={ style }
                         media="screen, projection"
                         rel="stylesheet"
                         type="text/css"
@@ -60,7 +60,7 @@ export default function Html(props) {
 }
 
 Html.propTypes = {
-    assets: PropTypes.object,
-    component: PropTypes.node,
-    store: PropTypes.object
+    assets: PropTypes.object.isRequired,
+    component: PropTypes.node.isRequired,
+    store: PropTypes.object.isRequired
 };

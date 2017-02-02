@@ -4,8 +4,10 @@
  *  ie: import { CounterButton, InfoBar } from 'components';
  *
  */
-export * as Map from './Map';
+// export * as Map from './Map';
+
+// export * as About from './About';
+// export * as Contacts from './Contacts';
 export * as Shared from './Shared';
-export * as About from './About';
-export * as Contacts from './Contacts';
+export * as Home from './Home';
 export * as Footer from './Footer';

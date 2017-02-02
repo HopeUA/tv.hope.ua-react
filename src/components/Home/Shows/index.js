@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Desktop from './Views/Desktop/index';
 
 import items from './Mock/data.json';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 // TODO Забирать данные по api
 // import items from './Mock/data.json';

@@ -7,7 +7,7 @@ export default function Mobile() {
         backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/banners/ban1-mobile.jpg)'
     };
 
-    let dots = [];
+    const dots = [];
 
     for (let i = 0; i < 5; i++) {
         const className = cx({

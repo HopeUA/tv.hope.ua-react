@@ -11,11 +11,10 @@ export const TYPE_SUCCESS = 'success';
     height: 154
 })
 /* eslint-disable react/prefer-stateless-function */
-export default class letter extends Component {
-
+export default class Submit extends Component {
     static propTypes = {
-        color: PropTypes.string,
-        type: PropTypes.string
+        color: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired
     };
 
     render() {

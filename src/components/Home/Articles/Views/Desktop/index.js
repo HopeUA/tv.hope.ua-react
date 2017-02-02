@@ -22,7 +22,7 @@ export default function Desktop(props) {
 
         return (
             <article className={ Styles.item } key={ el.code }>
-                <div className={ Styles.image } style={ background }></div>
+                <div className={ Styles.image } style={ background }/>
                 <div className={ Styles.info }>
                     <div className={ Styles.date }>
                         <BubbleArticle color={ Palette.paletteColor1 }/>
@@ -63,4 +63,7 @@ export default function Desktop(props) {
 
 Desktop.propTypes = {
     items: PropTypes.array
+};
+Desktop.defaultProps = {
+    items: []
 };

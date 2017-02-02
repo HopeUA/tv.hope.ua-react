@@ -4,7 +4,7 @@ import DesktopGrid from './Views/DesktopGrid/tpl';
 import DesktopRow from './Views/DesktopRow/tpl';
 
 import PixelPerfect from 'vendor/PixelPerfect/component';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 export default function Episodes(props) {
     const { mediaType, view } = props;

@@ -30,14 +30,12 @@ export default function useStandardScroll(createHistory) {
     function updateLocation(_ref) {
         const parts = _ref.pathname.split('/');
 
-        currentKey = parts[1];
+        [,currentKey] = parts; // eslint-disable-line comma-spacing
     }
 
     function updateScroll() {
         const _ref2 = getScrollPosition() || [0, 0];
-
-        const x = _ref2[0];
-        const y = _ref2[1];
+        const [x, y] = _ref2;
 
         window.scrollTo(x, y);
     }

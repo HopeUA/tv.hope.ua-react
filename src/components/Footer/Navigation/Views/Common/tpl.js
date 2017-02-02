@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
-import PixelPerfect from 'components/PixelPerfect/component';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import PixelPerfect from 'vendor/PixelPerfect/component';
+import BreakPoints from 'helpers/breakpoints';
 
 import Instagram from 'components/Assets/Social/instagram';
 import Facebook from 'components/Assets/Social/Fb';

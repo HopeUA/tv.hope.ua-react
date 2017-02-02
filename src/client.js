@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { CALCULATE_RESPONSIVE_STATE } from 'redux-responsive';
-import { ReduxAsyncConnect } from 'redux-async-connect';
+import { ReduxAsyncConnect } from 'redux-connect';
 import useScroll from 'helpers/scroll';
 
 import getRoutes from './routes';

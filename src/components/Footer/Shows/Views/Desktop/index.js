@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import Grids from 'theme/Grid.scss';
 import Styles from './Styles/main.scss';
 
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 export default function Shows(props) {
     const { mediaType, items } = props;
@@ -101,8 +101,11 @@ export default function Shows(props) {
         </section>
     );
 }
+
 Shows.propTypes = {
     mediaType: PropTypes.string.isRequired,
     items: PropTypes.array
 };
-
+Shows.defaultProps = {
+    items: []
+};
