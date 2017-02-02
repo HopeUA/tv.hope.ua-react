@@ -1,18 +1,20 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
-import PixelPerfect from 'components/PixelPerfect/component';
+import BreakPoints from 'vendor/PixelPerfect/breakpoints';
+import PixelPerfect from 'vendor/PixelPerfect/component';
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 
-import ContactUs from 'components/Assets/Icons/ContactUs';
-import Mail from 'components/Assets/Icons/Mail';
-import PhoneAndInternet from 'components/Assets/Icons/PhoneAndInternet';
-import PhoneButton from 'components/Assets/Icons/PhoneButton';
-import PhoneContact from 'components/Assets/Icons/PhoneContact';
-import Skype from 'components/Assets/Icons/Skype';
-import SocialNetworks from 'components/Assets/Icons/SocialNetworks';
-import WriteButton from 'components/Assets/Icons/WriteButton';
+import Palette from 'components/Assets/Palette';
+
+import ContactUs from '../../Assets/ContactUs';
+import Mail from '../../Assets/Mail';
+import PhoneAndInternet from '../../Assets/PhoneAndInternet';
+import PhoneButton from '../../Assets/PhoneButton';
+import PhoneContact from '../../Assets/PhoneContact';
+import Skype from '../../Assets/Skype';
+import SocialNetworks from '../../Assets/SocialNetworks';
+import WriteButton from '../../Assets/WriteButton';
 import Instagram from 'components/Assets/Social/instagram';
 import Facebook from 'components/Assets/Social/Fb';
 import Twitter from 'components/Assets/Social/Tw';
@@ -32,50 +34,42 @@ export default class Info extends Component {
     render() {
         const { browser } = this.props;
 
-        const templates = [
-            BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name,
-            BreakPoints.tabletPortrait.name,
-            BreakPoints.tabletLandscape.name,
-            BreakPoints.desktop.name
-        ];
-
         const socialTitle = browser.mediaType === BreakPoints.tabletPortrait.name ?
             'Ищите нас в социальных сетях'
             : 'Ищите в соц. сетях';
 
         return (
-            <PixelPerfect templates={ templates } component="Info">
+            <PixelPerfect component="Contacts.Info">
                 <section className={ Grids.container }>
                     <section className={ Styles.infoComponent }>
                         <section className={ Styles.live }>
                             <header>
-                                <ContactUs/>
+                                <ContactUs color1={ Palette.paletteColor9 } color2={ Palette.paletteColor1 }/>
                                 <h1>Общайтесь онлайн</h1>
                             </header>
                             <div className={ Styles.chat }>
                                 <p>Онлайн чат работает каждый день с <b>8:00 до 20:00</b></p>
                                 <a href="#">
-                                    <WriteButton/>
+                                    <WriteButton color={ Palette.paletteColor2 }/>
                                     Написать в онлайн чат
                                 </a>
                             </div>
                             <div className={ Styles.call }>
                                 <p>Онлайн чат работает каждый день с <b>8:00 до 20:00</b></p>
                                 <a href="#">
-                                    <PhoneButton/>
+                                    <PhoneButton color={ Palette.paletteColor2 }/>
                                     Позвонить нам сейчас
                                 </a>
                             </div>
                         </section>
                         <section className={ Styles.contacts }>
                             <header>
-                                <PhoneAndInternet/>
+                                <PhoneAndInternet color1={ Palette.paletteColor9 } color2={ Palette.paletteColor1 }/>
                                 <h1>Задайте вопрос</h1>
                             </header>
                             <div className={ Styles.phone }>
                                 <div className={ Styles.row }>
-                                    <PhoneContact/>
+                                    <PhoneContact color={ Palette.paletteColor10 }/>
                                     <span>0 800 30 20 20</span>
                                 </div>
                                 <div>
@@ -93,7 +87,7 @@ export default class Info extends Component {
                             </div>
                             <div className={ Styles.mail }>
                                 <div className={ Styles.row }>
-                                    <Mail/>
+                                    <Mail color={ Palette.paletteColor10 }/>
                                     <a href="#">contact@hope.ua</a>
                                 </div>
                                 <div>
@@ -103,34 +97,34 @@ export default class Info extends Component {
                         </section>
                         <section className={ Styles.social }>
                             <header>
-                                <SocialNetworks/>
+                                <SocialNetworks color1={ Palette.paletteColor1 } color2={ Palette.paletteColor9 }/>
                                 <h1>{ socialTitle }</h1>
                             </header>
                             <div className={ Styles.list }>
-                                <div className={ Styles.item }>
-                                    <Twitter/>
+                                <a href="https://twitter.com/ua_hope" className={ Styles.item }>
+                                    <Twitter className={ Styles.twitter }/>
+                                    <span>1k</span>
+                                </a>
+                                <a href="https://vk.com/hopechannel" className={ Styles.item }>
+                                    <Vk className={ Styles.vk }/>
                                     <span>5k</span>
-                                </div>
-                                <div className={ Styles.item }>
-                                    <Vk/>
-                                    <span>1k</span>
-                                </div>
-                                <div className={ Styles.item }>
-                                    <Facebook/>
+                                </a>
+                                <a href="https://www.facebook.com/hope.ua/" className={ Styles.item }>
+                                    <Facebook className={ Styles.fb }/>
+                                    <span>2k</span>
+                                </a>
+                                <a href="https://ok.ru/hopechannel" className={ Styles.item }>
+                                    <Ok className={ Styles.ok }/>
                                     <span>3k</span>
-                                </div>
-                                <div className={ Styles.item }>
-                                    <Ok/>
-                                    <span>6k</span>
-                                </div>
-                                <div className={ Styles.item }>
-                                    <YouTube/>
-                                    <span>3k</span>
-                                </div>
-                                <div className={ Styles.item }>
-                                    <Instagram/>
+                                </a>
+                                <a href="https://www.youtube.com/user/HopeChannelUkraine" className={ Styles.item }>
+                                    <YouTube className={ Styles.youTube }/>
+                                    <span>7k</span>
+                                </a>
+                                <a href="https://www.instagram.com/ua_hope/" className={ Styles.item }>
+                                    <Instagram className={ Styles.instagram }/>
                                     <span>1k</span>
-                                </div>
+                                </a>
                             </div>
                         </section>
                     </section>

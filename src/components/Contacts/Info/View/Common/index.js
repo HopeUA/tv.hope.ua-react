@@ -6,14 +6,14 @@ import Grids from 'theme/Grid.scss';
 
 import Palette from 'components/Assets/Palette';
 
-import ContactUs from 'components/Assets/Icons/ContactUs';
-import Mail from 'components/Assets/Icons/Mail';
-import PhoneAndInternet from 'components/Assets/Icons/PhoneAndInternet';
-import PhoneButton from 'components/Assets/Icons/PhoneButton';
-import PhoneContact from 'components/Assets/Icons/PhoneContact';
-import Skype from 'components/Assets/Icons/Skype';
-import SocialNetworks from 'components/Assets/Icons/SocialNetworks';
-import WriteButton from 'components/Assets/Icons/WriteButton';
+import ContactUs from '../../Assets/ContactUs';
+import Mail from '../../Assets/Mail';
+import PhoneAndInternet from '../../Assets/PhoneAndInternet';
+import PhoneButton from '../../Assets/PhoneButton';
+import PhoneContact from '../../Assets/PhoneContact';
+import Skype from '../../Assets/Skype';
+import SocialNetworks from '../../Assets/SocialNetworks';
+import WriteButton from '../../Assets/WriteButton';
 import Instagram from 'components/Assets/Social/instagram';
 import Facebook from 'components/Assets/Social/Fb';
 import Twitter from 'components/Assets/Social/Tw';

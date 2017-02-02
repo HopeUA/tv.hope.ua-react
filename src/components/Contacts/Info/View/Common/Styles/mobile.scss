@@ -69,7 +69,7 @@
 
                 i {
                     order: -1;
-                    width: px(38);
+                    width: px(42);
                     margin: 0 px(24);
                 }
 
@@ -176,6 +176,7 @@
                     margin-left: px(54);
                     color: $commonColor1;
                     font-size: px(42);
+                    font-weight: bold;
 
                     &::before {
                         display: block;
@@ -206,6 +207,7 @@
                     position: relative;
                     color: $mainColor4;
                     font-size: px(42);
+                    font-weight: bold;
                     text-decoration: none;
 
                     &::before {
@@ -264,9 +266,9 @@
                 }
 
                 a {
-                    position: relative;
+                    display: flex;
+                    align-items: center;
                     margin-top: px(2);
-                    margin-right: px(42);
                     margin-left: px(54);
                     font-size: px(42);
 
@@ -275,9 +277,9 @@
                     }
 
                     &::after {
-                        position: absolute;
-                        top: px(4);
-                        right: px(-54);
+                        font-family: Arial;
+                        font-size: px(30);
+                        margin-left: px(12);
                         content: '→';
                     }
                 }

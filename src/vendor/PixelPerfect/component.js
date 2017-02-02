@@ -36,7 +36,12 @@ export default class PixelPerfect extends Component {
     static defaultProps = {
         opacity: 80,
         breakPoints: BreakPoints,
-        templates: [],
+        templates: [
+            BreakPoints.phonePortrait.name,
+            BreakPoints.phoneLandscape.name,
+            BreakPoints.tabletPortrait.name,
+            BreakPoints.tabletLandscape.name
+        ],
         state: 'Default'
     };
 
@@ -171,7 +176,7 @@ export default class PixelPerfect extends Component {
                     filename += `__${state.current}`;
                 }
             }
-            const src = `/PixelPerfect/${component}/${filename}.jpg`;
+            const src = `/PixelPerfect/${component.replace('.', '//')}/${filename}.jpg`;
 
             return (
                 <img key={ filename } src={ src }/>
