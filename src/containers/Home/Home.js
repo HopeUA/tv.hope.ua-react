@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-// import { asyncConnect } from 'redux-async-connect';
 import { connect } from 'react-redux';
 
 import Helmet from 'react-helmet';
