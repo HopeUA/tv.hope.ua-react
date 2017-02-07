@@ -7,15 +7,6 @@ import * as Home from 'components/Home';
 import * as Footer from 'components/Footer';
 import * as Shared from 'components/Shared';
 
-// @asyncConnect([{
-//     deferred: true,
-//     promise: ({ store: { dispatch, getState } }) => {
-//         const state = getState();
-//         const promises = [];
-//
-//         return Promise.all(promises);
-//     }
-// }])
 @connect(({ browser }) => {
     return { browser };
 })
