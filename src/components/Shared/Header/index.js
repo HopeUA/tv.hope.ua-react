@@ -3,7 +3,7 @@ import Mobile from './Views/Mobile';
 import Tablet from './Views/Tablet';
 import Desktop from './Views/Desktop';
 import Data from './Mock/data.json';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+import BreakPoints from 'helpers/breakpoints';
 
 export default class Header extends Component {
     state = {

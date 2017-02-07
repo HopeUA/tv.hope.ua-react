@@ -57,6 +57,8 @@ export default function Header(props) {
             );
         });
 
+    console.log(socialLinks);
+
     return (
         <section className={ Styles.headerComponent }>
             <div className={ Styles.head }>
@@ -95,11 +97,14 @@ export default function Header(props) {
 }
 
 Header.propTypes = {
-    mediaType: PropTypes.string.isRequired,
-    handleMenu: PropTypes.func,
+    handleMenu: PropTypes.func.isRequired,
     isMenuVisible: PropTypes.boolean,
-    language: PropTypes.string,
-    socialLinks: PropTypes.string,
-    menu: PropTypes.object,
-    priorityFilter: PropTypes.function
+    language: PropTypes.string.isRequired,
+    socialLinks: PropTypes.object.isRequired,
+    menu: PropTypes.object.isRequired,
+    priorityFilter: PropTypes.function.isRequired
+};
+
+Header.defaultProps = {
+    isMenuVisible: false
 };
