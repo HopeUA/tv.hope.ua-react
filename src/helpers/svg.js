@@ -9,10 +9,12 @@ const svg = (Component, { width = 0, height = 0 } = {}) => {
     return class Svg extends Component {
         static propTypes = {
             className: PropTypes.any,
-            onClick: PropTypes.func.isRequired
+            onClick: PropTypes.func
         };
+
         static defaultProps = {
-            className: null
+            className: null,
+            onClick: () => { return null; }
         };
 
         state = {

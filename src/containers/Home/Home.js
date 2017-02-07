@@ -22,8 +22,7 @@ export default class HomePage extends Component {
         return (
             <div>
                 <Helmet { ...Meta() }/>
-                { /*    <Shared.Header mediaType={ browser.mediaType }/>    */ }
-                { /* <Shared.Header mediaType={ browser.mediaType }/> */ }
+                <Shared.Header mediaType={ browser.mediaType }/>
                 <Shared.Timeline mediaType={ browser.mediaType }/>
                 <Home.Banner mediaType={ browser.mediaType }/>
                 <Home.Live mediaType={ browser.mediaType }/>

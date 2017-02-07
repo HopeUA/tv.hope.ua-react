@@ -11,7 +11,7 @@ import Vk from 'components/Assets/SocialFlat/Vk';
 import Logo from 'components/Assets/Icons/Logo';
 import Palette from 'components/Assets/Palette';
 import MenuLive from 'components/Assets/Icons/menuLive';
-import Earth from 'components/Assets/Icons/Worldwide';
+import Worldwide from 'components/Assets/Icons/Worldwide';
 
 export default function Header(props) {
     const { language, socialLinks, menu, priorityFilter } = props;
@@ -65,7 +65,7 @@ export default function Header(props) {
             <section className={ Styles.headerComponent }>
                 <div className={ Styles.top }>
                     <a href="#" className={ Styles.worldwideChannel }>
-                        <Earth/>
+                        <Worldwide color={ Palette.paletteColor12 }/>
                         Всемирный HopeChannel
                     </a>
                     <ul className={ Styles.subMenu }>
@@ -73,19 +73,19 @@ export default function Header(props) {
                     </ul>
                     <div className={ Styles.social }>
                         <a href={ socialLinks.youtube } className={ Styles.youTube }>
-                            <YouTube/>
+                            <YouTube color={ Palette.paletteColor12 }/>
                         </a>
                         <a href={ socialLinks.instagram } className={ Styles.instagram }>
-                            <Instagram/>
+                            <Instagram color={ Palette.paletteColor12 }/>
                         </a>
                         <a href={ socialLinks.twitter } className={ Styles.twitter }>
-                            <Twitter/>
+                            <Twitter color={ Palette.paletteColor12 }/>
                         </a>
                         <a href={ socialLinks.vk } className={ Styles.vk }>
-                            <Vk/>
+                            <Vk color={ Palette.paletteColor12 }/>
                         </a>
                         <a href={ socialLinks.facebook } className={ Styles.fb }>
-                            <Facebook/>
+                            <Facebook color={ Palette.paletteColor12 }/>
                         </a>
                     </div>
                     <div className={ Styles.languages }>
