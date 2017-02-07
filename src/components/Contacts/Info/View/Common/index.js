@@ -41,6 +41,7 @@ export default class Info extends Component {
         };
         /* eslint-enable no-undef */
 
+        /* eslint-disable */
         ((d, s, id) => {
             const fjs = d.getElementsByTagName(s)[0];
             const js = d.createElement(s);
@@ -48,6 +49,7 @@ export default class Info extends Component {
             js.src = 'https://widget.sender.mobi/build/init.js';
             fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
         })(document, 'script');
+        /* eslint-enable */
     };
 
     startChat = (event) => {

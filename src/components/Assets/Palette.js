@@ -7,5 +7,6 @@ export default {
     paletteColor6: '#fff',     // White
     paletteColor9: '#6d7c7c', // Text secondary
     paletteColor10: '#aeb3b4',   // Text secondary
-    paletteColor11: '#c8d9dd'
+    paletteColor11: '#c8d9dd',
+    paletteColor12: '#7a888a'
 };

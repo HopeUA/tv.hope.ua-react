@@ -10,13 +10,14 @@ import svg, { STATE_HOVER, STATE_ACTIVE } from 'helpers/svg';
 export default class Arrow extends Component {
     static propTypes = {
         color: PropTypes.string.isRequired,
-        hoverColor: PropTypes.string.isRequired,
+        hoverColor: PropTypes.string,
         state: PropTypes.string.isRequired,
         isStatic: PropTypes.bool
     };
 
     static defaultProps = {
-        isStatic: true
+        isStatic: true,
+        hoverColor: ''
     };
 
     render() {

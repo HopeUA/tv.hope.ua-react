@@ -9,7 +9,11 @@ import svg from 'helpers/svg';
 /* eslint-disable react/prefer-stateless-function */
 export default class Top extends Component {
     static propTypes = {
-        color: PropTypes.string.isRequired
+        color: PropTypes.string
+    };
+
+    static defaultProps = {
+        color: ''
     };
 
     render() {

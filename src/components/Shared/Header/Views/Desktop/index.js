@@ -11,7 +11,7 @@ import Vk from 'components/Assets/SocialFlat/Vk';
 import Logo from 'components/Assets/Icons/Logo';
 import Palette from 'components/Assets/Palette';
 import MenuLive from 'components/Assets/Icons/menuLive';
-import Earth from 'components/Assets/Icons/Worldwide';
+import Worldwide from 'components/Assets/Icons/Worldwide';
 
 export default function Header(props) {
     const { language, socialLinks, menu, priorityFilter } = props;
@@ -65,7 +65,7 @@ export default function Header(props) {
             <section className={ Styles.headerComponent }>
                 <div className={ Styles.top }>
                     <a href="#" className={ Styles.worldwideChannel }>
-                        <Earth/>
+                        <Worldwide/>
                         Всемирный HopeChannel
                     </a>
                     <ul className={ Styles.subMenu }>

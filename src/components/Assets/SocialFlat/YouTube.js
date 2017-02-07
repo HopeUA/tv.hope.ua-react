@@ -10,7 +10,11 @@ import svg from 'helpers/svg';
 export default class YouTube extends Component {
 
     static propTypes = {
-        color: PropTypes.string.isRequired
+        color: PropTypes.string
+    };
+
+    static defaultProps = {
+        color: ''
     };
 
     render() {
