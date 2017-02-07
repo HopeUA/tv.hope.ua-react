@@ -109,5 +109,5 @@ Header.propTypes = {
     language: PropTypes.string.isRequired,
     socialLinks: PropTypes.object.isRequired,
     menu: PropTypes.object.isRequired,
-    priorityFilter: PropTypes.function.isRequired
+    priorityFilter: PropTypes.func.isRequired
 };
