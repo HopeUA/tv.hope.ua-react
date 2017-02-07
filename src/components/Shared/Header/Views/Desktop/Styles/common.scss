@@ -30,7 +30,14 @@
             li {
                 margin-right: px(114);
 
+                &:hover {
+                    a {
+                        color: $mainColor1;
+                    }
+                }
+
                 a {
+                    transition: color .2s;
                     color: $tempColor22;
                     font-size: px(28);
                 }
@@ -47,9 +54,19 @@
 
             a {
                 margin-right: px(32);
+                transition: transform .5s;
 
                 i {
+                    transition: fill .5s;
                     fill: $tempColor22;
+                }
+
+                &:hover {
+                    transform: rotate(360deg);
+
+                    i {
+                        fill: $mainColor1;
+                    }
                 }
             }
 

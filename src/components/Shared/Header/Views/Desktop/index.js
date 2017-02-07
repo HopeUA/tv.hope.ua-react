@@ -65,7 +65,7 @@ export default function Header(props) {
             <section className={ Styles.headerComponent }>
                 <div className={ Styles.top }>
                     <a href="#" className={ Styles.worldwideChannel }>
-                        <Worldwide color={ Palette.paletteColor12 }/>
+                        <Worldwide/>
                         Всемирный HopeChannel
                     </a>
                     <ul className={ Styles.subMenu }>
@@ -73,19 +73,19 @@ export default function Header(props) {
                     </ul>
                     <div className={ Styles.social }>
                         <a href={ socialLinks.youtube } className={ Styles.youTube }>
-                            <YouTube color={ Palette.paletteColor12 }/>
+                            <YouTube/>
                         </a>
                         <a href={ socialLinks.instagram } className={ Styles.instagram }>
-                            <Instagram color={ Palette.paletteColor12 }/>
+                            <Instagram/>
                         </a>
                         <a href={ socialLinks.twitter } className={ Styles.twitter }>
-                            <Twitter color={ Palette.paletteColor12 }/>
+                            <Twitter/>
                         </a>
                         <a href={ socialLinks.vk } className={ Styles.vk }>
-                            <Vk color={ Palette.paletteColor12 }/>
+                            <Vk/>
                         </a>
                         <a href={ socialLinks.facebook } className={ Styles.fb }>
-                            <Facebook color={ Palette.paletteColor12 }/>
+                            <Facebook/>
                         </a>
                     </div>
                     <div className={ Styles.languages }>

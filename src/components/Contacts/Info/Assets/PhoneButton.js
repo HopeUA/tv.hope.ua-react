@@ -13,6 +13,10 @@ export default class PhoneButton extends Component {
         color: PropTypes.string
     };
 
+    static defaultProps = {
+        color: ''
+    };
+
     render() {
         const { color } = this.props;
 

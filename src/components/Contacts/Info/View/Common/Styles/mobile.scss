@@ -277,9 +277,9 @@
                     }
 
                     &::after {
+                        margin-left: px(12);
                         font-family: Arial;
                         font-size: px(30);
-                        margin-left: px(12);
                         content: '→';
                     }
                 }

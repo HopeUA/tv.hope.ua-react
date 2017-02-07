@@ -13,6 +13,10 @@ export default class WriteButton extends Component {
         color: PropTypes.string
     };
 
+    static defaultProps = {
+        color: ''
+    };
+
     render() {
         const { color } = this.props;
 

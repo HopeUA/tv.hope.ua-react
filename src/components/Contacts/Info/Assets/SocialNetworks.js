@@ -14,6 +14,11 @@ export default class SocialNetworks extends Component {
         color2: PropTypes.string
     };
 
+    static defaultProps = {
+        color1: '',
+        color2: ''
+    };
+
     render() {
         const { color1, color2 } = this.props;
 
