@@ -22,7 +22,7 @@ export default class Mobile extends Component {
         return (
             <section className={ Styles.liveComponent }>
                 <a href={ url } onClick={ this.playVideo }>
-                    <PlaySmall color={ Palette.paletteColor6 } className={ Styles.play }/>
+                    <PlaySmall color={ Palette.mainColor1 } className={ Styles.play }/>
                     Смотреть ТВ «Надія» Онлайн
                 </a>
             </section>

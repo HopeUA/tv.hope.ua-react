@@ -34,11 +34,11 @@ export default function DesktopRow(props) {
         return (
             <article key={ el.uid } className={ Styles.item }>
                 <div className={ Styles.image } style={ background }>
-                    <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                    <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                 </div>
                 <div className={ Styles.info }>
                     <div className={ Styles.date }>
-                        <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                        <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                         <span>
                             <strong>
                                 { `${date.format('D')} ${date.format('MMM')},` }
@@ -49,7 +49,7 @@ export default function DesktopRow(props) {
                     <h1><a href="#">{ el.title }</a></h1>
                     <div className={ Styles.show }>
                         <h2><a href="#">{ el.show.title }</a></h2>
-                        <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                        <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                     </div>
                 </div>
             </article>

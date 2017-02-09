@@ -48,7 +48,7 @@ export default function Header(props) {
             } : null;
 
             const liveIcon = el.id === 'live' ? (
-                <MenuLive className={ Styles.liveIcon } color={ Palette.paletteColor1 }/>
+                <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
             ) : null;
 
             return (
@@ -95,7 +95,7 @@ export default function Header(props) {
                     </div>
                 </div>
                 <div className={ Styles.main }>
-                    <Logo className={ Styles.logo } color={ Palette.paletteColor6 }/>
+                    <Logo className={ Styles.logo } color={ Palette.mainColor1 }/>
                     <ul className={ Styles.menu }>
                         { mainMenu }
                     </ul>

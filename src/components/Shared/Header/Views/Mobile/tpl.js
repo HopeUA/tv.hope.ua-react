@@ -23,9 +23,9 @@ export default function Header(props) {
     return (
         <section className={ Styles.headerComponent }>
             <div className={ Styles.head }>
-                <a href="#"><Logo color={ Palette.paletteColor6 }/></a>
+                <a href="#"><Logo color={ Palette.mainColor1 }/></a>
                 <span onClick={ handleMenu }>
-                    <Hamburger isOpened={ isMenuVisible } color={ Palette.paletteColor6 }/>
+                    <Hamburger isOpened={ isMenuVisible } color={ Palette.mainColor1 }/>
                 </span>
             </div>
             <div className={ Styles.popup } style={ popupStyle }>

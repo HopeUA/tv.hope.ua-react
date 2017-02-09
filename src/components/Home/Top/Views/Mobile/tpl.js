@@ -21,13 +21,13 @@ export default function Large() {
                         <div className={ Styles.blur } style={ imageStyle }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleVideo color={ Palette.paletteColor6 } className={ Styles.bubble }/>
+                                <BubbleVideo color={ Palette.mainColor1 } className={ Styles.bubble }/>
                                 <span><strong>18 августа,&nbsp;</strong>2016</span>
                             </div>
                             <a className={ Styles.titleLink }>Видиме з невидимого</a>
                             <div className={ Styles.link }>
                                 <a href="#">Філософський камінь</a>
-                                <Arrow color={ Palette.paletteColor6 } className={ Styles.arrow }/>
+                                <Arrow color={ Palette.mainColor1 } className={ Styles.arrow }/>
                             </div>
                         </div>
                     </div>

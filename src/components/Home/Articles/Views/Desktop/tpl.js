@@ -29,7 +29,7 @@ export default function Desktop() {
                         <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleArticle color={ Palette.paletteColor1 }/>
+                                <BubbleArticle color={ Palette.mainColor3 }/>
                                 <p><strong>20 августа,</strong>&nbsp;18:27</p>
                             </div>
                             <h1>«Знаешь ли ты»?</h1>
@@ -43,7 +43,7 @@ export default function Desktop() {
                         <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleArticle color={ Palette.paletteColor1 }/>
+                                <BubbleArticle color={ Palette.mainColor3 }/>
                                 <p><strong>20 августа,</strong>&nbsp;18:27</p>
                             </div>
                             <h1>«Знаешь ли ты»?</h1>
@@ -56,7 +56,7 @@ export default function Desktop() {
                         <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleArticle color={ Palette.paletteColor1 }/>
+                                <BubbleArticle color={ Palette.mainColor3 }/>
                                 <p><strong>20 августа,</strong>&nbsp;18:27</p>
                             </div>
                             <h1>«Знаешь ли ты»?</h1>
@@ -69,7 +69,7 @@ export default function Desktop() {
                         <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleArticle color={ Palette.paletteColor1 }/>
+                                <BubbleArticle color={ Palette.mainColor3 }/>
                                 <p><strong>20 августа,</strong>&nbsp;18:27</p>
                             </div>
                             <h1>«Знаешь ли ты»?</h1>
@@ -82,7 +82,7 @@ export default function Desktop() {
                         <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleArticle color={ Palette.paletteColor1 }/>
+                                <BubbleArticle color={ Palette.mainColor3 }/>
                                 <p><strong>20 августа,</strong>&nbsp;18:27</p>
                             </div>
                             <h1>«Знаешь ли ты»?</h1>

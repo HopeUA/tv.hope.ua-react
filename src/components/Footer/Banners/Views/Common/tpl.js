@@ -82,7 +82,7 @@ export default function Banners(props) {
                 <SwipeableViews { ...swipeParams }>
                     <article className={ Styles.item } style={ androidBg }>
                         <a href="#" className={ Styles.info }>
-                            <Android color={ Palette.paletteColor6 }/>
+                            <Android color={ Palette.mainColor1 }/>
                             <div className={ Styles.text }>
                                 <span className={ Styles.row1 }>Приложения</span>
                                 <span className={ Styles.row2 }>для системы</span>
@@ -92,7 +92,7 @@ export default function Banners(props) {
                     </article>
                     <article className={ Styles.item } style={ appleBg }>
                         <a href="#" className={ Styles.info }>
-                            <Apple color={ Palette.paletteColor6 }/>
+                            <Apple color={ Palette.mainColor1 }/>
                             <div className={ Styles.text }>
                                 <span className={ Styles.row1 }>Приложения</span>
                                 <span className={ Styles.row2 }>для системы</span>
@@ -102,7 +102,7 @@ export default function Banners(props) {
                     </article>
                     <article className={ Styles.item } style={ donateBg }>
                         <a href="#" className={ Styles.info }>
-                            <Donate color={ Palette.paletteColor6 }/>
+                            <Donate color={ Palette.mainColor1 }/>
                             <div className={ Styles.text }>
                                 <span className={ Styles.row1 }>Поддержка</span>
                                 <span className={ Styles.row2 }>через проект</span>
@@ -112,7 +112,7 @@ export default function Banners(props) {
                     </article>
                     <article className={ Styles.item } style={ volunteersBg }>
                         <a href="#" className={ Styles.info }>
-                            <Android color={ Palette.paletteColor6 }/>
+                            <Android color={ Palette.mainColor1 }/>
                             <div className={ Styles.text }>
                                 <span className={ Styles.row1 }>Я очень хочу</span>
                                 <span className={ Styles.row2 }>помагать как</span>

@@ -1,4 +1,5 @@
 scss_files: "src/**/*.scss"
+exclude: 'src/theme/Palette.scss'
 linters:
   PropertySortOrder:
     order: smacss
