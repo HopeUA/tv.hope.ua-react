@@ -1,12 +1,11 @@
 import { createStore as _createStore, applyMiddleware, compose } from 'redux';
-import apiMiddleware from './middleware/apiMiddleware';
+import promiseMiddleware from 'redux-promise';
 import { routerMiddleware } from 'react-router-redux';
-import thunk from 'redux-thunk';
 import { createResponsiveStoreEnhancer } from 'redux-responsive';
 
 export default function createStore(history, data) {
     const reduxRouterMiddleware = routerMiddleware(history);
-    const middleware = [apiMiddleware, thunk, reduxRouterMiddleware];
+    const middleware = [promiseMiddleware, reduxRouterMiddleware];
     const responsiveStoreEnhancer = createResponsiveStoreEnhancer({ calculateStateInitially: false });
 
     let finalCreateStore;

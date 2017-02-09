@@ -62,9 +62,9 @@ export default function Header(props) {
     return (
         <section className={ Styles.headerComponent }>
             <div className={ Styles.head }>
-                <a href="#"><Logo color={ Palette.paletteColor6 }/></a>
+                <a href="#"><Logo color={ Palette.mainColor1 }/></a>
                 <span onClick={ handleMenu }>
-                    <Hamburger isOpened={ isMenuVisible } color={ Palette.paletteColor6 }/>
+                    <Hamburger isOpened={ isMenuVisible } color={ Palette.mainColor1 }/>
                 </span>
             </div>
             <div className={ Styles.popup } style={ style }>
@@ -78,12 +78,24 @@ export default function Header(props) {
                 </div>
                 <div className={ Styles.footer }>
                     <div className={ Styles.social }>
-                        <a href={ socialLinks.youtube } className={ Styles.youtubeIcon }><YouTube/></a>
-                        <a href={ socialLinks.instagram } className={ Styles.instagramIcon }><Instagram/></a>
-                        <a href={ socialLinks.twitter } className={ Styles.twitterIcon }><Twitter/></a>
-                        <a href={ socialLinks.vk } className={ Styles.vkIcon }><Vk/></a>
-                        <a href={ socialLinks.facebook } className={ Styles.facebookIcon }><Facebook/></a>
-                        <a href={ socialLinks.ok } className={ Styles.okIcon }><Ok/></a>
+                        <a href={ socialLinks.youtube } className={ Styles.youtubeIcon }>
+                            <YouTube color={ Palette.tempColor8 }/>
+                        </a>
+                        <a href={ socialLinks.instagram } className={ Styles.instagramIcon }>
+                            <Instagram color={ Palette.tempColor10 }/>
+                        </a>
+                        <a href={ socialLinks.twitter } className={ Styles.twitterIcon }>
+                            <Twitter color={ Palette.tempColor12 }/>
+                        </a>
+                        <a href={ socialLinks.vk } className={ Styles.vkIcon }>
+                            <Vk color={ Palette.tempColor9 }/>
+                        </a>
+                        <a href={ socialLinks.facebook } className={ Styles.facebookIcon }>
+                            <Facebook color={ Palette.tempColor6 }/>
+                        </a>
+                        <a href={ socialLinks.ok } className={ Styles.okIcon }>
+                            <Ok color={ Palette.tempColor7 }/>
+                        </a>
                     </div>
                     <div className={ Styles.languages }>
                         <span className={ Styles.choose }>Язык сайта:</span>

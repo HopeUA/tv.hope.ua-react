@@ -32,97 +32,97 @@ export default function DesktopRow() {
                 <Slider { ...properties }>
                     <article className={ Styles.item }>
                         <div className={ Styles.image } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         </div>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                 <span><strong>20 августа,&nbsp;</strong>2016</span>
                             </div>
                             <h1><a href="#">«Помолитесь за меня»:</a></h1>
                             <div className={ Styles.show }>
                                 <h2><a href="#">Філософський камінь</a></h2>
-                                <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                                <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                             </div>
                         </div>
                     </article>
                     <article className={ Styles.item }>
                         <div className={ Styles.image } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         </div>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                 <span><strong>20 августа,&nbsp;</strong>2016</span>
                             </div>
                             <h1><a href="#">«Помолитесь за меня»:</a></h1>
                             <div className={ Styles.show }>
                                 <h2><a href="#">Філософський камінь</a></h2>
-                                <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                                <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                             </div>
                         </div>
                     </article>
                     <article className={ Styles.item }>
                         <div className={ Styles.image } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         </div>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                 <span><strong>20 августа,&nbsp;</strong>2016</span>
                             </div>
                             <h1><a href="#">«Помолитесь за меня»:</a></h1>
                             <div className={ Styles.show }>
                                 <h2><a href="#">Філософський камінь</a></h2>
-                                <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                                <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                             </div>
                         </div>
                     </article>
                     <article className={ Styles.item }>
                         <div className={ Styles.image } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         </div>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                 <span><strong>20 августа,&nbsp;</strong>2016</span>
                             </div>
                             <h1><a href="#">«Помолитесь за меня»:</a></h1>
                             <div className={ Styles.show }>
                                 <h2><a href="#">Філософський камінь</a></h2>
-                                <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                                <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                             </div>
                         </div>
                     </article>
                     <article className={ Styles.item }>
                         <div className={ Styles.image } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         </div>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                 <span><strong>20 августа,&nbsp;</strong>2016</span>
                             </div>
                             <h1><a href="#">«Помолитесь за меня»:</a></h1>
                             <div className={ Styles.show }>
                                 <h2><a href="#">Філософський камінь</a></h2>
-                                <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                                <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                             </div>
                         </div>
                     </article>
                     <article className={ Styles.item }>
                         <div className={ Styles.image } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         </div>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                 <span><strong>20 августа,&nbsp;</strong>2016</span>
                             </div>
                             <h1><a href="#">«Помолитесь за меня»:</a></h1>
                             <div className={ Styles.show }>
                                 <h2><a href="#">Філософський камінь</a></h2>
-                                <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                                <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                             </div>
                         </div>
                     </article>

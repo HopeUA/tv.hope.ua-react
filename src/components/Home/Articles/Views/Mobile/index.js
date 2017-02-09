@@ -25,7 +25,7 @@ export default function Mobile(props) {
                 <div className={ Styles.image } style={ background }/>
                 <div className={ Styles.info }>
                     <div className={ Styles.date }>
-                        <BubbleArticle color={ Palette.paletteColor1 }/>
+                        <BubbleArticle color={ Palette.mainColor3 }/>
                         <p>
                             <strong>{ `${date.format('D')} ${date.format('MMMM')},` }</strong>
                             &nbsp;{ `${date.format('LT')}` }

@@ -29,33 +29,33 @@ export default function DesktopGrid() {
                 </div>
                 <Slider { ...properties }>
                     <div className={ Styles.large } style={ styles }>
-                        <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                        <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         <h3>Хвороба століття</h3>
                         <h4>Настав час</h4>
                     </div>
                     <div className={ Styles.row }>
                         <div className={ Styles.small } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                             <h3>Для найменших — найменше?</h3>
                         </div>
                         <div className={ Styles.small } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                             <h3>Для найменших — найменше?</h3>
                         </div>
                         <div className={ Styles.small } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                             <h3>Для найменших — найменше?</h3>
                         </div>
                         <div className={ Styles.small } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                             <h3>Для найменших — найменше?</h3>
                         </div>
                         <div className={ Styles.small } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                             <h3>Для найменших — найменше?</h3>
                         </div>
                         <div className={ Styles.small } style={ styles }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                             <h3>Для найменших — найменше?</h3>
                         </div>
                     </div>

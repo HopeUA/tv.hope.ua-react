@@ -10,22 +10,22 @@ import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { CALCULATE_RESPONSIVE_STATE } from 'redux-responsive';
 import { ReduxAsyncConnect } from 'redux-connect';
-import useScroll from 'helpers/scroll';
+// import useScroll from 'helpers/scroll';
 
 import getRoutes from './routes';
 
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'helpers/i18n';
 
-const _browserHistory = useScroll(() => browserHistory)();
+// const _browserHistory = useScroll(() => browserHistory)();
 const dest = document.getElementById('content');
-const store = createStore(_browserHistory, window.__data);
-const history = syncHistoryWithStore(_browserHistory, store);
+const store = createStore(browserHistory, window.__data);
+const history = syncHistoryWithStore(browserHistory, store);
 
 /* eslint-disable react/jsx-no-bind, arrow-parens */
 const component = (
     <Router
-        render={ (props) => <ReduxAsyncConnect { ...props } filter={ item => !item.deferred }/> }
+        render={ (props) => <ReduxAsyncConnect { ...props }/> }
         history={ history }
     >
         { getRoutes(store) }

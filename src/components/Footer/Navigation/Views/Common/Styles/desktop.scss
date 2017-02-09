@@ -67,69 +67,6 @@
                 a {
                     margin-right: px(32);
                 }
-
-                .twitterIcon {
-                    order: 1;
-
-                    i {
-                        path {
-                            fill: $tempColor12;
-                        }
-                    }
-                }
-
-                .facebookIcon {
-                    order: 2;
-
-                    i {
-                        path {
-                            fill: $tempColor6;
-                        }
-                    }
-                }
-
-                .okIcon {
-                    order: 3;
-
-                    i {
-                        path {
-                            fill: $tempColor7;
-                        }
-                    }
-                }
-
-                .youtubeIcon {
-                    order: 4;
-
-                    i {
-                        path,
-                        polygon {
-                            fill: $tempColor8;
-                        }
-                    }
-                }
-
-                .vkIcon {
-                    order: 5;
-
-                    i {
-                        width: px(46);
-
-                        path {
-                            fill: $tempColor9;
-                        }
-                    }
-                }
-
-                .instagramIcon {
-                    order: 6;
-
-                    i {
-                        path {
-                            fill: $tempColor10;
-                        }
-                    }
-                }
             }
         }
         // END networks

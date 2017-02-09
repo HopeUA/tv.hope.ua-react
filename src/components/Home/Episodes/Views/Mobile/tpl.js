@@ -31,13 +31,13 @@ export default function EpisodesMobile(props) {
                             <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
-                                    <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                    <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                     <p className={ Styles.date }><strong>18 августа,</strong>&nbsp;2016</p>
                                 </div>
                                 <h1>Вчимо дітей розпоряджатися грішми</h1>
                                 <div className={ Styles.link }>
                                     <a href="#">Ранок Надії</a>
-                                    <Arrow className={ Styles.arrow } color={ Palette.paletteColor3 }/>
+                                    <Arrow className={ Styles.arrow } color={ Palette.commonColor1 }/>
                                 </div>
                             </div>
                         </article>
@@ -45,13 +45,13 @@ export default function EpisodesMobile(props) {
                             <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
-                                    <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                    <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                     <p className={ Styles.date }><strong>18 августа,</strong>&nbsp;2016</p>
                                 </div>
                                 <h1>Вчимо дітей розпоряджатися грішми</h1>
                                 <div className={ Styles.link }>
                                     <a href="#">Ранок Надії</a>
-                                    <Arrow className={ Styles.arrow } color={ Palette.paletteColor3 }/>
+                                    <Arrow className={ Styles.arrow } color={ Palette.commonColor1 }/>
                                 </div>
                             </div>
                         </article>
@@ -59,13 +59,13 @@ export default function EpisodesMobile(props) {
                             <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
-                                    <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                    <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                     <p className={ Styles.date }><strong>18 августа,</strong>&nbsp;2016</p>
                                 </div>
                                 <h1>Вчимо дітей розпоряджатися грішми</h1>
                                 <div className={ Styles.link }>
                                     <a href="#">Ранок Надії</a>
-                                    <Arrow className={ Styles.arrow } color={ Palette.paletteColor3 }/>
+                                    <Arrow className={ Styles.arrow } color={ Palette.commonColor1 }/>
                                 </div>
                             </div>
                         </article>
@@ -73,13 +73,13 @@ export default function EpisodesMobile(props) {
                             <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
-                                    <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                    <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                     <p className={ Styles.date }><strong>18 августа,</strong>&nbsp;2016</p>
                                 </div>
                                 <h1>Вчимо дітей розпоряджатися грішми</h1>
                                 <div className={ Styles.link }>
                                     <a href="#">Ранок Надії</a>
-                                    <Arrow className={ Styles.arrow } color={ Palette.paletteColor3 }/>
+                                    <Arrow className={ Styles.arrow } color={ Palette.commonColor1 }/>
                                 </div>
                             </div>
                         </article>
@@ -88,13 +88,13 @@ export default function EpisodesMobile(props) {
                             <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
-                                    <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                    <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                     <p className={ Styles.date }><strong>18 августа,</strong>&nbsp;2016</p>
                                 </div>
                                 <h1>Вчимо дітей розпоряджатися грішми</h1>
                                 <div className={ Styles.link }>
                                     <a href="#">Ранок Надії</a>
-                                    <Arrow className={ Styles.arrow } color={ Palette.paletteColor3 }/>
+                                    <Arrow className={ Styles.arrow } color={ Palette.commonColor1 }/>
                                 </div>
                             </div>
                         </article>,
@@ -102,13 +102,13 @@ export default function EpisodesMobile(props) {
                             <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.blockDate }>
-                                    <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                                    <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                                     <p className={ Styles.date }><strong>19 августа,</strong>&nbsp;2016</p>
                                 </div>
                                 <h1>Вчимо дітей розпоряджатися грішми</h1>
                                 <div className={ Styles.link }>
                                     <a href="#">Ранок Надії</a>
-                                    <Arrow className={ Styles.arrow } color={ Palette.paletteColor3 }/>
+                                    <Arrow className={ Styles.arrow } color={ Palette.commonColor1 }/>
                                 </div>
                             </div>
                         </article>
