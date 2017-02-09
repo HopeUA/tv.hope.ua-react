@@ -10,6 +10,10 @@ import GoTo from 'components/Assets/Icons/GoTo';
 export default function DesktopGrid(props) {
     const { items } = props;
 
+    if (items.length === 0) {
+        return null;
+    }
+
     const [large] = items;
     const styles = {
         backgroundImage: `url(${large.image})`
