@@ -1,4 +1,4 @@
-& {
+ & {
     position: relative;
     bottom: 0;
     width: 100%;
@@ -132,55 +132,6 @@
                 i {
                     width: px(60);
 
-                }
-
-                .twitterIcon {
-                    i {
-                        path {
-                            fill: $tempColor12;
-                        }
-                    }
-                }
-
-                .facebookIcon {
-                    i {
-                        path {
-                            fill: $tempColor6;
-                        }
-                    }
-                }
-
-                .okIcon {
-                    i {
-                        path {
-                            fill: $tempColor7;
-                        }
-                    }
-                }
-
-                .youtubeIcon {
-                    i {
-                        path,
-                        polygon {
-                            fill: $tempColor8;
-                        }
-                    }
-                }
-
-                .vkIcon {
-                    i {
-                        path {
-                            fill: $tempColor9;
-                        }
-                    }
-                }
-
-                .instagramIcon {
-                    i {
-                        path {
-                            fill: $tempColor10;
-                        }
-                    }
                 }
             }
 

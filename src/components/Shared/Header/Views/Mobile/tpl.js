@@ -61,12 +61,12 @@ export default function Header(props) {
                 </div>
                 <div className={ Styles.footer }>
                     <div className={ Styles.social }>
-                        <a href="#" className={ Styles.youtubeIcon }><YouTube/></a>
-                        <a href="#" className={ Styles.instagramIcon }><Instagram/></a>
-                        <a href="#" className={ Styles.twitterIcon }><Twitter/></a>
-                        <a href="#" className={ Styles.vkIcon }><Vk/></a>
-                        <a href="#" className={ Styles.facebookIcon }><Facebook/></a>
-                        <a href="#" className={ Styles.okIcon }><Ok/></a>
+                        <a href="#" className={ Styles.youtubeIcon }><YouTube color={ Palette.tempColor8 }/></a>
+                        <a href="#" className={ Styles.instagramIcon }><Instagram color={ Palette.tempColor10 }/></a>
+                        <a href="#" className={ Styles.twitterIcon }><Twitter color={ Palette.tempColor12 }/></a>
+                        <a href="#" className={ Styles.vkIcon }><Vk color={ Palette.tempColor9 }/></a>
+                        <a href="#" className={ Styles.facebookIcon }><Facebook color={ Palette.tempColor6 }/></a>
+                        <a href="#" className={ Styles.okIcon }><Ok color={ Palette.tempColor7 }/></a>
                     </div>
                     <div className={ Styles.languages }>
                         <span className={ Styles.choose }>Язык сайта:</span>
