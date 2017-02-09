@@ -27,7 +27,7 @@ export default function Header() {
     return (
         <section className={ Styles.headerComponent }>
             <div className={ Styles.header }>
-                <Logo className={ Styles.logo } color={ Palette.paletteColor10 }/>
+                <Logo className={ Styles.logo } color={ Palette.tempColor26 }/>
                 <ul className={ Styles.menu }>
                     <li>
                         <a href="#">Все программы</a>
@@ -36,11 +36,11 @@ export default function Header() {
                         <a href="#">ТВ Программа</a>
                     </li>
                     <li>
-                        <MenuLive className={ Styles.liveIcon } color={ Palette.paletteColor1 }/>
+                        <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
                         <a href="#">ТВ Онлайн</a>
                     </li>
                 </ul>
-                <Hamburger className={ Styles.hamburger } color={ Palette.paletteColor10 }/>
+                <Hamburger className={ Styles.hamburger } color={ Palette.tempColor26 }/>
             </div>
             <div className={ Styles.popup }>
                 <div className={ Styles.content }>

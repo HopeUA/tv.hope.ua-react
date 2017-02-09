@@ -128,14 +128,14 @@ export default class Desktop extends Component {
                         <div className={ Styles.controls }>
                             <ArrowBanner
                                 className={ Styles.arrowLeft }
-                                color={ Palette.paletteColor6 }
+                                color={ Palette.mainColor1 }
                                 showCircle={ showCircle }
                                 onClick={ this.togglePrevSlide }
                             />
-                            <Play className={ Styles.play } color={ Palette.paletteColor6 }/>
+                            <Play className={ Styles.play } color={ Palette.mainColor1 }/>
                             <ArrowBanner
                                 className={ Styles.arrowRight }
-                                color={ Palette.paletteColor6 }
+                                color={ Palette.mainColor1 }
                                 showCircle={ showCircle }
                                 onClick={ this.toggleNextSlide }
                             />

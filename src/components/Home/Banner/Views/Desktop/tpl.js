@@ -50,13 +50,13 @@ export default function Desktop(props) {
                         { arrow }
                         <ArrowBanner
                             className={ Styles.arrowLeft }
-                            color={ Palette.paletteColor6 }
+                            color={ Palette.mainColor1 }
                             isShowCircle={ arrow }
                         />
-                        <Play className={ Styles.play } color={ Palette.paletteColor6 }/>
+                        <Play className={ Styles.play } color={ Palette.mainColor1 }/>
                         <ArrowBanner
                             className={ Styles.arrowRight }
-                            color={ Palette.paletteColor6 }
+                            color={ Palette.mainColor1 }
                             isShowCircle={ arrow }
                         />
                     </div>

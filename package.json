@@ -21,7 +21,7 @@
     "start-dev": "better-npm-run start-dev",
     "watch-client": "better-npm-run watch-client",
     "dev": "concurrently --kill-others \"npm run watch-client\" \"npm run start-dev\"",
-    "generate:component": "yo hope:component"
+    "palette": "NODE_ENV=development NODE_PATH=./src node -r babel-register ./bin/palette.js"
   },
   "betterScripts": {
     "start-prod": {

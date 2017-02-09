@@ -39,7 +39,7 @@ export default function Header(props) {
             } : null;
 
             const liveIcon = el.id === 'live' ? (
-                <MenuLive className={ Styles.liveIcon } color={ Palette.paletteColor1 }/>
+                <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
             ) : null;
 
             return (
@@ -71,13 +71,13 @@ export default function Header(props) {
     return (
         <section className={ Styles.headerComponent }>
             <div className={ Styles.header }>
-                <Logo className={ Styles.logo } color={ Palette.paletteColor10 }/>
+                <Logo className={ Styles.logo } color={ Palette.tempColor26 }/>
                 <ul className={ Styles.menu }>
                     { mainMenuItems }
                 </ul>
                 <Hamburger
                     className={ Styles.hamburger }
-                    color={ Palette.paletteColor10 }
+                    color={ Palette.tempColor26 }
                     isOpened={ isMenuVisible }
                     onClick={ handleMenu }
                 />

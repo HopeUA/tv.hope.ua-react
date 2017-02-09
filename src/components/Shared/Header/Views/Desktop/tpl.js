@@ -29,12 +29,12 @@ export default function Header() {
             <section className={ Styles.headerComponent }>
                 <div className={ Styles.top }>
                     <a href="#" className={ Styles.worldwideChannel }>
-                        <Worldwide color={ Palette.paletteColor12 }/>
+                        <Worldwide color={ Palette.tempColor22 }/>
                         Всемирный HopeChannel
                     </a>
                     <ul className={ Styles.subMenu }>
                         <li>
-                            <a href="#">Где нас смотреть</a>
+                            <a href="#">Где нас смотреть</a>t
                         </li>
                         <li>
                             <a href="#">Контакты</a>
@@ -67,7 +67,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div className={ Styles.main }>
-                    <Logo className={ Styles.logo } color={ Palette.paletteColor6 }/>
+                    <Logo className={ Styles.logo } color={ Palette.mainColor1 }/>
                     <ul className={ Styles.menu }>
                         <li>
                             <a href="#">Все программы</a>
@@ -82,7 +82,7 @@ export default function Header() {
                             <a href="#">Новости</a>
                         </li>
                         <li>
-                            <MenuLive color={ Palette.paletteColor1 }/>
+                            <MenuLive color={ Palette.mainColor3 }/>
                             <a href="#">ТВ Онлайн</a>
                         </li>
                     </ul>

@@ -28,7 +28,7 @@ export default function Mobile(props) {
                             <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.date }>
-                                    <BubbleArticle color={ Palette.paletteColor1 }/>
+                                    <BubbleArticle color={ Palette.mainColor3 }/>
                                     <p><strong>15 августа,</strong>&nbsp;14:32</p>
                                 </div>
                                 <h1>«Помолитесь за меня»: Моментальный ответ</h1>
@@ -40,7 +40,7 @@ export default function Mobile(props) {
                             <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.date }>
-                                    <BubbleArticle color={ Palette.paletteColor1 }/>
+                                    <BubbleArticle color={ Palette.mainColor3 }/>
                                     <p><strong>15 августа,</strong>&nbsp;14:32</p>
                                 </div>
                                 <h1>«Помолитесь за меня»: Моментальный ответ</h1>
@@ -52,7 +52,7 @@ export default function Mobile(props) {
                             <div className={ Styles.image } style={ styles }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.date }>
-                                    <BubbleArticle color={ Palette.paletteColor1 }/>
+                                    <BubbleArticle color={ Palette.mainColor3 }/>
                                     <p><strong>15 августа,</strong>&nbsp;14:32</p>
                                 </div>
                                 <h1>«Помолитесь за меня»: Моментальный ответ</h1>
@@ -66,7 +66,7 @@ export default function Mobile(props) {
                         <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleArticle color={ Palette.paletteColor1 }/>
+                                <BubbleArticle color={ Palette.mainColor3 }/>
                                 <p><strong>15 августа,</strong>&nbsp;14:32</p>
                             </div>
                             <h1>«Помолитесь за меня»: Моментальный ответ</h1>
@@ -77,7 +77,7 @@ export default function Mobile(props) {
                         <div className={ Styles.image } style={ styles }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleArticle color={ Palette.paletteColor1 }/>
+                                <BubbleArticle color={ Palette.mainColor3 }/>
                                 <p><strong>15 августа,</strong>&nbsp;14:32</p>
                             </div>
                             <h1>«Помолитесь за меня»: Моментальный ответ</h1>

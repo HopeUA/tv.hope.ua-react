@@ -75,7 +75,7 @@ export default class Slider extends Component {
         return (
             <section className={ this.props.slider }>
                 <div className={ this.props.arrowLeft } onClick={ this.prev } style={ arrowLeftStyle }>
-                    <Arrow color={ Palette.paletteColor3 } hoverColor={ Palette.paletteColor5 } isStatic={ false } className={ this.props.arrow }/>
+                    <Arrow color={ Palette.commonColor1 } hoverColor={ Palette.mainColor6 } isStatic={ false } className={ this.props.arrow }/>
                 </div>
                     <div style={overHid} className={ this.props.wrap }>
                         <div ref={ (ref) => this.listContainer = ref } className={this.props.list} style={styles}>
@@ -83,7 +83,7 @@ export default class Slider extends Component {
                         </div>
                     </div>
                 <div className={ this.props.arrowRight } onClick={ this.next } style={ arrowRightStyle }>
-                    <Arrow color={ Palette.paletteColor3 } hoverColor={ Palette.paletteColor5 } isStatic={ false } className={ this.props.arrow }/>
+                    <Arrow color={ Palette.commonColor1 } hoverColor={ Palette.mainColor6 } isStatic={ false } className={ this.props.arrow }/>
                 </div>
             </section>
         );
