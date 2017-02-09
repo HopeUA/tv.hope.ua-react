@@ -73,12 +73,23 @@ export default function Header() {
                     </ul>
                     <div className={ Styles.footer }>
                         <div className={ Styles.social }>
-                            <a href={ '#' } className={ Styles.youtube }><YouTube/></a>
-                            <a href={ '#' } className={ Styles.instagram }><Instagram/></a>
-                            <a href={ '#' } className={ Styles.twitter }><Twitter/></a>
-                            <a href={ '#' } className={ Styles.vk }><Vk/></a>
-                            <a href={ '#' } className={ Styles.facebook }><Facebook/></a>
-                            <a href={ '#' } className={ Styles.ok }><Ok/></a>
+                            <a href="#" className={ Styles.youtubeIcon }>
+                                <YouTube color={ Palette.tempColor8 }/>
+                            </a>
+                            <a href="#" className={ Styles.instagramIcon }>
+                                <Instagram color={ Palette.tempColor10 }/></a>
+                            <a href="#" className={ Styles.twitterIcon }>
+                                <Twitter color={ Palette.tempColor12 }/>
+                            </a>
+                            <a href="#" className={ Styles.vkIcon }>
+                                <Vk color={ Palette.tempColor9 }/>
+                            </a>
+                            <a href="#" className={ Styles.facebookIcon }>
+                                <Facebook color={ Palette.tempColor6 }/>
+                            </a>
+                            <a href="#" className={ Styles.okIcon }>
+                                <Ok color={ Palette.tempColor7 }/>
+                            </a>
                         </div>
                         <div className={ Styles.languages }>
                             <span className={ Styles.choose }>Язык сайта:</span>
