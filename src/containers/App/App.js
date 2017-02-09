@@ -10,7 +10,11 @@ import Styles from './main.scss'; // eslint-disable-line no-unused-vars
 )
 export default class App extends Component {
     static propTypes = {
-        children: PropTypes.object.isRequired
+        children: PropTypes.object
+    };
+
+    static defaultProps = {
+        children: null
     };
 
     static contextTypes = {

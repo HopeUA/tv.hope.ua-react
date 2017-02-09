@@ -1,15 +1,46 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-
+import { asyncConnect } from 'redux-connect';
 import Helmet from 'react-helmet';
+import getAsyncLoaders from 'utils/getAsyncLoaders';
+
 import Meta from './Meta';
 import * as Home from 'components/Home';
 import * as Footer from 'components/Footer';
 import * as Shared from 'components/Shared';
 
-@connect(({ browser }) => {
-    return { browser };
-})
+/**
+ * Async data loading
+ */
+const loaders = getAsyncLoaders([
+    {
+        component: Home.Episodes,
+        params: {
+            type: 'new'
+        }
+    },
+    {
+        component: Home.Episodes,
+        params: {
+            type: 'now'
+        }
+    },
+    {
+        component: Home.Episodes,
+        params: {
+            type: 'recommended'
+        }
+    }
+]);
+/**
+ * END Async data loading
+ */
+
+@asyncConnect(
+    loaders,
+    ({ browser }) => {
+        return { browser };
+    }
+)
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends Component {
     static propTypes = {
@@ -30,18 +61,25 @@ export default class HomePage extends Component {
                 <Home.Articles mediaType={ browser.mediaType }/>
                 <Home.Top mediaType={ browser.mediaType }/>
                 <Home.Episodes
-                    mediaType={ browser.mediaType }
                     title={ 'Новые выпуски' }
+                    type="new"
                     dynamic={ false }
                     canRefresh={ false }
                     view="grid"
                 />
                 <Home.Episodes
-                    mediaType={ browser.mediaType }
-                    title={ 'Новые выпуски' }
+                    title={ 'Рекомендуемые выпуски' }
+                    type="recommended"
                     dynamic={ false }
                     canRefresh={ false }
                     view="row"
+                />
+                <Home.Episodes
+                    title={ 'Сейчас смотрят' }
+                    type="now"
+                    dynamic={ false }
+                    canRefresh={ false }
+                    view="grid"
                 />
                 <Footer.Banners mediaType={ browser.mediaType }/>
                 <Footer.Shows mediaType={ browser.mediaType }/>
