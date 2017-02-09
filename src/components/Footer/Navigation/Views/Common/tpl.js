@@ -70,12 +70,12 @@ export default function Navigation(props) {
             { [
                 BreakPoints.phonePortrait.name,
                 BreakPoints.phoneLandscape.name
-            ].indexOf(mediaType) === -1 ? <a href="#"><Top/></a> : null }
+            ].indexOf(mediaType) === -1 ? (<a href="#"><Top/></a>) : null }
         </footer>
     );
 
     return (
-        <PixelPerfect templates={ templates } component="navigation">
+        <PixelPerfect templates={ templates } component="Footer.Navigation">
             <section className={ Styles.navigationComponent }>
                 <div className={ Grids.container }>
                     <div className={ Styles.mainContent }>
@@ -125,20 +125,20 @@ export default function Navigation(props) {
                         BreakPoints.phonePortrait.name,
                         BreakPoints.phoneLandscape.name
                     ].indexOf(mediaType) !== -1 ? <div className={ Styles.additionalContent }>
-                            { [
-                                BreakPoints.phonePortrait.name
-                            ].indexOf(mediaType) !== -1 ? info : null }
-                            { [
-                                BreakPoints.phonePortrait.name
-                            ].indexOf(mediaType) !== -1 ? rights : null }
-                            { [
-                                BreakPoints.phonePortrait.name,
-                                BreakPoints.phoneLandscape.name
-                            ].indexOf(mediaType) !== -1 ? copyright : null }
-                            { [
-                                BreakPoints.phoneLandscape.name
-                            ].indexOf(mediaType) !== -1 ? networks : null }
-                        </div> : null }
+                        { [
+                            BreakPoints.phonePortrait.name
+                        ].indexOf(mediaType) !== -1 ? info : null }
+                        { [
+                            BreakPoints.phonePortrait.name
+                        ].indexOf(mediaType) !== -1 ? rights : null }
+                        { [
+                            BreakPoints.phonePortrait.name,
+                            BreakPoints.phoneLandscape.name
+                        ].indexOf(mediaType) !== -1 ? copyright : null }
+                        { [
+                            BreakPoints.phoneLandscape.name
+                        ].indexOf(mediaType) !== -1 ? networks : null }
+                    </div> : null }
                 </div>
             </section>
         </PixelPerfect>

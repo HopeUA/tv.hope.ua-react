@@ -4,21 +4,21 @@
     .mainContent {
         display: flex;
         position: relative;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        justify-content: space-between;
         padding: px(70) px(46) 0 px(40);
         background-color: $commonColor4;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-flow: row wrap;
     }
 
     .additionalContent {
         display: flex;
         position: relative;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        justify-content: space-between;
         padding: px(58) px(80) px(62) px(58);
         background-color: $mainColor1;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-flow: row wrap;
     }
 
     section {
@@ -37,7 +37,7 @@
         a {
             transition: color .2s;
             color: $commonColor1;
-            font-size: px(24);
+            font-size: px(24.5);
             text-decoration: none;
 
             &:active {
@@ -69,6 +69,15 @@
 
     .connection {
         margin-right: px(38);
+        font-stretch: semi-condensed;
+        //h1 {
+        //    width: px(240);
+        //}
+
+        //ul {
+        //    width: px(239);
+        //    margin-right: px(-1);
+        //}
     }
 
     .networks {
@@ -184,24 +193,27 @@
 
     footer {
         position: absolute;
-        top: px(210);
+        top: px(209);
         left: px(320);
         width: px(254);
 
-        p {
-            margin-bottom: px(-6);
-            font-size: px(20);
-            line-height: px(24);
+        .container {
 
-            span {
-                color: $commonColor1;
-                font-weight: bold;
+            .copyright {
+                font-size: px(20);
+                line-height: px(24);
+
+                &::before {
+                    font-weight: bold;
+                    content: '© ';
+                }
             }
-        }
 
-        span {
-            color: $tempColor11;
-            font-size: px(18);
+            .designer {
+                margin-top: px(9);
+                color: $tempColor11;
+                font-size: px(18);
+            }
         }
     }
 }

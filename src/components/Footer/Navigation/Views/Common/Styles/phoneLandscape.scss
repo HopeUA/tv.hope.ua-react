@@ -6,8 +6,8 @@
     }
 
     .additionalContent {
-        align-items: center;
         padding: px(36) px(60);
+        align-items: center;
     }
 
     .menu {
@@ -29,15 +29,27 @@
     }
 
     .rights {
-        width: px(166);
+        width: px(170);
 
         h1 {
             margin-top: px(2);
+            //margin-right: px(-1);
+        }
+
+        span {
+            line-height: px(26);
         }
     }
 
     footer {
         position: static;
         margin-top: px(2);
+
+        .container {
+
+            .designer {
+                margin-top: px(6);
+            }
+        }
     }
 }
