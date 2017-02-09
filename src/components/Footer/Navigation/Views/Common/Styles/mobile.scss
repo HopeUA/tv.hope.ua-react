@@ -91,67 +91,6 @@
 
         div {
             display: flex;
-
-            .twitterIcon {
-                order: 3;
-
-                i {
-                    path {
-                        fill: $tempColor12;
-                    }
-                }
-            }
-
-            .facebookIcon {
-                order: 5;
-
-                i {
-                    path {
-                        fill: $tempColor6;
-                    }
-                }
-            }
-
-            .okIcon {
-                order: 6;
-
-                i {
-                    path {
-                        fill: $tempColor7;
-                    }
-                }
-            }
-
-            .youtubeIcon {
-                order: 1;
-
-                i {
-                    path,
-                    polygon {
-                        fill: $tempColor8;
-                    }
-                }
-            }
-
-            .vkIcon {
-                order: 4;
-
-                i {
-                    path {
-                        fill: $tempColor9;
-                    }
-                }
-            }
-
-            .instagramIcon {
-                order: 2;
-
-                i {
-                    path {
-                        fill: $tempColor10;
-                    }
-                }
-            }
         }
     }
     // END networks

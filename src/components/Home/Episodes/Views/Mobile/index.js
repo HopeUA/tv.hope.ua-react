@@ -25,7 +25,7 @@ export default function Mobile(props) {
                 <div className={ Styles.image } style={ background }/>
                 <div className={ Styles.info }>
                     <div className={ Styles.blockDate }>
-                        <BubbleVideo color={ Palette.paletteColor2 } className={ Styles.bubble }/>
+                        <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
                         <p className={ Styles.date }>
                             <strong>{ `${publishDate[0]} ${publishDate[1]},` }</strong>
                             &nbsp;{ `${publishDate[2]}` }
@@ -34,7 +34,7 @@ export default function Mobile(props) {
                     <h1>{ el.title }</h1>
                     <div className={ Styles.link }>
                         <a href="#">{ el.show.title }</a>
-                        <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                        <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                     </div>
                 </div>
             </article>

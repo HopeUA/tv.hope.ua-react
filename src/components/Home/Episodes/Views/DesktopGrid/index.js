@@ -10,6 +10,10 @@ import GoTo from 'components/Assets/Icons/GoTo';
 export default function DesktopGrid(props) {
     const { items } = props;
 
+    if (items.length === 0) {
+        return null;
+    }
+
     const [large] = items;
     const styles = {
         backgroundImage: `url(${large.image})`
@@ -22,7 +26,7 @@ export default function DesktopGrid(props) {
 
         return (
             <div className={ Styles.small } style={ background } key={ el.uid }>
-                <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                 <h3>{ el.title }</h3>
             </div>
         );
@@ -45,7 +49,7 @@ export default function DesktopGrid(props) {
                 </div>
                 <Slider { ...properties }>
                     <div className={ Styles.large } style={ styles }>
-                        <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                        <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         <h3>{ large.title }</h3>
                         <h4>{ large.show.title }</h4>
                     </div>

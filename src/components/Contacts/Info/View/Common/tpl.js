@@ -44,32 +44,32 @@ export default class Info extends Component {
                     <section className={ Styles.infoComponent }>
                         <section className={ Styles.live }>
                             <header>
-                                <ContactUs color1={ Palette.paletteColor9 } color2={ Palette.paletteColor1 }/>
+                                <ContactUs color1={ Palette.commonColor2 } color2={ Palette.mainColor3 }/>
                                 <h1>Общайтесь онлайн</h1>
                             </header>
                             <div className={ Styles.chat }>
                                 <p>Онлайн чат работает каждый день с <b>8:00 до 20:00</b></p>
                                 <a href="#">
-                                    <WriteButton color={ Palette.paletteColor2 }/>
+                                    <WriteButton color={ Palette.mainColor4 }/>
                                     Написать в онлайн чат
                                 </a>
                             </div>
                             <div className={ Styles.call }>
                                 <p>Онлайн чат работает каждый день с <b>8:00 до 20:00</b></p>
                                 <a href="#">
-                                    <PhoneButton color={ Palette.paletteColor2 }/>
+                                    <PhoneButton color={ Palette.mainColor4 }/>
                                     Позвонить нам сейчас
                                 </a>
                             </div>
                         </section>
                         <section className={ Styles.contacts }>
                             <header>
-                                <PhoneAndInternet color1={ Palette.paletteColor9 } color2={ Palette.paletteColor1 }/>
+                                <PhoneAndInternet color1={ Palette.commonColor2 } color2={ Palette.mainColor3 }/>
                                 <h1>Задайте вопрос</h1>
                             </header>
                             <div className={ Styles.phone }>
                                 <div className={ Styles.row }>
-                                    <PhoneContact color={ Palette.paletteColor10 }/>
+                                    <PhoneContact color={ Palette.tempColor26 }/>
                                     <span>0 800 30 20 20</span>
                                 </div>
                                 <div>
@@ -87,7 +87,7 @@ export default class Info extends Component {
                             </div>
                             <div className={ Styles.mail }>
                                 <div className={ Styles.row }>
-                                    <Mail color={ Palette.paletteColor10 }/>
+                                    <Mail color={ Palette.tempColor26 }/>
                                     <a href="#">contact@hope.ua</a>
                                 </div>
                                 <div>
@@ -97,7 +97,7 @@ export default class Info extends Component {
                         </section>
                         <section className={ Styles.social }>
                             <header>
-                                <SocialNetworks color1={ Palette.paletteColor1 } color2={ Palette.paletteColor9 }/>
+                                <SocialNetworks color1={ Palette.mainColor3 } color2={ Palette.commonColor2 }/>
                                 <h1>{ socialTitle }</h1>
                             </header>
                             <div className={ Styles.list }>

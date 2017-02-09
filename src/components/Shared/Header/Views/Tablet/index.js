@@ -39,7 +39,7 @@ export default function Header(props) {
             } : null;
 
             const liveIcon = el.id === 'live' ? (
-                <MenuLive className={ Styles.liveIcon } color={ Palette.paletteColor1 }/>
+                <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
             ) : null;
 
             return (
@@ -71,13 +71,13 @@ export default function Header(props) {
     return (
         <section className={ Styles.headerComponent }>
             <div className={ Styles.header }>
-                <Logo className={ Styles.logo } color={ Palette.paletteColor10 }/>
+                <Logo className={ Styles.logo } color={ Palette.tempColor26 }/>
                 <ul className={ Styles.menu }>
                     { mainMenuItems }
                 </ul>
                 <Hamburger
                     className={ Styles.hamburger }
-                    color={ Palette.paletteColor10 }
+                    color={ Palette.tempColor26 }
                     isOpened={ isMenuVisible }
                     onClick={ handleMenu }
                 />
@@ -89,12 +89,24 @@ export default function Header(props) {
                     </ul>
                     <div className={ Styles.footer }>
                         <div className={ Styles.social }>
-                            <a href={ socialLinks.youtube } className={ Styles.youtube }><YouTube/></a>
-                            <a href={ socialLinks.instagram } className={ Styles.instagram }><Instagram/></a>
-                            <a href={ socialLinks.twitter } className={ Styles.twitter }><Twitter/></a>
-                            <a href={ socialLinks.vk } className={ Styles.vk }><Vk/></a>
-                            <a href={ socialLinks.facebook } className={ Styles.facebook }><Facebook/></a>
-                            <a href={ socialLinks.ok } className={ Styles.ok }><Ok/></a>
+                            <a href={ socialLinks.youtube } className={ Styles.youtubeIcon }>
+                                <YouTube color={ Palette.tempColor8 }/>
+                            </a>
+                            <a href={ socialLinks.instagram } className={ Styles.instagramIcon }>
+                                <Instagram color={ Palette.tempColor10 }/>
+                            </a>
+                            <a href={ socialLinks.twitter } className={ Styles.twitterIcon }>
+                                <Twitter color={ Palette.tempColor12 }/>
+                            </a>
+                            <a href={ socialLinks.vk } className={ Styles.vkIcon }>
+                                <Vk color={ Palette.tempColor9 }/>
+                            </a>
+                            <a href={ socialLinks.facebook } className={ Styles.facebookIcon }>
+                                <Facebook color={ Palette.tempColor6 }/>
+                            </a>
+                            <a href={ socialLinks.ok } className={ Styles.okIcon }>
+                                <Ok color={ Palette.tempColor7 }/>
+                            </a>
                         </div>
                         <div className={ Styles.languages }>
                             <span className={ Styles.choose }>Язык сайта:</span>

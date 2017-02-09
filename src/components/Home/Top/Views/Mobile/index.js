@@ -28,7 +28,7 @@ export default function Mobile(props) {
                         <div className={ Styles.blur } style={ imageStyle }/>
                         <div className={ Styles.info }>
                             <div className={ Styles.date }>
-                                <BubbleVideo color={ Palette.paletteColor6 } className={ Styles.bubble }/>
+                                <BubbleVideo color={ Palette.mainColor1 } className={ Styles.bubble }/>
                                 <span>
                                     <strong>
                                         { `${Date.format('D')} ${Date.format('MMM')},` }
@@ -41,7 +41,7 @@ export default function Mobile(props) {
                                 <h1>
                                     <a href="#">{ item.show.title }</a>
                                 </h1>
-                                <Arrow color={ Palette.paletteColor6 } className={ Styles.arrow }/>
+                                <Arrow color={ Palette.mainColor1 } className={ Styles.arrow }/>
                             </div>
                         </div>
                     </div>

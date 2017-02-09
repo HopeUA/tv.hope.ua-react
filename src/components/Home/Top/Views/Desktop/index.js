@@ -32,13 +32,13 @@ export default function Desktop(props) {
     const small = (
         <article className={ Styles.small }>
             <div className={ Styles.image } style={ imageNext }>
-                <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
             </div>
             <div className={ Styles.container }>
                 <div className={ Styles.blur } style={ imageNext }/>
                 <div className={ Styles.info }>
                     <div className={ Styles.date }>
-                        <BubbleArticle color={ Palette.paletteColor6 } className={ Styles.bubble }/>
+                        <BubbleArticle color={ Palette.mainColor1 } className={ Styles.bubble }/>
                         <span>
                             <strong>
                                 {
@@ -66,13 +66,13 @@ export default function Desktop(props) {
                     <h1>Актуально</h1>
                     <article className={ Styles.main }>
                         <div className={ Styles.image } style={ imageCurrent }>
-                            <GoTo color={ Palette.paletteColor6 } className={ Styles.goTo }/>
+                            <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         </div>
                         <div className={ Styles.container }>
                             <div className={ Styles.blur } style={ imageCurrent }/>
                             <div className={ Styles.info }>
                                 <div className={ Styles.date }>
-                                    <BubbleVideo color={ Palette.paletteColor6 } className={ Styles.bubble }/>
+                                    <BubbleVideo color={ Palette.mainColor1 } className={ Styles.bubble }/>
                                     <span>
                                         <strong>
                                             { `${date.format('D')} ${date.format('MMM')},` }
@@ -85,7 +85,7 @@ export default function Desktop(props) {
                                     <h1>
                                         <a href="#">{ itemLarge.show.title }</a>
                                     </h1>
-                                    <Arrow color={ Palette.paletteColor6 } className={ Styles.arrow }/>
+                                    <Arrow color={ Palette.mainColor1 } className={ Styles.arrow }/>
                                 </div>
                                 <p>{ itemLarge.description }</p>
                             </div>

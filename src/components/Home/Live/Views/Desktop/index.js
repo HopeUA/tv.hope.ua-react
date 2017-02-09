@@ -56,7 +56,7 @@ export default class Desktop extends Component {
         const episodeLink = current.episode.code === '' ? null : (
             <div className={ Styles.episodeLink }>
                 <a href="#" className={ Styles.episode } >Перейти к выпуску</a>
-                <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
             </div>
         );
 
@@ -96,7 +96,7 @@ export default class Desktop extends Component {
                     <h2>{ next.show.title }</h2>
                     <div className={ Styles.link }>
                         <a href="#">{ next.episode.title }</a>
-                        <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                        <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                     </div>
                     <span className={ Styles.description }>{ nextDescription }</span>
                 </div>
@@ -116,9 +116,9 @@ export default class Desktop extends Component {
                                 />
                                 <div className={ Styles.iconsBlock }>
                                     <div className={ Styles.icons }>
-                                        <Volume color={ Palette.paletteColor6 } isMuted={ isMuted }/>
-                                        <PlayPause color={ Palette.paletteColor6 } isPlaying={ test }/>
-                                        <FullScreen color={ Palette.paletteColor6 }/>
+                                        <Volume color={ Palette.mainColor1 } isMuted={ isMuted }/>
+                                        <PlayPause color={ Palette.mainColor1 } isPlaying={ test }/>
+                                        <FullScreen color={ Palette.mainColor1 }/>
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@ export default class Desktop extends Component {
                                 <h1>{ current.episode.title }</h1>
                                 <div className={ Styles.showLink }>
                                     <a href="#" className={ Styles.show }>{ current.show.title }</a>
-                                    <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                                    <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                                 </div>
                                 <p>{ currentDescription }</p>
                                 { episodeLink }

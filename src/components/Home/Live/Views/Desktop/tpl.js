@@ -45,7 +45,7 @@ export default function Desktop(props) {
                 <h2>Ох уже ці італійці</h2>
                 <div className={ Styles.link }>
                     <a href="#">В гостях у Добрячка</a>
-                    <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                    <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                 </div>
                 <span className={ Styles.description }>Повтор программы</span>
             </div>
@@ -63,9 +63,9 @@ export default function Desktop(props) {
                                 <div className={ Styles.video } style={ style }/>
                                 <div className={ Styles.iconsBlock }>
                                     <div className={ Styles.icons }>
-                                        <Volume color={ Palette.paletteColor6 } isMuted={ test }/>
-                                        <PlayPause color={ Palette.paletteColor6 } isPlaying={ test }/>
-                                        <FullScreen color={ Palette.paletteColor6 }/>
+                                        <Volume color={ Palette.mainColor1 } isMuted={ test }/>
+                                        <PlayPause color={ Palette.mainColor1 } isPlaying={ test }/>
+                                        <FullScreen color={ Palette.mainColor1 }/>
                                     </div>
                                 </div>
                             </div>
@@ -87,12 +87,12 @@ export default function Desktop(props) {
                                 <h1>Ох уже ці італійці</h1>
                                 <div className={ Styles.showLink }>
                                     <a href="#" className={ Styles.show }>В гостях у Добрячка</a>
-                                    <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                                    <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                                 </div>
                                 <p>Про італійців та їх культуру розповість дітлахам Добрячок.</p>
                                 <div className={ Styles.episodeLink }>
                                     <a href="#" className={ Styles.episode }>Перейти к выпуску</a>
-                                    <Arrow color={ Palette.paletteColor3 } className={ Styles.arrow }/>
+                                    <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                                 </div>
                             </div>
                         </div>
