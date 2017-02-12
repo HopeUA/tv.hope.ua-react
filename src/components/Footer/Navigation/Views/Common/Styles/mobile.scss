@@ -69,6 +69,7 @@
 
     .connection {
         margin-right: px(38);
+        font-stretch: semi-condensed;
     }
 
     .networks {
@@ -127,20 +128,24 @@
         left: px(320);
         width: px(254);
 
-        p {
-            margin-bottom: px(-6);
-            font-size: px(20);
-            line-height: px(24);
+        .container {
 
-            span {
-                color: $commonColor1;
-                font-weight: bold;
+            .copyright {
+                font-size: px(20);
+                line-height: px(24);
+
+                &::before {
+                    margin-right: px(4);
+                    font-weight: bold;
+                    content: '©';
+                }
             }
-        }
 
-        span {
-            color: $tempColor11;
-            font-size: px(18);
+            .designer {
+                margin-top: px(8);
+                color: $tempColor11;
+                font-size: px(18);
+            }
         }
     }
 }

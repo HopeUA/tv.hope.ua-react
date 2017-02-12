@@ -1,7 +1,7 @@
 .idea/
 node_modules/
 dist/
-static/PixelPerfect/
+static/PixelPerfect
 *.iml
 webpack-assets.json
 webpack-stats.json

@@ -78,7 +78,7 @@ export default function Navigation(props) {
     );
 
     return (
-        <PixelPerfect templates={ templates } component="navigation">
+        <PixelPerfect templates={ templates } component="Footer.Navigation">
             <section className={ Styles.navigationComponent }>
                 <div className={ Grids.container }>
                     <div className={ Styles.mainContent }>
@@ -95,9 +95,7 @@ export default function Navigation(props) {
 
                         { [
                             BreakPoints.phonePortrait.name
-                        ].indexOf(mediaType) === -1 ? (
-                            info
-                        ) : null }
+                        ].indexOf(mediaType) === -1 ? info : null }
 
                         <section className={ Styles.connection }>
                             <h1>Связь</h1>
@@ -109,9 +107,7 @@ export default function Navigation(props) {
 
                         { [
                             BreakPoints.phoneLandscape.name
-                        ].indexOf(mediaType) === -1 ? (
-                            networks
-                        ) : null }
+                        ].indexOf(mediaType) === -1 ? networks : null }
 
                         <section className={ Styles.phoneNumber }>
                             <h1>0 (800) 50 157 80</h1>
@@ -120,16 +116,12 @@ export default function Navigation(props) {
 
                         { [
                             BreakPoints.phonePortrait.name
-                        ].indexOf(mediaType) === -1 ? (
-                            rights
-                        ) : null }
+                        ].indexOf(mediaType) === -1 ? rights : null }
 
                         { [
                             BreakPoints.phonePortrait.name,
                             BreakPoints.phoneLandscape.name
-                        ].indexOf(mediaType) === -1 ? (
-                            copyright
-                        ) : null }
+                        ].indexOf(mediaType) === -1 ? copyright : null }
                     </div>
 
                     { [
@@ -139,25 +131,17 @@ export default function Navigation(props) {
                         <div className={ Styles.additionalContent }>
                             { [
                                 BreakPoints.phonePortrait.name
-                            ].indexOf(mediaType) !== -1 ? (
-                                info
-                            ) : null }
+                            ].indexOf(mediaType) !== -1 ? info : null }
                             { [
                                 BreakPoints.phonePortrait.name
-                            ].indexOf(mediaType) !== -1 ? (
-                                rights
-                            ) : null }
+                            ].indexOf(mediaType) !== -1 ? rights : null }
                             { [
                                 BreakPoints.phonePortrait.name,
                                 BreakPoints.phoneLandscape.name
-                            ].indexOf(mediaType) !== -1 ? (
-                                copyright
-                            ) : null }
+                            ].indexOf(mediaType) !== -1 ? copyright : null }
                             { [
                                 BreakPoints.phoneLandscape.name
-                            ].indexOf(mediaType) !== -1 ? (
-                                networks
-                            ) : null }
+                            ].indexOf(mediaType) !== -1 ? networks : null }
                         </div>
                     ) : null }
                 </div>

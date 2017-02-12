@@ -100,16 +100,13 @@
         }
 
         footer {
-            margin-top: px(80);
+            margin-top: px(84);
 
-            p {
-                margin-top: px(14);
-                margin-bottom: 0;
-                font-size: px(24);
-            }
+            .container {
 
-            span {
-                padding-left: px(30);
+                .copyright {
+                    font-size: px(24);
+                }
             }
         }
     }
