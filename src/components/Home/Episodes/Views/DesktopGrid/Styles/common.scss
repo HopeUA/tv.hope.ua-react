@@ -17,9 +17,9 @@
         .refresh {
             display: flex;
             align-items: center;
-            font-style: italic;
-            font-size: px(28);
             color: $tempColor3;
+            font-size: px(28);
+            font-style: italic;
             cursor: pointer;
 
             i {

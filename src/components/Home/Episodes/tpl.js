@@ -17,7 +17,8 @@ export default class Episodes extends Component {
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
         view: PropTypes.string.isRequired,
-        canRefresh: PropTypes.bool.isRequired
+        canRefresh: PropTypes.bool.isRequired,
+        scrollDisable: PropTypes.bool.isRequired
     };
 
     render = () => {
