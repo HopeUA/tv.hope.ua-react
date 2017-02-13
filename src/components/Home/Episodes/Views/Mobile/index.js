@@ -11,8 +11,6 @@ import Palette from 'components/Assets/Palette';
 
 Moment.locale('ru');
 
-// return BreakPoints.phoneLandscape.name === mediaType && index < 2 ? element : arr;
-
 export default function Mobile(props) {
     const { items, mediaType, title } = props;
     const episodes = items

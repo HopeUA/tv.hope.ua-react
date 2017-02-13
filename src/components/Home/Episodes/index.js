@@ -28,10 +28,15 @@ export default class Episodes extends Component {
         view: PropTypes.string.isRequired,
         items: PropTypes.array.isRequired,
         title: PropTypes.string.isRequired,
-        canRefresh: PropTypes.bool.isRequired,
-        scrollDisable: PropTypes.bool.isRequired,
+        canRefresh: PropTypes.bool,
+        scrollDisable: PropTypes.bool,
         fetchItems: PropTypes.func.isRequired,
         type: PropTypes.string.isRequired
+    };
+
+    static defaultProps = {
+        scrollDisable: false,
+        canRefresh: false
     };
 
     static displayName = componentId;

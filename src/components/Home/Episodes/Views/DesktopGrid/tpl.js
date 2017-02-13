@@ -7,10 +7,9 @@ import Grids from 'theme/Grid.scss';
 import Palette from 'components/Assets/Palette';
 import GoTo from 'components/Assets/Icons/GoTo';
 import Refresh from 'components/Assets/Icons/Reload';
-import BreakPoints from 'helpers/breakpoints';
 
 export default function DesktopGrid(props) {
-    const { mediaType, canRefresh, dynamic } = props;
+    const { canRefresh, scrollDisable } = props;
 
     const styles = {
         backgroundImage: 'url(https://cdn.hope.ua/media/shows/CLMU/episodes/09615/CLMU09615-cover.jpg)'
@@ -29,25 +28,17 @@ export default function DesktopGrid(props) {
         display: canRefresh ? 'flex' : 'none'
     };
 
-    const reload = [
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name,
-        BreakPoints.tabletPortrait.name
-    ].indexOf(mediaType) === -1 ? (
-        <div className={ Styles.refresh } style={ refreshStyle }>
-            Обновить
-            <Refresh color={ Palette.tempColor3 }/>
-        </div>
-        ) : null;
-
     return (
         <section className={ Grids.container }>
             <section className={ Styles.episodesComponent }>
                 <div className={ Styles.header }>
                     <h1>Новые выпуски</h1>
-                    { reload }
+                    <div className={ Styles.refresh } style={ refreshStyle }>
+                        Обновить
+                        <Refresh color={ Palette.tempColor3 }/>
+                    </div>
                 </div>
-                <Slider { ...properties } disabled={ dynamic }>
+                <Slider { ...properties } disabled={ scrollDisable }>
                     <div className={ Styles.large } style={ styles }>
                         <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         <h3>Хвороба століття</h3>
@@ -86,7 +77,11 @@ export default function DesktopGrid(props) {
 }
 
 DesktopGrid.propTypes = {
-    mediaType: PropTypes.string.isRequired,
-    canRefresh: PropTypes.bool.isRequired,
-    dynamic: PropTypes.boll.isRequired
+    canRefresh: PropTypes.bool,
+    scrollDisable: PropTypes.bool
+};
+
+DesktopGrid.defaultProps = {
+    canRefresh: false,
+    scrollDisable: false
 };
