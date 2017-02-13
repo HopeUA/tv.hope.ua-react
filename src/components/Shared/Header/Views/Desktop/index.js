@@ -89,9 +89,9 @@ export default function Header(props) {
                         </a>
                     </div>
                     <div className={ Styles.languages }>
-                        <span className={ ruClass }>Рус</span>
+                        <a href="#" className={ ruClass }>Рус</a>
                         <span className={ Styles.slash }>/</span>
-                        <span className={ ukClass }>Укр</span>
+                        <a href="#" className={ ukClass }>Укр</a>
                     </div>
                 </div>
                 <div className={ Styles.main }>
