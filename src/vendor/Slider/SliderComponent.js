@@ -5,7 +5,12 @@ import Palette from 'components/Assets/Palette';
 
 export default class Slider extends Component {
     static propTypes = {
-        children: PropTypes.any
+        children: PropTypes.any,
+        disabled: PropTypes.bool
+    };
+
+    static defaultProps = {
+        disabled: false
     };
 
     state = {
@@ -25,6 +30,10 @@ export default class Slider extends Component {
 
     refreshLastIndex = () => {
         setTimeout(() => {
+            if (!this.listContainer) {
+                return;
+            }
+
             const margin = parseInt(window.getComputedStyle(this.listContainer).backgroundSize, 10);
             this.lastIndex = Math.ceil((this.listContainer.scrollWidth - margin) / this.listContainer.offsetWidth);
         }, 0);
@@ -72,19 +81,43 @@ export default class Slider extends Component {
             visibility: isArrowRightVisible ? 'visible' : 'hidden'
         };
 
+        const sliderStyle = {
+            justifyContent: 'center'
+        };
+
         return (
-            <section className={ this.props.slider }>
-                <div className={ this.props.arrowLeft } onClick={ this.prev } style={ arrowLeftStyle }>
-                    <Arrow color={ Palette.commonColor1 } hoverColor={ Palette.mainColor6 } isStatic={ false } className={ this.props.arrow }/>
-                </div>
-                    <div style={overHid} className={ this.props.wrap }>
-                        <div ref={ (ref) => this.listContainer = ref } className={this.props.list} style={styles}>
-                            { children }
+            <section className={ this.props.slider } style={ sliderStyle }>
+                {
+                    !this.props.disabled ?  (
+                        <div className={ this.props.arrowLeft } onClick={ this.prev } style={ arrowLeftStyle }>
+                            <Arrow
+                                color={ Palette.commonColor1 }
+                                hoverColor={ Palette.mainColor6 }
+                                isStatic={ false }
+                                className={ this.props.arrow }
+                            />
                         </div>
+                    ) : null
+
+                }
+                <div style={ overHid } className={ this.props.wrap }>
+                    <div ref={ (ref) => this.listContainer = ref } className={this.props.list} style={styles}>
+                        { children }
                     </div>
-                <div className={ this.props.arrowRight } onClick={ this.next } style={ arrowRightStyle }>
-                    <Arrow color={ Palette.commonColor1 } hoverColor={ Palette.mainColor6 } isStatic={ false } className={ this.props.arrow }/>
                 </div>
+                {
+                    !this.props.disabled ?  (
+                        <div className={ this.props.arrowRight } onClick={ this.next } style={ arrowRightStyle }>
+                            <Arrow
+                                color={ Palette.commonColor1 }
+                                hoverColor={ Palette.mainColor6 }
+                                isStatic={ false }
+                                className={ this.props.arrow }
+                            />
+                        </div>
+                    ) : null
+
+                }
             </section>
         );
     }

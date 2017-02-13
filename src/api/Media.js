@@ -30,7 +30,7 @@ export default class Media {
         const url = `${this.endpoint}/${resource}/${params.type}`;
 
         const response = await fetch(url);
-        const result = await response.json;
+        const result = await response.json();
 
         return result.data;
     }

@@ -61,24 +61,10 @@ export default class HomePage extends Component {
                 <Home.Articles mediaType={ browser.mediaType }/>
                 <Home.Top mediaType={ browser.mediaType }/>
                 <Home.Episodes
-                    title={ 'Новые выпуски' }
-                    type="new"
-                    dynamic={ false }
-                    canRefresh={ false }
-                    view="grid"
-                />
-                <Home.Episodes
-                    title={ 'Рекомендуемые выпуски' }
-                    type="recommended"
-                    dynamic={ false }
-                    canRefresh={ false }
-                    view="row"
-                />
-                <Home.Episodes
                     title={ 'Сейчас смотрят' }
                     type="now"
-                    dynamic={ false }
-                    canRefresh={ false }
+                    scrollDisable
+                    canRefresh
                     view="grid"
                 />
                 <Footer.Banners mediaType={ browser.mediaType }/>
@@ -89,3 +75,20 @@ export default class HomePage extends Component {
         );
     }
 }
+
+/*
+ <Home.Episodes
+ title={ 'Новые выпуски' }
+ type="new"
+ dynamic={ false }
+ canRefresh={ false }
+ view="grid"
+ />
+ <Home.Episodes
+ title={ 'Рекомендуемые выпуски' }
+ type="recommended"
+ dynamic={ false }
+ canRefresh={ false }
+ view="row"
+ />
+ */

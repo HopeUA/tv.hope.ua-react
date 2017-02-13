@@ -3,12 +3,14 @@ import Slider from 'vendor/Slider/SliderComponent';
 
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
+import BreakPoints from 'helpers/breakpoints';
 
 import Palette from 'components/Assets/Palette';
 import GoTo from 'components/Assets/Icons/GoTo';
+import Refresh from 'components/Assets/Icons/Reload';
 
 export default function DesktopGrid(props) {
-    const { items } = props;
+    const { mediaType, items, title, canRefresh, scrollDisable, handleRefresh } = props;
 
     if (items.length === 0) {
         return null;
@@ -41,13 +43,33 @@ export default function DesktopGrid(props) {
         arrow: Styles.arrow
     };
 
+    const refreshStyle = {
+        display: canRefresh ? 'flex' : 'none'
+    };
+
+    const reload = [
+        BreakPoints.phonePortrait.name,
+        BreakPoints.phoneLandscape.name,
+        BreakPoints.tabletPortrait.name
+    ].indexOf(mediaType) === -1 ? (
+        <div
+            className={ Styles.refresh }
+            style={ refreshStyle }
+            onClick={ handleRefresh }
+        >
+            Обновить
+            <Refresh color={ Palette.tempColor3 }/>
+        </div>
+        ) : null;
+
     return (
         <section className={ Grids.container }>
             <section className={ Styles.episodesComponent }>
                 <div className={ Styles.header }>
-                    <h1>Новые выпуски</h1>
+                    <h1>{ title }</h1>
+                    { reload }
                 </div>
-                <Slider { ...properties }>
+                <Slider { ...properties } disabled={ scrollDisable }>
                     <div className={ Styles.large } style={ styles }>
                         <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         <h3>{ large.title }</h3>
@@ -63,7 +85,12 @@ export default function DesktopGrid(props) {
 }
 
 DesktopGrid.propTypes = {
-    items: PropTypes.array
+    items: PropTypes.array,
+    title: PropTypes.string.isRequired,
+    mediaType: PropTypes.string.isRequired,
+    canRefresh: PropTypes.bool.isRequired,
+    scrollDisable: PropTypes.bool.isRequired,
+    handleRefresh: PropTypes.func.isRequired
 };
 DesktopGrid.defaultProps = {
     items: []

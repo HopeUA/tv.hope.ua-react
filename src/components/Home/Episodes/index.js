@@ -26,7 +26,12 @@ export default class Episodes extends Component {
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
         view: PropTypes.string.isRequired,
-        items: PropTypes.array.isRequired
+        items: PropTypes.array.isRequired,
+        title: PropTypes.string.isRequired,
+        canRefresh: PropTypes.bool.isRequired,
+        scrollDisable: PropTypes.bool.isRequired,
+        fetchItems: PropTypes.func.isRequired,
+        type: PropTypes.string.isRequired
     };
 
     static displayName = componentId;
@@ -35,8 +40,12 @@ export default class Episodes extends Component {
         return dispatch(actions.fetchItems(params.type));
     };
 
+    handleRefresh = () => {
+        this.props.fetchItems(this.props.type);
+    };
+
     render = () => {
-        const { mediaType, view, items } = this.props;
+        const { mediaType, view, items, title, canRefresh, scrollDisable } = this.props;
 
         const isMobile = [
             BreakPoints.phonePortrait.name,
@@ -46,14 +55,23 @@ export default class Episodes extends Component {
         let component = null;
 
         if (isMobile) {
-            component = <Mobile mediaType={ mediaType } items={ items }/>;
+            component = <Mobile mediaType={ mediaType } items={ items } title={ title }/>;
         } else {
             switch (view) {
                 case 'grid':
-                    component = <DesktopGrid items={ items }/>;
+                    component = (
+                        <DesktopGrid
+                            items={ items }
+                            title={ title }
+                            mediaType={ mediaType }
+                            canRefresh={ canRefresh }
+                            scrollDisable={ scrollDisable }
+                            handleRefresh={ this.handleRefresh }
+                        />
+                    );
                     break;
                 case 'row':
-                    component = <DesktopRow items={ items }/>;
+                    component = <DesktopRow items={ items } title={ title }/>;
                     break;
                 default:
                     component = null;

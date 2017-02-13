@@ -11,35 +11,41 @@ import Palette from 'components/Assets/Palette';
 
 Moment.locale('ru');
 
-export default function Mobile(props) {
-    const { items, mediaType } = props;
-    const episodes = items.map((el) => {
-        const background = {
-            backgroundImage: `url(${el.image})`
-        };
-        const moment = Moment(el.publish).format('LL');
-        const publishDate = moment.split(' ');
+// return BreakPoints.phoneLandscape.name === mediaType && index < 2 ? element : arr;
 
-        return (
-            <article className={ Styles.episodeItem } key={ el.uid }>
-                <div className={ Styles.image } style={ background }/>
-                <div className={ Styles.info }>
-                    <div className={ Styles.blockDate }>
-                        <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
-                        <p className={ Styles.date }>
-                            <strong>{ `${publishDate[0]} ${publishDate[1]},` }</strong>
-                            &nbsp;{ `${publishDate[2]}` }
-                        </p>
+export default function Mobile(props) {
+    const { items, mediaType, title } = props;
+    const episodes = items
+        .filter((element, index) => {
+            return !(BreakPoints.phoneLandscape.name === mediaType && index > 1);
+        })
+        .map((el) => {
+            const background = {
+                backgroundImage: `url(${el.image})`
+            };
+            const moment = Moment(el.publish).format('LL');
+            const publishDate = moment.split(' ');
+
+            return (
+                <article className={ Styles.episodeItem } key={ el.uid }>
+                    <div className={ Styles.image } style={ background }/>
+                    <div className={ Styles.info }>
+                        <div className={ Styles.blockDate }>
+                            <BubbleVideo color={ Palette.mainColor4 } className={ Styles.bubble }/>
+                            <p className={ Styles.date }>
+                                <strong>{ `${publishDate[0]} ${publishDate[1]},` }</strong>
+                                &nbsp;{ `${publishDate[2]}` }
+                            </p>
+                        </div>
+                        <h1>{ el.title }</h1>
+                        <div className={ Styles.link }>
+                            <a href="#">{ el.show.title }</a>
+                            <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
+                        </div>
                     </div>
-                    <h1>{ el.title }</h1>
-                    <div className={ Styles.link }>
-                        <a href="#">{ el.show.title }</a>
-                        <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
-                    </div>
-                </div>
-            </article>
-        );
-    });
+                </article>
+            );
+        });
 
     const swipeParams = {
         containerWidth: 81.25,
@@ -49,7 +55,7 @@ export default function Mobile(props) {
 
     return (
         <section className={ Styles.episodesComponent }>
-            <h1 className={ Styles.title }>Новые выпуски</h1>
+            <h1 className={ Styles.title }>{ title }</h1>
             <div className={ Styles.cover }>
                 {
                     BreakPoints.phonePortrait.name === mediaType ? (
@@ -65,7 +71,8 @@ export default function Mobile(props) {
 
 Mobile.propTypes = {
     items: PropTypes.array,
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
 };
 Mobile.defaultProps = {
     items: []
