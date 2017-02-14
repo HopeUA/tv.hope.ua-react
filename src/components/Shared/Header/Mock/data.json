@@ -72,6 +72,15 @@
         },
         "url": "/contacts",
         "external": false
+      },
+      {
+        "id": "worldwide",
+        "title": {
+          "ru": "Всемирный Hope Channel",
+          "uk": "Світовий Hope Channel"
+        },
+        "url": "http://www.hopetv.org/",
+        "external": true
       }
     ],
     "position": {
