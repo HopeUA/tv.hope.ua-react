@@ -11,7 +11,7 @@ i18n
         ns: ['common'],
         defaultNS: 'common',
 
-        debug: true,
+        debug: false,
 
         interpolation: {
             escapeValue: false // not needed for react!!

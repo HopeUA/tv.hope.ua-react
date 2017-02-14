@@ -24,6 +24,22 @@ const server = new http.Server(app);
 
 app.use(Express.static(path.join(__dirname, '..', 'static')));
 
+// TODO добавить определение языка по заголовкам и кукам
+app.use((req, res, next) => {
+    const langs = ['uk', 'ru'];
+    const pathParts = req.path.split('/');
+
+    const [, currentLang] = pathParts;
+    if (currentLang === '' || langs.indexOf(currentLang) === -1) {
+        const url = `/${langs[0]}${req.url}`;
+
+        return res.redirect(302, url);
+    }
+    req.language = currentLang;
+
+    return next();
+});
+
 app.use((req, res) => {
     if (__DEVELOPMENT__) {
         // Do not cache webpack stats: the script file would change since
@@ -34,7 +50,7 @@ app.use((req, res) => {
     const store = createStore(memoryHistory);
     const history = syncHistoryWithStore(memoryHistory, store);
 
-    const locale = req.language || 'uk';
+    const locale = req.language;
     const resources = i18n.getResourceBundle(locale, 'common');
     const i18nClient = {
         locale,
