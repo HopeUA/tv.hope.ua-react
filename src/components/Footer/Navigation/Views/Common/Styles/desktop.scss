@@ -1,9 +1,9 @@
 & {
     width: 100%;
-    border-top: solid 2px $commonColor4;
-    background-color: $mainColor1;
-    outline: px(52) solid $mainColor1;
     margin-top: px(52);
+    border-top: solid 2px $commonColor4;
+    outline: px(52) solid $mainColor1;
+    background-color: $mainColor1;
 
     .mainContent {
         display: flex;
