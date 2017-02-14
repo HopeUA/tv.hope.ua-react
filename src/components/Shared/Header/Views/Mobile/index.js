@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import Styles from './Styles/main.scss';
 import cx from 'classnames';
+import Styles from './Styles/main.scss';
 
 import Instagram from 'components/Assets/Social/instagram';
 import Facebook from 'components/Assets/Social/Fb';
@@ -56,8 +56,6 @@ export default function Header(props) {
                 </li>
             );
         });
-
-    console.log(socialLinks);
 
     return (
         <section className={ Styles.headerComponent }>
