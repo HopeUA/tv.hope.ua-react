@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { reducer as reduxAsyncConnect } from 'redux-connect';
 import { createResponsiveStateReducer } from 'redux-responsive';
+import locale from './locale';
 
 /**
  * Component reducers
@@ -22,6 +23,7 @@ export default combineReducers({
         desktopMega: 2560
     }),
     reduxAsyncConnect,
+    locale,
     'Home.Episodes': episodes
     // watchUs
 });

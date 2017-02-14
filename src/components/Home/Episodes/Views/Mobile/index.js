@@ -49,7 +49,7 @@ export default function Mobile(props) {
 
     return (
         <section className={ Styles.episodesComponent }>
-            <h1 className={ Styles.title }>Новые выпуски</h1>
+            <h1 className={ Styles.title }>Выпуски</h1>
             <div className={ Styles.cover }>
                 {
                     BreakPoints.phonePortrait.name === mediaType ? (
