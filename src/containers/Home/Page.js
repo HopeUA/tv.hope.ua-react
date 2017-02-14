@@ -70,14 +70,12 @@ export default class HomePage extends Component {
                 <Home.Episodes
                     title={ 'Новые выпуски' }
                     type="new"
-                    dynamic={ false }
                     canRefresh={ false }
                     view="grid"
                 />
                 <Home.Episodes
                     title={ 'Рекомендуемые выпуски' }
                     type="recommended"
-                    dynamic={ false }
                     canRefresh={ false }
                     view="row"
                 />
