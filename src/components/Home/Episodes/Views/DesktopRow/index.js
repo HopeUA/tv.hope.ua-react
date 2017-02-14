@@ -13,7 +13,7 @@ import Arrow from 'components/Assets/Icons/Arrow';
 Moment.locale('ru');
 
 export default function DesktopRow(props) {
-    const { items } = props;
+    const { items, title } = props;
 
     const properties = {
         slider: Styles.slider,
@@ -60,7 +60,7 @@ export default function DesktopRow(props) {
         <section className={ Grids.container }>
             <section className={ Styles.episodesComponent }>
                 <div className={ Styles.header }>
-                    <h1>Рекомендованные выпуски</h1>
+                    <h1>{ title }</h1>
                 </div>
                 <Slider { ...properties }>
                     { item }
@@ -71,7 +71,8 @@ export default function DesktopRow(props) {
 }
 
 DesktopRow.propTypes = {
-    items: PropTypes.array
+    items: PropTypes.array,
+    title: PropTypes.string.isRequired
 };
 DesktopRow.defaultProps = {
     items: []

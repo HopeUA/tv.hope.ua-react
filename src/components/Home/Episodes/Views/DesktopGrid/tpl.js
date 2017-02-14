@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Slider from 'vendor/Slider/SliderComponent';
 
 import Styles from './Styles/main.scss';
@@ -6,8 +6,11 @@ import Grids from 'theme/Grid.scss';
 
 import Palette from 'components/Assets/Palette';
 import GoTo from 'components/Assets/Icons/GoTo';
+import Refresh from 'components/Assets/Icons/Reload';
 
-export default function DesktopGrid() {
+export default function DesktopGrid(props) {
+    const { canRefresh, scrollDisable } = props;
+
     const styles = {
         backgroundImage: 'url(https://cdn.hope.ua/media/shows/CLMU/episodes/09615/CLMU09615-cover.jpg)'
     };
@@ -21,13 +24,21 @@ export default function DesktopGrid() {
         arrow: Styles.arrow
     };
 
+    const refreshStyle = {
+        display: canRefresh ? 'flex' : 'none'
+    };
+
     return (
         <section className={ Grids.container }>
             <section className={ Styles.episodesComponent }>
                 <div className={ Styles.header }>
                     <h1>Новые выпуски</h1>
+                    <div className={ Styles.refresh } style={ refreshStyle }>
+                        Обновить
+                        <Refresh color={ Palette.tempColor3 }/>
+                    </div>
                 </div>
-                <Slider { ...properties }>
+                <Slider { ...properties } disabled={ scrollDisable }>
                     <div className={ Styles.large } style={ styles }>
                         <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         <h3>Хвороба століття</h3>
@@ -64,3 +75,13 @@ export default function DesktopGrid() {
         </section>
     );
 }
+
+DesktopGrid.propTypes = {
+    canRefresh: PropTypes.bool,
+    scrollDisable: PropTypes.bool
+};
+
+DesktopGrid.defaultProps = {
+    canRefresh: false,
+    scrollDisable: false
+};
