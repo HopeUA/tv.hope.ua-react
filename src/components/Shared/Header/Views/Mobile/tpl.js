@@ -81,5 +81,5 @@ export default function Header(props) {
 
 Header.propTypes = {
     handleMenu: PropTypes.func.isRequired,
-    isMenuVisible: PropTypes.boolean.isRequired
+    isMenuVisible: PropTypes.bool.isRequired
 };

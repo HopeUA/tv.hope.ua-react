@@ -6,9 +6,10 @@ import Grids from 'theme/Grid.scss';
 
 import Palette from 'components/Assets/Palette';
 import GoTo from 'components/Assets/Icons/GoTo';
+import Refresh from 'components/Assets/Icons/Reload';
 
 export default function DesktopGrid(props) {
-    const { items } = props;
+    const { items, title, canRefresh, scrollDisable, handleRefresh } = props;
 
     if (items.length === 0) {
         return null;
@@ -41,13 +42,25 @@ export default function DesktopGrid(props) {
         arrow: Styles.arrow
     };
 
+    const refreshStyle = {
+        display: canRefresh ? 'flex' : 'none'
+    };
+
     return (
         <section className={ Grids.container }>
             <section className={ Styles.episodesComponent }>
                 <div className={ Styles.header }>
-                    <h1>Новые выпуски</h1>
+                    <h1>{ title }</h1>
+                    <div
+                        className={ Styles.refresh }
+                        style={ refreshStyle }
+                        onClick={ handleRefresh }
+                    >
+                        Обновить
+                        <Refresh color={ Palette.tempColor3 }/>
+                    </div>
                 </div>
-                <Slider { ...properties }>
+                <Slider { ...properties } disabled={ scrollDisable }>
                     <div className={ Styles.large } style={ styles }>
                         <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
                         <h3>{ large.title }</h3>
@@ -63,8 +76,14 @@ export default function DesktopGrid(props) {
 }
 
 DesktopGrid.propTypes = {
-    items: PropTypes.array
+    items: PropTypes.array,
+    title: PropTypes.string.isRequired,
+    canRefresh: PropTypes.bool,
+    scrollDisable: PropTypes.bool,
+    handleRefresh: PropTypes.func.isRequired
 };
 DesktopGrid.defaultProps = {
-    items: []
+    items: [],
+    scrollDisable: false,
+    canRefresh: false
 };

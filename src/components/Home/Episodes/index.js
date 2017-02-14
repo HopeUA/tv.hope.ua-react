@@ -26,7 +26,17 @@ export default class Episodes extends Component {
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
         view: PropTypes.string.isRequired,
-        items: PropTypes.array.isRequired
+        items: PropTypes.array.isRequired,
+        title: PropTypes.string.isRequired,
+        canRefresh: PropTypes.bool,
+        scrollDisable: PropTypes.bool,
+        fetchItems: PropTypes.func.isRequired,
+        type: PropTypes.string.isRequired
+    };
+
+    static defaultProps = {
+        scrollDisable: false,
+        canRefresh: false
     };
 
     static displayName = componentId;
@@ -35,8 +45,12 @@ export default class Episodes extends Component {
         return dispatch(actions.fetchItems(params.type));
     };
 
+    handleRefresh = () => {
+        this.props.fetchItems(this.props.type);
+    };
+
     render = () => {
-        const { mediaType, view, items } = this.props;
+        const { mediaType, view, items, title, canRefresh, scrollDisable } = this.props;
 
         const isMobile = [
             BreakPoints.phonePortrait.name,
@@ -55,10 +69,19 @@ export default class Episodes extends Component {
         } else {
             switch (view) {
                 case 'grid':
-                    component = <DesktopGrid items={ items }/>;
+                    component = (
+                        <DesktopGrid
+                            items={ items }
+                            title={ title }
+                            mediaType={ mediaType }
+                            canRefresh={ canRefresh }
+                            scrollDisable={ scrollDisable }
+                            handleRefresh={ this.handleRefresh }
+                        />
+                    );
                     break;
                 case 'row':
-                    component = <DesktopRow items={ items }/>;
+                    component = <DesktopRow items={ items } title={ title }/>;
                     break;
                 default:
                     component = null;

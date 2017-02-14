@@ -3,14 +3,29 @@
     flex-direction: column;
 
     .header {
-        padding-top: px(86);
-        padding-bottom: px(54);
-        padding-left: px(108);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: px(86) px(108) px(54);
 
         h1 {
             color: $commonColor1;
             font-size: px(48);
             font-weight: 100;
+        }
+
+        .refresh {
+            display: flex;
+            align-items: center;
+            color: $tempColor3;
+            font-size: px(28);
+            font-style: italic;
+            cursor: pointer;
+
+            i {
+                width: px(30);
+                margin-left: px(12);
+            }
         }
     }
 
