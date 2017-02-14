@@ -13,7 +13,7 @@ import Helmet from 'react-helmet';
  * by the server.js file.
  */
 export default function Html(props) {
-    const { assets, component, store } = props;
+    const { assets, component, store, i18n } = props;
     const content = component ? ReactDOM.renderToString(component) : '';
     const head = Helmet.rewind();
 
@@ -53,6 +53,7 @@ export default function Html(props) {
                     dangerouslySetInnerHTML={ { __html: `window.__data=${serialize(store.getState())};` } }
                     charSet="UTF-8"
                 />
+                <script dangerouslySetInnerHTML={ { __html: `window.__i18n=${serialize(i18n)};` } } charSet="UTF-8"/>
                 <script src={ assets.javascript.main } charSet="UTF-8"/>
             </body>
         </html>
@@ -61,6 +62,11 @@ export default function Html(props) {
 
 Html.propTypes = {
     assets: PropTypes.object.isRequired,
-    component: PropTypes.node.isRequired,
-    store: PropTypes.object.isRequired
+    component: PropTypes.node,
+    store: PropTypes.object.isRequired,
+    i18n: PropTypes.object.isRequired
+};
+
+Html.defaultProps = {
+    component: null
 };

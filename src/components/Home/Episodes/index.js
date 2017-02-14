@@ -60,7 +60,12 @@ export default class Episodes extends Component {
         let component = null;
 
         if (isMobile) {
-            component = <Mobile mediaType={ mediaType } items={ items } title={ title }/>;
+            component = (
+                <Mobile
+                    mediaType={ mediaType }
+                    items={ items }
+                />
+            );
         } else {
             switch (view) {
                 case 'grid':

@@ -15,7 +15,10 @@ import { ReduxAsyncConnect } from 'redux-connect';
 import getRoutes from './routes';
 
 import { I18nextProvider } from 'react-i18next';
-import i18n from 'helpers/i18n';
+import i18n from './i18n-client';
+
+i18n.changeLanguage(window.__i18n.locale);
+i18n.addResourceBundle(window.__i18n.locale, 'common', window.__i18n.resources, true);
 
 // const _browserHistory = useScroll(() => browserHistory)();
 const dest = document.getElementById('content');
@@ -34,11 +37,11 @@ const component = (
 /* eslint-enable react/jsx-no-bind, arrow-parens */
 
 ReactDOM.render(
-    <Provider store={ store } key="provider">
-        <I18nextProvider i18n={ i18n }>
+    <I18nextProvider i18n={ i18n }>
+        <Provider store={ store } key="provider">
             { component }
-        </I18nextProvider>
-    </Provider>,
+        </Provider>
+    </I18nextProvider>,
     dest
 );
 
