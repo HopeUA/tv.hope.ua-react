@@ -67,6 +67,20 @@ export default class HomePage extends Component {
                     canRefresh
                     view="grid"
                 />
+                <Home.Episodes
+                    title={ 'Новые выпуски' }
+                    type="new"
+                    dynamic={ false }
+                    canRefresh={ false }
+                    view="grid"
+                />
+                <Home.Episodes
+                    title={ 'Рекомендуемые выпуски' }
+                    type="recommended"
+                    dynamic={ false }
+                    canRefresh={ false }
+                    view="row"
+                />
                 <Footer.Banners mediaType={ browser.mediaType }/>
                 <Footer.Shows mediaType={ browser.mediaType }/>
                 <Footer.Form mediaType={ browser.mediaType }/>
@@ -75,20 +89,3 @@ export default class HomePage extends Component {
         );
     }
 }
-
-/*
- <Home.Episodes
- title={ 'Новые выпуски' }
- type="new"
- dynamic={ false }
- canRefresh={ false }
- view="grid"
- />
- <Home.Episodes
- title={ 'Рекомендуемые выпуски' }
- type="recommended"
- dynamic={ false }
- canRefresh={ false }
- view="row"
- />
- */
