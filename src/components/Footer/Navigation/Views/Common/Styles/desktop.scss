@@ -2,7 +2,7 @@
     width: 100%;
     margin-top: px(52);
     border-top: solid 2px $commonColor4;
-    outline: px(52) solid $mainColor1;
+    outline: px(54) solid $mainColor1;
     background-color: $mainColor1;
 
     .mainContent {
@@ -10,8 +10,8 @@
         position: relative;
         flex-flow: row wrap;
         align-items: flex-start;
-        justify-content: space-between;
-        padding: px(74) px(80) 0;
+        justify-content: flex-start;
+        padding: px(70) px(80) 0;
 
         section {
             h1 {
@@ -48,19 +48,22 @@
         }
 
         .information {
-            margin-left: px(4);
+            margin-left: px(176);
+        }
+
+        .connection {
+            margin-left: px(174);
         }
 
         .networks {
-            margin-right: px(48);
-            margin-left: px(98);
+            margin-left: px(274);
 
             h1 {
                 margin-bottom: px(38);
             }
 
             i {
-                width: px(50);
+                width: px(48);
             }
 
             div {
@@ -74,9 +77,8 @@
         // END networks
 
         .phoneNumber {
-            position: absolute;
-            top: px(280);
-            right: px(882);
+            margin-top: px(-98);
+            margin-left: px(832);
 
             h1 {
                 margin-bottom: px(12);
@@ -88,17 +90,16 @@
         }
 
         .rights {
-            position: absolute;
-            top: px(260);
-            right: px(168);
+            margin-top: px(-118);
+            margin-left: px(280);
 
             h1 {
-                margin-bottom: px(38);
+                margin-bottom: px(32);
             }
 
             span {
                 display: block;
-                font-size: px(26);
+                font-size: px(30);
 
                 &::after {
                     position: relative;
