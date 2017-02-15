@@ -10,6 +10,10 @@
             .menu1 {
                 li {
                     padding: 0 0 0 px(57);
+
+                    &:last-child>a {
+                        border: 0;
+                    }
                 }
             }
 
@@ -17,6 +21,7 @@
                 flex-direction: row;
                 justify-content: space-between;
                 padding: 0 px(78);
+                border-top: 1px solid $tempColor24;
 
                 li {
                     flex-grow: 1;
@@ -63,7 +68,7 @@
 
             .social {
                 position: relative;
-                padding: 0 px(140);
+                margin: 0 px(140);
                 border-bottom: 1px solid $tempColor24;
 
             }
