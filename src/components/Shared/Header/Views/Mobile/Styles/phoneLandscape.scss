@@ -11,8 +11,10 @@
                 li {
                     padding: 0 0 0 px(57);
 
-                    &:last-child>a {
-                        border: 0;
+                    &:last-child {
+                        a {
+                            border: 0;
+                        }
                     }
                 }
             }
