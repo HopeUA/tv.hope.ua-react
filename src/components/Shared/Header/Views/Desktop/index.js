@@ -14,20 +14,29 @@ import MenuLive from 'components/Assets/Icons/menuLive';
 import Worldwide from 'components/Assets/Icons/Worldwide';
 
 export default function Header(props) {
-    const { language, socialLinks, menu, priorityFilter } = props;
+    const {
+        locale,
+        socialLinks,
+        menu,
+        sortMenu,
+        filterMenu,
+        worldwide
+    } = props;
 
     const ukClass = cx({
-        [Styles.active]: language === 'uk',
+        [Styles.active]: locale === 'uk',
         [Styles.language]: true
     });
 
     const ruClass = cx({
-        [Styles.active]: language === 'ru',
+        [Styles.active]: locale === 'ru',
         [Styles.language]: true
     });
 
-    const subMenu = menu.sub
-        .filter(priorityFilter).map((el) => {
+    const subMenu = menu.items
+        .filter(filterMenu('sub'))
+        .sort(sortMenu('sub'))
+        .map((el) => {
             const target = el.external ? {
                 'target': '_blank',
                 'rel': 'noopener noreferrer'
@@ -35,12 +44,14 @@ export default function Header(props) {
 
             return (
                 <li key={ el.id }>
-                    <a { ...target } href={ el.url }>{ el.title }</a>
+                    <a { ...target } href={ el.url }>{ el.title[locale] }</a>
                 </li>
             );
         });
 
-    const mainMenu = menu.main
+    const mainMenu = menu.items
+        .filter(filterMenu('main'))
+        .sort(sortMenu('main'))
         .map((el) => {
             const target = el.external ? {
                 target: '_blank',
@@ -54,44 +65,47 @@ export default function Header(props) {
             return (
                 <li key={ el.id }>
                     { liveIcon }
-                    <a { ...target } href={ el.url }>{ el.title }</a>
+                    <a { ...target } href={ el.url }>{ el.title[locale] }</a>
                 </li>
             );
         })
     ;
+    const worldwideData = worldwide();
 
     return (
         <section className={ Grids.container }>
             <section className={ Styles.headerComponent }>
                 <div className={ Styles.top }>
-                    <a href="#" className={ Styles.worldwideChannel }>
+                    <a href={ worldwideData.url } className={ Styles.worldwideChannel }>
                         <Worldwide/>
-                        Всемирный HopeChannel
+                        { worldwideData.title[locale] }
                     </a>
-                    <ul className={ Styles.subMenu }>
-                        { subMenu }
-                    </ul>
-                    <div className={ Styles.social }>
-                        <a href={ socialLinks.youtube } className={ Styles.youTube }>
-                            <YouTube/>
-                        </a>
-                        <a href={ socialLinks.instagram } className={ Styles.instagram }>
-                            <Instagram/>
-                        </a>
-                        <a href={ socialLinks.twitter } className={ Styles.twitter }>
-                            <Twitter/>
-                        </a>
-                        <a href={ socialLinks.vk } className={ Styles.vk }>
-                            <Vk/>
-                        </a>
-                        <a href={ socialLinks.facebook } className={ Styles.fb }>
-                            <Facebook/>
-                        </a>
-                    </div>
-                    <div className={ Styles.languages }>
-                        <a href="#" className={ ruClass }>Рус</a>
-                        <span className={ Styles.slash }>/</span>
-                        <a href="#" className={ ukClass }>Укр</a>
+                    <div className={ Styles.wrap }>
+                        <ul className={ Styles.subMenu }>
+                            { subMenu }
+                        </ul>
+                        <div className={ Styles.social }>
+                            <a href={ socialLinks.youtube } className={ Styles.youTube }>
+                                <YouTube/>
+                            </a>
+                            <a href={ socialLinks.instagram } className={ Styles.instagram }>
+                                <Instagram/>
+                            </a>
+                            <a href={ socialLinks.twitter } className={ Styles.twitter }>
+                                <Twitter/>
+                            </a>
+                            <a href={ socialLinks.vk } className={ Styles.vk }>
+                                <Vk/>
+                            </a>
+                            <a href={ socialLinks.facebook } className={ Styles.fb }>
+                                <Facebook/>
+                            </a>
+                        </div>
+                        <div className={ Styles.languages }>
+                            <a href="https://tv.hope.ua/ru" className={ ruClass }>Рус</a>
+                            <span className={ Styles.slash }>/</span>
+                            <a href="https://tv.hope.ua/uk" className={ ukClass }>Укр</a>
+                        </div>
                     </div>
                 </div>
                 <div className={ Styles.main }>
@@ -106,8 +120,10 @@ export default function Header(props) {
 }
 
 Header.propTypes = {
-    language: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
     socialLinks: PropTypes.object.isRequired,
     menu: PropTypes.object.isRequired,
-    priorityFilter: PropTypes.func.isRequired
+    sortMenu: PropTypes.func.isRequired,
+    filterMenu: PropTypes.func.isRequired,
+    worldwide: PropTypes.func.isRequired
 };

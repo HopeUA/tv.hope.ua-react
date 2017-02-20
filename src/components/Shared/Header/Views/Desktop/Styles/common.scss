@@ -10,7 +10,8 @@
         .worldwideChannel {
             display: flex;
             align-items: center;
-            margin-right: px(200);
+            width: px(330);
+            margin-right: px(176);
             color: $tempColor22;
             font-size: px(24);
             font-style: italic;
@@ -20,91 +21,112 @@
                 margin-right: px(32);
                 fill: $tempColor22;
             }
+
+            &:hover {
+                color: $mainColor1;
+            }
         }
 
-        .subMenu {
+        .wrap {
             display: flex;
             align-items: center;
-            margin-right: px(142);
+            justify-content: space-between;
+            width: px(1400);
 
-            li {
-                margin-right: px(114);
+            .subMenu {
+                display: flex;
+                align-items: center;
+                margin-right: px(80);
 
-                &:hover {
+                li {
+                    margin-right: px(114);
+
+                    &:hover {
+                        a {
+                            color: $mainColor1;
+                        }
+                    }
+
                     a {
+                        transition: color .2s;
+                        color: $tempColor22;
+                        font-size: px(28);
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .social {
+                display: flex;
+                margin-right: px(130);
+
+                a {
+                    margin-right: px(32);
+                    transition: transform .5s;
+
+                    i {
+                        transition: fill .5s;
+                        fill: $tempColor22;
+                    }
+
+                    &:hover {
+                        transform: rotate(360deg);
+
+                        i {
+                            fill: $mainColor1;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                .youTube {
+                    width: px(38);
+                }
+
+                .fb {
+                    width: px(14);
+                }
+
+                .vk {
+                    width: px(44);
+                }
+
+                .twitter {
+                    width: px(34);
+                }
+
+                .instagram {
+                    width: px(28);
+                }
+            }
+
+            .languages {
+
+                a {
+                    &:hover {
                         color: $mainColor1;
                     }
                 }
 
-                a {
-                    transition: color .2s;
+                .language {
                     color: $tempColor22;
                     font-size: px(28);
                 }
 
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-        }
-
-        .social {
-            display: flex;
-            margin-right: px(170);
-
-            a {
-                margin-right: px(32);
-                transition: transform .5s;
-
-                i {
-                    transition: fill .5s;
-                    fill: $tempColor22;
+                .slash {
+                    margin: 0 px(6);
+                    font-size: px(26);
                 }
 
-                &:hover {
-                    transform: rotate(360deg);
-
-                    i {
-                        fill: $mainColor1;
-                    }
+                .active {
+                    color: $tempColor23;
                 }
-            }
-
-            .youTube {
-                width: px(38);
-            }
-
-            .fb {
-                width: px(14);
-            }
-
-            .vk {
-                width: px(44);
-            }
-
-            .twitter {
-                width: px(34);
-            }
-
-            .instagram {
-                width: px(28);
-            }
-        }
-
-        .languages {
-
-            .language {
-                color: $tempColor22;
-                font-size: px(28);
-            }
-
-            .slash {
-                margin: 0 px(6);
-                font-size: px(26);
-            }
-
-            .active {
-                color: $tempColor23;
             }
         }
     }
@@ -112,7 +134,6 @@
     .main {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         margin-top: px(24);
         padding-top: px(30);
         padding-right: px(108);
@@ -120,6 +141,7 @@
 
         .logo {
             width: px(284);
+            margin-right: px(176);
         }
 
         .menu {
@@ -143,6 +165,7 @@
                 a {
                     color: $mainColor1;
                     font-size: px(32);
+                    transition: color .2s;
                 }
 
                 i {

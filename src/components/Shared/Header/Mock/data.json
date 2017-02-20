@@ -31,7 +31,7 @@
       {
         "id": "live",
         "title": {
-          "ru": "ТВ Онлвйн",
+          "ru": "ТВ Онлайн",
           "uk": "ТБ Онлайн"
         },
         "url": "/live",
@@ -103,11 +103,11 @@
     }
   },
   "socialLinks": {
-      "youtube": "#",
-      "vk": "#",
-      "ok": "#",
-      "facebook": "#",
-      "instagram": "#",
-      "twitter": "#"
+      "youtube": "https://www.youtube.com/user/HopeChannelUkraine",
+      "vk": "https://m.vk.com/hopechannel",
+      "ok": "https://ok.ru/hopechannel",
+      "facebook": "https://www.facebook.com/hope.ua/",
+      "instagram": "https://www.instagram.com/tvhopeua/",
+      "twitter": "https://twitter.com/ua_hope"
   }
 }

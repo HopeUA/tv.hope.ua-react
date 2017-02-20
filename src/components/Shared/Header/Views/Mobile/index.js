@@ -14,37 +14,53 @@ import Hamburger from 'components/Assets/Icons/Hamburger';
 import Palette from 'components/Assets/Palette';
 
 export default function Header(props) {
-    const { handleMenu, isMenuVisible, language, socialLinks, menu, priorityFilter } = props;
+    const {
+        handleMenu,
+        isMenuVisible,
+        locale,
+        socialLinks,
+        menu,
+        sortMenu,
+        filterMenu
+    } = props;
 
-    const style = {
-        visibility: isMenuVisible ? 'visible' : 'hidden'
+    if (window) {
+        const $body = document.getElementsByTagName('body');
+        const $content = document.getElementById('content');
+
+        if (isMenuVisible) {
+            $content.style.height = '0';
+            $content.style.overflow = 'hidden';
+            $body[0].style.background = Palette.commonColor10;
+        } else {
+            $content.style.height = null;
+            $content.style.overflow = null;
+            $body[0].style.background = null;
+        }
+    }
+
+    const stylePopup = {
+        display: isMenuVisible ? 'block' : 'none'
+    };
+
+    const componentStyle = {
+        position: isMenuVisible ? 'absolute' : 'static'
     };
 
     const ukClass = cx({
-        [Styles.active]: language === 'uk',
+        [Styles.active]: locale === 'uk',
         [Styles.language]: true
     });
 
     const ruClass = cx({
-        [Styles.active]: language === 'ru',
+        [Styles.active]: locale === 'ru',
         [Styles.language]: true
     });
 
-    const itemsMenu1 = menu.main.map((el) => {
-        const target = el.external ? {
-            'target': '_blank',
-            'rel': 'noopener noreferrer'
-        } : null;
-
-        return (
-            <li key={ el.id }>
-                <a { ...target } href={ el.url }>{ el.title }</a>
-            </li>
-        );
-    });
-
-    const itemsMenu2 = menu.sub
-        .filter(priorityFilter).map((el) => {
+    const itemsMenu1 = menu.items
+        .filter(filterMenu('main'))
+        .sort(sortMenu('main'))
+        .map((el) => {
             const target = el.external ? {
                 'target': '_blank',
                 'rel': 'noopener noreferrer'
@@ -52,20 +68,36 @@ export default function Header(props) {
 
             return (
                 <li key={ el.id }>
-                    <a { ...target } href={ el.url }>{ el.title }</a>
+                    <a { ...target } href={ el.url }>{ el.title[locale] }</a>
+                </li>
+            );
+        });
+
+    const itemsMenu2 = menu.items
+        .filter(filterMenu('sub'))
+        .sort(sortMenu('sub'))
+        .map((el) => {
+            const target = el.external ? {
+                'target': '_blank',
+                'rel': 'noopener noreferrer'
+            } : null;
+
+            return (
+                <li key={ el.id }>
+                    <a { ...target } href={ el.url }>{ el.title[locale] }</a>
                 </li>
             );
         });
 
     return (
-        <section className={ Styles.headerComponent }>
+        <section className={ Styles.headerComponent } style={ componentStyle }>
             <div className={ Styles.head }>
                 <a href="#"><Logo color={ Palette.mainColor1 }/></a>
                 <span onClick={ handleMenu }>
                     <Hamburger isOpened={ isMenuVisible } color={ Palette.mainColor1 }/>
                 </span>
             </div>
-            <div className={ Styles.popup } style={ style }>
+            <div className={ Styles.popup } style={ stylePopup }>
                 <div className={ Styles.lists }>
                     <ul className={ Styles.menu1 }>
                         { itemsMenu1 }
@@ -97,8 +129,8 @@ export default function Header(props) {
                     </div>
                     <div className={ Styles.languages }>
                         <span className={ Styles.choose }>Язык сайта:</span>
-                        <span className={ ruClass }>Русский</span>
-                        <span className={ ukClass }>Украинский</span>
+                        <a className={ ruClass } href="https://tv.hope.ua/ru">Русский</a>
+                        <a className={ ukClass } href="https://tv.hope.ua/uk">Украинский</a>
                     </div>
                 </div>
             </div>
@@ -109,10 +141,11 @@ export default function Header(props) {
 Header.propTypes = {
     handleMenu: PropTypes.func.isRequired,
     isMenuVisible: PropTypes.bool,
-    language: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
     socialLinks: PropTypes.object.isRequired,
     menu: PropTypes.object.isRequired,
-    priorityFilter: PropTypes.func.isRequired
+    sortMenu: PropTypes.func.isRequired,
+    filterMenu: PropTypes.func.isRequired
 };
 
 Header.defaultProps = {
