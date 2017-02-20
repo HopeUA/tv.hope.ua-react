@@ -49,4 +49,27 @@ const breakpoints = {
     }
 };
 
+export function isMobile(mediaType) {
+    return [
+        breakpoints.phonePortrait.name,
+        breakpoints.phoneLandscape.name
+    ].indexOf(mediaType) !== -1;
+}
+
+export function isDesktop(mediaType) {
+    return [
+        breakpoints.tabletLandscape.name,
+        breakpoints.desktop.name,
+        breakpoints.desktopHD.name,
+        breakpoints.desktopMega.name,
+        breakpoints.desktopWide.name
+    ].indexOf(mediaType) !== -1;
+}
+
+export function isTabletPortrait(mediaType) {
+    return [
+        breakpoints.tabletPortrait.name
+    ].indexOf(mediaType) !== -1;
+}
+
 export default breakpoints;
