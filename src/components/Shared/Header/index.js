@@ -60,12 +60,15 @@ export default class Header extends Component {
         };
     };
 
-    worldwide = () => {
-        const el = Data.menu.items.find((element, index) => {
-            return Data.menu.items[index].id === 'worldwide';
+    getWorldwideItem = () => {
+        return Data.menu.items.find((element) => {
+            return element.id === 'worldwide';
         });
+    };
 
-        return el;
+    getMenuItems = (type) => {
+        return Data.menu.items.filter(this.filterMenu(type))
+            .sort(this.sortMenu(type));
     };
 
     render() {
@@ -81,9 +84,8 @@ export default class Header extends Component {
             socialLinks: Data.socialLinks,
             menu: Data.menu,
             changeLanguage,
-            sortMenu: this.sortMenu,
-            filterMenu: this.filterMenu,
-            worldwide: this.worldwide
+            getMenuItems: this.getMenuItems,
+            getWorldwideItem: this.getWorldwideItem
         };
 
         if (BP.isMobile(mediaType)) {

@@ -67,17 +67,8 @@
                     margin-right: px(32);
                     transition: transform .5s;
 
-                    i {
-                        transition: fill .5s;
-                        fill: $tempColor22;
-                    }
-
                     &:hover {
                         transform: rotate(360deg);
-
-                        i {
-                            fill: $mainColor1;
-                        }
                     }
 
                     &:last-child {

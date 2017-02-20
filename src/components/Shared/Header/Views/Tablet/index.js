@@ -19,9 +19,7 @@ export default function Header(props) {
         isMenuVisible,
         locale,
         socialLinks,
-        menu,
-        sortMenu,
-        filterMenu
+        getMenuItems
     } = props;
 
     const ukClass = cx({
@@ -38,46 +36,26 @@ export default function Header(props) {
         display: isMenuVisible ? 'flex' : 'none'
     };
 
-    const mainMenuItems = menu.items
-        .filter(filterMenu('main'))
-        .sort(sortMenu('main'))
-        .map((el) => {
-            const target = el.external ? {
-                target: '_blank',
-                rel: 'noopener noreferrer'
-            } : null;
+    const convertToComponent = (el) => {
+        const target = el.external ? {
+            'target': '_blank',
+            'rel': 'noopener noreferrer'
+        } : null;
 
-            const liveIcon = el.id === 'live' ? (
-                <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
-            ) : null;
+        const liveIcon = el.id === 'live' ? (
+            <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
+        ) : null;
 
-            return (
-                <li key={ el.id }>
-                    { liveIcon }
-                    <a { ...target } href={ el.url }>{ el.title[locale] }</a>
-                </li>
-            );
-        })
-    ;
+        return (
+            <li key={ el.id }>
+                { liveIcon }
+                <a { ...target } href={ el.url }>{ el.title[locale] }</a>
+            </li>
+        );
+    };
 
-    const subMenuItems = menu.items
-        .filter(filterMenu('sub'))
-        .sort(sortMenu('sub'))
-        .map((el) => {
-            const target = el.external ? {
-                'target': '_blank',
-                'rel': 'noopener noreferrer'
-            } : null;
-
-            return (
-                <li key={ el.id }>
-                    <a { ...target } href={ el.title }>
-                        { el.title[locale] }
-                    </a>
-                </li>
-            );
-        })
-    ;
+    const subMenuItems = getMenuItems('sub').map(convertToComponent);
+    const mainMenuItems = getMenuItems('main').map(convertToComponent);
 
     return (
         <section className={ Styles.headerComponent }>
@@ -121,8 +99,8 @@ export default function Header(props) {
                         </div>
                         <div className={ Styles.languages }>
                             <span className={ Styles.choose }>Язык сайта:</span>
-                            <a className={ ruClass } href="https://tv.hope.ua/ru">Русский</a>
-                            <a className={ ukClass } href="https://tv.hope.ua/uk">Украинский</a>
+                            <a className={ ruClass } href="/ru">Русский</a>
+                            <a className={ ukClass } href="/uk">Украинский</a>
                         </div>
                     </div>
                 </div>
@@ -136,9 +114,7 @@ Header.propTypes = {
     isMenuVisible: PropTypes.bool,
     locale: PropTypes.string.isRequired,
     socialLinks: PropTypes.object.isRequired,
-    menu: PropTypes.object.isRequired,
-    sortMenu: PropTypes.func.isRequired,
-    filterMenu: PropTypes.func.isRequired
+    getMenuItems: PropTypes.func.isRequired
 };
 
 Header.defaultProps = {

@@ -19,27 +19,25 @@ export default function Header(props) {
         isMenuVisible,
         locale,
         socialLinks,
-        menu,
-        sortMenu,
-        filterMenu
+        getMenuItems
     } = props;
 
     if (window) {
-        const $body = document.getElementsByTagName('body');
+        const $body = document.getElementsByTagName('body').item(0);
         const $content = document.getElementById('content');
 
         if (isMenuVisible) {
-            $content.style.height = '0';
+            $content.style.height = 0;
             $content.style.overflow = 'hidden';
-            $body[0].style.background = Palette.commonColor10;
+            $body.style.background = Palette.commonColor10;
         } else {
             $content.style.height = null;
             $content.style.overflow = null;
-            $body[0].style.background = null;
+            $body.style.background = null;
         }
     }
 
-    const stylePopup = {
+    const popupStyle = {
         display: isMenuVisible ? 'block' : 'none'
     };
 
@@ -57,37 +55,21 @@ export default function Header(props) {
         [Styles.language]: true
     });
 
-    const itemsMenu1 = menu.items
-        .filter(filterMenu('main'))
-        .sort(sortMenu('main'))
-        .map((el) => {
-            const target = el.external ? {
-                'target': '_blank',
-                'rel': 'noopener noreferrer'
-            } : null;
+    const convertToComponent = (el) => {
+        const target = el.external ? {
+            'target': '_blank',
+            'rel': 'noopener noreferrer'
+        } : null;
 
-            return (
-                <li key={ el.id }>
-                    <a { ...target } href={ el.url }>{ el.title[locale] }</a>
-                </li>
-            );
-        });
+        return (
+            <li key={ el.id }>
+                <a { ...target } href={ el.url }>{ el.title[locale] }</a>
+            </li>
+        );
+    };
 
-    const itemsMenu2 = menu.items
-        .filter(filterMenu('sub'))
-        .sort(sortMenu('sub'))
-        .map((el) => {
-            const target = el.external ? {
-                'target': '_blank',
-                'rel': 'noopener noreferrer'
-            } : null;
-
-            return (
-                <li key={ el.id }>
-                    <a { ...target } href={ el.url }>{ el.title[locale] }</a>
-                </li>
-            );
-        });
+    const subMenuItems = getMenuItems('sub').map(convertToComponent);
+    const mainMenuItems = getMenuItems('main').map(convertToComponent);
 
     return (
         <section className={ Styles.headerComponent } style={ componentStyle }>
@@ -97,13 +79,13 @@ export default function Header(props) {
                     <Hamburger isOpened={ isMenuVisible } color={ Palette.mainColor1 }/>
                 </span>
             </div>
-            <div className={ Styles.popup } style={ stylePopup }>
+            <div className={ Styles.popup } style={ popupStyle }>
                 <div className={ Styles.lists }>
                     <ul className={ Styles.menu1 }>
-                        { itemsMenu1 }
+                        { mainMenuItems }
                     </ul>
                     <ul className={ Styles.menu2 }>
-                        { itemsMenu2 }
+                        { subMenuItems }
                     </ul>
                 </div>
                 <div className={ Styles.footer }>
@@ -129,8 +111,8 @@ export default function Header(props) {
                     </div>
                     <div className={ Styles.languages }>
                         <span className={ Styles.choose }>Язык сайта:</span>
-                        <a className={ ruClass } href="https://tv.hope.ua/ru">Русский</a>
-                        <a className={ ukClass } href="https://tv.hope.ua/uk">Украинский</a>
+                        <a className={ ruClass } href="/ru">Русский</a>
+                        <a className={ ukClass } href="/uk">Украинский</a>
                     </div>
                 </div>
             </div>
@@ -143,9 +125,7 @@ Header.propTypes = {
     isMenuVisible: PropTypes.bool,
     locale: PropTypes.string.isRequired,
     socialLinks: PropTypes.object.isRequired,
-    menu: PropTypes.object.isRequired,
-    sortMenu: PropTypes.func.isRequired,
-    filterMenu: PropTypes.func.isRequired
+    getMenuItems: PropTypes.func.isRequired
 };
 
 Header.defaultProps = {

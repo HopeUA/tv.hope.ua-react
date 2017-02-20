@@ -17,10 +17,8 @@ export default function Header(props) {
     const {
         locale,
         socialLinks,
-        menu,
-        sortMenu,
-        filterMenu,
-        worldwide
+        getWorldwideItem,
+        getMenuItems
     } = props;
 
     const ukClass = cx({
@@ -33,44 +31,27 @@ export default function Header(props) {
         [Styles.language]: true
     });
 
-    const subMenu = menu.items
-        .filter(filterMenu('sub'))
-        .sort(sortMenu('sub'))
-        .map((el) => {
-            const target = el.external ? {
-                'target': '_blank',
-                'rel': 'noopener noreferrer'
-            } : null;
+    const convertToComponent = (el) => {
+        const target = el.external ? {
+            'target': '_blank',
+            'rel': 'noopener noreferrer'
+        } : null;
 
-            return (
-                <li key={ el.id }>
-                    <a { ...target } href={ el.url }>{ el.title[locale] }</a>
-                </li>
-            );
-        });
+        const liveIcon = el.id === 'live' ? (
+            <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
+        ) : null;
 
-    const mainMenu = menu.items
-        .filter(filterMenu('main'))
-        .sort(sortMenu('main'))
-        .map((el) => {
-            const target = el.external ? {
-                target: '_blank',
-                rel: 'noopener noreferrer'
-            } : null;
+        return (
+            <li key={ el.id }>
+                { liveIcon }
+                <a { ...target } href={ el.url }>{ el.title[locale] }</a>
+            </li>
+        );
+    };
 
-            const liveIcon = el.id === 'live' ? (
-                <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
-            ) : null;
-
-            return (
-                <li key={ el.id }>
-                    { liveIcon }
-                    <a { ...target } href={ el.url }>{ el.title[locale] }</a>
-                </li>
-            );
-        })
-    ;
-    const worldwideData = worldwide();
+    const subMenuItems = getMenuItems('sub').map(convertToComponent);
+    const mainMenuItems = getMenuItems('main').map(convertToComponent);
+    const worldwideData = getWorldwideItem();
 
     return (
         <section className={ Grids.container }>
@@ -82,36 +63,36 @@ export default function Header(props) {
                     </a>
                     <div className={ Styles.wrap }>
                         <ul className={ Styles.subMenu }>
-                            { subMenu }
+                            { subMenuItems }
                         </ul>
                         <div className={ Styles.social }>
                             <a href={ socialLinks.youtube } className={ Styles.youTube }>
-                                <YouTube/>
+                                <YouTube color={ Palette.tempColor22 }/>
                             </a>
                             <a href={ socialLinks.instagram } className={ Styles.instagram }>
-                                <Instagram/>
+                                <Instagram color={ Palette.tempColor22 }/>
                             </a>
                             <a href={ socialLinks.twitter } className={ Styles.twitter }>
-                                <Twitter/>
+                                <Twitter color={ Palette.tempColor22 }/>
                             </a>
                             <a href={ socialLinks.vk } className={ Styles.vk }>
-                                <Vk/>
+                                <Vk color={ Palette.tempColor22 }/>
                             </a>
                             <a href={ socialLinks.facebook } className={ Styles.fb }>
-                                <Facebook/>
+                                <Facebook color={ Palette.tempColor22 }/>
                             </a>
                         </div>
                         <div className={ Styles.languages }>
-                            <a href="https://tv.hope.ua/ru" className={ ruClass }>Рус</a>
+                            <a href="/ru" className={ ruClass }>Рус</a>
                             <span className={ Styles.slash }>/</span>
-                            <a href="https://tv.hope.ua/uk" className={ ukClass }>Укр</a>
+                            <a href="/uk" className={ ukClass }>Укр</a>
                         </div>
                     </div>
                 </div>
                 <div className={ Styles.main }>
                     <Logo className={ Styles.logo } color={ Palette.mainColor1 }/>
                     <ul className={ Styles.menu }>
-                        { mainMenu }
+                        { mainMenuItems }
                     </ul>
                 </div>
             </section>
@@ -122,8 +103,6 @@ export default function Header(props) {
 Header.propTypes = {
     locale: PropTypes.string.isRequired,
     socialLinks: PropTypes.object.isRequired,
-    menu: PropTypes.object.isRequired,
-    sortMenu: PropTypes.func.isRequired,
-    filterMenu: PropTypes.func.isRequired,
-    worldwide: PropTypes.func.isRequired
+    getWorldwideItem: PropTypes.func.isRequired,
+    getMenuItems: PropTypes.func.isRequired
 };
