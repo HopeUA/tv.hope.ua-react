@@ -3,15 +3,15 @@ import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 import cx from 'classnames';
 
-import Instagram from 'components/Assets/SocialFlat/instagram';
-import Facebook from 'components/Assets/SocialFlat/Fb';
-import Twitter from 'components/Assets/SocialFlat/Tw';
-import YouTube from 'components/Assets/SocialFlat/YouTube';
-import Vk from 'components/Assets/SocialFlat/Vk';
-import Logo from 'components/Assets/Icons/Logo';
+import Instagram from '../../Assets/Social/Instagram';
+import Facebook from '../../Assets/Social/Fb';
+import Twitter from '../../Assets/Social/Tw';
+import YouTube from '../../Assets/Social/YouTube';
+import Vk from '../../Assets/Social/Vk';
+import Logo from '../../Assets/Logo';
+import MenuLive from '../../Assets/MenuLive';
+import Worldwide from '../../Assets/Worldwide';
 import Palette from 'components/Assets/Palette';
-import MenuLive from 'components/Assets/Icons/menuLive';
-import Worldwide from 'components/Assets/Icons/Worldwide';
 
 export default function Header(props) {
     const {
