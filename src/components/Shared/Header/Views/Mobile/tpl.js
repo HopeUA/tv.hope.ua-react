@@ -1,18 +1,31 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
+
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
 
-import Instagram from 'components/Assets/Social/instagram';
+/**
+ * [IA]
+ * Assets Import
+ */
+import Instagram from 'components/Assets/Social/Instagram';
 import Facebook from 'components/Assets/Social/Fb';
 import Twitter from 'components/Assets/Social/Tw';
 import YouTube from 'components/Assets/Social/YouTube';
 import Ok from 'components/Assets/Social/Ok';
 import Vk from 'components/Assets/Social/Vk';
-import Logo from 'components/Assets/Icons/Logo';
-import Hamburger from 'components/Assets/Icons/Hamburger';
+import Logo from '../../Assets/Logo';
+import Hamburger from '../../Assets/Hamburger';
 
 import Palette from 'components/Assets/Palette';
 
-export default function Header(props) {
+function Header(props) {
     const { handleMenu, isMenuVisible } = props;
 
     const popupStyle = {
@@ -79,7 +92,17 @@ export default function Header(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Header.propTypes = {
     handleMenu: PropTypes.func.isRequired,
     isMenuVisible: PropTypes.bool.isRequired
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Header;
