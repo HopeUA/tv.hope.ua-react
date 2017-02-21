@@ -96,4 +96,8 @@ class Live extends Component {
     }
 }
 
+/**
+ * [IE]
+ * Export
+ */
 export default Live;
