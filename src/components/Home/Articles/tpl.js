@@ -21,7 +21,7 @@ export default function Articles(props) {
     ];
 
     return (
-        <PixelPerfect component="Articles" opacity="40" templates={ templates }>
+        <PixelPerfect component="Home.Articles" opacity="40" templates={ templates }>
             { component }
         </PixelPerfect>
     );

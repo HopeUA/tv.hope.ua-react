@@ -46,7 +46,7 @@ export default class Header extends Component {
         }
 
         return (
-            <PixelPerfect templates={ templates } component="Header">
+            <PixelPerfect templates={ templates } component="Shared.Header">
                 { view }
             </PixelPerfect>
         );
