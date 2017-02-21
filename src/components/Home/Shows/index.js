@@ -1,22 +1,84 @@
-import React, { PropTypes } from 'react';
+/**
+ * [IL]
+ * Library Import
+ */
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
+
+/**
+ * [IV]
+ * View Import
+ */
 import Desktop from './Views/Desktop/index';
 
-import items from './Mock/data.json';
-import BreakPoints from 'helpers/breakpoints';
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
 
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+/**
+ * [IDATA]
+ * Data Import (optional)
+ */
 // TODO Забирать данные по api
-// import items from './Mock/data.json';
+import items from './Mock/data.json';
 
-export default function Articles(props) {
-    const { mediaType } = props;
-    const component = [
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name
-    ].indexOf(mediaType) !== -1 ? null : <Desktop items={ items }/>;
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
+class Shows extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
 
-    return component;
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType } = this.props;
+
+        /**
+         * [RV]
+         * View
+         */
+        const view = BP.isDesktop(mediaType) ? (
+            <Desktop items={ items }/>
+        ) : null;
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return view;
+    }
 }
 
-Articles.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+export default Shows;

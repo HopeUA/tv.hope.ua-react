@@ -22,7 +22,7 @@ export default function Banner(props) {
     ];
 
     return (
-        <PixelPerfect component="Banner" opacity="40" templates={ templates }>
+        <PixelPerfect component="Home.Banner" opacity="40" templates={ templates }>
             { component }
         </PixelPerfect>
     );
