@@ -15,7 +15,7 @@ import Desktop from './Views/Desktop/index';
  * [IBP]
  * Breakpoints
  */
-import BP from 'helpers/breakpoints';
+import BP from 'lib/breakpoints';
 
 /**
  * [ICONF]
