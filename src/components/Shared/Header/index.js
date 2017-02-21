@@ -35,7 +35,6 @@ import Data from './Mock/data.json';
         mediaType: state.browser.mediaType
     };
 })
-
 class Header extends Component {
     /**
      * [CPT]

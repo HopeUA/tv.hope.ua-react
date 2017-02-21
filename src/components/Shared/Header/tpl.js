@@ -58,10 +58,6 @@ class Header extends Component {
         isMenuVisible: false
     };
 
-    /**
-     * [CHM-HM]
-     * JSDoc for every helper method
-     */
     handleMenu = () => {
         this.setState({
             isMenuVisible: !this.state.isMenuVisible
