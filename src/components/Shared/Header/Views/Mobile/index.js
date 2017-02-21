@@ -1,36 +1,73 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
-import Styles from './Styles/main.scss';
 import cx from 'classnames';
 
-import Instagram from 'components/Assets/Social/instagram';
+/**
+ * [IS]
+ * Style Import
+ */
+import Styles from './Styles/main.scss';
+
+/**
+ * [IA]
+ * Assets Import
+ */
+import Instagram from 'components/Assets/Social/Instagram';
 import Facebook from 'components/Assets/Social/Fb';
 import Twitter from 'components/Assets/Social/Tw';
 import YouTube from 'components/Assets/Social/YouTube';
 import Ok from 'components/Assets/Social/Ok';
 import Vk from 'components/Assets/Social/Vk';
-import Logo from 'components/Assets/Icons/Logo';
-import Hamburger from 'components/Assets/Icons/Hamburger';
-
+import Logo from '../../Assets/Logo';
+import Hamburger from '../../Assets/Hamburger';
 import Palette from 'components/Assets/Palette';
 
-export default function Header(props) {
-    const { handleMenu, isMenuVisible, language, socialLinks, menu, priorityFilter } = props;
+function Header(props) {
+    const {
+        handleMenu,
+        isMenuVisible,
+        locale,
+        socialLinks,
+        getMenuItems
+    } = props;
 
-    const style = {
-        visibility: isMenuVisible ? 'visible' : 'hidden'
+    if (window) {
+        const $body = document.getElementsByTagName('body').item(0);
+        const $content = document.getElementById('content');
+
+        if (isMenuVisible) {
+            $content.style.height = 0;
+            $content.style.overflow = 'hidden';
+            $body.style.background = Palette.commonColor10;
+        } else {
+            $content.style.height = null;
+            $content.style.overflow = null;
+            $body.style.background = null;
+        }
+    }
+
+    const popupStyle = {
+        display: isMenuVisible ? 'block' : 'none'
+    };
+
+    const componentStyle = {
+        position: isMenuVisible ? 'absolute' : 'static'
     };
 
     const ukClass = cx({
-        [Styles.active]: language === 'uk',
+        [Styles.active]: locale === 'uk',
         [Styles.language]: true
     });
 
     const ruClass = cx({
-        [Styles.active]: language === 'ru',
+        [Styles.active]: locale === 'ru',
         [Styles.language]: true
     });
 
-    const itemsMenu1 = menu.main.map((el) => {
+    const convertToComponent = (el) => {
         const target = el.external ? {
             'target': '_blank',
             'rel': 'noopener noreferrer'
@@ -38,42 +75,29 @@ export default function Header(props) {
 
         return (
             <li key={ el.id }>
-                <a { ...target } href={ el.url }>{ el.title }</a>
+                <a { ...target } href={ el.url }>{ el.title[locale] }</a>
             </li>
         );
-    });
+    };
 
-    const itemsMenu2 = menu.sub
-        .filter(priorityFilter).map((el) => {
-            const target = el.external ? {
-                'target': '_blank',
-                'rel': 'noopener noreferrer'
-            } : null;
-
-            return (
-                <li key={ el.id }>
-                    <a { ...target } href={ el.url }>{ el.title }</a>
-                </li>
-            );
-        });
-
-    console.log(socialLinks);
+    const subMenuItems = getMenuItems('sub').map(convertToComponent);
+    const mainMenuItems = getMenuItems('main').map(convertToComponent);
 
     return (
-        <section className={ Styles.headerComponent }>
+        <section className={ Styles.headerComponent } style={ componentStyle }>
             <div className={ Styles.head }>
                 <a href="#"><Logo color={ Palette.mainColor1 }/></a>
                 <span onClick={ handleMenu }>
                     <Hamburger isOpened={ isMenuVisible } color={ Palette.mainColor1 }/>
                 </span>
             </div>
-            <div className={ Styles.popup } style={ style }>
+            <div className={ Styles.popup } style={ popupStyle }>
                 <div className={ Styles.lists }>
                     <ul className={ Styles.menu1 }>
-                        { itemsMenu1 }
+                        { mainMenuItems }
                     </ul>
                     <ul className={ Styles.menu2 }>
-                        { itemsMenu2 }
+                        { subMenuItems }
                     </ul>
                 </div>
                 <div className={ Styles.footer }>
@@ -99,8 +123,8 @@ export default function Header(props) {
                     </div>
                     <div className={ Styles.languages }>
                         <span className={ Styles.choose }>Язык сайта:</span>
-                        <span className={ ruClass }>Русский</span>
-                        <span className={ ukClass }>Украинский</span>
+                        <a className={ ruClass } href="/ru">Русский</a>
+                        <a className={ ukClass } href="/uk">Украинский</a>
                     </div>
                 </div>
             </div>
@@ -108,15 +132,28 @@ export default function Header(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Header.propTypes = {
     handleMenu: PropTypes.func.isRequired,
     isMenuVisible: PropTypes.bool,
-    language: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
     socialLinks: PropTypes.object.isRequired,
-    menu: PropTypes.object.isRequired,
-    priorityFilter: PropTypes.func.isRequired
+    getMenuItems: PropTypes.func.isRequired
 };
 
+/**
+ * [CDP]
+ * Component default props
+ */
 Header.defaultProps = {
     isMenuVisible: false
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Header;

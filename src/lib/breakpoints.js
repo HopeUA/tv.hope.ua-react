@@ -50,7 +50,7 @@ class BP {
 
     static isMobile(mediaType) {
         return [
-            BP.phonePortrait.name, 
+            BP.phonePortrait.name,
             BP.phoneLandscape.name
         ].indexOf(mediaType) !== -1;
     }
@@ -67,7 +67,7 @@ class BP {
         return BP.tabletPortrait.name === mediaType;
     }
 
-    static isTabletLandscape() {
+    static isTabletLandscape(mediaType) {
         return BP.phoneLandscape.name === mediaType;
     }
 

@@ -1,81 +1,113 @@
 {
   "menu": {
-    "main": [
+    "items": [
       {
         "id": "shows",
-        "title": "Все программы",
-        "url": "#",
-        "external": true
+        "title": {
+          "ru": "Все программы",
+          "uk": "Всі програми"
+        },
+        "url": "/shows",
+        "external": false
       },
       {
         "id": "scheduler",
-        "title": "ТВ программа",
-        "url": "#",
+        "title": {
+          "ru": "ТВ программа",
+          "uk": "ТБ програма"
+        },
+        "url": "/schedules",
         "external": false
       },
       {
         "id": "donate",
-        "title": "Пожертвовать",
-        "url": "#",
-        "external": false,
-        "priority": "low"
+        "title": {
+          "ru": "Пожертвовать",
+          "uk": "Пожертви"
+        },
+        "url": "https://donate.hope.ua/",
+        "external": true
       },
       {
         "id": "live",
-        "title": "ТВ Онлайн",
-        "url": "#",
+        "title": {
+          "ru": "ТВ Онлайн",
+          "uk": "ТБ Онлайн"
+        },
+        "url": "/live",
         "external": false
       },
       {
         "id": "about",
-        "title": "О телеканале",
-        "url": "#",
-        "external": true,
-        "priority": "low"
-      }
-    ],
-    "sub": [
+        "title": {
+          "ru": "О телеканале",
+          "uk": "Про телеканал"
+        },
+        "url": "/about",
+        "external": false
+      },
       {
         "id": "news",
-        "title": "Новости",
-        "url": "#",
-        "external": true
+        "title": {
+          "ru": "Новости",
+          "uk": "Новини"
+        },
+        "url": "/news",
+        "external": false
       },
       {
         "id": "watch-us",
-        "title": "Где нас смотреть",
-        "url": "#",
-        "external": true,
-        "priority": "low"
-      },
-      {
-        "id": "donate",
-        "title": "Пожертвовать",
-        "url": "#",
+        "title": {
+          "ru": "Где нас смотреть?",
+          "uk": "Де дивитися?"
+        },
+        "url": "/watch-us",
         "external": false
       },
       {
-        "id": "about",
-        "title": "О телеканале",
-        "url": "#",
-        "external": true,
-        "priority": "low"
+        "id": "contacts",
+        "title": {
+          "ru": "Контакты",
+          "uk": "Контакти"
+        },
+        "url": "/contacts",
+        "external": false
       },
       {
-        "id": "contacts",
-        "title": "Контакты",
-        "url": "#",
+        "id": "worldwide",
+        "title": {
+          "ru": "Всемирный Hope Channel",
+          "uk": "Світовий Hope Channel"
+        },
+        "url": "http://www.hopetv.org/",
         "external": true
       }
-    ]
+    ],
+    "position": {
+      "phonePortrait": {
+        "main": ["shows", "scheduler", "donate", "live"],
+        "sub": ["news", "watch-us", "about", "contacts"]
+      },
+      "phoneLandscape": {
+        "main": ["shows", "scheduler", "donate", "live"],
+        "sub": ["news", "watch-us", "about", "contacts"]
+      },
+      "tabletPortrait": {
+        "main": ["shows", "scheduler", "live"],
+        "sub": ["news", "watch-us", "donate", "contacts", "about"]
+      },
+      "default": {
+        "main": ["shows", "scheduler", "donate", "news", "live"],
+        "sub": ["watch-us", "contacts", "about"]
+      }
+    }
   },
-  "language": "uk",
   "socialLinks": {
-      "youtube": "#",
-      "vk": "#",
-      "ok": "#",
-      "facebook": "#",
-      "instagram": "#",
-      "twitter": "#"
+      "youtube": "https://www.youtube.com/user/HopeChannelUkraine",
+      "vk": "https://vk.com/hopechannel",
+      "ok": "https://ok.ru/hopechannel",
+      "facebook": "https://www.facebook.com/hope.ua/",
+      "instagram": "https://www.instagram.com/tvhopeua/",
+      "twitter": "https://twitter.com/ua_hope"
   }
 }

@@ -1,103 +1,111 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
-import Styles from './Styles/main.scss';
-import Grids from 'theme/Grid.scss';
 import cx from 'classnames';
 
-import Instagram from 'components/Assets/SocialFlat/instagram';
-import Facebook from 'components/Assets/SocialFlat/Fb';
-import Twitter from 'components/Assets/SocialFlat/Tw';
-import YouTube from 'components/Assets/SocialFlat/YouTube';
-import Vk from 'components/Assets/SocialFlat/Vk';
-import Logo from 'components/Assets/Icons/Logo';
-import Palette from 'components/Assets/Palette';
-import MenuLive from 'components/Assets/Icons/menuLive';
-import Worldwide from 'components/Assets/Icons/Worldwide';
+/**
+ * [IS]
+ * Style Import
+ */
+import Styles from './Styles/main.scss';
+import Grids from 'theme/Grid.scss';
 
-export default function Header(props) {
-    const { language, socialLinks, menu, priorityFilter } = props;
+/**
+ * [IA]
+ * Assets Import
+ */
+import Instagram from '../../Assets/Social/Instagram';
+import Facebook from '../../Assets/Social/Fb';
+import Twitter from '../../Assets/Social/Tw';
+import YouTube from '../../Assets/Social/YouTube';
+import Vk from '../../Assets/Social/Vk';
+import Logo from '../../Assets/Logo';
+import MenuLive from '../../Assets/MenuLive';
+import Worldwide from '../../Assets/Worldwide';
+import Palette from 'components/Assets/Palette';
+
+function Header(props) {
+    const {
+        locale,
+        socialLinks,
+        getWorldwideItem,
+        getMenuItems
+    } = props;
 
     const ukClass = cx({
-        [Styles.active]: language === 'uk',
+        [Styles.active]: locale === 'uk',
         [Styles.language]: true
     });
 
     const ruClass = cx({
-        [Styles.active]: language === 'ru',
+        [Styles.active]: locale === 'ru',
         [Styles.language]: true
     });
 
-    const subMenu = menu.sub
-        .filter(priorityFilter).map((el) => {
-            const target = el.external ? {
-                'target': '_blank',
-                'rel': 'noopener noreferrer'
-            } : null;
+    const convertToComponent = (el) => {
+        const target = el.external ? {
+            'target': '_blank',
+            'rel': 'noopener noreferrer'
+        } : null;
 
-            return (
-                <li key={ el.id }>
-                    <a { ...target } href={ el.url }>{ el.title }</a>
-                </li>
-            );
-        });
+        const liveIcon = el.id === 'live' ? (
+            <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
+        ) : null;
 
-    const mainMenu = menu.main
-        .map((el) => {
-            const target = el.external ? {
-                target: '_blank',
-                rel: 'noopener noreferrer'
-            } : null;
+        return (
+            <li key={ el.id }>
+                { liveIcon }
+                <a { ...target } href={ el.url }>{ el.title[locale] }</a>
+            </li>
+        );
+    };
 
-            const liveIcon = el.id === 'live' ? (
-                <MenuLive className={ Styles.liveIcon } color={ Palette.mainColor3 }/>
-            ) : null;
-
-            return (
-                <li key={ el.id }>
-                    { liveIcon }
-                    <a { ...target } href={ el.url }>{ el.title }</a>
-                </li>
-            );
-        })
-    ;
+    const subMenuItems = getMenuItems('sub').map(convertToComponent);
+    const mainMenuItems = getMenuItems('main').map(convertToComponent);
+    const worldwideData = getWorldwideItem();
 
     return (
         <section className={ Grids.container }>
             <section className={ Styles.headerComponent }>
                 <div className={ Styles.top }>
-                    <a href="#" className={ Styles.worldwideChannel }>
-                        <Worldwide/>
-                        Всемирный HopeChannel
+                    <a href={ worldwideData.url } className={ Styles.worldwideChannel }>
+                        <Worldwide color={ Palette.tempColor22 }/>
+                        { worldwideData.title[locale] }
                     </a>
-                    <ul className={ Styles.subMenu }>
-                        { subMenu }
-                    </ul>
-                    <div className={ Styles.social }>
-                        <a href={ socialLinks.youtube } className={ Styles.youTube }>
-                            <YouTube/>
-                        </a>
-                        <a href={ socialLinks.instagram } className={ Styles.instagram }>
-                            <Instagram/>
-                        </a>
-                        <a href={ socialLinks.twitter } className={ Styles.twitter }>
-                            <Twitter/>
-                        </a>
-                        <a href={ socialLinks.vk } className={ Styles.vk }>
-                            <Vk/>
-                        </a>
-                        <a href={ socialLinks.facebook } className={ Styles.fb }>
-                            <Facebook/>
-                        </a>
-                    </div>
-                    <div className={ Styles.languages }>
-                        <a href="#" className={ ruClass }>Рус</a>
-                        <span className={ Styles.slash }>/</span>
-                        <a href="#" className={ ukClass }>Укр</a>
+                    <div className={ Styles.wrap }>
+                        <ul className={ Styles.subMenu }>
+                            { subMenuItems }
+                        </ul>
+                        <div className={ Styles.social }>
+                            <a href={ socialLinks.youtube } className={ Styles.youTube }>
+                                <YouTube color={ Palette.tempColor22 }/>
+                            </a>
+                            <a href={ socialLinks.instagram } className={ Styles.instagram }>
+                                <Instagram color={ Palette.tempColor22 }/>
+                            </a>
+                            <a href={ socialLinks.twitter } className={ Styles.twitter }>
+                                <Twitter color={ Palette.tempColor22 }/>
+                            </a>
+                            <a href={ socialLinks.vk } className={ Styles.vk }>
+                                <Vk color={ Palette.tempColor22 }/>
+                            </a>
+                            <a href={ socialLinks.facebook } className={ Styles.fb }>
+                                <Facebook color={ Palette.tempColor22 }/>
+                            </a>
+                        </div>
+                        <div className={ Styles.languages }>
+                            <a href="/ru" className={ ruClass }>Рус</a>
+                            <span className={ Styles.slash }>/</span>
+                            <a href="/uk" className={ ukClass }>Укр</a>
+                        </div>
                     </div>
                 </div>
                 <div className={ Styles.main }>
                     <Logo className={ Styles.logo } color={ Palette.mainColor1 }/>
                     <ul className={ Styles.menu }>
-                        { mainMenu }
+                        { mainMenuItems }
                     </ul>
                 </div>
             </section>
@@ -105,9 +113,19 @@ export default function Header(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Header.propTypes = {
-    language: PropTypes.string.isRequired,
+    locale: PropTypes.string.isRequired,
     socialLinks: PropTypes.object.isRequired,
-    menu: PropTypes.object.isRequired,
-    priorityFilter: PropTypes.func.isRequired
+    getWorldwideItem: PropTypes.func.isRequired,
+    getMenuItems: PropTypes.func.isRequired
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Header;

@@ -64,6 +64,7 @@ export default class Episodes extends Component {
                 <Mobile
                     mediaType={ mediaType }
                     items={ items }
+                    title={ title }
                 />
             );
         } else {

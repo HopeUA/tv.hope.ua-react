@@ -1,12 +1,59 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
+
+/**
+ * [IV]
+ * View Import
+ */
 import Mobile from './Views/Mobile/tpl';
 import Tablet from './Views/Tablet/tpl';
 import Desktop from './Views/Desktop/tpl';
-//
-import PixelPerfect from 'vendor/PixelPerfect/component';
-import BreakPoints from 'helpers/breakpoints';
 
-export default class Header extends Component {
+/**
+ * [IBP]
+ * Pixel Perfect and Breakpoints
+ */
+import PixelPerfect from 'vendor/PixelPerfect/component';
+import BP from 'lib/breakpoints';
+
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
+class Header extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
+
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CIS]
+     * Internal state (optional)
+     */
     state = {
         isMenuVisible: false
     };
@@ -17,19 +64,30 @@ export default class Header extends Component {
         });
     };
 
+    /**
+     * [CR]
+     * Render function
+     */
     render() {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
         const { mediaType } = this.props;
 
-        const templates = [
-            BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name,
-            BreakPoints.tabletPortrait.name,
-            BreakPoints.tabletLandscape.name
-        ];
+        /**
+         * [RCD]
+         * Config destructuring
+         */
+        const { id } = config;
 
+        /**
+         * [RV]
+         * View
+         */
         let view;
 
-        if ([BreakPoints.phonePortrait.name, BreakPoints.phoneLandscape.name].indexOf(mediaType) !== -1) {
+        if (BP.isMobile(mediaType)) {
             view = (
                 <Mobile
                     mediaType={ mediaType }
@@ -37,7 +95,7 @@ export default class Header extends Component {
                     handleMenu={ this.handleMenu }
                 />
             );
-        } else if (BreakPoints.tabletPortrait.name === mediaType) {
+        } else if (BP.isTabletPortrait(mediaType)) {
             view = (
                 <Tablet mediaType={ mediaType }/>
             );
@@ -45,14 +103,20 @@ export default class Header extends Component {
             view = <Desktop/>;
         }
 
+        /**
+         * [RR]
+         * Return Component
+         */
         return (
-            <PixelPerfect templates={ templates } component="Header">
+            <PixelPerfect component={ id }>
                 { view }
             </PixelPerfect>
         );
     }
 }
 
-Header.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+/**
+ * [IE]
+ * Export
+ */
+export default Header;

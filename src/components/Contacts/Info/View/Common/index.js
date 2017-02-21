@@ -14,7 +14,7 @@ import PhoneContact from '../../Assets/PhoneContact';
 import Skype from '../../Assets/Skype';
 import SocialNetworks from '../../Assets/SocialNetworks';
 import WriteButton from '../../Assets/WriteButton';
-import Instagram from 'components/Assets/Social/instagram';
+import Instagram from 'components/Assets/Social/Instagram';
 import Facebook from 'components/Assets/Social/Fb';
 import Twitter from 'components/Assets/Social/Tw';
 import YouTube from 'components/Assets/Social/YouTube';

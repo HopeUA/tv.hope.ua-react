@@ -1,11 +1,54 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
+
+/**
+ * [IV]
+ * View Import
+ */
 import Mobile from './Views/Mobile';
 import Tablet from './Views/Tablet';
 import Desktop from './Views/Desktop';
-import Data from './Mock/data.json';
-import BreakPoints from 'helpers/breakpoints';
 
-export default class Header extends Component {
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
+
+/**
+ * [IDATA]
+ * Data Import (optional)
+ */
+import Data from './Mock/data.json';
+
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        locale: state.locale,
+        mediaType: state.browser.mediaType
+    };
+})
+class Header extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired,
+        locale: PropTypes.string.isRequired
+    };
+
+    /**
+     * [CIS]
+     * Internal state (optional)
+     */
     state = {
         isMenuVisible: false
     };
@@ -16,48 +59,98 @@ export default class Header extends Component {
         });
     };
 
-    priorityFilter = (obj) => {
-        return obj.priority !== 'low';
+    getPosition = (type) => {
+        const { mediaType } = this.props;
+        const { position } = Data.menu;
+        const group = mediaType in position ? mediaType : 'default';
+        if (!(type in position[group])) {
+            return [];
+        }
+
+        return position[group][type];
     };
 
+    filterMenu = (type) => {
+        return (element) => {
+            return this.getPosition(type).indexOf(element.id) !== -1;
+        };
+    };
+
+    sortMenu = (type) => {
+        return (a, b) => {
+            const position = this.getPosition(type);
+
+            return position.indexOf(a.id) - position.indexOf(b.id);
+        };
+    };
+
+    getWorldwideItem = () => {
+        return Data.menu.items.find((element) => {
+            return element.id === 'worldwide';
+        });
+    };
+
+    getMenuItems = (type) => {
+        return Data.menu.items.filter(this.filterMenu(type))
+            .sort(this.sortMenu(type));
+    };
+
+    /**
+     * [CR]
+     * Render function
+     */
     render() {
-        const { mediaType } = this.props;
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType, locale } = this.props;
 
-        let view;
-
+        /**
+         * [RVP]
+         * View Props (optional)
+         */
         const viewProps = {
-            language: Data.language,
+            locale,
             mediaType,
             isMenuVisible: this.state.isMenuVisible,
             handleMenu: this.handleMenu,
             socialLinks: Data.socialLinks,
             menu: Data.menu,
-            priorityFilter: this.priorityFilter
+            getMenuItems: this.getMenuItems,
+            getWorldwideItem: this.getWorldwideItem
         };
 
-        if ([BreakPoints.phonePortrait.name, BreakPoints.phoneLandscape.name].indexOf(mediaType) !== -1) {
+        /**
+         * [RV]
+         * View
+         */
+        let view;
+
+        if (BP.isMobile(mediaType)) {
             view = (
                 <Mobile { ...viewProps }/>
             );
-        } else if (BreakPoints.tabletPortrait.name === mediaType) {
+        } else if (BP.isTabletPortrait(mediaType)) {
             view = (
                 <Tablet { ...viewProps }/>
             );
         } else {
             view = (
-                <Desktop
-                    language={ Data.language }
-                    socialLinks={ Data.socialLinks }
-                    menu={ Data.menu }
-                    priorityFilter={ this.priorityFilter }
-                />
+                <Desktop { ...viewProps }/>
             );
         }
 
+        /**
+         * [RR]
+         * Return Component
+         */
         return view;
     }
 }
 
-Header.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+/**
+ * [IE]
+ * Export
+ */
+export default Header;
