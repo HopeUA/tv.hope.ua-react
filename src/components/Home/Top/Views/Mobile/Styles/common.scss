@@ -14,31 +14,31 @@
 
         .main {
             display: flex;
+            position: relative;
             flex-direction: column;
             margin-top: px(50);
             border-radius: 6px;
             overflow: hidden;
+            z-index: 0;
 
             .image {
                 width: 100%;
                 height: px(302);
                 border-radius: 6px 6px 0 0;
                 background-size: cover;
-                z-index: 2;
+                z-index: 10;
             }
 
             .container {
                 position: relative;
                 width: 100%;
                 height: px(330);
-                z-index: 0;
 
                 .blur {
                     width: 100%;
                     height: 100%;
                     transform: scale(1.4);
                     background-size: cover;
-                    z-index: 1;
                     filter: blur(15px) grayscale(30%) brightness(80%);
 
                     &::before {

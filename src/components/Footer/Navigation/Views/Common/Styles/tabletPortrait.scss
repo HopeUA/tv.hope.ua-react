@@ -2,7 +2,7 @@
 
 & {
     .mainContent {
-        padding: px(72) px(50) 0 px(48);
+        padding: px(68) 0 0 px(48);
 
         section {
             h1 {
@@ -26,11 +26,15 @@
         }
 
         .information {
-            margin-left: px(-8);
+            margin-left: px(108);
+        }
+
+        .connection {
+            margin-left: px(108);
         }
 
         .networks {
-            margin: 0 px(-34) 0 0;
+            margin-left: px(102); // PixelPerfect requires 116, but Navigation.networks overlaps scroll bar in Safari
 
             h1 {
                 margin-bottom: px(32);
@@ -78,8 +82,8 @@
         }
 
         .phoneNumber {
-            top: px(274);
-            right: px(612);
+            margin-top: px(-78);
+            margin-left: px(638);
 
             h1 {
                 margin-bottom: px(4);
@@ -91,22 +95,26 @@
         }
 
         .rights {
-            top: px(250);
-            right: px(92);
+            margin-top: px(-102);
+            margin-left: px(102); // like a .networks
 
             h1 {
-                margin-bottom: px(36);
+                margin-bottom: px(32);
             }
         }
 
         footer {
-            margin-top: px(84);
+            margin-top: px(90);
 
             .container {
 
                 .copyright {
                     font-size: px(24);
                 }
+            }
+
+            i {
+                margin-right: px(50);
             }
         }
     }

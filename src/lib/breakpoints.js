@@ -50,25 +50,51 @@ class BP {
 
     static isMobile(mediaType) {
         return [
-                BP.phonePortrait.name,
-                BP.phoneLandscape.name
-            ].indexOf(mediaType) !== -1;
+            BP.phonePortrait.name, 
+            BP.phoneLandscape.name
+        ].indexOf(mediaType) !== -1;
     }
 
-    static isDesktop(mediaType) {
-        return [
-                BP.tabletLandscape.name,
-                BP.desktop.name,
-                BP.desktopHD.name,
-                BP.desktopMega.name,
-                BP.desktopWide.name
-            ].indexOf(mediaType) !== -1;
+    static isPhonePortrait(mediaType) {
+        return BP.phonePortrait.name === mediaType;
+    }
+
+    static isPhoneLandscape(mediaType) {
+        return BP.phoneLandscape.name === mediaType;
     }
 
     static isTabletPortrait(mediaType) {
+        return BP.tabletPortrait.name === mediaType;
+    }
+
+    static isTabletLandscape() {
+        return BP.phoneLandscape.name === mediaType;
+    }
+
+    static isDesktop(mediaType, desktopOnly = false) {
+        if (desktopOnly) {
+            return BP.desktop.name === mediaType;
+        }
+
         return [
-                BP.tabletPortrait.name
-            ].indexOf(mediaType) !== -1;
+            BP.tabletLandscape.name,
+            BP.desktop.name,
+            BP.desktopHD.name,
+            BP.desktopMega.name,
+            BP.desktopWide.name
+        ].indexOf(mediaType) !== -1;
+    }
+
+    static isDesktopWide(mediaType) {
+        return BP.desktopWide.name === mediaType;
+    }
+
+    static isDesktopHD(mediaType) {
+        return BP.desktopHD.name === mediaType;
+    }
+
+    static isDesktopMega(mediaType) {
+        return BP.desktopMega.name === mediaType;
     }
 }
 
