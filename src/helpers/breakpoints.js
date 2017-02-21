@@ -50,25 +50,25 @@ class BP {
 
     static isMobile(mediaType) {
         return [
-                BP.phonePortrait.name,
-                BP.phoneLandscape.name
-            ].indexOf(mediaType) !== -1;
+            BP.phonePortrait.name,
+            BP.phoneLandscape.name
+        ].indexOf(mediaType) !== -1;
     }
 
     static isDesktop(mediaType) {
         return [
-                BP.tabletLandscape.name,
-                BP.desktop.name,
-                BP.desktopHD.name,
-                BP.desktopMega.name,
-                BP.desktopWide.name
-            ].indexOf(mediaType) !== -1;
+            BP.tabletLandscape.name,
+            BP.desktop.name,
+            BP.desktopHD.name,
+            BP.desktopMega.name,
+            BP.desktopWide.name
+        ].indexOf(mediaType) !== -1;
     }
 
     static isTabletPortrait(mediaType) {
         return [
-                BP.tabletPortrait.name
-            ].indexOf(mediaType) !== -1;
+            BP.tabletPortrait.name
+        ].indexOf(mediaType) !== -1;
     }
 }
 
