@@ -18,7 +18,7 @@ import Desktop from './Views/Desktop/tpl';
  * Pixel Perfect and Breakpoints
  */
 import PixelPerfect from 'vendor/PixelPerfect/component';
-import BreakPoints, * as BP from 'lib/breakpoints';
+import BP from 'lib/breakpoints';
 
 /**
  * [ICONF]
@@ -104,22 +104,11 @@ class Header extends Component {
         }
 
         /**
-         * [RPPT]
-         * Pixel Perfect templates with state (optional)
-         */
-        const templates = [
-            BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name,
-            BreakPoints.tabletPortrait.name,
-            BreakPoints.tabletLandscape.name
-        ];
-
-        /**
          * [RR]
          * Return Component
          */
         return (
-            <PixelPerfect templates={ templates } component={ id }>
+            <PixelPerfect component={ id }>
                 { view }
             </PixelPerfect>
         );

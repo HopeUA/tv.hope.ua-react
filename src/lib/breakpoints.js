@@ -67,7 +67,7 @@ class BP {
         return BP.tabletPortrait.name === mediaType;
     }
 
-    static isTabletLandscape() {
+    static isTabletLandscape(mediaType) {
         return BP.phoneLandscape.name === mediaType;
     }
 

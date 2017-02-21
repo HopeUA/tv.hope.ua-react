@@ -15,11 +15,11 @@
             color: $tempColor22;
             font-size: px(24);
             font-style: italic;
+            transition: color .2s;
 
             i {
                 width: px(36);
                 margin-right: px(32);
-                fill: $tempColor22;
             }
 
             &:hover {

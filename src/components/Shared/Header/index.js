@@ -17,7 +17,7 @@ import Desktop from './Views/Desktop';
  * [IBP]
  * Breakpoints
  */
-import * as BP from 'lib/breakpoints';
+import BP from 'lib/breakpoints';
 
 /**
  * [IDATA]

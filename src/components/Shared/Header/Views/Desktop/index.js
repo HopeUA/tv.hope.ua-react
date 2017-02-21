@@ -71,7 +71,7 @@ function Header(props) {
             <section className={ Styles.headerComponent }>
                 <div className={ Styles.top }>
                     <a href={ worldwideData.url } className={ Styles.worldwideChannel }>
-                        <Worldwide/>
+                        <Worldwide color={ Palette.tempColor22 }/>
                         { worldwideData.title[locale] }
                     </a>
                     <div className={ Styles.wrap }>
