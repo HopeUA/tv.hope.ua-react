@@ -1,29 +1,92 @@
-import React, { PropTypes } from 'react';
+/**
+ * [IL]
+ * Library Import
+ */
+import React, { PropTypes, Component } from 'react';
+// import { connect } from 'react-redux';
+
+/**
+ * [IV]
+ * View Import
+ */
 import Desktop from './Views/Desktop/tpl';
 
+/**
+ * [IBP]
+ * Pixel Perfect and Breakpoints
+ */
 import PixelPerfect from 'vendor/PixelPerfect/component';
-import BreakPoints from 'helpers/breakpoints';
+import BP from 'helpers/breakpoints';
 
-export default function Shows(props) {
-    const { mediaType } = props;
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
 
-    const component = [
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name
-    ].indexOf(mediaType) !== -1 ? null : <Desktop/>;
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+// @connect((state) => {
+//     return {
+//         mediaType: state.browser.mediaType
+//     };
+// })
+class Shows extends Component {
+     /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
 
-    const templates = [
-        BreakPoints.tabletPortrait.name,
-        BreakPoints.tabletLandscape.name
-    ];
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
 
-    return (
-        <PixelPerfect component="Shows" opacity="40" templates={ templates }>
-            { component }
-        </PixelPerfect>
-    );
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType } = this.props;
+
+        /**
+         * [RCD]
+         * Config destructuring
+         */
+        const { id } = config;
+
+        /**
+         * [RV]
+         * Component
+         */
+        const view = BP.isDesktop(mediaType) ? (
+            <Desktop/>
+        ) : null;
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return (
+            <PixelPerfect component={ id }>
+                { view }
+            </PixelPerfect>
+        );
+    }
 }
 
-Shows.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+/**
+ * [IE]
+ * Export
+ */
+export default Shows;
