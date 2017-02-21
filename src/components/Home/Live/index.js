@@ -1,31 +1,100 @@
-import React, { PropTypes } from 'react';
-import MobileView from './Views/Mobile/index';
-import DesktopView from './Views/Desktop/index';
+/**
+ * [IL]
+ * Library Import
+ */
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 
-import BreakPoints from 'helpers/breakpoints';
+/**
+ * [IV]
+ * View Import
+ */
+import Mobile from './Views/Mobile/index';
+import Desktop from './Views/Desktop/index';
 
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'helpers/breakpoints';
+
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+/**
+ * [IDATA]
+ * Data Import (optional)
+ */
 // TODO получать через api
 import items from './Mock/data.json';
 const liveUrl = 'https://live-tv.hope.ua/nadia-publish/smil:nadia.smil/playlist.m3u8';
 const currentTime = '2016-10-24T09:23:30.000Z';
 
-export default function Live(props) {
-    const isMobile = [
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name
-    ].indexOf(props.mediaType) !== -1;
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
+class Live extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
 
-    return isMobile ? (
-        <MobileView url={ liveUrl }/>
-    ) : (
-        <DesktopView
-            mediaType={ props.mediaType }
-            items={ items }
-            currentTime={ currentTime }
-        />
-    );
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType } = this.props;
+
+        /**
+         * [RV]
+         * View
+         */
+        let view;
+
+        if (BP.isMobile(mediaType)) {
+            view = (
+                <Mobile url={ liveUrl }/>
+            );
+        } else {
+            view = (
+                <Desktop
+                    mediaType={ mediaType }
+                    items={ items }
+                    currentTime={ currentTime }
+                />
+            );
+        }
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return view;
+    }
 }
 
-Live.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+export default Live;
+
