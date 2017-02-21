@@ -12,10 +12,10 @@
             align-items: center;
             width: px(330);
             margin-right: px(176);
+            transition: color .2s;
             color: $tempColor22;
             font-size: px(24);
             font-style: italic;
-            transition: color .2s;
 
             i {
                 width: px(36);
