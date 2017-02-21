@@ -18,7 +18,7 @@ import Desktop from './Views/Desktop/tpl';
  * Pixel Perfect and Breakpoints
  */
 import PixelPerfect from 'vendor/PixelPerfect/component';
-import BreakPoints, * as BP from 'helpers/breakpoints';
+import BreakPoints, * as BP from 'lib/breakpoints';
 
 /**
  * [ICONF]
