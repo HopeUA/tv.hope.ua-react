@@ -3,7 +3,7 @@
  * Library Import
  */
 import React, { PropTypes, Component } from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 /**
  * [IV]
@@ -28,11 +28,11 @@ import config from './config';
  * [IRDX]
  * Redux connect (optional)
  */
-// @connect((state) => {
-//     return {
-//         mediaType: state.browser.mediaType
-//     };
-// })
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
 class Shows extends Component {
      /**
      * [CPT]
@@ -69,7 +69,7 @@ class Shows extends Component {
          * [RV]
          * Component
          */
-        const view = BP.isDesktop(mediaType) ? (
+        const view = BP.isDesktop(mediaType) || BP.isTabletPortrait(mediaType) ? (
             <Desktop/>
         ) : null;
 
