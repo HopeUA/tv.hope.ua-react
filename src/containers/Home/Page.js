@@ -29,6 +29,9 @@ const loaders = getAsyncLoaders([
         params: {
             type: 'recommended'
         }
+    },
+    {
+        component: Shared.Timeline
     }
 ]);
 /**
@@ -54,7 +57,7 @@ export default class HomePage extends Component {
             <div>
                 <Helmet { ...Meta() }/>
                 <Shared.Header/>
-                <Shared.Timeline mediaType={ browser.mediaType }/>
+                <Shared.Timeline/>
                 <Home.Banner mediaType={ browser.mediaType }/>
                 <Home.Live mediaType={ browser.mediaType }/>
                 <Home.Shows mediaType={ browser.mediaType }/>
