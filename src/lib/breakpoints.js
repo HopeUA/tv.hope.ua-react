@@ -47,7 +47,7 @@ class BP {
         max: 2560,
         template: 1922
     };
-    
+
     static isMobile(mediaType) {
         return [
             BP.phonePortrait.name, 
@@ -55,7 +55,27 @@ class BP {
         ].indexOf(mediaType) !== -1;
     }
 
-    static isDesktop(mediaType) {
+    static isPhonePortrait(mediaType) {
+        return BP.phonePortrait.name === mediaType;
+    }
+
+    static isPhoneLandscape(mediaType) {
+        return BP.phoneLandscape.name === mediaType;
+    }
+
+    static isTabletPortrait(mediaType) {
+        return BP.tabletPortrait.name === mediaType;
+    }
+
+    static isTabletLandscape() {
+        return BP.phoneLandscape.name === mediaType;
+    }
+
+    static isDesktop(mediaType, desktopOnly = false) {
+        if (desktopOnly) {
+            return BP.desktop.name === mediaType;
+        }
+
         return [
             BP.tabletLandscape.name,
             BP.desktop.name,
@@ -65,10 +85,16 @@ class BP {
         ].indexOf(mediaType) !== -1;
     }
 
-    static isTabletPortrait(mediaType) {
-        return [
-            BP.tabletPortrait.name
-        ].indexOf(mediaType) !== -1;
+    static isDesktopWide(mediaType) {
+        return BP.desktopWide.name === mediaType;
+    }
+
+    static isDesktopHD(mediaType) {
+        return BP.desktopHD.name === mediaType;
+    }
+
+    static isDesktopMega(mediaType) {
+        return BP.desktopMega.name === mediaType;
     }
 }
 
