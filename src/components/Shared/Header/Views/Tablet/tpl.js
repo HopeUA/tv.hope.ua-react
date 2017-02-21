@@ -1,7 +1,20 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React from 'react';
-import Styles from './Styles/main.scss';
 import cx from 'classnames';
 
+/**
+ * [IS]
+ * Style Import
+ */
+import Styles from './Styles/main.scss';
+
+/**
+ * [IA]
+ * Assets Import
+ */
 import Logo from '../../Assets/Logo';
 import Palette from 'components/Assets/Palette';
 import Hamburger from '../../Assets/Hamburger';
@@ -13,7 +26,7 @@ import Ok from 'components/Assets/Social/Ok';
 import Vk from 'components/Assets/Social/Vk';
 import MenuLive from '../../Assets/MenuLive';
 
-export default function Header() {
+function Header() {
     const ukClass = cx({
         [Styles.active]: true,
         [Styles.language]: true
@@ -102,3 +115,9 @@ export default function Header() {
         </section>
     );
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Header;

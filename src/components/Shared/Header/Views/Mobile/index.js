@@ -1,7 +1,20 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
 import cx from 'classnames';
+
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
 
+/**
+ * [IA]
+ * Assets Import
+ */
 import Instagram from 'components/Assets/Social/Instagram';
 import Facebook from 'components/Assets/Social/Fb';
 import Twitter from 'components/Assets/Social/Tw';
@@ -10,10 +23,9 @@ import Ok from 'components/Assets/Social/Ok';
 import Vk from 'components/Assets/Social/Vk';
 import Logo from '../../Assets/Logo';
 import Hamburger from '../../Assets/Hamburger';
-
 import Palette from 'components/Assets/Palette';
 
-export default function Header(props) {
+function Header(props) {
     const {
         handleMenu,
         isMenuVisible,
@@ -120,6 +132,10 @@ export default function Header(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Header.propTypes = {
     handleMenu: PropTypes.func.isRequired,
     isMenuVisible: PropTypes.bool,
@@ -128,6 +144,16 @@ Header.propTypes = {
     getMenuItems: PropTypes.func.isRequired
 };
 
+/**
+ * [CDP]
+ * Component default props
+ */
 Header.defaultProps = {
     isMenuVisible: false
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Header;

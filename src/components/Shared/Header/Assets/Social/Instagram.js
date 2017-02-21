@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import svg from 'helpers/svg';
+import svg, { STATE_HOVER } from 'helpers/svg';
 
 @svg({
     width: 200,
@@ -10,7 +10,8 @@ import svg from 'helpers/svg';
 export default class Instagram extends Component {
 
     static propTypes = {
-        color: PropTypes.string
+        color: PropTypes.string,
+        state: PropTypes.string.isRequired
     };
 
     static defaultProps = {
@@ -18,11 +19,13 @@ export default class Instagram extends Component {
     };
 
     render() {
-        const { color } = this.props;
+        const { color, state } = this.props;
+
+        const colorFill = state === STATE_HOVER ? '#fff' : color;
 
         return (
             <path
-                fill={ color } d="M199.5,64.1c-0.1-4.6-0.3-9.3-0.9-13.9c-0.7-5.6-2-11-4.1-16.2
+                fill={ colorFill } d="M199.5,64.1c-0.1-4.6-0.3-9.3-0.9-13.9c-0.7-5.6-2-11-4.1-16.2
                 c-5.4-13.3-14.7-22.7-27.9-28.3c-7.1-3-14.7-4.4-22.4-4.9c-4.5-0.3-9-0.5-13.5-0.6C108.9,0,87-0.2,65.2,0.4
                 c-5.1,0.1-10.1,
                 0.3-15.2,1c-5.2,0.7-10.2,1.8-15,3.7C20.6,10.7,10.7,20.6,5.1,34.9c-2.7,7-4,14.4-4.4,21.9c-0.3,6.3-0.5,

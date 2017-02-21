@@ -1,8 +1,21 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React from 'react';
-import Styles from './Styles/main.scss';
-import Grids from 'theme/Grid.scss';
 import cx from 'classnames';
 
+/**
+ * [IS]
+ * Style Import
+ */
+import Styles from './Styles/main.scss';
+import Grids from 'theme/Grid.scss';
+
+/**
+ * [IA]
+ * Assets Import
+ */
 import Instagram from '../../Assets/Social/Instagram';
 import Facebook from '../../Assets/Social/Fb';
 import Twitter from '../../Assets/Social/Tw';
@@ -13,7 +26,7 @@ import MenuLive from '../../Assets/MenuLive';
 import Worldwide from '../../Assets/Worldwide';
 import Palette from 'components/Assets/Palette';
 
-export default function Header() {
+function Header() {
     const ukClass = cx({
         [Styles.active]: true,
         [Styles.language]: true
@@ -91,3 +104,9 @@ export default function Header() {
         </section>
     );
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Header;

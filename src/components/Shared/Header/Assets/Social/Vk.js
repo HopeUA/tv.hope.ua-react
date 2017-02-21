@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import svg from 'helpers/svg';
+import svg, { STATE_HOVER } from 'helpers/svg';
 
 @svg({
     width: 200,
@@ -10,7 +10,8 @@ import svg from 'helpers/svg';
 export default class Vk extends Component {
 
     static propTypes = {
-        color: PropTypes.string
+        color: PropTypes.string,
+        state: PropTypes.string.isRequired
     };
 
     static defaultProps = {
@@ -18,11 +19,12 @@ export default class Vk extends Component {
     };
 
     render() {
-        const { color } = this.props;
+        const { color, state } = this.props;
+        const colorFill = state === STATE_HOVER ? '#fff' : color;
 
         return (
             <path
-                fill={ color } d="M177.3,47.7c2.8-3.7,5.1-6.6,6.8-8.8c12-16,17.2-26.1,
+                fill={ colorFill } d="M177.3,47.7c2.8-3.7,5.1-6.6,6.8-8.8c12-16,17.2-26.1,
                 15.6-30.6l-0.6-1c-0.4-0.6-1.5-1.2-3.2-1.7c-1.7-0.5-4-0.6-6.7-0.3l-30,0.2c-0.7-0.1-1.4-0.1-2.1,
                 0c-0.7,0.1-1.1,0.2-1.4,0.3c-0.2,0.1-0.4,0.2-0.5,0.3l-0.4,0.3c-0.3,0.2-0.7,0.6-1.1,1.1c-0.4,0.5-0.8,
                 1.1-1,1.8c-3.3,8.4-7,16.2-11.1,23.4c-2.6,4.3-4.9,8-7.1,11.2c-2.2,3.2-4,5.5-5.4,7c-1.5,1.5-2.8,2.7-4,

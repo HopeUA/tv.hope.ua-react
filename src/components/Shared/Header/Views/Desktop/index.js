@@ -1,8 +1,21 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
-import Styles from './Styles/main.scss';
-import Grids from 'theme/Grid.scss';
 import cx from 'classnames';
 
+/**
+ * [IS]
+ * Style Import
+ */
+import Styles from './Styles/main.scss';
+import Grids from 'theme/Grid.scss';
+
+/**
+ * [IA]
+ * Assets Import
+ */
 import Instagram from '../../Assets/Social/Instagram';
 import Facebook from '../../Assets/Social/Fb';
 import Twitter from '../../Assets/Social/Tw';
@@ -13,7 +26,7 @@ import MenuLive from '../../Assets/MenuLive';
 import Worldwide from '../../Assets/Worldwide';
 import Palette from 'components/Assets/Palette';
 
-export default function Header(props) {
+function Header(props) {
     const {
         locale,
         socialLinks,
@@ -100,9 +113,19 @@ export default function Header(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Header.propTypes = {
     locale: PropTypes.string.isRequired,
     socialLinks: PropTypes.object.isRequired,
     getWorldwideItem: PropTypes.func.isRequired,
     getMenuItems: PropTypes.func.isRequired
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Header;

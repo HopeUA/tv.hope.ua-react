@@ -1,30 +1,55 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
+/**
+ * [IV]
+ * View Import
+ */
 import Mobile from './Views/Mobile';
 import Tablet from './Views/Tablet';
 import Desktop from './Views/Desktop';
 
-import Data from './Mock/data.json';
+/**
+ * [IBP]
+ * Breakpoints
+ */
 import * as BP from 'helpers/breakpoints';
-import { changeLanguage } from 'redux/modules/locale';
 
+/**
+ * [IDATA]
+ * Data Import (optional)
+ */
+import Data from './Mock/data.json';
+
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
 @connect((state) => {
     return {
         locale: state.locale,
         mediaType: state.browser.mediaType
     };
-}, (dispatch) => {
-    return bindActionCreators({ changeLanguage }, dispatch);
 })
-export default class Header extends Component {
+
+class Header extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
-        locale: PropTypes.string.isRequired,
-        changeLanguage: PropTypes.func.isRequired
+        locale: PropTypes.string.isRequired
     };
 
+    /**
+     * [CIS]
+     * Internal state (optional)
+     */
     state = {
         isMenuVisible: false
     };
@@ -71,11 +96,21 @@ export default class Header extends Component {
             .sort(this.sortMenu(type));
     };
 
+    /**
+     * [CR]
+     * Render function
+     */
     render() {
-        const { mediaType, locale, changeLanguage } = this.props;
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType, locale } = this.props;
 
-        let view;
-
+        /**
+         * [RVP]
+         * View Props (optional)
+         */
         const viewProps = {
             locale,
             mediaType,
@@ -83,10 +118,15 @@ export default class Header extends Component {
             handleMenu: this.handleMenu,
             socialLinks: Data.socialLinks,
             menu: Data.menu,
-            changeLanguage,
             getMenuItems: this.getMenuItems,
             getWorldwideItem: this.getWorldwideItem
         };
+
+        /**
+         * [RV]
+         * View
+         */
+        let view;
 
         if (BP.isMobile(mediaType)) {
             view = (
@@ -102,6 +142,16 @@ export default class Header extends Component {
             );
         }
 
+        /**
+         * [RR]
+         * Return Component
+         */
         return view;
     }
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Header;
