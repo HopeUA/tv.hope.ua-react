@@ -78,7 +78,7 @@ class Live extends Component {
             );
         } else {
             view = (
-                <Desktop/>
+                <Desktop mediaType={ mediaType }/>
             );
         }
 
