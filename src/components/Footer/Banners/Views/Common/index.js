@@ -7,7 +7,7 @@ import BreakPoints from 'vendor/PixelPerfect/breakpoints';
 
 import InlineSvg from 'vendor/InlineSvg/component';
 
-export default function Banners(props) {
+export default function Common(props) {
     const {
         mediaType,
         items
@@ -74,11 +74,11 @@ export default function Banners(props) {
     );
 }
 
-Banners.propTypes = {
+Common.propTypes = {
     mediaType: PropTypes.string.isRequired,
     items: PropTypes.array
 };
 
-Banners.defaultProps = {
+Common.defaultProps = {
     items: []
 };
