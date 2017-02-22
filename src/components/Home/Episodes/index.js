@@ -1,18 +1,42 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes, Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import Mobile from './Views/Mobile/';
+/**
+ * [IV]
+ * View Import
+ */
+import Mobile from './Views/Mobile';
 import DesktopGrid from './Views/DesktopGrid';
-import DesktopRow from './Views/DesktopRow/index';
+import DesktopRow from './Views/DesktopRow';
 
-import BreakPoints from 'helpers/breakpoints';
+/**
+ * [IA]
+ */
 import * as actions from './reducer';
 
-const componentId = 'Home.Episodes';
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
 
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
 @connect((state, props) => {
-    const localState = state[componentId] && state[componentId][props.type] ? state[componentId][props.type] : {};
+    const localState = state[config.id] && state[config.id][props.type] ? state[config.id][props.type] : {};
 
     return {
         items: localState.items || [],
@@ -22,7 +46,11 @@ const componentId = 'Home.Episodes';
 }, (dispatch) => {
     return bindActionCreators({ ...actions }, dispatch);
 })
-export default class Episodes extends Component {
+class Episodes extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
         view: PropTypes.string.isRequired,
@@ -34,13 +62,24 @@ export default class Episodes extends Component {
         type: PropTypes.string.isRequired
     };
 
+    /**
+     * [CDP]
+     * Component default props
+     */
     static defaultProps = {
-        scrollDisable: false,
-        canRefresh: false
+        canRefresh: false,
+        scrollDisable: false
     };
 
-    static displayName = componentId;
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
 
+    /**
+     * [CLOAD]
+     */
     static loader = (params) => ({ store: { dispatch } }) => {
         return dispatch(actions.fetchItems(params.type));
     };
@@ -49,22 +88,37 @@ export default class Episodes extends Component {
         this.props.fetchItems(this.props.type);
     };
 
+    /**
+     * [CR]
+     * Render function
+     */
     render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
         const { mediaType, view, items, title, canRefresh, scrollDisable } = this.props;
 
-        const isMobile = [
-            BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name
-        ].indexOf(mediaType) !== -1;
+        /**
+         * [RVP]
+         * View Props (optional)
+         */
+        const viewProps = {
+            items: { items },
+            title: { title }
+        };
 
+        /**
+         * [RV]
+         * View
+         */
         let component = null;
 
-        if (isMobile) {
+        if (BP.isMobile(mediaType)) {
             component = (
                 <Mobile
                     mediaType={ mediaType }
-                    items={ items }
-                    title={ title }
+                    { ...viewProps }
                 />
             );
         } else {
@@ -72,8 +126,7 @@ export default class Episodes extends Component {
                 case 'grid':
                     component = (
                         <DesktopGrid
-                            items={ items }
-                            title={ title }
+                            { ...viewProps }
                             mediaType={ mediaType }
                             canRefresh={ canRefresh }
                             scrollDisable={ scrollDisable }
@@ -82,13 +135,23 @@ export default class Episodes extends Component {
                     );
                     break;
                 case 'row':
-                    component = <DesktopRow items={ items } title={ title }/>;
+                    component = <DesktopRow { ...viewProps }/>;
                     break;
                 default:
                     component = null;
             }
         }
 
+        /**
+         * [RR]
+         * Return Component
+         */
         return component;
     }
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Episodes;

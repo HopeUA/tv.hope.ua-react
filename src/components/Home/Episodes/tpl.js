@@ -74,8 +74,7 @@ export default class Episodes extends Component {
             <PixelPerfect
                 templates={ templates }
                 component="Home.Episodes"
-                opacity="40"
-                state="row"
+                state={ view }
             >
                 { component }
             </PixelPerfect>
