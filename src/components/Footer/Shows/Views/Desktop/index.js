@@ -5,7 +5,7 @@ import Styles from './Styles/main.scss';
 
 import BreakPoints from 'helpers/breakpoints';
 
-export default function Shows(props) {
+export default function Desktop(props) {
     const { mediaType, items } = props;
 
     const options = [
@@ -102,10 +102,10 @@ export default function Shows(props) {
     );
 }
 
-Shows.propTypes = {
+Desktop.propTypes = {
     mediaType: PropTypes.string.isRequired,
     items: PropTypes.array
 };
-Shows.defaultProps = {
+Desktop.defaultProps = {
     items: []
 };
