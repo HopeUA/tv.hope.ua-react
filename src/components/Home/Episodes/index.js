@@ -104,8 +104,8 @@ class Episodes extends Component {
          * View Props (optional)
          */
         const viewProps = {
-            items: { items },
-            title: { title }
+            items,
+            title
         };
 
         /**
