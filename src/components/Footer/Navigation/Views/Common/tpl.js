@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
-import PixelPerfect from 'vendor/PixelPerfect/component';
 import BreakPoints from 'helpers/breakpoints';
 
 import Palette from 'components/Assets/Palette';
@@ -13,14 +12,7 @@ import Ok from 'components/Assets/Social/Ok';
 import Vk from 'components/Assets/Social/Vk';
 import Top from 'components/Assets/Icons/Top';
 
-export default function Navigation(props) {
-    const templates = [
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name,
-        BreakPoints.tabletPortrait.name,
-        BreakPoints.tabletLandscape.name
-    ];
-
+export default function Common(props) {
     const { mediaType } = props;
 
     const info = (
@@ -78,78 +70,76 @@ export default function Navigation(props) {
     );
 
     return (
-        <PixelPerfect templates={ templates } component="Footer.Navigation">
-            <section className={ Styles.navigationComponent }>
-                <div className={ Grids.container }>
-                    <div className={ Styles.mainContent }>
-                        <section className={ Styles.menu }>
-                            <h1>Меню</h1>
-                            <ul>
-                                <li><a href="#">Все Программы</a></li>
-                                <li><a href="#">ТВ Программа</a></li>
-                                <li><a href="#">Пожертвовать</a></li>
-                                <li><a href="#">ТВ Онлайн</a></li>
-                                <li><a href="#">Изучение Библии</a></li>
-                            </ul>
-                        </section>
+        <section className={ Styles.navigationComponent }>
+            <div className={ Grids.container }>
+                <div className={ Styles.mainContent }>
+                    <section className={ Styles.menu }>
+                        <h1>Меню</h1>
+                        <ul>
+                            <li><a href="#">Все Программы</a></li>
+                            <li><a href="#">ТВ Программа</a></li>
+                            <li><a href="#">Пожертвовать</a></li>
+                            <li><a href="#">ТВ Онлайн</a></li>
+                            <li><a href="#">Изучение Библии</a></li>
+                        </ul>
+                    </section>
 
-                        { [
-                            BreakPoints.phonePortrait.name
-                        ].indexOf(mediaType) === -1 ? info : null }
+                    { [
+                        BreakPoints.phonePortrait.name
+                    ].indexOf(mediaType) === -1 ? info : null }
 
-                        <section className={ Styles.connection }>
-                            <h1>Связь</h1>
-                            <ul>
-                                <li><a href="#">Позвонить нам сейчас</a></li>
-                                <li><a href="#">Написать в онлайн чат</a></li>
-                            </ul>
-                        </section>
+                    <section className={ Styles.connection }>
+                        <h1>Связь</h1>
+                        <ul>
+                            <li><a href="#">Позвонить нам сейчас</a></li>
+                            <li><a href="#">Написать в онлайн чат</a></li>
+                        </ul>
+                    </section>
 
-                        { [
-                            BreakPoints.phoneLandscape.name
-                        ].indexOf(mediaType) === -1 ? networks : null }
+                    { [
+                        BreakPoints.phoneLandscape.name
+                    ].indexOf(mediaType) === -1 ? networks : null }
 
-                        <section className={ Styles.phoneNumber }>
-                            <h1>0 (800) 50 157 80</h1>
-                            <span>Киев, 04071, а/я 36</span>
-                        </section>
+                    <section className={ Styles.phoneNumber }>
+                        <h1>0 (800) 50 157 80</h1>
+                        <span>Киев, 04071, а/я 36</span>
+                    </section>
 
-                        { [
-                            BreakPoints.phonePortrait.name
-                        ].indexOf(mediaType) === -1 ? rights : null }
-
-                        { [
-                            BreakPoints.phonePortrait.name,
-                            BreakPoints.phoneLandscape.name
-                        ].indexOf(mediaType) === -1 ? copyright : null }
-                    </div>
+                    { [
+                        BreakPoints.phonePortrait.name
+                    ].indexOf(mediaType) === -1 ? rights : null }
 
                     { [
                         BreakPoints.phonePortrait.name,
                         BreakPoints.phoneLandscape.name
-                    ].indexOf(mediaType) !== -1 ? (
-                        <div className={ Styles.additionalContent }>
-                            { [
-                                BreakPoints.phonePortrait.name
-                            ].indexOf(mediaType) !== -1 ? info : null }
-                            { [
-                                BreakPoints.phonePortrait.name
-                            ].indexOf(mediaType) !== -1 ? rights : null }
-                            { [
-                                BreakPoints.phonePortrait.name,
-                                BreakPoints.phoneLandscape.name
-                            ].indexOf(mediaType) !== -1 ? copyright : null }
-                            { [
-                                BreakPoints.phoneLandscape.name
-                            ].indexOf(mediaType) !== -1 ? networks : null }
-                        </div>
-                    ) : null }
+                    ].indexOf(mediaType) === -1 ? copyright : null }
                 </div>
-            </section>
-        </PixelPerfect>
+
+                { [
+                    BreakPoints.phonePortrait.name,
+                    BreakPoints.phoneLandscape.name
+                ].indexOf(mediaType) !== -1 ? (
+                    <div className={ Styles.additionalContent }>
+                        { [
+                            BreakPoints.phonePortrait.name
+                        ].indexOf(mediaType) !== -1 ? info : null }
+                        { [
+                            BreakPoints.phonePortrait.name
+                        ].indexOf(mediaType) !== -1 ? rights : null }
+                        { [
+                            BreakPoints.phonePortrait.name,
+                            BreakPoints.phoneLandscape.name
+                        ].indexOf(mediaType) !== -1 ? copyright : null }
+                        { [
+                            BreakPoints.phoneLandscape.name
+                        ].indexOf(mediaType) !== -1 ? networks : null }
+                    </div>
+                ) : null }
+            </div>
+        </section>
     );
 }
 
-Navigation.propTypes = {
+Common.propTypes = {
     mediaType: PropTypes.string.isRequired
 };
