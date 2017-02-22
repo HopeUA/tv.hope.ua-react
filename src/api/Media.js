@@ -6,7 +6,7 @@ import fetch from 'isomorphic-fetch';
  * Программа по коду
  * Выпуск по коду
  */
-export default class Media {
+class Media {
     static endpoint = 'https://media.s.hope.ua/v1';
 
     static async getEpisodes(params) {
@@ -40,3 +40,5 @@ export default class Media {
     //     }
     // }
 }
+
+export default Media;
