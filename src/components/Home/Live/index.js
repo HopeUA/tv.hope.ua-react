@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
  * [IV]
  * View Import
  */
-import Mobile from './Views/Mobile/index';
-import Desktop from './Views/Desktop/index';
+import Mobile from './Views/Mobile';
+import Desktop from './Views/Desktop';
 
 /**
  * [IBP]
@@ -96,4 +96,8 @@ class Live extends Component {
     }
 }
 
+/**
+ * [IE]
+ * Export
+ */
 export default Live;

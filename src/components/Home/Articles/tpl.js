@@ -1,32 +1,101 @@
-import React, { PropTypes } from 'react';
+/**
+ * [IL]
+ * Library Import
+ */
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
+
+/**
+ * [IV]
+ * View Import
+ */
 import Mobile from './Views/Mobile/tpl';
 import Desktop from './Views/Desktop/tpl';
 
+/**
+ * [IBP]
+ * Pixel Perfect and Breakpoints
+ */
 import PixelPerfect from 'vendor/PixelPerfect/component';
-import BreakPoints from 'helpers/breakpoints';
+import BP from 'lib/breakpoints';
 
-export default function Articles(props) {
-    const { mediaType } = props;
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
 
-    const component = [
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name
-    ].indexOf(mediaType) !== -1 ? <Mobile mediaType={ mediaType }/> : <Desktop/>;
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
+class Articles extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
 
-    const templates = [
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name,
-        BreakPoints.tabletPortrait.name,
-        BreakPoints.tabletLandscape.name
-    ];
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
 
-    return (
-        <PixelPerfect component="Home.Articles" opacity="40" templates={ templates }>
-            { component }
-        </PixelPerfect>
-    );
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType } = this.props;
+
+        /**
+         * [RCD]
+         * Config destructuring
+         */
+        const { id } = config;
+
+        /**
+         * [RV]
+         * View
+         */
+        let view;
+
+        if (BP.isMobile(mediaType)) {
+            view = (
+                <Mobile mediaType={ mediaType }/>
+            );
+        } else {
+            view = (
+                <Desktop/>
+            );
+        }
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return (
+            <PixelPerfect component={ id }>
+                { view }
+            </PixelPerfect>
+        );
+    }
 }
 
-Articles.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+/**
+ * [IE]
+ * Export
+ */
+export default Articles;

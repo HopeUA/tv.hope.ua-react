@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
  * [IV]
  * View Import
  */
-import Desktop from './Views/Desktop/index';
+import Desktop from './Views/Desktop';
 
 /**
  * [IBP]
@@ -69,7 +69,7 @@ class Shows extends Component {
          * [RV]
          * View
          */
-        const view = BP.isDesktop(mediaType) ? (
+        const view = BP.isDesktop(mediaType) || BP.isTabletPortrait(mediaType) ? (
             <Desktop items={ items }/>
         ) : null;
 

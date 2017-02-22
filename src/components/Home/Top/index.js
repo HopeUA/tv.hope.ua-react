@@ -1,25 +1,99 @@
-import React, { PropTypes } from 'react';
+/**
+ * [IL]
+ * Library Import
+ */
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
+
+/**
+ * [IV]
+ * View Import
+ */
 import Mobile from './Views/Mobile';
 import Desktop from './Views/Desktop';
 
-import BreakPoints from 'helpers/breakpoints';
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
 
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+/**
+ * [IDATA]
+ * Data Import (optional)
+ */
 import items from './Mock/data.json';
 
-export default function Top(props) {
-    return [
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name
-    ].indexOf(props.mediaType) !== -1 ?
-        <Mobile
-            items={ items }
-        /> : <Desktop
-            mediaType={ props.mediaType }
-            items={ items }
-        />
-    ;
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
+class Top extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
+
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType } = this.props;
+
+        /**
+         * [RV]
+         * View
+         */
+        let view;
+
+        if (BP.isMobile(mediaType)) {
+            view = (
+                <Mobile items={ items }/>
+            );
+        } else {
+            view = (
+                <Desktop
+                    mediaType={ mediaType }
+                    items={ items }
+                />
+            );
+        }
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return view;
+    }
 }
 
-Top.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+/**
+ * [IE]
+ * Export
+ */
+export default Top;
