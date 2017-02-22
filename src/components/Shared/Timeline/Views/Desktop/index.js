@@ -1,24 +1,38 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
-import Styles from './Styles/main.scss';
-import BreakPoints from 'helpers/breakpoints';
+import moment from 'moment';
 import cx from 'classnames';
-import px from 'helpers/px';
-import Moment from 'moment';
+import px from 'lib/px';
 
-export default function Timeline(props) {
+/**
+ * [IS]
+ * Style Import
+ */
+import Styles from './Styles/main.scss';
+
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
+
+function Timeline(props) {
     const { mediaType, serverTime, items } =  props;
 
     let timelineStart;
 
-    if (BreakPoints.tabletLandscape.name === mediaType) {
+    if (BP.isTabletLandscape(mediaType)) {
         timelineStart = 470;
-    } else if (BreakPoints.desktop.name === mediaType) {
+    } else if (BP.isDesktop(mediaType, true)) {
         timelineStart = 516;
-    } else if (BreakPoints.desktopWide.name === mediaType) {
+    } else if (BP.isDesktopWide(mediaType)) {
         timelineStart = 586;
-    } else if (BreakPoints.desktopHD.name === mediaType) {
+    } else if (BP.isDesktopHD(mediaType)) {
         timelineStart = 730;
-    } else if (BreakPoints.desktopMega.name === mediaType) {
+    } else if (BP.isDesktopMega(mediaType)) {
         timelineStart = 910;
     }
 
@@ -31,18 +45,11 @@ export default function Timeline(props) {
         clockWidth: 72
     };
 
-    const currentTime = Moment(serverTime);
-    const isDesktop = [
-        BreakPoints.desktop.name,
-        BreakPoints.desktopWide.name,
-        BreakPoints.desktopHD.name,
-        BreakPoints.desktopMega.name
-    ].indexOf(mediaType) !== -1
-    ;
+    const currentTime = moment(serverTime);
 
     let timelineOffset = -sizes.timelineStart - (sizes.clockWidth / 2) + sizes.timelineOffset;
     const episodes = items.map((element, index) => {
-        const startCurrentEpisode = Moment(element.date);
+        const startCurrentEpisode = moment(element.date);
         if (!items[index + 1]) {
             return null;
         }
@@ -51,7 +58,7 @@ export default function Timeline(props) {
             && currentTime.isBefore(items[index + 1].date);
         const isPast = currentTime.isAfter(element.date) && !isCurrent;
 
-        const startNextEpisode = Moment(items[index + 1].date);
+        const startNextEpisode = moment(items[index + 1].date);
         const difference = startNextEpisode.diff(startCurrentEpisode, 'seconds');
         let width = ((difference / 60) / 60) * sizes.hourWidth;
         if (width < sizes.minWidth) {
@@ -93,11 +100,11 @@ export default function Timeline(props) {
                     <div className={ Styles.next } style={ nextStyle }/>
                 </div>
                 <div className={ Styles.info }>
-                    <span className={ Styles.time }>{ Moment(element.date).format('LT') }</span>
+                    <span className={ Styles.time }>{ moment(element.date).format('LT') }</span>
                     <span className={ Styles.label }/>
                 </div>
-                { isDesktop ? (
-                    <p className={ Styles.title }>Богослужение в храме</p>
+                { !BP.isTabletLandscape(mediaType) ? (
+                    <p className={ Styles.title }>{ element.episode.title }</p>
                     ) : null }
             </div>
         );
@@ -111,7 +118,7 @@ export default function Timeline(props) {
         <section className={ Styles.timelineComponent }>
             <div className={ Styles.scheduler }>
                 <div className={ Styles.clock }>
-                    <span>{ Moment(currentTime).format('LT') }</span>
+                    <span>{ moment(currentTime).format('LT') }</span>
                 </div>
                 <div className={ Styles.episodes } style={ episodesStyle }>
                     { episodes }
@@ -121,11 +128,26 @@ export default function Timeline(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Timeline.propTypes = {
     mediaType: PropTypes.string.isRequired,
     serverTime: PropTypes.string.isRequired,
     items: PropTypes.array
 };
+
+/**
+ * [CDP]
+ * Component default props
+ */
 Timeline.defaultProps = {
     items: []
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Timeline;

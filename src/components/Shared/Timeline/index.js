@@ -1,21 +1,81 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { Component, PropTypes } from 'react';
-import BreakPoints from 'helpers/breakpoints';
-import Desktop from './Views/Desktop';
-import Moment from 'moment';
-import items from './Mock/data.json';
+import { connect } from 'react-redux';
 
-export default class TimeLine extends Component {
+/**
+ * [IV]
+ * View Import
+ */
+import Desktop from './Views/Desktop';
+
+/**
+ * [IA]
+ */
+import * as actions from './reducer';
+
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
+
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+@connect((state) => {
+    const localState = state[config.id] ? state[config.id] : {};
+
+    return {
+        items: localState.items || [],
+        loaded: localState.loaded || false,
+        mediaType: state.browser.mediaType
+    };
+})
+class TimeLine extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
     static propTypes = {
+        items: PropTypes.array.isRequired,
         mediaType: PropTypes.string.isRequired
     };
 
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CIS]
+     * Internal state (optional)
+     */
     state = {
-        offset: 0,
         localTime: new Date()
     };
 
+    /**
+     * [CLOAD]
+     */
+    static loader = () => ({ store: { dispatch } }) => {
+        return dispatch(actions.fetchItems());
+    };
+
+    timer = null;
+
     componentDidMount = () => {
-        setInterval(this.updateTime, 1000 * 30);
+        this.timer = setInterval(this.updateTime, 1000 * 30);
+    };
+
+    componentWillUnmount = () => {
+        clearInterval(this.timer);
     };
 
     updateTime = () => {
@@ -24,18 +84,41 @@ export default class TimeLine extends Component {
         });
     };
 
+    /**
+     * [CR]
+     * Render function
+     */
     render() {
-        const { mediaType } = this.props;
-        const { localTime, offset } = this.state;
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { items, mediaType } = this.props;
 
-        const serverTime = Moment(localTime).add(offset, 's');
+        /**
+         * [RSD]
+         * State destructuring
+         */
+        const { localTime } = this.state;
 
-        return [
-            BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name,
-            BreakPoints.tabletPortrait.name
-        ].indexOf(mediaType) !== -1 ? null : (
-            <Desktop mediaType={ mediaType } serverTime={ serverTime.toISOString() } items={ items }/>
-        );
+        /**
+         * [RV]
+         * View
+         */
+        const view = BP.isDesktop(mediaType) ? (
+            <Desktop mediaType={ mediaType } serverTime={ localTime.toISOString() } items={ items }/>
+        ) : null;
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return view;
     }
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default TimeLine;
