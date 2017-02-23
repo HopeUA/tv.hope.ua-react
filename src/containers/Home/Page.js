@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { asyncConnect } from 'redux-connect';
 import Helmet from 'react-helmet';
-import getAsyncLoaders from 'utils/getAsyncLoaders';
+import getAsyncLoaders from 'lib/getAsyncLoaders';
 
 import Meta from './Meta';
 import * as Home from 'components/Home';
@@ -39,30 +39,20 @@ const loaders = getAsyncLoaders([
  */
 
 @asyncConnect(
-    loaders,
-    ({ browser }) => {
-        return { browser };
-    }
+    loaders
 )
-/* eslint-disable react/prefer-stateless-function */
-export default class HomePage extends Component {
-    static propTypes = {
-        browser: PropTypes.object.isRequired
-    };
-
-    render() {
-        const { browser } = this.props;
-
+class HomePage extends Component {
+    render = () => {
         return (
             <div>
                 <Helmet { ...Meta() }/>
                 <Shared.Header/>
                 <Shared.Timeline/>
-                <Home.Banner mediaType={ browser.mediaType }/>
-                <Home.Live mediaType={ browser.mediaType }/>
-                <Home.Shows mediaType={ browser.mediaType }/>
-                <Home.Articles mediaType={ browser.mediaType }/>
-                <Home.Top mediaType={ browser.mediaType }/>
+                <Home.Banner/>
+                <Home.Live/>
+                <Home.Shows/>
+                <Home.Articles/>
+                <Home.Top/>
                 <Home.Episodes
                     title={ 'Сейчас смотрят' }
                     type="now"
@@ -80,11 +70,13 @@ export default class HomePage extends Component {
                     type="recommended"
                     view="row"
                 />
-                <Footer.Banners mediaType={ browser.mediaType }/>
-                <Footer.Shows mediaType={ browser.mediaType }/>
-                <Footer.Form mediaType={ browser.mediaType }/>
-                <Footer.Navigation mediaType={ browser.mediaType }/>
+                <Footer.Banners/>
+                <Footer.Shows/>
+                <Footer.Form/>
+                <Footer.Navigation/>
             </div>
         );
     }
 }
+
+export default HomePage;

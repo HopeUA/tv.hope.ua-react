@@ -1,16 +1,92 @@
-import React, { PropTypes } from 'react';
-import Shows from './Views/Desktop/tpl';
+/**
+ * [IL]
+ * Library Import
+ */
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 
-import BreakPoints from 'helpers/breakpoints';
+/**
+ * [IV]
+ * View Import
+ */
+import Desktop from './Views/Desktop/tpl';
 
-export default function Component(props) {
-    const { mediaType } = props;
+/**
+ * [IBP]
+ * Pixel Perfect and Breakpoints
+ */
+import PixelPerfect from 'vendor/PixelPerfect/component';
+import BP from 'lib/breakpoints';
 
-    return [BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name
-    ].indexOf(mediaType) !== -1 ? null : (<Shows mediaType={ props.mediaType }/>);
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
+class Shows extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
+
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType } = this.props;
+
+        /**
+         * [RCD]
+         * Config destructuring
+         */
+        const { id } = config;
+
+        /**
+         * [RV]
+         * View
+         */
+        const view = BP.isMobile(mediaType) ? null : (
+            <Desktop mediaType={ mediaType }/>
+        );
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return (
+            <PixelPerfect component={ id }>
+                { view }
+            </PixelPerfect>
+        );
+    }
 }
 
-Component.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+/**
+ * [IE]
+ * Export
+ */
+export default Shows;

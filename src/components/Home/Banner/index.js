@@ -1,23 +1,96 @@
-import React, { PropTypes } from 'react';
-import Mobile from './Views/Mobile/';
-import Desktop from './Views/Desktop/';
+/**
+ * [IL]
+ * Library Import
+ */
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 
+/**
+ * [IV]
+ * View Import
+ */
+import Mobile from './Views/Mobile';
+import Desktop from './Views/Desktop';
+
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
+
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+/**
+ * [IDATA]
+ * Data Import (optional)
+ */
 import items from './Mock/data.json';
-import BreakPoints from 'helpers/breakpoints';
 
-export default function Banner(props) {
-    const { mediaType } = props;
-    const component = [
-        BreakPoints.phonePortrait.name,
-        BreakPoints.phoneLandscape.name,
-        BreakPoints.tabletPortrait.name
-    ].indexOf(mediaType) !== -1 ?
-            (<Mobile mediaType={ mediaType } items={ items }/>) : (<Desktop mediaType={ mediaType } items={ items }/>)
-    ;
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
+class Banner extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
 
-    return component;
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType } = this.props;
+
+        /**
+         * [RV]
+         * View
+         */
+        let view;
+
+        if (BP.isMobile(mediaType) || BP.isTabletPortrait(mediaType)) {
+            view = (
+                <Mobile mediaType={ mediaType } items={ items }/>
+            );
+        } else {
+            view = (
+                <Desktop mediaType={ mediaType } items={ items }/>
+            );
+        }
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return view;
+    }
 }
 
-Banner.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+/**
+ * [IE]
+ * Export
+ */
+export default Banner;
