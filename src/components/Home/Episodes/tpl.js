@@ -1,19 +1,45 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 
+/**
+ * [IV]
+ * View Import
+ */
 import Mobile from './Views/Mobile/tpl';
 import DesktopGrid from './Views/DesktopGrid/tpl';
 import DesktopRow from './Views/DesktopRow/tpl';
 
+/**
+ * [IBP]
+ * Pixel Perfect and Breakpoints
+ */
 import PixelPerfect from 'vendor/PixelPerfect/component';
-import BreakPoints from 'helpers/breakpoints';
+import BP from 'lib/breakpoints';
 
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
 @connect((state) => {
     return {
         mediaType: state.browser.mediaType
     };
 })
-export default class Episodes extends Component {
+class Episodes extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
         view: PropTypes.string.isRequired,
@@ -21,35 +47,45 @@ export default class Episodes extends Component {
         scrollDisable: PropTypes.bool
     };
 
+    /**
+     * [CDP]
+     * Component default props
+     */
     static defaultProps = {
         canRefresh: false,
         scrollDisable: false
     };
 
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CR]
+     * Render function
+     */
     render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
         const { mediaType, view, canRefresh, scrollDisable } = this.props;
 
-        const isMobile = [
-            BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name
-        ].indexOf(mediaType) !== -1;
+        /**
+         * [RCD]
+         * Config destructuring
+         */
+        const { id } = config;
 
-        const templates = [
-            BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name,
-            {
-                name: BreakPoints.tabletPortrait.name,
-                states: ['grid', 'row']
-            },
-            {
-                name: BreakPoints.tabletLandscape.name,
-                states: ['grid', 'row']
-            }
-        ];
-
+        /**
+         * [RV]
+         * View
+         */
         let component = null;
 
-        if (isMobile) {
+        if (BP.isMobile(mediaType)) {
             component = <Mobile mediaType={ mediaType }/>;
         } else {
             switch (view) {
@@ -70,10 +106,31 @@ export default class Episodes extends Component {
             }
         }
 
+        /**
+         * [RPPT]
+         * Pixel Perfect templates with state (optional)
+         */
+        const templates = [
+            BP.phonePortrait.name,
+            BP.phoneLandscape.name,
+            {
+                name: BP.tabletPortrait.name,
+                states: ['grid', 'row']
+            },
+            {
+                name: BP.tabletLandscape.name,
+                states: ['grid', 'row']
+            }
+        ];
+
+        /**
+         * [RR]
+         * Return Component
+         */
         return (
             <PixelPerfect
                 templates={ templates }
-                component="Home.Episodes"
+                component={ id }
                 state={ view }
             >
                 { component }
@@ -81,3 +138,9 @@ export default class Episodes extends Component {
         );
     }
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Episodes;
