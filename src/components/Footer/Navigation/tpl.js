@@ -1,12 +1,89 @@
-import React, { PropTypes } from 'react';
-import Navigation from './Views/Common/tpl';
+/**
+ * [IL]
+ * Library Import
+ */
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 
-export default function Component(props) {
-    const { mediaType } = props;
+/**
+ * [IV]
+ * View Import
+ */
+import Common from './Views/Common/tpl';
 
-    return <Navigation mediaType={ mediaType }/>;
+/**
+ * [IBP]
+ * Pixel Perfect and Breakpoints
+ */
+import PixelPerfect from 'vendor/PixelPerfect/component';
+
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
+class Navigation extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        mediaType: PropTypes.string.isRequired
+    };
+
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType } = this.props;
+
+        /**
+         * [RCD]
+         * Config destructuring
+         */
+        const { id } = config;
+
+        /**
+         * [RV]
+         * View
+         */
+        const view = <Common mediaType={ mediaType }/>;
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return (
+            <PixelPerfect component={ id }>
+                { view }
+            </PixelPerfect>
+        );
+    }
 }
 
-Component.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+/**
+ * [IE]
+ * Export
+ */
+export default Navigation;

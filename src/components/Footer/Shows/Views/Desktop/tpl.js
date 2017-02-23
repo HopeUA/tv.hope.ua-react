@@ -3,15 +3,9 @@ import React, { PropTypes } from 'react';
 import Grids from 'theme/Grid.scss';
 import Styles from './Styles/main.scss';
 
-import PixelPerfect from 'vendor/PixelPerfect/component';
 import BreakPoints from 'helpers/breakpoints';
 
-export default function Shows(props) {
-    const templates = [
-        BreakPoints.tabletPortrait.name,
-        BreakPoints.tabletLandscape.name
-    ];
-
+export default function Desktop(props) {
     const { mediaType } = props;
 
     if ([
@@ -138,17 +132,15 @@ export default function Shows(props) {
     );
 
     return (
-        <PixelPerfect templates={ templates } component="shows">
-            <section className={ Grids.container }>
-                <section className={ Styles.showsComponent }>
-                    { shows }
-                    { about }
-                </section>
+        <section className={ Grids.container }>
+            <section className={ Styles.showsComponent }>
+                { shows }
+                { about }
             </section>
-        </PixelPerfect>
+        </section>
     );
 }
-Shows.propTypes = {
+Desktop.propTypes = {
     mediaType: PropTypes.string.isRequired
 };
 

@@ -1,18 +1,71 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes, Component } from 'react';
-import Form from './Views/Desktop';
-import BreakPoints from 'helpers/breakpoints';
 import Fetch from 'isomorphic-fetch';
+import { connect } from 'react-redux';
+
+/**
+ * [IV]
+ * View Import
+ */
+import Desktop from './Views/Desktop';
+
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
+
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
 
 export const STATE_NORMAL = 'normal';
 export const STATE_LOADING = 'loading';
 export const STATE_ERROR = 'error';
 export const STATE_SUCCESS = 'success';
 
-export default class extends Component {
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect((state) => {
+    return {
+        mediaType: state.browser.mediaType
+    };
+})
+class Form extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
     static propTypes = {
         mediaType: PropTypes.string.isRequired
     };
 
+    /**
+     * [CDP]
+     * Component default props
+     */
+    static defaultProps = {
+        canRefresh: false,
+        scrollDisable: false
+    };
+
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    /**
+     * [CIS]
+     * Internal state (optional)
+     */
     state = {
         name: '',
         email: '',
@@ -20,6 +73,10 @@ export default class extends Component {
         form: STATE_NORMAL
     };
 
+    /**
+     * [CHM-HM]
+     * JSDoc for every helper method
+     */
     handleChange = (event) => {
         const el = event.target;
         this.setState({
@@ -27,7 +84,7 @@ export default class extends Component {
         });
     };
 
-    handleSubmit = async (event) => { // eslint-disable-line arrow-parens
+    handleSubmit = async (event) => { // eslint-disable-line arrow-parentheses
         const form = event.target.parentNode;
 
         if (this.state.form !== STATE_NORMAL || !form.checkValidity()) {
@@ -61,14 +118,23 @@ export default class extends Component {
         event.preventDefault();
     };
 
-    render() {
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        /**
+         * [RPD]
+         * Props destructuring
+         */
         const { mediaType } = this.props;
 
-        return [
-            BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name
-        ].indexOf(mediaType) !== -1 ? null : (
-            <Form
+        /**
+         * [RV]
+         * View
+         */
+        const view = BP.isMobile(mediaType) ? null : (
+            <Desktop
                 handleChange={ this.handleChange }
                 handleSubmit={ this.handleSubmit }
                 handleDefaultSubmit={ this.handleDefaultSubmit }
@@ -76,5 +142,17 @@ export default class extends Component {
                 { ...this.state }
             />
         );
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return view;
     }
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Form;
