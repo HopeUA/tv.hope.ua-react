@@ -12,7 +12,7 @@ import Ok from 'components/Assets/Social/Ok';
 import Vk from 'components/Assets/Social/Vk';
 import Top from 'components/Assets/Icons/Top';
 
-export default function Navigation(props) {
+export default function Common(props) {
     const { mediaType } = props;
 
     const info = (
@@ -140,6 +140,6 @@ export default function Navigation(props) {
     );
 }
 
-Navigation.propTypes = {
+Common.propTypes = {
     mediaType: PropTypes.string.isRequired
 };

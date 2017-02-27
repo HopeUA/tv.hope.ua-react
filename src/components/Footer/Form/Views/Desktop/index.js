@@ -3,7 +3,7 @@ import Styles from './Styles/main.scss';
 import Submit, { TYPE_NORMAL, TYPE_LOADING, TYPE_ERROR, TYPE_SUCCESS } from 'components/Assets/Icons/Submit';
 import { STATE_NORMAL, STATE_LOADING, STATE_ERROR, STATE_SUCCESS } from '../..';
 
-export default function Form(props) {
+export default function Desktop(props) {
     const { handleChange, name, email, message, handleSubmit, handleDefaultSubmit, state } = props;
 
     let submitProps = {};
@@ -95,7 +95,7 @@ export default function Form(props) {
     );
 }
 
-Form.propTypes = {
+Desktop.propTypes = {
     handleChange: PropTypes.func.isRequired,
     handleSubmit: PropTypes.func.isRequired,
     handleDefaultSubmit: PropTypes.func.isRequired,
