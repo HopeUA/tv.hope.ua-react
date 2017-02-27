@@ -68,7 +68,7 @@ class BP {
     }
 
     static isTabletLandscape(mediaType) {
-        return BP.phoneLandscape.name === mediaType;
+        return BP.tabletLandscape.name === mediaType;
     }
 
     static isDesktop(mediaType, desktopOnly = false) {
