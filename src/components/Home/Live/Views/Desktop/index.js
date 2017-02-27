@@ -4,8 +4,8 @@
  */
 import React, { Component, PropTypes } from 'react';
 import Moment from 'moment';
-import flowplayer from 'flowplayer';
-import fpEngine from 'flowplayer-hlsjs';
+// import flowplayer from 'flowplayer';
+// import fpEngine from 'flowplayer-hlsjs';
 
 /**
  * [IS]
@@ -53,26 +53,26 @@ class Desktop extends Component {
         isMuted: false
     };
 
-    videoContainer = null;
-
-    componentDidMount = () => {
-        if (this.videoContainer) {
-            fpEngine(flowplayer);
-
-            flowplayer(this.videoContainer, {
-                live: true,
-                autoplay: true,
-                clip: {
-                    sources: [
-                        {
-                            type: 'application/x-mpegurl',
-                            src: 'https://stream.hope.ua/hopeua/smil:hopeua.smil/playlist.m3u8'
-                        }
-                    ]
-                }
-            });
-        }
-    };
+    // videoContainer = null;
+    //
+    // componentDidMount = () => {
+    //     if (this.videoContainer) {
+    //         fpEngine(flowplayer);
+    //
+    //         flowplayer(this.videoContainer, {
+    //             live: true,
+    //             autoplay: true,
+    //             clip: {
+    //                 sources: [
+    //                     {
+    //                         type: 'application/x-mpegurl',
+    //                         src: 'https://stream.hope.ua/hopeua/smil:hopeua.smil/playlist.m3u8'
+    //                     }
+    //                 ]
+    //             }
+    //         });
+    //     }
+    // };
 
     render() {
         const { mediaType, currentTime, items, isMuted, t } = this.props;

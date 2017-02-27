@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 /**
  * [IV]
@@ -22,13 +23,7 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
-
-/**
- * [IDATA]
- * Data Import (optional)
- */
-// TODO Забирать данные по api
-import items from './Mock/data.json';
+import * as actions from './reducer';
 
 /**
  * [IRDX]
@@ -36,16 +31,21 @@ import items from './Mock/data.json';
  */
 @connect((state) => {
     return {
-        mediaType: state.browser.mediaType
+        mediaType: state.browser.mediaType,
+        items: state[config.id].popular.items
     };
+}, (dispatch) => {
+    return bindActionCreators({ ...actions }, dispatch);
 })
+
 class Shows extends Component {
     /**
      * [CPT]
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        items: PropTypes.array.isRequired
     };
 
     /**
@@ -53,6 +53,10 @@ class Shows extends Component {
      * Component display name
      */
     static displayName = config.id;
+
+    static loader = (params) => ({ store: { dispatch } }) => {
+        return dispatch(actions.fetchItems(params.type));
+    };
 
     /**
      * [CR]
@@ -63,7 +67,7 @@ class Shows extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, items } = this.props;
 
         /**
          * [RV]

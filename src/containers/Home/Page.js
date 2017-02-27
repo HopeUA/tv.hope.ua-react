@@ -32,6 +32,12 @@ const loaders = getAsyncLoaders([
     },
     {
         component: Shared.Timeline
+    },
+    {
+        component: Home.Shows,
+        params: {
+            type: 'popular'
+        }
     }
 ]);
 /**

@@ -34,11 +34,24 @@ class Media {
 
         return result.data;
     }
-    // async getShows(params) {
-    //     switch (params.type) {
-    //         case
-    //     }
-    // }
+
+    static async getShows(params) {
+        const resource = 'shows';
+        const limit = '?limit=20';
+
+        switch (params.type) {
+            case 'popular':
+                break;
+            default: throw new Error(`Media API: ${params.type} is not defined`);
+        }
+
+        const url = `${this.endpoint}/${resource}/${params.type}${limit}`;
+
+        const response = await fetch(url);
+        const result = await response.json();
+
+        return result.data;
+    }
 }
 
 export default Media;
