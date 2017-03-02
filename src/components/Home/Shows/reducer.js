@@ -1,8 +1,9 @@
 import { createAction, handleActions } from 'redux-actions';
 import MediaApi from 'api/Media';
+import config from './config';
 
 const actions = {
-    FETCH: '@hope/Home.Shows/FETCH'
+    FETCH: `@hope/${config.id}/FETCH`
 };
 
 export const fetchItems = createAction(actions.FETCH, async (type = 'popular') => {

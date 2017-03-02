@@ -78,14 +78,14 @@
                     }
 
                     .image {
-                        background-size: 140%;
-                        filter: blur(3px);
+                        transform: scale(1.1) translateY(-34px);
+                        filter: grayscale(70%);
                     }
                 }
 
                 .image {
                     height: px(248);
-                    transition: filter, background-size .3s;
+                    transition: all .3s;
                     background-position: center;
                     background-size: 110%;
                 }

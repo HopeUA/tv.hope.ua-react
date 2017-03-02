@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { asyncConnect } from 'redux-connect';
 import Helmet from 'react-helmet';
 import getAsyncLoaders from 'lib/getAsyncLoaders';
+import { translate } from 'react-i18next';
 
 import Meta from './Meta';
 import * as Home from 'components/Home';
@@ -44,10 +45,14 @@ const loaders = getAsyncLoaders([
  * END Async data loading
  */
 
+@translate(['common'])
 @asyncConnect(
     loaders
 )
 class HomePage extends Component {
+    static propTypes = {
+        t: PropTypes.func.isRequired
+    };
     render = () => {
         return (
             <div>
@@ -56,7 +61,7 @@ class HomePage extends Component {
                 <Shared.Timeline/>
                 <Home.Banner/>
                 <Home.Live/>
-                <Home.Shows/>
+                <Home.Shows title={ this.props.t('Home.Shows.title') }/>
                 <Home.Articles/>
                 <Home.Top/>
                 <Home.Episodes

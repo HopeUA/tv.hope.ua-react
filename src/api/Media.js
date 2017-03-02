@@ -37,7 +37,7 @@ class Media {
 
     static async getShows(params) {
         const resource = 'shows';
-        const limit = '?limit=20';
+        const limit = '?limit=16';
 
         switch (params.type) {
             case 'popular':

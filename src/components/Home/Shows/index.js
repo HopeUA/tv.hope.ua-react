@@ -45,7 +45,8 @@ class Shows extends Component {
      */
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
-        items: PropTypes.array.isRequired
+        items: PropTypes.array.isRequired,
+        title: PropTypes.string.isRequired
     };
 
     /**
@@ -67,14 +68,13 @@ class Shows extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType, items } = this.props;
-
+        const { mediaType, items, title } = this.props;
         /**
          * [RV]
          * View
          */
         const view = BP.isDesktop(mediaType) || BP.isTabletPortrait(mediaType) ? (
-            <Desktop items={ items }/>
+            <Desktop items={ items } title={ title }/>
         ) : null;
 
         /**
