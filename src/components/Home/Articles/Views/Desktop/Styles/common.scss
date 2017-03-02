@@ -65,6 +65,7 @@
 
                 .image {
                     height: px(248);
+                    will-change: filter, transform;
                     transition: filter.3s, transform .3s;
                     background-position: center;
                     background-size: 110%;
