@@ -25,7 +25,7 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
-import configTimeLine from 'components/Shared/Timeline/config';
+import timelineConfig from 'components/Shared/Timeline/config';
 
 /**
  * [IDATA]
@@ -39,7 +39,8 @@ const liveUrl = 'https://live-tv.hope.ua/nadia-publish/smil:nadia.smil/playlist.
  */
 @translate(['common'])
 @connect((state) => {
-    const timeLineItems = state[configTimeLine.id].items;
+    const localState = state[timelineConfig.id] ? state[timelineConfig.id] : {};
+    const timeLineItems = localState.items ? localState.items : [];
     const items = timeLineItems.filter((element, index) => {
         return moment(element.date)
                 .isSameOrAfter(moment()) || moment()

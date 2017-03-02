@@ -120,9 +120,7 @@ class Desktop extends Component {
         const nextImageStyle = { backgroundImage: `url(${nextImage})` };
         const currentImageStyle = { backgroundImage: `url(${currentImage})` };
 
-        const nextVideo = BP.isTabletPortrait(mediaType) ? (
-            null
-        ) : (
+        const nextVideo = !BP.isTabletPortrait(mediaType) ? (
             <section className={ Styles.nextContainer }>
                 <h1>{ t('Home.Live.next') }</h1>
                 <div className={ Styles.nextVideo }>
@@ -142,7 +140,7 @@ class Desktop extends Component {
                     </div>
                 </div>
             </section>
-        );
+        ) : null;
 
         return (
             <section className={ Grids.container }>

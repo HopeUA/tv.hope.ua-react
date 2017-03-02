@@ -53,7 +53,10 @@ class HomePage extends Component {
     static propTypes = {
         t: PropTypes.func.isRequired
     };
+
     render = () => {
+        const { t } = this.props;
+
         return (
             <div>
                 <Helmet { ...Meta() }/>
@@ -61,7 +64,7 @@ class HomePage extends Component {
                 <Shared.Timeline/>
                 <Home.Banner/>
                 <Home.Live/>
-                <Home.Shows title={ this.props.t('Home.Shows.title') }/>
+                <Home.Shows title={ t('Home.Shows.title') }/>
                 <Home.Articles/>
                 <Home.Top/>
                 <Home.Episodes

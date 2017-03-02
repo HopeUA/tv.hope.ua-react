@@ -30,9 +30,12 @@ import * as actions from './reducer';
  * Redux connect (optional)
  */
 @connect((state) => {
+    const localState = state[config.id] ? state[config.id] : {};
+    const popular = localState.popular ? localState.popular : {};
+
     return {
         mediaType: state.browser.mediaType,
-        items: state[config.id].popular.items
+        items: popular.items ? popular.items : []
     };
 }, (dispatch) => {
     return bindActionCreators({ ...actions }, dispatch);

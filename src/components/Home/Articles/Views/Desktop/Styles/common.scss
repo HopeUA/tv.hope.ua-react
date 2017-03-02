@@ -63,6 +63,13 @@
                 cursor: pointer;
                 overflow: hidden;
 
+                .image {
+                    height: px(248);
+                    transition: filter.3s, transform .3s;
+                    background-position: center;
+                    background-size: 110%;
+                }
+
                 &:hover {
                     .info {
                         height: px(392);
@@ -81,13 +88,6 @@
                         transform: scale(1.1) translateY(-34px);
                         filter: grayscale(70%);
                     }
-                }
-
-                .image {
-                    height: px(248);
-                    transition: all .3s;
-                    background-position: center;
-                    background-size: 110%;
                 }
 
                 .info {
