@@ -9,6 +9,7 @@ import locale from './locale';
  */
 import episodes from 'components/Home/Episodes/reducer';
 import timeline from 'components/Shared/Timeline/reducer';
+import shows from 'components/Home/Shows/reducer';
 // import watchUs from './watchUs';
 
 export default combineReducers({
@@ -26,6 +27,7 @@ export default combineReducers({
     reduxAsyncConnect,
     locale,
     'Home.Episodes': episodes,
-    'Shared.Timeline': timeline
+    'Shared.Timeline': timeline,
+    'Home.Shows': shows
     // watchUs
 });

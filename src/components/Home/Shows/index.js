@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 /**
  * [IV]
@@ -22,30 +23,32 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
-
-/**
- * [IDATA]
- * Data Import (optional)
- */
-// TODO Забирать данные по api
-import items from './Mock/data.json';
+import * as actions from './reducer';
 
 /**
  * [IRDX]
  * Redux connect (optional)
  */
 @connect((state) => {
+    const localState = state[config.id] && state[config.id].popular ? state[config.id].popular : {};
+
     return {
-        mediaType: state.browser.mediaType
+        mediaType: state.browser.mediaType,
+        items: localState.items ? localState.items : []
     };
+}, (dispatch) => {
+    return bindActionCreators({ ...actions }, dispatch);
 })
+
 class Shows extends Component {
     /**
      * [CPT]
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        items: PropTypes.array.isRequired,
+        title: PropTypes.string.isRequired
     };
 
     /**
@@ -53,6 +56,10 @@ class Shows extends Component {
      * Component display name
      */
     static displayName = config.id;
+
+    static loader = (params) => ({ store: { dispatch } }) => {
+        return dispatch(actions.fetchItems(params.type));
+    };
 
     /**
      * [CR]
@@ -63,14 +70,13 @@ class Shows extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
-
+        const { mediaType, items, title } = this.props;
         /**
          * [RV]
          * View
          */
         const view = BP.isDesktop(mediaType) || BP.isTabletPortrait(mediaType) ? (
-            <Desktop items={ items }/>
+            <Desktop items={ items } title={ title }/>
         ) : null;
 
         /**

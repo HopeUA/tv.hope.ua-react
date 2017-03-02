@@ -1,48 +1,84 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { Component, PropTypes } from 'react';
 import Moment from 'moment';
+// import flowplayer from 'flowplayer';
+// import fpEngine from 'flowplayer-hlsjs';
 
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
-import Palette from 'components/Assets/Palette';
-import BreakPoints from 'vendor/PixelPerfect/breakpoints';
+
+/**
+ * [IA]
+ * Assets Import
+ */
 
 import Arrow from 'components/Assets/Icons/Arrow';
 import PlayPause from 'components/Assets/Icons/PlayPause';
 import Volume from 'components/Assets/Icons/Volume';
 import FullScreen from 'components/Assets/Icons/FullScreen';
 
-export default class Desktop extends Component {
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import Palette from 'components/Assets/Palette';
+import BP from 'lib/breakpoints';
+
+class Desktop extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
         currentTime: PropTypes.string.isRequired,
         items: PropTypes.array,
-        isMuted: PropTypes.bool
+        isMuted: PropTypes.bool,
+        t: PropTypes.func.isRequired
     };
+
+    /**
+     * [CDP]
+     * Component default props
+     */
     static defaultProps = {
         items: [],
         isMuted: false
     };
 
-    videoContainer = null;
-
-    componentDidMount = () => {
-        // TODO Вставить flowplayer
-        // flowplayer(this.videoContainer, {
-        //     live: true,
-        //     autoplay: true,
-        //     clip: {
-        //         sources: [
-        //             {
-        //                 type: 'application/x-mpegurl',
-        //                 src: 'https://live-tv.hope.ua/nadia-publish/smil:nadia.smil/playlist.m3u8'
-        //             }
-        //         ]
-        //     }
-        // });
-    };
+    // videoContainer = null;
+    //
+    // componentDidMount = () => {
+    //     if (this.videoContainer) {
+    //         fpEngine(flowplayer);
+    //
+    //         flowplayer(this.videoContainer, {
+    //             live: true,
+    //             autoplay: true,
+    //             clip: {
+    //                 sources: [
+    //                     {
+    //                         type: 'application/x-mpegurl',
+    //                         src: 'https://stream.hope.ua/hopeua/smil:hopeua.smil/playlist.m3u8'
+    //                     }
+    //                 ]
+    //             }
+    //         });
+    //     }
+    // };
 
     render() {
-        const { mediaType, currentTime, items, isMuted } = this.props;
+        const { mediaType, currentTime, items, isMuted, t } = this.props;
+        if (items.length < 3) {
+            return null;
+        }
 
         const [current, next, third] = items;
 
@@ -50,12 +86,14 @@ export default class Desktop extends Component {
         const test = true;
 
         const currentDescription = current.episode.description === '' ?
-            current.show.description : current.episode.description;
-        const nextDescription = next.episode.description === '' ? next.show.description : next.episode.description;
+            current.show.description.short : current.episode.description;
+        const nextDescription = next.episode.description === '' ? next
+                .show.description.short : next.episode.description;
         const nextImage = next.episode.image === '' ? next.show.images.cover : next.episode.image;
+        const currentImage = current.episode.image === '' ? current.show.images.cover : current.episode.image;
         const episodeLink = current.episode.code === '' ? null : (
             <div className={ Styles.episodeLink }>
-                <a href="#" className={ Styles.episode } >Перейти к выпуску</a>
+                <a href="#" className={ Styles.episode } >{ t('Home.Live.goToEpisode') }</a>
                 <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
             </div>
         );
@@ -80,39 +118,40 @@ export default class Desktop extends Component {
         const timeStyles = { transform: `translateX(${progress}%)` };
         const timelineStyles = { width: `${episodeProgress}%` };
         const nextImageStyle = { backgroundImage: `url(${nextImage})` };
+        const currentImageStyle = { backgroundImage: `url(${currentImage})` };
 
-        const nextVideo = BreakPoints.tabletPortrait.name === mediaType ? (
-            null
-        ) : (<section className={ Styles.nextContainer }>
-            <h1>Дальше в эфире</h1>
-            <div className={ Styles.nextVideo }>
-                <div className={ Styles.image } style={ nextImageStyle }/>
-                <div className={ Styles.info }>
-                    <div className={ Styles.bar }>
-                        <span className={ Styles.startTime }>{ Moment(next.date).format('LT') }</span>
-                        <span className={ Styles.timeLine }/>
-                        <span className={ Styles.endTime }>{ Moment(third.date).format('LT') }</span>
+        const nextVideo = !BP.isTabletPortrait(mediaType) ? (
+            <section className={ Styles.nextContainer }>
+                <h1>{ t('Home.Live.next') }</h1>
+                <div className={ Styles.nextVideo }>
+                    <div className={ Styles.image } style={ nextImageStyle }/>
+                    <div className={ Styles.info }>
+                        <div className={ Styles.bar }>
+                            <span className={ Styles.startTime }>{ Moment(next.date).format('LT') }</span>
+                            <span className={ Styles.timeLine }/>
+                            <span className={ Styles.endTime }>{ Moment(third.date).format('LT') }</span>
+                        </div>
+                        <h2>{ next.show.title }</h2>
+                        <div className={ Styles.link }>
+                            <a href="#">{ next.episode.title }</a>
+                            <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
+                        </div>
+                        <span className={ Styles.description }>{ nextDescription.replace(/<(?:.|\n)*?>/gm, ' ') }</span>
                     </div>
-                    <h2>{ next.show.title }</h2>
-                    <div className={ Styles.link }>
-                        <a href="#">{ next.episode.title }</a>
-                        <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
-                    </div>
-                    <span className={ Styles.description }>{ nextDescription }</span>
                 </div>
-            </div>
-        </section>);
+            </section>
+        ) : null;
 
         return (
             <section className={ Grids.container }>
                 <section className={ Styles.liveComponent }>
                     <section className={ Styles.liveContainer }>
-                        <h1 className={ Styles.label }>в эфире</h1>
+                        <h1 className={ Styles.label }>{ t('Home.Live.live') }</h1>
                         <div className={ Styles.live }>
                             <div className={ Styles.videoContainer }>
                                 <div
                                     className={ Styles.video }
-                                    style={ nextImageStyle } ref={ (ref) => { this.videoContainer = ref; } }
+                                    style={ currentImageStyle } ref={ (ref) => { this.videoContainer = ref; } }
                                 />
                                 <div className={ Styles.iconsBlock }>
                                     <div className={ Styles.icons }>
@@ -142,7 +181,7 @@ export default class Desktop extends Component {
                                     <a href="#" className={ Styles.show }>{ current.show.title }</a>
                                     <Arrow color={ Palette.commonColor1 } className={ Styles.arrow }/>
                                 </div>
-                                <p>{ currentDescription }</p>
+                                <p>{ currentDescription.replace(/<(?:.|\n)*?>/gm, ' ') }</p>
                                 { episodeLink }
                             </div>
                         </div>
@@ -153,3 +192,9 @@ export default class Desktop extends Component {
         );
     }
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Desktop;

@@ -1,11 +1,28 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { Component, PropTypes } from 'react';
 
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
 
+/**
+ * [IA]
+ * Assets Import
+ */
 import PlaySmall from 'components/Assets/Icons/PlaySmall';
 import Palette from 'components/Assets/Palette';
+
 /* eslint-disable */
-export default class Mobile extends Component {
+class Mobile extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
     static propTypes = {
         url: PropTypes.string.isRequired
     };
@@ -30,7 +47,11 @@ export default class Mobile extends Component {
     }
 }
 
-
+/**
+ * [IE]
+ * Export
+ */
+export default Mobile;
 // <video ref={ (ref) => this.video = ref }>
 //     <source src={ url } type="application/x-mpegurl"/>
 // </video>

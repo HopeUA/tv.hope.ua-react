@@ -1,17 +1,33 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
 
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
+
+/**
+ * [IA]
+ * Assets Import
+ */
 import Palette from 'components/Assets/Palette';
-
-import BreakPoints from 'vendor/PixelPerfect/breakpoints';
-
 import Arrow from 'components/Assets/Icons/Arrow';
 import PlayPause from 'components/Assets/Icons/PlayPause';
 import Volume from 'components/Assets/Icons/Volume';
 import FullScreen from 'components/Assets/Icons/FullScreen';
 
-export default function Desktop(props) {
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BreakPoints from 'vendor/PixelPerfect/breakpoints';
+
+function Desktop(props) {
     const style = {
         backgroundImage: 'url(https://tv.hope.ua/wp-content/uploads/2016/02/green-landscape-wallpaper.jpg)'
     };
@@ -94,6 +110,16 @@ export default function Desktop(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Desktop.propTypes = {
     mediaType: PropTypes.string.isRequired
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Desktop;
