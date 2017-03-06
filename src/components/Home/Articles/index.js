@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 /**
  * [IV]
@@ -23,29 +24,32 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
-
-/**
- * [IDATA]
- * Data Import (optional)
- */
-import items from './Mock/data.json';
+import * as actions from './reducer';
 
 /**
  * [IRDX]
  * Redux connect (optional)
  */
 @connect((state) => {
+    const localState = state[config.id] && state[config.id].news ? state[config.id].news : {};
+
     return {
-        mediaType: state.browser.mediaType
+        mediaType: state.browser.mediaType,
+        items: localState.items ? localState.items : []
     };
+}, (dispatch) => {
+    return bindActionCreators({ ...actions }, dispatch);
 })
+
 class Articles extends Component {
     /**
      * [CPT]
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        items: PropTypes.array.isRequired,
+        title: PropTypes.string.isRequired
     };
 
     /**
@@ -53,7 +57,9 @@ class Articles extends Component {
      * Component display name
      */
     static displayName = config.id;
-
+    static loader = (params) => ({ store: { dispatch } }) => {
+        return dispatch(actions.fetchItems(params.type));
+    };
     /**
      * [CR]
      * Render function
@@ -63,7 +69,7 @@ class Articles extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, items, title } = this.props;
 
         /**
          * [RV]
@@ -76,11 +82,12 @@ class Articles extends Component {
                 <Mobile
                     items={ items }
                     mediaType={ mediaType }
+                    title={ title }
                 />
             );
         } else {
             view = (
-                <Desktop items={ items }/>
+                <Desktop items={ items } title={ title }/>
             );
         }
 

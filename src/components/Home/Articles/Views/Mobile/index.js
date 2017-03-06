@@ -11,7 +11,7 @@ import BubbleArticle from 'components/Assets/Icons/BubbleArticle';
 Moment.locale('ru');
 
 export default function Mobile(props) {
-    const { items, mediaType } = props;
+    const { items, mediaType, title } = props;
 
     const articles = items.map((el) => {
         const background = {
@@ -48,7 +48,7 @@ export default function Mobile(props) {
 
     return (
         <section className={ Styles.articleComponent }>
-            <h1 className={ Styles.title }>Анонсы</h1>
+            <h1 className={ Styles.title }>{ title }</h1>
             {
                 BreakPoints.phonePortrait.name === mediaType ? (
                     <SwipeableViews { ...swipeParams }>
@@ -62,7 +62,8 @@ export default function Mobile(props) {
 
 Mobile.propTypes = {
     items: PropTypes.array,
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
 };
 
 Mobile.defaultProps = {
