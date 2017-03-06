@@ -1,5 +1,5 @@
 import { createAction, handleActions } from 'redux-actions';
-import MediaApi from 'api/Media';
+import ContentApi from 'api/Content';
 import config from './config';
 
 const actions = {
@@ -7,7 +7,7 @@ const actions = {
 };
 
 export const fetchItems = createAction(actions.FETCH, async (type = 'news') => {
-    const items = await MediaApi.getArticles({ type });
+    const items = await ContentApi.getArticles({ type });
 
     return {
         items,
