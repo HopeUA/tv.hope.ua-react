@@ -39,6 +39,12 @@ const loaders = getAsyncLoaders([
         params: {
             type: 'popular'
         }
+    },
+    {
+        component: Home.Articles,
+        params: {
+            type: 'news'
+        }
     }
 ]);
 /**
@@ -65,7 +71,7 @@ class HomePage extends Component {
                 <Home.Banner/>
                 <Home.Live/>
                 <Home.Shows title={ t('Home.Shows.title') }/>
-                <Home.Articles/>
+                <Home.Articles title={ t('Home.Articles.title') }/>
                 <Home.Top/>
                 <Home.Episodes
                     title={ 'Сейчас смотрят' }

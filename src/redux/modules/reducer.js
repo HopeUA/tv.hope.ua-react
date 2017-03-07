@@ -10,6 +10,7 @@ import locale from './locale';
 import episodes from 'components/Home/Episodes/reducer';
 import timeline from 'components/Shared/Timeline/reducer';
 import shows from 'components/Home/Shows/reducer';
+import articles from 'components/Home/Articles/reducer';
 // import watchUs from './watchUs';
 
 export default combineReducers({
@@ -28,6 +29,6 @@ export default combineReducers({
     locale,
     'Home.Episodes': episodes,
     'Shared.Timeline': timeline,
-    'Home.Shows': shows
-    // watchUs
+    'Home.Shows': shows,
+    'Home.Articles': articles
 });
