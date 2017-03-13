@@ -1,14 +1,51 @@
-import React, { PropTypes } from 'react';
-import Info from './View/Common/tpl';
+/**
+ * [IL]
+ * Library Import
+ */
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 
-export default function Component(props) {
-    const { mediaType } = props;
+/**
+ * [IV]
+ * View Import
+ */
+import Common from './View/Common/tpl';
 
-    return (
-        <Info mediaType={ mediaType }/>
-    );
+/**
+ * [IRDX]
+ * Redux connect (optional)
+ */
+@connect(({ browser }) => {
+    return { browser };
+})
+class Info extends Component {
+    /**
+     * [CPT]
+     * Component prop types
+     */
+    static propTypes = {
+        browser: PropTypes.object.isRequired
+    };
+
+    /**
+     * [CR]
+     * Render function
+     */
+    render = () => {
+        const { browser } = this.props;
+
+        /**
+         * [RR]
+         * Return Component
+         */
+        return (
+            <Common mediaType={ browser.mediaType }/>
+        );
+    }
 }
 
-Component.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
+/**
+ * [IE]
+ * Export
+ */
+export default Info;
