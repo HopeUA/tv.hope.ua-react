@@ -10,7 +10,7 @@ import { translate } from 'react-i18next';
  * [IV]
  * View Import
  */
-import Info from './View/Common';
+import Common from './View/Common';
 
 /**
  * [IRDX]
@@ -20,7 +20,7 @@ import Info from './View/Common';
     return { browser };
 })
 @translate(['common'])
-class info extends Component {
+class Info extends Component {
     /**
      * [CPT]
      * Component prop types
@@ -43,7 +43,7 @@ class info extends Component {
          * Return Component
          */
         return (
-            <Info mediaType={ browser.mediaType } social={ social } t={ t }/>
+            <Common mediaType={ browser.mediaType } social={ social } t={ t }/>
         );
     }
 }
@@ -52,4 +52,4 @@ class info extends Component {
  * [IE]
  * Export
  */
-export default info;
+export default Info;

@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
  * [IV]
  * View Import
  */
-import Info from './View/Common/tpl';
+import Common from './View/Common/tpl';
 
 /**
  * [IRDX]
@@ -18,7 +18,7 @@ import Info from './View/Common/tpl';
 @connect(({ browser }) => {
     return { browser };
 })
-class infoComponent extends Component {
+class Info extends Component {
     /**
      * [CPT]
      * Component prop types
@@ -39,7 +39,7 @@ class infoComponent extends Component {
          * Return Component
          */
         return (
-            <Info mediaType={ browser.mediaType }/>
+            <Common mediaType={ browser.mediaType }/>
         );
     }
 }
@@ -48,4 +48,4 @@ class infoComponent extends Component {
  * [IE]
  * Export
  */
-export default infoComponent;
+export default Info;
