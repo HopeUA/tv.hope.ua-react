@@ -62,9 +62,11 @@
             }
 
             div {
+                align-items: flex-start;
+
                 p {
                     margin-top: 0;
-                    margin-left: px(32);
+                    margin-left: px(20);
                     font-size: px(28);
                     line-height: px(36);
                 }
@@ -91,13 +93,17 @@
                         left: px(-26);
                         height: px(36);
                     }
+
+                    &::after {
+                        font-size: px(30);
+                    }
                 }
             }
 
             div {
                 p {
                     margin-top: px(6);
-                    margin-left: px(32);
+                    margin-left: px(20);
                     font-size: px(28);
                     line-height: px(36);
                 }

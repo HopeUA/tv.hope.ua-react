@@ -1,11 +1,21 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import BreakPoints from 'helpers/breakpoints';
+
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 
+/**
+ * [IA]
+ * Assets Import
+ */
 import Palette from 'components/Assets/Palette';
-
 import ContactUs from '../../Assets/ContactUs';
 import Mail from '../../Assets/Mail';
 import PhoneAndInternet from '../../Assets/PhoneAndInternet';
@@ -21,15 +31,28 @@ import YouTube from 'components/Assets/Social/YouTube';
 import Ok from 'components/Assets/Social/Ok';
 import Vk from 'components/Assets/Social/Vk';
 
-/* eslint-disable react/prefer-stateless-function */
-@connect(({ browser }) => {
-    return { browser };
-})
-export default class Info extends Component {
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
+
+class Info extends Component {
+
+    /**
+     * [CPT]
+     * Component prop types
+     */
     static propTypes = {
-        browser: PropTypes.object.isRequired
+        mediaType: PropTypes.string.isRequired,
+        social: PropTypes.object.isRequired,
+        t: PropTypes.func.isRequired
     };
 
+    /**
+     * [CHM-HM]
+     * JSDoc for every helper method
+     */
     componentDidMount = () => {
         /* eslint-disable no-undef */
         window.senderCallback = () => {
@@ -59,40 +82,58 @@ export default class Info extends Component {
         /* eslint-enable no-undef */
     };
 
+    round = (num) => {
+        return Math.round(num / 1000);
+    };
+
+    /**
+     * [CR]
+     * Render function
+     */
     render() {
-        const { browser } = this.props;
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType, social, t } = this.props;
 
-        const socialTitle = browser.mediaType === BreakPoints.tabletPortrait.name ?
-            'Ищите нас в социальных сетях'
-            : 'Ищите в соц. сетях';
+        const socialTitle = BP.isTabletPortrait(mediaType) ?
+            t('Contacts.Info.searchUs.2')
+            : t('Contacts.Info.searchUs.1');
 
+        /**
+         * [RR]
+         * Return Component
+         */
         return (
             <section className={ Grids.container }>
                 <section className={ Styles.infoComponent }>
                     <section className={ Styles.live }>
                         <header>
                             <ContactUs color1={ Palette.commonColor2 } color2={ Palette.mainColor3 }/>
-                            <h1>Общайтесь онлайн</h1>
+                            <h1>{ t('Contacts.Info.communicateOnline') }</h1>
                         </header>
                         <div className={ Styles.chat }>
-                            <p>Онлайн чат работает каждый день с <b>9:00 до 17:00</b></p>
+                            <p>{ t('Contacts.Info.scheduleChat.1') }<b>{ t('Contacts.Info.scheduleChat.2') }</b></p>
                             <a href="#" onClick={ this.startChat }>
                                 <WriteButton color={ Palette.mainColor4 }/>
-                                Написать в онлайн чат
+                                { t('Contacts.Info.chatButton') }
                             </a>
                         </div>
                         <div className={ Styles.call }>
-                            <p>Контакт-центр работает каждый день с <b>9:00 до 21:00</b></p>
+                            <p>{ t('Contacts.Info.callCenterSchedule.1') }
+                                <b>{ t('Contacts.Info.callCenterSchedule.2') }</b>
+                            </p>
                             <a href="skype:contact-hope?call">
                                 <PhoneButton color={ Palette.mainColor4 }/>
-                                Позвонить нам сейчас
+                                { t('Contacts.Info.callButton') }
                             </a>
                         </div>
                     </section>
                     <section className={ Styles.contacts }>
                         <header>
                             <PhoneAndInternet color1={ Palette.commonColor2 } color2={ Palette.mainColor3 }/>
-                            <h1>Задайте вопрос</h1>
+                            <h1>{ t('Contacts.Info.askUs') }</h1>
                         </header>
                         <div className={ Styles.phone }>
                             <div className={ Styles.row }>
@@ -100,7 +141,10 @@ export default class Info extends Component {
                                 <span>0 800 30 20 20</span>
                             </div>
                             <div>
-                                <p><span>Звоните</span> ежедневно: <b>9:00-21:00</b></p>
+                                <p>
+                                    { t('Contacts.Info.callEveryDay.1') }<br/>
+                                    <b>{ t('Contacts.Info.callEveryDay.2') }</b>
+                                </p>
                             </div>
                         </div>
                         <div className={ Styles.skype }>
@@ -109,7 +153,7 @@ export default class Info extends Component {
                                 <a href="skype:contact-hope?chat">contact-hope</a>
                             </div>
                             <div>
-                                <p>Ответ <span>в сети Skype</span> в течение <b>5 мин</b></p>
+                                <p>{ t('Contacts.Info.answerSkype.1') }<b>{ t('Contacts.Info.answerSkype.2') }</b></p>
                             </div>
                         </div>
                         <div className={ Styles.mail }>
@@ -118,7 +162,7 @@ export default class Info extends Component {
                                 <a href="mailto:contact@hope.ua">contact@hope.ua</a>
                             </div>
                             <div>
-                                <p>Ответ <span>по почте</span> в течение <b>24 часов</b></p>
+                                <p>{ t('Contacts.Info.answerMail.1') }<b>{ t('Contacts.Info.answerMail.2') }</b></p>
                             </div>
                         </div>
                     </section>
@@ -128,29 +172,29 @@ export default class Info extends Component {
                             <h1>{ socialTitle }</h1>
                         </header>
                         <div className={ Styles.list }>
-                            <a href="https://twitter.com/ua_hope" className={ Styles.item }>
+                            <a href={ social.twitter.url } className={ Styles.item }>
                                 <Twitter className={ Styles.twitter }/>
-                                <span>1k</span>
+                                <span>{ this.round(social.twitter.subscribers) }k</span>
                             </a>
-                            <a href="https://vk.com/hopechannel" className={ Styles.item }>
+                            <a href={ social.vk.url } className={ Styles.item }>
                                 <Vk className={ Styles.vk }/>
-                                <span>5k</span>
+                                <span>{ this.round(social.vk.subscribers) }k</span>
                             </a>
-                            <a href="https://www.facebook.com/hope.ua/" className={ Styles.item }>
+                            <a href={ social.facebook.url } className={ Styles.item }>
                                 <Facebook className={ Styles.fb }/>
-                                <span>2k</span>
+                                <span>{ this.round(social.facebook.subscribers) }k</span>
                             </a>
-                            <a href="https://ok.ru/hopechannel" className={ Styles.item }>
+                            <a href={ social.ok.url } className={ Styles.item }>
                                 <Ok className={ Styles.ok }/>
-                                <span>3k</span>
+                                <span>{ this.round(social.ok.subscribers) }k</span>
                             </a>
-                            <a href="https://www.youtube.com/user/HopeChannelUkraine" className={ Styles.item }>
+                            <a href={ social.youtube.url } className={ Styles.item }>
                                 <YouTube className={ Styles.youTube }/>
-                                <span>7k</span>
+                                <span>{ this.round(social.youtube.subscribers) }k</span>
                             </a>
-                            <a href="https://www.instagram.com/ua_hope/" className={ Styles.item }>
+                            <a href={ social.instagram.url } className={ Styles.item }>
                                 <Instagram className={ Styles.instagram }/>
-                                <span>1k</span>
+                                <span>{ this.round(social.instagram.subscribers) }k</span>
                             </a>
                         </div>
                     </section>
@@ -159,3 +203,9 @@ export default class Info extends Component {
         );
     }
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Info;

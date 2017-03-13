@@ -44,5 +44,31 @@ module.exports = Object.assign({
                 }
             ]
         }
+    },
+    social: {
+        youtube: {
+            url: 'https://www.youtube.com/user/HopeChannelUkraine',
+            subscribers: 11508
+        },
+        vk: {
+            url: 'https://vk.com/hopechannel',
+            subscribers: 6063
+        },
+        ok: {
+            url: 'https://ok.ru/hopechannel',
+            subscribers: 2933
+        },
+        facebook: {
+            url: 'https://www.facebook.com/hope.ua/',
+            subscribers: 3090
+        },
+        instagram: {
+            url: 'https://www.instagram.com/tvhopeua/',
+            subscribers: 1254
+        },
+        twitter: {
+            url: 'https://twitter.com/ua_hope',
+            subscribers: 4533
+        }
     }
 }, environment);

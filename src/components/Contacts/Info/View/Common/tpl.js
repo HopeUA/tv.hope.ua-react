@@ -1,12 +1,21 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import BreakPoints from 'vendor/PixelPerfect/breakpoints';
-import PixelPerfect from 'vendor/PixelPerfect/component';
+
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 
+/**
+ * [IA]
+ * Assets Import
+ */
 import Palette from 'components/Assets/Palette';
-
 import ContactUs from '../../Assets/ContactUs';
 import Mail from '../../Assets/Mail';
 import PhoneAndInternet from '../../Assets/PhoneAndInternet';
@@ -22,22 +31,42 @@ import YouTube from 'components/Assets/Social/YouTube';
 import Ok from 'components/Assets/Social/Ok';
 import Vk from 'components/Assets/Social/Vk';
 
-/* eslint-disable react/prefer-stateless-function */
-@connect(({ browser }) => {
-    return { browser };
-})
-export default class Info extends Component {
+/**
+ * [IBP]
+ * Pixel Perfect and Breakpoints
+ */
+import PixelPerfect from 'vendor/PixelPerfect/component';
+import BreakPoints from 'vendor/PixelPerfect/breakpoints';
+
+class Info extends Component {
+
+    /**
+     * [CPT]
+     * Component prop types
+     */
     static propTypes = {
-        browser: PropTypes.object.isRequired
+        mediaType: PropTypes.string.isRequired
     };
 
+    /**
+     * [CR]
+     * Render function
+     */
     render() {
-        const { browser } = this.props;
+        /**
+         * [RPD]
+         * Props destructuring
+         */
+        const { mediaType } = this.props;
 
-        const socialTitle = browser.mediaType === BreakPoints.tabletPortrait.name ?
+        const socialTitle = mediaType === BreakPoints.tabletPortrait.name ?
             'Ищите нас в социальных сетях'
             : 'Ищите в соц. сетях';
 
+        /**
+         * [RR]
+         * Return Component
+         */
         return (
             <PixelPerfect component="Contacts.Info">
                 <section className={ Grids.container }>
@@ -133,3 +162,9 @@ export default class Info extends Component {
         );
     }
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Info;
