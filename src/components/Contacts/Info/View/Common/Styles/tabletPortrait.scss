@@ -150,7 +150,7 @@
 
     .skype {
         margin-top: px(72);
-        margin-right: px(86);
+        margin-right: px(70);
 
         .row {
             margin-top: 0;
@@ -169,6 +169,7 @@
 
                 &::after {
                     right: px(-64);
+                    font-size: px(50);
                 }
             }
 
@@ -183,6 +184,7 @@
             margin-right: px(52);
 
             p {
+                margin-left: px(12);
                 font-size: px(34);
                 line-height: px(46);
             }

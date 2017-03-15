@@ -1,11 +1,19 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
 import Slider from 'vendor/Slider/SliderComponent';
 
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 
-export default function Desktop(props) {
-    const { items } = props;
+function Desktop(props) {
+    const { items, title } = props;
 
     const articles = items.map((el) => {
         const background = {
@@ -31,7 +39,7 @@ export default function Desktop(props) {
     return (
         <section className={ Grids.container }>
             <section className={ Styles.showsComponent }>
-                <h1 className={ Styles.title }>Популярные программы</h1>
+                <h1 className={ Styles.title }>{ title }</h1>
                 <Slider { ...properties }>
                     <div className={ Styles.row }>
                         { articles }
@@ -42,9 +50,25 @@ export default function Desktop(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Desktop.propTypes = {
-    items: PropTypes.array
+    items: PropTypes.array,
+    title: PropTypes.string.isRequired
 };
+
+/**
+ * [CDP]
+ * Component default props
+ */
 Desktop.defaultProps = {
     items: []
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Desktop;

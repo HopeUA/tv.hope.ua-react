@@ -4,12 +4,14 @@ import { changeLanguage } from 'redux/modules/locale';
 import {
     App,
     Home,
+    Contacts,
     NotFound
 } from 'containers';
 
 const componentRoutes = (
     <Route>
         <IndexRoute component={ Home }/>
+        <Route path="contacts" component={ Contacts }/>
         <Route path="*" component={ NotFound } status={ 404 }/>
     </Route>
 );

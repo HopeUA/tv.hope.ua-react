@@ -4,6 +4,8 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
+import { translate } from 'react-i18next';
 
 /**
  * [IV]
@@ -23,23 +25,31 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
+import timelineConfig from 'components/Shared/Timeline/config';
 
 /**
  * [IDATA]
  * Data Import (optional)
  */
 // TODO получать через api
-import items from './Mock/data.json';
 const liveUrl = 'https://live-tv.hope.ua/nadia-publish/smil:nadia.smil/playlist.m3u8';
-const currentTime = '2016-10-24T09:23:30.000Z';
-
 /**
  * [IRDX]
  * Redux connect (optional)
  */
+@translate(['common'])
 @connect((state) => {
+    const localState = state[timelineConfig.id] ? state[timelineConfig.id] : {};
+    const timeLineItems = localState.items ? localState.items : [];
+    const items = timeLineItems.filter((element, index) => {
+        return moment(element.date)
+                .isSameOrAfter(moment()) || moment()
+                .isBetween(moment(element.date), moment(timeLineItems[index + 1].date));
+    }).slice(0, 3);
+
     return {
-        mediaType: state.browser.mediaType
+        mediaType: state.browser.mediaType,
+        items
     };
 })
 class Live extends Component {
@@ -48,7 +58,9 @@ class Live extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        items: PropTypes.array.isRequired,
+        t: PropTypes.func.isRequired
     };
 
     /**
@@ -66,7 +78,9 @@ class Live extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, items, t } = this.props;
+
+        const currentTime = moment().format();
 
         /**
          * [RV]
@@ -84,6 +98,7 @@ class Live extends Component {
                     mediaType={ mediaType }
                     items={ items }
                     currentTime={ currentTime }
+                    t={ t }
                 />
             );
         }

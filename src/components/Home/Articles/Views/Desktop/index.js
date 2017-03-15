@@ -11,7 +11,7 @@ import BubbleArticle from 'components/Assets/Icons/BubbleArticle';
 Moment.locale('ru');
 
 export default function Desktop(props) {
-    const { items } = props;
+    const { items, title } = props;
 
     const articles = items.map((el) => {
         const background = {
@@ -52,7 +52,7 @@ export default function Desktop(props) {
     return (
         <section className={ Grids.container }>
             <section className={ Styles.articlesComponent }>
-                <h1 className={ Styles.title }>Анонсы</h1>
+                <h1 className={ Styles.title }>{ title }</h1>
                 <Slider { ...properties }>
                     { articles }
                 </Slider>
@@ -62,7 +62,8 @@ export default function Desktop(props) {
 }
 
 Desktop.propTypes = {
-    items: PropTypes.array
+    items: PropTypes.array,
+    title: PropTypes.string.isRequired
 };
 Desktop.defaultProps = {
     items: []

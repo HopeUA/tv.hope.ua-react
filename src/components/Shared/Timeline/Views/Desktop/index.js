@@ -27,13 +27,13 @@ function Timeline(props) {
     if (BP.isTabletLandscape(mediaType)) {
         timelineStart = 470;
     } else if (BP.isDesktop(mediaType, true)) {
-        timelineStart = 516;
+        timelineStart = 776;
     } else if (BP.isDesktopWide(mediaType)) {
-        timelineStart = 586;
+        timelineStart = 1030;
     } else if (BP.isDesktopHD(mediaType)) {
-        timelineStart = 730;
+        timelineStart = 1140;
     } else if (BP.isDesktopMega(mediaType)) {
-        timelineStart = 910;
+        timelineStart = 1580;
     }
 
     const sizes = {
@@ -47,7 +47,7 @@ function Timeline(props) {
 
     const currentTime = moment(serverTime);
 
-    let timelineOffset = -sizes.timelineStart - (sizes.clockWidth / 2) + sizes.timelineOffset;
+    let timelineOffset = sizes.timelineStart + (sizes.clockWidth / 2) - sizes.timelineOffset;
     const episodes = items.map((element, index) => {
         const startCurrentEpisode = moment(element.date);
         if (!items[index + 1]) {
@@ -72,7 +72,7 @@ function Timeline(props) {
         const prevStyle = {};
 
         if (isPast) {
-            timelineOffset += width + sizes.episodesMargin;
+            timelineOffset -= width + sizes.episodesMargin;
         }
 
         if (isCurrent) {
@@ -80,7 +80,7 @@ function Timeline(props) {
             const episodeProgressWidth =  episodeProgress / 60 / 60 * sizes.hourWidth;
             const translation = (episodeProgressWidth * 100) / width;
 
-            timelineOffset += episodeProgressWidth;
+            timelineOffset -= episodeProgressWidth;
 
             prevStyle.width = `${translation}%`;
             nextStyle.width = `${100 - translation}%`;
@@ -111,7 +111,7 @@ function Timeline(props) {
     });
 
     const episodesStyle = {
-        transform: `translateX(-${px(timelineOffset, mediaType)}vw)`
+        transform: `translateX(${px(timelineOffset, mediaType)}vw)`
     };
 
     return (

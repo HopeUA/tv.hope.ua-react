@@ -21,7 +21,7 @@ class Scheduler {
         const response = await fetch(url);
         const result = await response.json();
 
-        return result.data;
+        return Array.isArray(result.data) ? result.data : [];
     }
 }
 

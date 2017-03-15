@@ -1,9 +1,18 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React from 'react';
 import Slider from 'vendor/Slider/SliderComponent';
+
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
 import Grids from 'theme/Grid.scss';
 
-export default function Desktop() {
+function Desktop() {
     const styles = {
         backgroundImage: 'url(https://cdn.hope.ua/media/shows/ALKU/episodes/02816/ALKU02816-cover.jpg)'
     };
@@ -44,3 +53,9 @@ export default function Desktop() {
         </section>
     );
 }
+
+/**
+ * [IE]
+ * Export
+ */
+export default Desktop;

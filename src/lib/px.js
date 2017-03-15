@@ -3,10 +3,10 @@ const k = {
     phoneLandscape: 0.08803,
     tabletPortrait: 0.065106,
     tabletLandscape: 0.04882826,
-    desktop: 0.04687513,
-    desktopWide: 0.04394543,
-    desktopHD: 0.0390626,
-    desktopMega: 0.0341797
+    desktop: 0.03660322,
+    desktopWide: 0.03125,
+    desktopHD: 0.028935,
+    desktopMega: 0.022978
 };
 
 export default (px, mediaType) => {

@@ -9,13 +9,13 @@
     } @else if $media == tabletLandscape {
         $k: .04882826;
     } @else if $media == desktop {
-        $k: .04687513;
+        $k: .03660322;
     } @else if $media == desktopWide {
-        $k: .04394543;
+        $k: .03125;
     } @else if $media == desktopHD {
-        $k: .0390626;
+        $k: .028935;
     } @else if $media == desktopMega {
-        $k: .0341797;
+        $k: .022978;
     }
 
     @return $px * $k * 1vw;
