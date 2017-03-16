@@ -1,0 +1,307 @@
+& {
+    display: flex;
+    flex-wrap: wrap;
+
+    > section {
+        &::after {
+            width: px(560);
+            height: 3px;
+            margin: px(80) auto;
+            background-image: url('components/WatchUs/Info/Assets/divider-bg.svg');
+            content: '';
+        }
+    }
+
+    .internet {
+        display: flex;
+        flex-wrap: wrap;
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            i {
+                width: px(137);
+                margin: px(60) 0 0 px(38);
+            }
+
+            h1 {
+                width: max-content;
+                margin: px(42) auto 0;
+                color: $commonColor1;
+                font-size: px(44);
+
+                &::after {
+                    display: block;
+                    width: px(60);
+                    height: px(6);
+                    margin: px(51) auto 0;
+                    background-color: $mainColor3;
+                    content: '';
+                }
+            }
+        }
+
+        p {
+            width: px(335);
+            margin: px(50) auto 0;
+            font-size: px(30);
+            line-height: px(36);
+            text-align: center;
+        }
+
+        .apps {
+            display: flex;
+            width: px(518);
+            margin: px(50) auto;
+
+            a {
+                flex-shrink: 0;
+                width: px(120);
+                height: px(120);
+
+            }
+
+            .androidLink {
+                border: 1px solid $tempColor27;
+                border-radius: 6px;
+
+                &:active {
+                    background: $tempColor27;
+                }
+
+                i {
+                    width: px(78);
+                    margin: px(15) auto 0;
+                }
+            }
+
+            .appleLink {
+                border: 1px solid $commonColor6;
+                border-radius: 6px;
+
+                &:active {
+                    background: $commonColor6;
+                }
+
+                i {
+                    width: px(67);
+                    margin: px(17) auto 0;
+                }
+            }
+
+
+            div {
+                display: flex;
+                position: relative;
+                align-items: center;
+                text-align: center;
+
+                span {
+                    margin-bottom: px(6);
+                    color: $tempColor2;
+                    font-size: px(32);
+                    font-weight: bold;
+                    line-height: px(26);
+                }
+
+                i {
+                    position: absolute;
+                    width: px(67);
+                }
+
+                .appleArrow {
+                    top: 0;
+                    right: px(22);
+                }
+
+                .androidArrow {
+                    bottom: 0;
+                    left: px(26);
+                    transform: rotate(180deg);
+                }
+
+            }
+        }
+
+        .watchOnline {
+            margin-top: px(4);
+        }
+    }
+
+    .satellite {
+        display: flex;
+        flex-wrap: wrap;
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            i {
+                width: px(116);
+                margin: 0 px(36) 0 0;
+            }
+
+            h1 {
+                width: max-content;
+                margin: px(46) auto 0;
+                color: $commonColor1;
+                font-size: px(44);
+
+                &::after {
+                    display: block;
+                    width: px(60);
+                    height: px(6);
+                    margin: px(51) auto 0;
+                    background-color: $mainColor3;
+                    content: '';
+                }
+            }
+        }
+
+        ul {
+            width: 100%;
+            margin: px(54) auto 0;
+            color: $tempColor2;
+
+            li {
+                display: flex;
+                margin-bottom: px(30);
+
+                span {
+                    &:nth-child(1) {
+                        display: block;
+                        flex-basis: 50%;
+                        margin-right: px(8);
+                        font-size: px(30);
+                        font-weight: bold;
+                        text-align: right;
+                    }
+
+                    &:nth-child(2) {
+                        display: block;
+                        flex-basis: 50%;
+                        font-size: px(30);
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        .tunerContainer {
+            margin: 0 auto;
+            display: none;
+        }
+    }
+
+    .cable {
+        display: flex;
+        flex-wrap: wrap;
+
+        &::after {
+            display: none;
+        }
+
+        header {
+            width: 100%;
+
+            i {
+                width: px(135);
+                margin: 0 auto;
+            }
+
+            h1 {
+                width: max-content;
+                margin: px(40) auto 0;
+                color: $commonColor1;
+                font-size: px(44);
+
+                &::after {
+                    display: block;
+                    width: px(60);
+                    height: px(6);
+                    margin: px(51) auto 0;
+                    background-color: $mainColor3;
+                    content: '';
+                }
+            }
+        }
+
+        p {
+            width: px(507);
+            margin: px(48) auto 0;
+            color: $tempColor2;
+            font-size: px(30);
+            line-height: px(36);
+            text-align: center;
+        }
+
+        .btn.btnSearch {
+            padding: 0 0 0 px(26);
+
+            &::before {
+                width: px(38);
+                height: px(38);
+                margin-right: px(30);
+                background: url('components/WatchUs/Info/Assets/search-bg.svg') no-repeat;
+                content: '';
+            }
+
+            &:active {
+                &::before {
+                    background: url('components/WatchUs/Info/Assets/searchHover-bg.svg') no-repeat;
+                }
+            }
+        }
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        width: px(380);
+        height: px(100);
+        margin: px(52) auto 0;
+        padding: 0 px(26);
+        border: 1px solid $mainColor4;
+        border-radius: 6px;
+        color: $mainColor4;
+        font-size: px(30);
+        text-decoration: none;
+
+        &.btnTuner {
+            &::before {
+                margin-right: px(16);
+            }
+        }
+
+        &::before {
+            width: px(38);
+            height: px(38);
+            margin-right: px(26);
+            background: url('components/WatchUs/Info/Assets/play-bg.svg') no-repeat;
+            content: '';
+
+            path {
+                fill: $mainColor4;
+            }
+        }
+
+        &:active {
+            background: $mainColor4;
+            color: $mainColor1;
+
+            &::before {
+                background: url('components/WatchUs/Info/Assets/playHover-bg.svg') no-repeat;
+            }
+        }
+    }
+
+    .btnTuner {
+        margin: px(26) auto 0;
+        padding: 0 0 0 px(26);
+    }
+}

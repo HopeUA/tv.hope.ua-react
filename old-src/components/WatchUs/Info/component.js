@@ -7,12 +7,12 @@ import InlineSvg from 'components/InlineSvg/component';
 import Styles from './main.scss';
 import Grids from 'theme/Grid.scss';
 
-import SvgInternet from 'components/WatchUs/Info/Assets/internet.svg';
-import SvgAndroid from 'components/WatchUs/Info/Assets/android.svg';
-import SvgApple from 'components/WatchUs/Info/Assets/apple.svg';
-import SvgArrow from 'components/WatchUs/Info/Assets/pointerArrow.svg';
-import SvgSatellite from 'components/WatchUs/Info/Assets/satellite.svg';
-import SvgTv from 'components/WatchUs/Info/Assets/tv.svg';
+import SvgInternet from 'components/WatchUs_delete/Info/Assets/internet.svg';
+import SvgAndroid from 'components/WatchUs_delete/Info/Assets/android.svg';
+import SvgApple from 'components/WatchUs_delete/Info/Assets/apple.svg';
+import SvgArrow from 'components/WatchUs_delete/Info/Assets/pointerArrow.svg';
+import SvgSatellite from 'components/WatchUs_delete/Info/Assets/satellite.svg';
+import SvgTv from 'components/WatchUs_delete/Info/Assets/tv.svg';
 
 /* eslint-disable react/prefer-stateless-function */
 @connect(({ browser, watchUs }) => {

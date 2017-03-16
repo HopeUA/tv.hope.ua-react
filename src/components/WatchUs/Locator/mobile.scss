@@ -1,0 +1,283 @@
+& {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $color3;
+
+    header {
+        display: flex;
+        flex-grow: 0;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: px(140);
+        padding: 0 px(42) 0 px(40);
+        background-color: $color1;
+
+        a:first-child {
+            &::before {
+                display: block;
+                width: px(23);
+                height: px(40);
+                margin-right: px(40);
+                background: url($componentRoot + 'arrowBackIcon-bg.svg') no-repeat;
+                content: '';
+            }
+        }
+
+        h1 {
+            display: block;
+            flex-grow: 1;
+            width: 100%;
+            margin-top: px(-4);
+            padding-right: px(57);
+            color: $color2;
+            font-size: px(44);
+            font-weight: bold;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        a:last-child {
+            i {
+                width: px(41);
+            }
+        }
+    }
+
+    >div {
+        display: flex;
+        flex-grow: 1;
+        overflow: hidden;
+
+        .listItems {
+            flex-shrink: 0;
+            width: 100%;
+            padding-left: px(40);
+            background-color: $color3;
+
+            // Forward Animations
+            &.sliderEnter {
+                transform: translate3d(100%, 0, 0);
+                transition: all 1s ease-in;
+            }
+
+            &.sliderEnterActive {
+                transform: translate3d(0, 0, 0);
+            }
+
+            &.sliderLeave {
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            &.sliderLeaveActive {
+                transform: translate3d(-200%, 0, 0);
+                transition: all 1s ease-in;
+            }
+
+            // Back Animations
+            &.sliderBackEnter {
+                transform: translate3d(-100%, 0, 0);
+                transition: all 1s ease-in;
+            }
+
+            &.sliderBackEnterActive {
+                transform: translate3d(0, 0, 0);
+            }
+
+            &.sliderBackLeave {
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            &.sliderBackLeaveActive {
+                transform: translate3d(0, 0, 0);
+                transition: all 1s ease-in;
+            }
+
+            > li {
+                display: flex;
+                align-items: center;
+                height: px(135);
+                border-bottom: 1px solid $color4;
+
+                .title {
+                    display: flex;
+                    position: relative;
+                    width: 100%;
+                    padding: px(12) px(54) 0 px(18);
+                    color: $color5;
+                    font-size: px(34);
+                    font-weight: bold;
+                    text-decoration: none;
+
+                    span {
+                        display: inline-block;
+                        min-width: px(46);
+                        margin-top: px(-6);
+                        margin-left: px(24);
+                        padding: px(6) px(8) px(4);
+                        border: 1px solid $color6;
+                        border-radius: px(24);
+                        color: $color6;
+                        font-size: px(30);
+                        font-weight: normal;
+                        text-align: center;
+                    }
+
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        top: px(20);
+                        right: px(48);
+                        width: px(24);
+                        height: px(24);
+                        background: url($componentRoot + 'rightMenuIcon-bg.svg') no-repeat;
+                        content: '';
+                    }
+                }
+
+                &.select {
+                    height: px(133);
+                    margin-left: px(-40);
+                    padding-left: px(40);
+                    border-bottom: 0;
+                    background-color: $color7;
+
+                    .title {
+                        margin-top: px(-2);
+                        color: $color8;
+
+                        span {
+                            border-color: $color9;
+                            color: $color9;
+                        }
+
+                        &::after {
+                            margin-top: px(2);
+                            background: url($componentRoot + 'rightMenuIconSelect-bg.svg') no-repeat;
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+
+            &.operators {
+                li {
+                    .title {
+                        &::after {
+                            transform: rotate(90deg);
+                        }
+                    }
+
+                    &.opened {
+                        flex-wrap: wrap;
+                        height: auto;
+                        margin-top: px(-2);
+                        margin-left: px(-40);
+                        padding-right: px(40);
+                        padding-left: px(40);
+                        background-color: $color1;
+
+                        .title {
+                            margin-top: px(41);
+                            padding-bottom: px(44);
+                            color: $color8;
+
+                            &::after {
+                                top: px(6);
+                                right: px(8);
+                                transform: rotate(270deg);
+                            }
+                        }
+
+                        div {
+                            width: 100%;
+                            min-height: px(132);
+                            overflow: hidden;
+
+                            ul {
+                                position: relative;
+                                width: 100%;
+                                padding-top: px(54);
+                                padding-bottom: px(42);
+                                padding-left: px(74);
+                                border-top: 1px solid $color4;
+                                border-bottom: 1px solid $color4;
+
+                                &::before {
+                                    display: block;
+                                    position: absolute;
+                                    top: px(50);
+                                    left: px(4);
+                                    width: px(40);
+                                    height: px(40);
+                                    background: url($componentRoot + 'phoneMenuIcon-bg.svg') no-repeat;
+                                    content: '';
+                                }
+
+                                li {
+                                    margin-bottom: px(22);
+                                    color: $color8;
+                                    font-size: px(34);
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        .website {
+                            display: flex;
+                            margin-top: px(48);
+                            margin-bottom: px(48);
+                            margin-left: px(4);
+                            padding-top: 1px;
+                            color: $color8;
+                            font-size: px(34);
+                            text-decoration: none;
+
+                            &::before {
+                                display: block;
+                                width: px(40);
+                                height: px(40);
+                                margin-top: px(-4);
+                                margin-right: px(28);
+                                background: url($componentRoot + 'earthMenuIcon-bg.svg') no-repeat;
+                                content: '';
+                            }
+
+                            &::after {
+                                margin-top: px(4);
+                                margin-left: px(22);
+                                font-family: Arial;
+                                font-size: px(26);
+                                content: '→';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        flex-grow: 0;
+        width: 100%;
+        height: px(236);
+        padding-top: px(80);
+        background-color: $color3;
+
+        &::after {
+            display: block;
+            bottom: px(74);
+            width: px(258);
+            height: px(80);
+            margin: 0 auto;
+            background: url($componentRoot + 'logo-bg.svg') no-repeat;
+            content: '';
+            opacity: .2;
+        }
+    }
+}

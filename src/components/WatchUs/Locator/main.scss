@@ -1,0 +1,8 @@
+.locatorComponent {
+    @import 'theme/MediaQueries';
+    @import 'theme/PxFunction';
+    @import 'theme/Palette';
+
+    @import 'variables';
+    @import 'MediaQueries/all';
+}
