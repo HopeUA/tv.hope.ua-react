@@ -1,0 +1,25 @@
+@import './desktopCommon';
+
+& {
+    height: px(884);
+    padding-top: px(110);
+
+    .container {
+        height: px(604);
+
+        &::before {
+            height: px(604);
+        }
+
+        h1 {
+            top: px(268);
+            width: px(1200);
+            margin-left: px(-600);
+            font-size: px(42);
+        }
+
+        .poster {
+            height: px(688);
+        }
+    }
+}
