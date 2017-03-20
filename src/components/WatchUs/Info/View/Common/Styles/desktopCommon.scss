@@ -10,7 +10,7 @@
         left: px(56);
         width: 95%;
         height: 4px;
-        background-image: url($componentRoot + 'divider-bg.svg');
+        background-image: url('components/WatchUs/Info/Assets/divider-bg.svg');
         content: '';
     }
 
@@ -47,7 +47,7 @@
             h1 {
                 width: max-content;
                 margin: px(42) px(16) 0;
-                color: $titleColor;
+                color: $commonColor1;
                 font-size: px(44);
 
                 &::after {
@@ -56,7 +56,7 @@
                     height: px(6);
                     margin-top: px(36);
                     margin-left: px(196);
-                    background-color: $titleAfterColor;
+                    background-color: $mainColor3;
                     content: '';
                 }
             }
@@ -85,44 +85,22 @@
             }
 
             .androidLink {
-                border: 1px solid $androidColor;
-                border-radius: 6px;
-
                 &:hover {
-                    background: $androidColor;
                     cursor: pointer;
-
-                    i {
-                        path {
-                            fill: $btnHoverColor;
-                        }
-                    }
                 }
 
                 i {
-                    width: px(78);
-                    margin: px(15) auto 0;
+                    width: px(120);
                 }
             }
 
             .appleLink {
-                border: 1px solid $textTuner;
-                border-radius: 6px;
-
                 &:hover {
-                    background: $textTuner;
                     cursor: pointer;
-
-                    i {
-                        path {
-                            fill: $btnHoverColor;
-                        }
-                    }
                 }
 
                 i {
-                    width: px(64);
-                    margin: px(17) auto 0;
+                    width: px(120);
                 }
             }
 
@@ -135,7 +113,7 @@
 
                 span {
                     margin-bottom: 0;
-                    color: $textTuner;
+                    color: $commonColor2;
                     font-size: px(28);
                     font-weight: bold;
                     line-height: px(28);
@@ -147,21 +125,14 @@
                 }
 
                 .appleArrow {
+                    top: 0;
                     right: px(22);
-
-                    path {
-                        fill: $textTuner;
-                    }
                 }
 
                 .androidArrow {
                     bottom: 0;
                     left: px(26);
                     transform: rotate(180deg);
-
-                    path {
-                        fill: $androidColor;
-                    }
                 }
 
             }
@@ -189,7 +160,7 @@
             font-size: px(28);
 
             &::before {
-                width: px(39);
+                width: px(34);
                 margin-right: px(32);
             }
         }
@@ -216,7 +187,7 @@
             h1 {
                 width: max-content;
                 margin: px(42) 0 0 px(30);
-                color: $titleColor;
+                color: $commonColor1;
                 font-size: px(44);
 
                 &::after {
@@ -225,7 +196,7 @@
                     height: px(6);
                     margin-top: px(40);
                     margin-left: px(178);
-                    background-color: $titleAfterColor;
+                    background-color: $mainColor3;
                     content: '';
                 }
             }
@@ -245,7 +216,7 @@
                         flex-basis: 50%;
                         margin-top: px(-2);
                         margin-right: px(18);
-                        color: $textTuner;
+                        color: $commonColor2;
                         font-size: px(28);
                         font-weight: bold;
                         text-align: right;
@@ -254,7 +225,7 @@
                     &:nth-child(2) {
                         display: block;
                         flex-basis: 50%;
-                        color: $textTuner;
+                        color: $commonColor2;
                         font-size: px(28);
                         text-align: left;
                     }
@@ -304,7 +275,7 @@
                 width: max-content;
                 margin-top: px(40);
                 margin-right: px(20);
-                color: $titleColor;
+                color: $commonColor1;
                 font-size: px(44);
 
                 &::after {
@@ -313,7 +284,7 @@
                     height: px(6);
                     margin-top: px(40);
                     margin-left: px(148);
-                    background-color: $titleAfterColor;
+                    background-color: $mainColor3;
                     content: '';
                 }
             }
@@ -333,7 +304,7 @@
             width: px(356);
             margin: px(146) auto 0;
             padding-left: px(16);
-            color: $providerSearchColor;
+            color: $tempColor29;
             font-size: px(28);
             font-style: italic;
             font-weight: bold;
@@ -347,7 +318,7 @@
                 width: px(70);
                 height: 1px;
                 margin-left: px(-26);
-                background: $providerSearchBeforeColor;
+                background: $commonColor7;
                 content: '';
             }
 
@@ -359,8 +330,8 @@
                 width: px(230);
                 height: px(212);
                 margin-left: px(-100);
-                background-color: $backgroundColor;
-                background-image: url($componentRoot + 'arrowMapDownIcon-bg.svg');
+                background-color: $commonColor4;
+                background-image: url('components/WatchUs/Info/Assets/arrowMapDownIcon-bg.svg');
                 background-repeat: no-repeat;
                 content: '';
                 background-position-x: px(70);
@@ -374,7 +345,7 @@
                 width: px(39);
                 height: px(39);
                 margin-right: px(30);
-                background: url($componentRoot + 'search-bg.svg') no-repeat;
+                background: url('components/WatchUs/Info/Assets/search-bg.svg') no-repeat;
                 content: '';
             }
 
@@ -382,7 +353,7 @@
                 cursor: pointer;
 
                 &::before {
-                    background: url($componentRoot + 'searchHover-bg.svg') no-repeat;
+                    background: url('components/WatchUs/Info/Assets/searchHover-bg.svg') no-repeat;
                 }
             }
         }
@@ -395,9 +366,9 @@
         height: px(100);
         margin: px(52) auto 0;
         padding: 0 px(26);
-        border: 1px solid $btnColor;
+        border: 1px solid $mainColor4;
         border-radius: 6px;
-        color: $btnColor;
+        color: $mainColor4;
         font-size: px(30);
         text-decoration: none;
 
@@ -411,21 +382,21 @@
             width: px(39);
             height: px(39);
             margin-right: px(26);
-            background: url($componentRoot + 'play-bg.svg') no-repeat;
+            background: url('components/WatchUs/Info/Assets/play-bg.svg') no-repeat;
             content: '';
 
             path {
-                fill: $btnColor;
+                fill: $mainColor4;
             }
         }
 
         &:hover {
-            background: $btnColor;
-            color: $btnHoverColor;
+            background: $mainColor4;
+            color: $mainColor1;
             cursor: pointer;
 
             &::before {
-                background: url($componentRoot + 'playHover-bg.svg') no-repeat;
+                background: url('components/WatchUs/Info/Assets/playHover-bg.svg') no-repeat;
             }
         }
     }
