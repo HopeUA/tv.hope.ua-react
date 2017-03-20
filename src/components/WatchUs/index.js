@@ -1,1 +1,1 @@
-export Info from './Info/tpl';
+export Info from './Info';
