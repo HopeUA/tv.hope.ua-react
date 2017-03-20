@@ -1,4 +1,4 @@
-@import '../mobile';
+@import './mobile';
 
 > section {
     &::after {
@@ -157,14 +157,14 @@
                 transform: rotate(-90deg);
 
                 path {
-                    fill: $arrowTuner;
+                    fill: $commonColor6;
                 }
             }
 
             p {
                 width: px(370);
                 margin-top: px(36);
-                color: $textTuner;
+                color: $commonColor2;
                 font-size: px(24);
                 font-style: italic;
                 line-height: px(28);

@@ -58,7 +58,8 @@ export default function Common(props) {
             <div className={ Styles.container }>
                 <div className={ Styles.copyright }><strong>2009-2017</strong> Телеканал
                     <strong> «Надія»</strong>
-                    . Всі права захищені.</div>
+                    . Всі права захищені.
+                </div>
                 <div className={ Styles.designer }>Дизайн: Мирослав Джулай</div>
             </div>
             { [

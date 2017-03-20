@@ -1,4 +1,4 @@
-@import '../mobile';
+@import './mobile';
 
 > section {
     &::after {
@@ -7,6 +7,7 @@
 }
 
 .satellite {
+    display: block;
     flex-basis: 50%;
     order: 1;
 
@@ -144,7 +145,7 @@
                 right: px(-590);
                 width: px(540);
                 height: 3px;
-                background-image: url($componentRoot + 'divider-bg.svg');
+                background-image: url('components/WatchUs/Info/Assets/divider-bg.svg');
                 content: '';
 
             }
@@ -156,7 +157,7 @@
                 left: px(-580);
                 width: px(540);
                 height: 3px;
-                background-image: url($componentRoot + 'divider-bg.svg');
+                background-image: url('components/WatchUs/Info/Assets/divider-bg.svg');
                 content: '';
             }
         }
