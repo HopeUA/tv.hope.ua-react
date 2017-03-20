@@ -58,7 +58,7 @@ function Common(props) {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <Android color={ Palette.tempColor27 }/>
+                            <Android color={ Palette.tempColor27 } color1={ Palette.mainColor1 }/>
                         </a>
                         <div>
                             <Arrow className={ Styles.appleArrow } color={ Palette.commonColor2 }/>
@@ -71,7 +71,7 @@ function Common(props) {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <Apple color={ Palette.commonColor2 }/>
+                            <Apple color={ Palette.commonColor2 } color1={ Palette.mainColor1 }/>
                         </a>
                     </div>
                     <p className={ Styles.watchOnline }>Смотрите вещание в сети Интернет</p>
