@@ -65,30 +65,14 @@
             }
 
             .androidLink {
-                border: 1px solid $tempColor27;
-                border-radius: 6px;
-
-                &:active {
-                    background: $tempColor27;
-                }
-
                 i {
-                    width: px(78);
-                    margin: px(15) auto 0;
+                    width: px(120);
                 }
             }
 
             .appleLink {
-                border: 1px solid $commonColor6;
-                border-radius: 6px;
-
-                &:active {
-                    background: $commonColor6;
-                }
-
                 i {
-                    width: px(67);
-                    margin: px(17) auto 0;
+                    width: px(120);
                 }
             }
 
