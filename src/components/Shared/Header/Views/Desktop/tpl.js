@@ -47,7 +47,8 @@ function Header() {
                     </a>
                     <ul className={ Styles.subMenu }>
                         <li>
-                            <a href="#">Где нас смотреть</a>t
+                            <a href="#">Где нас смотреть</a>
+                            t
                         </li>
                         <li>
                             <a href="#">Контакты</a>

@@ -20,7 +20,10 @@
     }
 
     .container {
+        display: flex;
         position: relative;
+        justify-content: center;
+        align-items: center;
         width: 102vw;
         height: px(564);
         margin-left: -1vw;
@@ -37,16 +40,13 @@
             z-index: 1;
         }
 
-        h1 {
-            position: absolute;
-            top: px(242);
-            left: 50%;
-            width: px(1374);
-            margin-left: px(-687);
+        .text {
+            width: px(1174);
             transform: rotate(2.9deg);
             color: $mainColor1;
             font-size: px(48);
-            line-height: px(54);
+            font-weight: normal;
+            line-height: px(58);
             text-align: center;
             z-index: 1;
 
@@ -57,7 +57,7 @@
         }
 
         .poster {
-            position: relative;
+            position: absolute;
             width: 100%;
             height: px(680);
             margin-top: -3vw;

@@ -3,7 +3,10 @@
     padding-top: px(76);
 
     .container {
+        display: flex;
         position: relative;
+        justify-content: center;
+        align-items: center;
         width: 100vw;
         height: px(396);
         overflow: hidden;
@@ -18,14 +21,11 @@
             z-index: 1;
         }
 
-        h1 {
-            position: absolute;
-            top: px(130);
-            left: 50%;
+        .text {
             width: px(518);
-            margin-left: px(-259);
             color: $mainColor1;
             font-size: px(38);
+            font-weight: normal;
             line-height: px(44);
             text-align: center;
             z-index: 1;
@@ -37,7 +37,7 @@
         }
 
         .poster {
-            position: relative;
+            position: absolute;
             width: 100%;
             height: px(396);
             background: url('components/About/Banner/Assets/banner.jpg') no-repeat;
