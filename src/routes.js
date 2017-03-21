@@ -5,6 +5,7 @@ import {
     App,
     Home,
     Contacts,
+    About,
     WatchUs,
     NotFound
 } from 'containers';
@@ -13,6 +14,7 @@ const componentRoutes = (
     <Route>
         <IndexRoute component={ Home }/>
         <Route path="contacts" component={ Contacts }/>
+        <Route path="about" component={ About }/>
         <Route path="watchUs" component={ WatchUs }/>
         <Route path="*" component={ NotFound } status={ 404 }/>
     </Route>

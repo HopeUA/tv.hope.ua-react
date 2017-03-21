@@ -1,0 +1,57 @@
+& {
+    position: relative;
+    padding-top: px(76);
+
+    .container {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: px(396);
+        overflow: hidden;
+        z-index: 3;
+
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: px(396);
+            background-color: $commonColor8;
+            content: '';
+            z-index: 1;
+        }
+
+        .text {
+            width: px(518);
+            color: $mainColor1;
+            font-size: px(38);
+            font-weight: normal;
+            line-height: px(44);
+            text-align: center;
+            z-index: 1;
+
+            span {
+                color: $mainColor3;
+                font-weight: bold;
+            }
+        }
+
+        .poster {
+            position: absolute;
+            width: 100%;
+            height: px(396);
+            background: url('components/About/Banner/Assets/banner.jpg') no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        bottom: px(-10);
+        width: 100%;
+        height: px(10);
+        background-color: $mainColor3;
+        content: '';
+        z-index: 2;
+    }
+}

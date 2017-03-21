@@ -12,4 +12,5 @@ export * as Shared from './Shared';
 export * as Home from './Home';
 export * as Footer from './Footer';
 export * as Contacts from './Contacts';
+export * as About from './About';
 export * as WatchUs from './WatchUs';
