@@ -17,9 +17,9 @@ function Common() {
                 <div className={ Styles.container }>
                     <p className={ Styles.text }>
                         Наша мета – створення <span>якісного</span>
-                        ,
+                        ,&nbsp;
                         <span>морально-чистого</span>
-                        ,
+                        ,&nbsp;
                         <span>актуального</span>
                         медіапродукту
                     </p>
