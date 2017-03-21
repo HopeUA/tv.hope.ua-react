@@ -8,3 +8,4 @@ webpack-stats.json
 npm-debug.log
 docs/
 config/local.json
+./bannerGitIgnore

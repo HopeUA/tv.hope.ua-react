@@ -1,0 +1,69 @@
+& {
+    height: px(752);
+    margin-bottom: px(-80);
+    overflow: hidden;
+
+    .banner {
+        position: relative;
+        padding-top: px(128);
+
+        &::after {
+            position: absolute;
+            bottom: px(-18);
+            width: 100%;
+            height: px(30);
+            transform: rotate(-2.2deg);
+            background-color: $mainColor3;
+            content: '';
+            z-index: 2;
+        }
+    }
+
+    .container {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 102vw;
+        height: px(564);
+        margin-left: -1vw;
+        transform: rotate(-2.9deg);
+        overflow: hidden;
+        z-index: 3;
+
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: px(564);
+            background-color: $commonColor8;
+            content: '';
+            z-index: 1;
+        }
+
+        .text {
+            width: px(1174);
+            transform: rotate(2.9deg);
+            color: $mainColor1;
+            font-size: px(48);
+            font-weight: normal;
+            line-height: px(58);
+            text-align: center;
+            z-index: 1;
+
+            span {
+                color: $mainColor3;
+                font-weight: bold;
+            }
+        }
+
+        .poster {
+            position: absolute;
+            width: 100%;
+            height: px(680);
+            margin-top: -3vw;
+            transform: rotate(2.9deg);
+            background: url('components/About/Banner/Assets/banner.jpg') no-repeat;
+            background-size: cover;
+        }
+    }
+}
