@@ -1,0 +1,21 @@
+@import './mobile';
+
+& {
+    padding-top: px(66);
+
+    .container {
+        height: px(404);
+
+        &::before {
+            height: px(404);
+        }
+
+        .text {
+            font-size: px(36);
+        }
+    }
+
+    .poster {
+        height: px(404);
+    }
+}
