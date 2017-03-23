@@ -5,8 +5,6 @@ import svg from 'helpers/svg';
     width: 200,
     height: 236
 })
-
-/* eslint-disable react/prefer-stateless-function */
 export default class WhyViolence extends Component {
     static propTypes = {
         color: PropTypes.string,

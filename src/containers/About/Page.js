@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
-import { Banner, Why } from 'components/About';
+import * as About from 'components/About';
 import Meta from './Meta';
 import Helmet from 'react-helmet';
 
@@ -10,7 +10,7 @@ import Helmet from 'react-helmet';
 @connect(({ browser }) => {
     return { browser };
 })
-export default class About extends Component {
+export default class Page extends Component {
     static propTypes = {
         t: PropTypes.func.isRequired
     };
@@ -21,8 +21,8 @@ export default class About extends Component {
         return (
             <section>
                 <Helmet { ...Meta() }/>
-                <Why t={ t }/>
-                <Banner text={ t('About.Banner.text') }/>
+                <About.Why/>
+                <About.Banner text={ t('About.Banner.text') }/>
             </section>
         );
     }

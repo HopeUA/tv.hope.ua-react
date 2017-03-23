@@ -5,8 +5,6 @@ import svg from 'helpers/svg';
     width: 200,
     height: 140
 })
-
-/* eslint-disable react/prefer-stateless-function */
 export default class Hope extends Component {
     static propTypes = {
         color: PropTypes.string

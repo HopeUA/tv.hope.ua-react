@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 
 /**
  * [IV]
@@ -15,6 +16,7 @@ import Common from './View/Common';
  * [IRDX]
  * Redux connect (optional)
  */
+@translate(['common'])
 @connect((state) => {
     return {
         locale: state.locale,

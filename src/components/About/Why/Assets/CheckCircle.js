@@ -5,8 +5,6 @@ import svg from 'helpers/svg';
     width: 200,
     height: 200
 })
-
-/* eslint-disable react/prefer-stateless-function */
 export default class CheckCircle extends Component {
     static propTypes = {
         color: PropTypes.string,
