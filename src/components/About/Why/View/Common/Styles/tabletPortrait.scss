@@ -1,0 +1,151 @@
+@import './desktopCommon';
+
+.why {
+    header {
+        i {
+            width: px(166);
+            margin-top: px(100);
+            margin-right: px(2);
+            margin-left: 0;
+        }
+
+        h1 {
+            margin-top: px(56);
+            font-size: px(50);
+
+            &::after {
+                width: px(66);
+                margin-top: px(62);
+            }
+        }
+    }
+
+    .arguments {
+        width: px(1300);
+        margin-top: px(60);
+        padding-right: px(54);
+
+        div {
+            i {
+                width: px(120);
+                margin-left: px(4);
+            }
+
+            .label {
+                width: px(66);
+                height: px(38);
+                margin-top: px(-82);
+                margin-left: px(-42);
+                padding-top: px(2);
+                font-size: px(24);
+            }
+
+            .text {
+                margin-left: px(-20);
+                font-size: px(40);
+            }
+        }
+
+        .violence {
+            margin-right: px(12);
+            margin-left: 0;
+
+            .label {
+                margin-left: px(-38);
+            }
+
+            .text {
+                margin-left: px(-26);
+            }
+        }
+
+        .advert {
+            i {
+                margin-left: px(-38);
+            }
+        }
+    }
+}
+
+.aroundTheClock {
+    header {
+        margin-top: px(60);
+
+        span {
+            width: px(190);
+            height: px(190);
+            font-size: px(42);
+
+            &::before {
+                left: px(-650);
+                width: px(580);
+                height: px(6);
+            }
+
+            &::after {
+                right: px(-650);
+                width: px(580);
+                height: px(6);
+            }
+        }
+
+        h1 {
+            margin-top: px(58);
+            font-size: px(46);
+        }
+
+        h2 {
+            font-size: px(40);
+        }
+    }
+
+    ul {
+        margin-top: px(58);
+        padding-right: px(24);
+
+        li {
+            div {
+                font-size: px(32);
+                line-height: px(36);
+            }
+
+            i {
+                width: px(52);
+                margin-top: px(2);
+            }
+        }
+
+        &::before {
+            width: px(240);
+            height: px(258);
+        }
+
+        .everydaySpeech {
+            margin-top: px(30);
+            margin-right: px(80);
+            margin-bottom: px(60);
+        }
+
+        .varietyPrograms {
+            margin-right: px(80);
+        }
+
+        .interactiveCommunication {
+            margin-top: px(30);
+            margin-bottom: px(60);
+            margin-left: px(80);
+
+            i {
+                margin-right: px(42);
+            }
+        }
+
+        .holisticChristianity {
+            margin-left: px(80);
+
+            i {
+                margin-right: px(42);
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import './mobile';
+
+.why {
+    header {
+        h1 {
+            margin-top: px(76);
+
+            &::after {
+                margin-top: px(50);
+            }
+        }
+    }
+
+    .arguments {
+        justify-content: flex-start;
+        width: auto;
+        margin: px(60) 0 0;
+
+        div {
+            flex-direction: row;
+
+            i {
+                margin-left: 0;
+            }
+
+            .label {
+                height: px(42);
+                margin-top: px(-30);
+                margin-right: px(4);
+                padding-top: px(2);
+                transform: rotate(-45deg);
+                border: px(4) solid $tempColor30;
+            }
+
+            .text {
+                margin-top: px(2);
+            }
+        }
+
+        .policy {
+            margin-left: px(60);
+        }
+
+        .violence {
+            margin-left: px(88);
+
+            i {
+                margin-left: px(10);
+            }
+
+            .label {
+                margin-right: px(6);
+            }
+        }
+
+        .advert {
+            margin-left: px(78);
+        }
+    }
+}
+
+.aroundTheClock {
+    header {
+        margin-top: px(60);
+
+        span {
+            &::before {
+                left: px(-410);
+                width: px(370);
+            }
+
+            &::after {
+                right: px(-410);
+                width: px(370);
+            }
+        }
+
+        h2 {
+            &::after {
+                margin-top: px(48);
+            }
+        }
+    }
+
+    ul {
+        flex-wrap: wrap;
+        height: px(280);
+        margin-top: px(50);
+
+
+        li {
+            width: max-content;
+            margin-top: 0;
+            margin-bottom: px(68);
+
+            &:nth-child(3) {
+                margin-right: px(80);
+                margin-left: 0;
+            }
+
+            &:nth-child(4) {
+                margin-right: px(80);
+                margin-left: 0;
+            }
+        }
+    }
+}
