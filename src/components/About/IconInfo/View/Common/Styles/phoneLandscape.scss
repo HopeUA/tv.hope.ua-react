@@ -1,9 +1,9 @@
-@import '../mobile';
+@import './mobile';
 
 .container {
     flex-direction: row;
     height: px(490);
-    background-color: $color2;
+    background-color: $mainColor1;
 
     div {
         flex-direction: column;

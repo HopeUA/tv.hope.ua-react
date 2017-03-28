@@ -9,7 +9,7 @@
         height: px(288);
 
         &:nth-child(2n+1) {
-            background-color: $color2;
+            background-color: $mainColor1;
         }
 
         i {
@@ -22,7 +22,7 @@
             position: relative;
             width: px(200);
             margin-right: px(8);
-            color: $color1;
+            color: $commonColor1;
             font-size: px(30);
             line-height: px(28);
 
@@ -42,7 +42,7 @@
                 height: px(60);
                 margin-top: px(-30);
                 border-radius: 2px;
-                background-color: $color3;
+                background-color: $mainColor3;
                 content: '';
             }
         }
