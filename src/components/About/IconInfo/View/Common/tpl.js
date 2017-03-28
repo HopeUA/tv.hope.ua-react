@@ -16,9 +16,9 @@ import Styles from './Styles/main.scss';
  * Assets Import
  */
 import Palette from 'components/Assets/Palette';
-import Sign from 'components/About/IconInfo/Assets/Sign';
-import Live from 'components/About/IconInfo/Assets/Live';
-import Uk from 'components/About/IconInfo/Assets/Ukrainian';
+import Sign from '../../Assets/Sign';
+import Live from '../../Assets/Live';
+import Uk from '../../Assets/Ukrainian';
 
 /**
  * [IBP]
