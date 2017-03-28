@@ -16,7 +16,7 @@ import Styles from './Styles/main.scss';
  */
 import BP from 'lib/breakpoints';
 
-export default function WorldNetwork(props) {
+function WorldNetwork(props) {
     const { mediaType } =  props;
 
     const text = BP.isMobile(mediaType) ?
@@ -31,7 +31,7 @@ export default function WorldNetwork(props) {
                 <h2>Hope Channel</h2>
             </header>
             <p dangerouslySetInnerHTML={ { __html: text } }/>
-            <div className={ Styles.map }></div>
+            <div className={ Styles.map }/>
         </section>
     );
 }
