@@ -23,6 +23,7 @@ export default class Page extends Component {
                 <Helmet { ...Meta() }/>
                 <About.Why/>
                 <About.Banner text={ t('About.Banner.text') }/>
+                <About.WorldNetwork/>
                 <About.IconInfo/>
                 <About.Buttons/>
             </section>

@@ -1,0 +1,30 @@
+@import './desktopCommon';
+
+header {
+    h1 {
+        margin-top: px(72);
+        font-size: px(46);
+    }
+
+    h2 {
+        margin-top: px(8);
+        font-size: px(40);
+
+        &::after {
+            width: px(66);
+        }
+    }
+}
+
+p {
+    font-size: px(32);
+    line-height: px(42);
+}
+
+div {
+    width: 100%;
+    height: px(872);
+    margin-top: px(6);
+    background-image: url('../../../Assets/worldMap.png');
+    background-size: 100%;
+}
