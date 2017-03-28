@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: px(60);
-    border-bottom: px(4) solid $color3;
-    background-image: url($componentRoot + 'worldNetwork_background.jpg');
+    border-bottom: px(4) solid $commonColor5;
+    background-image: url('../../../Assets/worldNetwork_background.jpg');
 
     header {
         display: flex;
@@ -13,13 +13,13 @@
 
         h1 {
             margin-top: px(76);
-            color: $color1;
+            color: $commonColor1;
             font-size: px(44);
         }
 
         h2 {
             margin-top: px(6);
-            color: $color1;
+            color: $commonColor1;
             font-size: px(34);
             font-weight: 100;
 
@@ -28,7 +28,7 @@
                 width: px(60);
                 height: px(6);
                 margin: px(48) auto 0;
-                background-color: $color2;
+                background-color: $mainColor3;
                 content: '';
             }
         }
@@ -37,7 +37,7 @@
     p {
         width: px(530);
         margin-top: px(50);
-        color: $color1;
+        color: $commonColor1;
         font-size: px(30);
         line-height: px(36);
         text-align: center;
@@ -47,7 +47,7 @@
         width: 100%;
         height: px(396);
         margin-top: px(48);
-        background-image: url($componentRoot + 'worldMap.png');
+        background-image: url('../../../Assets/worldMap.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 122%;

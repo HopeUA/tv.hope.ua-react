@@ -1,4 +1,4 @@
-@import '../desktop';
+@import './desktopCommon';
 
 header {
     h1 {
@@ -25,6 +25,6 @@ div {
     width: 100%;
     height: px(872);
     margin-top: px(6);
-    background-image: url($componentRoot + 'worldMap.png');
+    background-image: url('../../../Assets/worldMap.png');
     background-size: 100%;
 }
