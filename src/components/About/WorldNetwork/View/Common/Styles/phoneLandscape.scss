@@ -1,0 +1,21 @@
+@import './mobile';
+
+& {
+    padding-bottom: px(60);
+
+    header {
+        h2 {
+            margin-top: px(8);
+        }
+    }
+
+    p {
+        width: px(700);
+    }
+
+    div {
+        height: px(576);
+        background-size: 100%;
+        background-position-y: 0;
+    }
+}

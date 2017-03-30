@@ -51,5 +51,14 @@ export default {
     tempColor26: '#aeb3b4',
     tempColor27: '#7fbf10',
     tempColor28: '#FACB10',
-    tempColor29: '#6D7B7C'
+    tempColor29: '#6D7B7C',
+    tempColor30: '#ab493c',
+    tempColor31: '#F9CB17',
+    tempColor32: '#6E7D7D',
+    tempColor33: '#7F2F2F',
+    tempColor34: '#F7D559',
+    tempColor35: '#21778F',
+    tempColor36: '#DFE0E1',
+    tempColor37: '#1D788F',
+    tempColor38: '#52666A'
 };
