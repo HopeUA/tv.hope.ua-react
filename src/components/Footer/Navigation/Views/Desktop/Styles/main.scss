@@ -2,7 +2,7 @@
 @import 'theme/PxFunction';
 @import 'theme/Palette';
 
-.articlesComponent {
+.navigationComponent {
     @function px($px) {
         @return pxMedia($px, tabletPortrait)
     }
