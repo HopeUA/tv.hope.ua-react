@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 
 /**
  * [IV]
@@ -21,6 +22,7 @@ import config from './config';
  * [IRDX]
  * Redux connect (optional)
  */
+@translate(['common'])
 @connect((state) => {
     return {
         mediaType: state.browser.mediaType
@@ -32,7 +34,8 @@ class Navigation extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        t: PropTypes.func.isRequired
     };
 
     /**
@@ -50,13 +53,13 @@ class Navigation extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, t } = this.props;
 
         /**
          * [RV]
          * View
          */
-        const view = <Common mediaType={ mediaType }/>;
+        const view = <Common t={ t } mediaType={ mediaType }/>;
 
         /**
          * [RR]

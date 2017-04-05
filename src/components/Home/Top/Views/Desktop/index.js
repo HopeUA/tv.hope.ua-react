@@ -16,7 +16,7 @@ Moment.locale('ru');
 
 // TODO item может быть episode или article
 export default function Desktop(props) {
-    const { items } = props;
+    const { items, t } = props;
     const [itemLarge, itemSmall] = items;
     const date = Moment(itemLarge.publish);
     const dateNext = Moment(itemSmall.publish);
@@ -63,7 +63,7 @@ export default function Desktop(props) {
         <section className={ Grids.container }>
             <section className={ Styles.topComponent }>
                 <section className={ Styles.item }>
-                    <h1>Актуально</h1>
+                    <h1>{ t('Home.Top.title') }</h1>
                     <article className={ Styles.main }>
                         <div className={ Styles.image } style={ imageCurrent }>
                             <GoTo color={ Palette.mainColor1 } className={ Styles.goTo }/>
@@ -100,7 +100,8 @@ export default function Desktop(props) {
 
 Desktop.propTypes = {
     mediaType: PropTypes.string.isRequired,
-    items: PropTypes.array
+    items: PropTypes.array,
+    t: PropTypes.func.isRequired
 };
 Desktop.defaultProps = {
     items: []
