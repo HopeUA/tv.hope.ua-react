@@ -1,0 +1,243 @@
+& {
+    width: 100%;
+    margin-top: px(52);
+    padding: px(74) px(78) px(74) px(80);
+    border-top: solid 2px $commonColor4;
+    outline: px(54) solid $mainColor1;
+    background-color: $mainColor1;
+
+    .mainContent {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        padding: 0 px(78) 0 px(82);
+        color: $commonColor1;
+
+        .col1 {
+            min-width: px(300);
+
+            .menu {
+                .title {
+                    margin-bottom: px(32);
+                    font-size: px(32);
+                }
+
+                .list {
+                    li {
+                        margin-top: px(16);
+
+                        .link {
+                            transition: color .2s;
+                            color: $commonColor1;
+                            font-size: px(26);
+
+                            &:hover {
+                                color: $mainColor4;
+                            }
+                        }
+
+                        &:first-of-type {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .col2 {
+            min-width: px(300);
+            margin-left: px(78);
+
+            .information {
+                .title {
+                    margin-bottom: px(32);
+                    font-size: px(32);
+                }
+
+                .list {
+                    li {
+                        margin-top: px(16);
+
+                        .link {
+                            transition: color .2s;
+                            color: $commonColor1;
+                            font-size: px(26);
+
+                            &:hover {
+                                color: $mainColor4;
+                            }
+                        }
+
+                        &:first-of-type {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .col3 {
+            min-width: px(300);
+            margin-left: px(74);
+
+            .connection {
+                .title {
+                    margin-bottom: px(32);
+                    font-size: px(32);
+                }
+
+                .list {
+                    li {
+                        margin-top: px(16);
+
+                        .link {
+                            transition: color .2s;
+                            color: $commonColor1;
+                            font-size: px(26);
+
+                            &:hover {
+                                color: $mainColor4;
+                            }
+                        }
+
+                        &:first-of-type {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .phoneNumber {
+                margin-top: px(62);
+
+                .title {
+                    margin-bottom: px(18);
+                    font-size: px(32);
+                }
+
+                .item {
+                    font-size: px(26);
+                }
+            }
+        }
+
+        .col4 {
+            width: px(446);
+            margin-left: px(230);
+
+            .networks {
+                .title {
+                    margin-bottom: px(38);
+                    font-size: px(32);
+                }
+
+                a {
+                    transition: color .2s;
+
+                    i {
+                        width: px(48);
+                    }
+                }
+
+                .row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .twitterIcon {
+                        order: 1;
+                    }
+
+                    .facebookIcon {
+                        order: 2;
+                    }
+
+                    .okIcon {
+                        order: 3;
+                    }
+
+                    .youtubeIcon {
+                        order: 4;
+                    }
+
+                    .vkIcon {
+                        order: 5;
+                    }
+
+                    .instagramIcon {
+                        order: 6;
+                    }
+                }
+            }
+
+            .rights {
+                margin-top: px(68);
+
+                .title {
+                    font-size: px(32);
+                }
+
+                .link {
+                    display: block;
+                    margin-top: px(38);
+                    transition: color .2s;
+                    color: $commonColor1;
+                    font-size: px(26);
+
+                    &::after {
+                        position: relative;
+                        left: px(10);
+                        font-family: Arial, sans-serif;
+                        content: '→';
+                    }
+
+                    &:hover {
+                        color: $mainColor4;
+                    }
+                }
+            }
+        }
+    }
+    // END mainContainer
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        margin: px(94) 0 0 px(36);
+
+        .container {
+            position: relative;
+            margin-top: px(6);
+
+            .copyright {
+                color: $tempColor5;
+                font-size: px(26);
+
+                &::before {
+                    display: block;
+                    position: absolute;
+                    bottom: px(50);
+                    left: px(-36);
+                    color: $tempColor5;
+                    font-weight: bold;
+                    content: '©';
+                }
+            }
+
+            .designer {
+                margin: px(6) 0 0 px(2);
+                color: $tempColor11;
+                font-size: px(22);
+            }
+        }
+
+        i {
+            width: px(80);
+
+            path {
+                fill: $commonColor7;
+            }
+        }
+    }
+    // END footer
+}

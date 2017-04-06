@@ -10,7 +10,14 @@ import { translate } from 'react-i18next';
  * [IV]
  * View Import
  */
-import Common from './Views/Common';
+import Desktop from './Views/Desktop';
+import Mobile from './Views/Mobile';
+
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
 
 /**
  * [ICONF]
@@ -59,7 +66,17 @@ class Navigation extends Component {
          * [RV]
          * View
          */
-        const view = <Common t={ t } mediaType={ mediaType }/>;
+        let view;
+
+        if (BP.isMobile(mediaType)) {
+            view = (
+                <Mobile mediaType={ mediaType }/>
+            );
+        } else {
+            view = (
+                <Desktop/>
+            );
+        }
 
         /**
          * [RR]
