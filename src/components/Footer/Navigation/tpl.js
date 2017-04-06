@@ -9,13 +9,15 @@ import { connect } from 'react-redux';
  * [IV]
  * View Import
  */
-import Common from './Views/Common/tpl';
+import Desktop from './Views/Desktop/tpl';
+import Mobile from './Views/Mobile/tpl';
 
 /**
  * [IBP]
  * Pixel Perfect and Breakpoints
  */
 import PixelPerfect from 'vendor/PixelPerfect/component';
+import BP from 'lib/breakpoints';
 
 /**
  * [ICONF]
@@ -68,7 +70,17 @@ class Navigation extends Component {
          * [RV]
          * View
          */
-        const view = <Common mediaType={ mediaType }/>;
+        let view;
+
+        if (BP.isMobile(mediaType)) {
+            view = (
+                <Mobile mediaType={ mediaType }/>
+            );
+        } else {
+            view = (
+                <Desktop/>
+            );
+        }
 
         /**
          * [RR]
