@@ -1,12 +1,24 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
 
+/**
+ * [IS]
+ * Style Import
+ */
 import Grids from 'theme/Grid.scss';
 import Styles from './Styles/main.scss';
 
-import BreakPoints from 'helpers/breakpoints';
+/**
+ * [IBP]
+ * Breakpoints
+ */
+import BP from 'lib/breakpoints';
 
-export default function Desktop(props) {
-    const { mediaType, items } = props;
+function Desktop(props) {
+    const { mediaType, items, t } = props;
 
     const options = [
         ['people', 'history'],
@@ -64,8 +76,8 @@ export default function Desktop(props) {
     const shows = (
         <section className={ Styles.shows }>
             <header>
-                <h1>Популярные программы</h1>
-                <a href="#">Все программы</a>
+                <h1>{ t('Footer.Shows.shows.title') }</h1>
+                <a href="#">{ t('Footer.Shows.shows.all') }</a>
             </header>
             <div className={ Styles.col1 }>
                 { cols[0] }
@@ -79,33 +91,48 @@ export default function Desktop(props) {
         </section>
     );
 
-    const about = BreakPoints.tabletPortrait.name !== mediaType ? (
+    const about = (
         <section className={ Styles.about } >
-            <h1>О телеканале</h1>
-            <p><strong>Телеканал</strong> предлагает большое разнообразие программ — для детей и молодежи, о
-                семье, здоровье, творческие программы, а также программы духовной тематики — с помощью которых
-                Вы сможете углубляться в познание библейских истин, быть участником интересных жизненных историй,
-                отправляться с детскими героями в увлекательные путешествия, погружаться в мир музыки, узнавать о
-                событиях в мире и Украине в <strong>позитивной перспективе.</strong></p>
-            <a href="#">Подробнее...</a>
+            <h1>{ t('Footer.Shows.about.title') }</h1>
+            <p>
+                <strong>{ t('Footer.Shows.about.description.1') }</strong>
+                { t('Footer.Shows.about.description.2') }
+                <strong>{ t('Footer.Shows.about.description.3') }</strong>
+            </p>
+            <a href="#">{ t('Footer.Shows.about.more') }</a>
         </section>
-        ) : null
-    ;
+    );
 
     return (
         <section className={ Grids.container }>
             <section className={ Styles.showsComponent }>
                 { shows }
-                { about }
+                { BP.isTabletLandscape(mediaType) || BP.isDesktop(mediaType) ? about : null }
             </section>
         </section>
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Desktop.propTypes = {
     mediaType: PropTypes.string.isRequired,
-    items: PropTypes.array
+    items: PropTypes.array,
+    t: PropTypes.func.isRequired
 };
+
+/**
+ * [CDP]
+ * Component default props
+ */
 Desktop.defaultProps = {
     items: []
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Desktop;

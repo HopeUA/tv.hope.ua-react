@@ -1,10 +1,24 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
+
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
+
+/**
+ * [IA]
+ * Assets Import
+ */
 import Submit, { TYPE_NORMAL, TYPE_LOADING, TYPE_ERROR, TYPE_SUCCESS } from 'components/Assets/Icons/Submit';
 import { STATE_NORMAL, STATE_LOADING, STATE_ERROR, STATE_SUCCESS } from '../..';
 
-export default function Desktop(props) {
-    const { handleChange, name, email, message, handleSubmit, handleDefaultSubmit, state } = props;
+function Desktop(props) {
+    const { handleChange, name, email, message, handleSubmit, handleDefaultSubmit, state, t } = props;
 
     let submitProps = {};
     const styles = {
@@ -18,14 +32,14 @@ export default function Desktop(props) {
             submitProps = {
                 type: TYPE_NORMAL,
                 color: '#2793b2',
-                buttonText: 'Отправить письмо'
+                buttonText: t('Footer.Form.button.normal')
             };
             break;
         case STATE_LOADING:
             submitProps = {
                 type: TYPE_LOADING,
                 color: '#fff',
-                buttonText: 'Отправка письма'
+                buttonText: t('Footer.Form.button.loading')
             };
             styles.background = '#b7c3c4';
             styles.color = '#fff';
@@ -35,7 +49,7 @@ export default function Desktop(props) {
             submitProps = {
                 type: TYPE_ERROR,
                 color: '#fff',
-                buttonText: 'Ошибка отправки'
+                buttonText: t('Footer.Form.button.error')
             };
             styles.background = '#a9473f';
             styles.color = '#fff';
@@ -45,7 +59,7 @@ export default function Desktop(props) {
             submitProps = {
                 type: TYPE_SUCCESS,
                 color: '#fff',
-                buttonText: 'Письмо отправлено'
+                buttonText: t('Footer.Form.button.success')
             };
             styles.background = '#4ec27f';
             styles.color = '#fff';
@@ -57,14 +71,14 @@ export default function Desktop(props) {
     return (
         <section className={ Styles.formComponent }>
             <header>
-                <h1>Контакт Центр «Надія»</h1>
+                <h1>{ t('Footer.Form.title') }</h1>
             </header>
             <form onSubmit={ handleDefaultSubmit }>
                 <input
                     name="name"
                     type="text"
                     className={ Styles.name }
-                    placeholder="Ваше имя"
+                    placeholder={ t('Footer.Form.name') }
                     onChange={ handleChange }
                     value={ name }
                     required
@@ -73,7 +87,7 @@ export default function Desktop(props) {
                     name="email"
                     type="email"
                     className={ Styles.email }
-                    placeholder="Ваш E-MAIL:"
+                    placeholder={ t('Footer.Form.email') }
                     onChange={ handleChange }
                     value={ email }
                     required
@@ -81,7 +95,7 @@ export default function Desktop(props) {
                 <textarea
                     name="message"
                     type="text"
-                    placeholder="Текст сообщения..."
+                    placeholder={ t('Footer.Form.message') }
                     onChange={ handleChange }
                     value={ message }
                     required
@@ -95,6 +109,10 @@ export default function Desktop(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Desktop.propTypes = {
     handleChange: PropTypes.func.isRequired,
     handleSubmit: PropTypes.func.isRequired,
@@ -102,5 +120,12 @@ Desktop.propTypes = {
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     message: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired
+    state: PropTypes.string.isRequired,
+    t: PropTypes.func.isRequired
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Desktop;
