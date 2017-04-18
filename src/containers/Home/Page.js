@@ -74,19 +74,19 @@ class HomePage extends Component {
                 <Home.Articles title={ t('Home.Articles.title') }/>
                 <Home.Top/>
                 <Home.Episodes
-                    title={ 'Сейчас смотрят' }
+                    title={ t('Home.Episodes.title.now') }
                     type="now"
                     scrollDisable
                     canRefresh
                     view="grid"
                 />
                 <Home.Episodes
-                    title={ 'Новые выпуски' }
+                    title={ t('Home.Episodes.title.new') }
                     type="new"
                     view="grid"
                 />
                 <Home.Episodes
-                    title={ 'Рекомендуемые выпуски' }
+                    title={ t('Home.Episodes.title.recommended') }
                     type="recommended"
                     view="row"
                 />

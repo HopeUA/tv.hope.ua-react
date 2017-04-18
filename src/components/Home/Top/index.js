@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 
 /**
  * [IV]
@@ -34,6 +35,7 @@ import items from './Mock/data.json';
  * [IRDX]
  * Redux connect (optional)
  */
+@translate(['common'])
 @connect((state) => {
     return {
         mediaType: state.browser.mediaType
@@ -45,7 +47,8 @@ class Top extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        t: PropTypes.func.isRequired
     };
 
     /**
@@ -63,7 +66,7 @@ class Top extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, t } = this.props;
 
         /**
          * [RV]
@@ -73,13 +76,14 @@ class Top extends Component {
 
         if (BP.isMobile(mediaType)) {
             view = (
-                <Mobile items={ items }/>
+                <Mobile items={ items } t={ t }/>
             );
         } else {
             view = (
                 <Desktop
                     mediaType={ mediaType }
                     items={ items }
+                    t={ t }
                 />
             );
         }
