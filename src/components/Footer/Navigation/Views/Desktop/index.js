@@ -2,7 +2,7 @@
  * [IL]
  * Library Import
  */
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 /**
  * [IS]
@@ -24,52 +24,76 @@ import Vk from 'components/Assets/Social/Vk';
 import Top from 'components/Assets/Icons/Top';
 import Palette from 'components/Assets/Palette';
 
-function Desktop() {
+function Desktop(props) {
+    const { t } = props;
+
     const menu = (
         <div className={ Styles.menu }>
-            <h1 className={ Styles.title }>Меню</h1>
+            <h1 className={ Styles.title }>{ t('Footer.Navigation.menu.title') }</h1>
             <ul className={ Styles.list }>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>Все Программы</a></li>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>ТВ Программа</a></li>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>Пожертвовать</a></li>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>ТВ Онлайн</a></li>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>Изучение Библии</a></li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.menu.row-1') }</a>
+                </li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.menu.row-2') }</a>
+                </li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.menu.row-3') }</a>
+                </li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.menu.row-4') }</a>
+                </li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.menu.row-5') }</a>
+                </li>
             </ul>
         </div>
     );
 
     const info = (
         <div className={ Styles.information }>
-            <h1 className={ Styles.title }>Информация</h1>
+            <h1 className={ Styles.title }>{ t('Footer.Navigation.information.title') }</h1>
             <ul className={ Styles.list }>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>Где нас смотреть?</a></li>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>О Телеканале</a></li>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>Новости</a></li>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>Контакты</a></li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.information.row-1') }</a>
+                </li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.information.row-2') }</a>
+                </li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.information.row-3') }</a>
+                </li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.information.row-4') }</a>
+                </li>
             </ul>
         </div>
     );
 
     const connection = (
         <div className={ Styles.connection }>
-            <h1 className={ Styles.title }>Связь</h1>
+            <h1 className={ Styles.title }>{ t('Footer.Navigation.connection.title') }</h1>
             <ul className={ Styles.list }>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>Позвонить нам сейчас</a></li>
-                <li className={ Styles.listItem }><a href="#" className={ Styles.link }>Написать в онлайн чат</a></li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.connection.row-1') }</a>
+                </li>
+                <li className={ Styles.listItem }>
+                    <a href="#" className={ Styles.link }>{ t('Footer.Navigation.connection.row-2') }</a>
+                </li>
             </ul>
         </div>
     );
 
     const phoneNumber = (
         <div className={ Styles.phoneNumber }>
-            <h1 className={ Styles.title }>0 (800) 50 157 80</h1>
-            <div className={ Styles.item }>Киев, 04071, а/я 36</div>
+            <h1 className={ Styles.title }>{ t('Footer.Navigation.phoneNumber.title') }</h1>
+            <div className={ Styles.item }>{ t('Footer.Navigation.phoneNumber.item') }</div>
         </div>
     );
 
     const networks = (
         <div className={ Styles.networks }>
-            <h1 className={ Styles.title }>Соц. сети</h1>
+            <h1 className={ Styles.title }>{ t('Footer.Navigation.networks') }</h1>
             <div className={ Styles.row } >
                 <a href="#" className={ Styles.twitterIcon }><Twitter color={ Palette.tempColor12 }/></a>
                 <a href="#" className={ Styles.vkIcon }><Vk color={ Palette.tempColor9 }/></a>
@@ -83,8 +107,8 @@ function Desktop() {
 
     const rights = (
         <div className={ Styles.rights }>
-            <h1 className={ Styles.title }>Права</h1>
-            <a href="#" className={ Styles.link }>Інформація про структуру власності</a>
+            <h1 className={ Styles.title }>{ t('Footer.Navigation.rights.title') }</h1>
+            <a href="#" className={ Styles.link }>{ t('Footer.Navigation.rights.item') }</a>
         </div>
     );
 
@@ -92,9 +116,12 @@ function Desktop() {
         <section className={ Styles.footer }>
             <div className={ Styles.container }>
                 <div className={ Styles.copyright }>
-                    <strong>2009-2017</strong> Телеканал<strong> «Надія»</strong>. Всі права захищені.
+                    <strong>2009-2017</strong>
+                    { t('Footer.Navigation.footer.copyright.1') }
+                    <strong>«Надія»</strong>
+                    { t('Footer.Navigation.footer.copyright.2') }
                 </div>
-                <div className={ Styles.designer }>Дизайн: Мирослав Джулай</div>
+                <div className={ Styles.designer }>{ t('Footer.Navigation.footer.designer') }</div>
             </div>
             <div className={ Styles.toTop }>
                 <a href="#"><Top/></a>
@@ -126,6 +153,14 @@ function Desktop() {
         </section>
     );
 }
+
+/**
+ * [CPT]
+ * Component prop types
+ */
+Desktop.propTypes = {
+    t: PropTypes.func.isRequired
+};
 
 /**
  * [IE]

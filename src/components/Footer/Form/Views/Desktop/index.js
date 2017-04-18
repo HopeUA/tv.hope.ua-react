@@ -1,9 +1,23 @@
+/**
+ * [IL]
+ * Library Import
+ */
 import React, { PropTypes } from 'react';
+
+/**
+ * [IS]
+ * Style Import
+ */
 import Styles from './Styles/main.scss';
+
+/**
+ * [IA]
+ * Assets Import
+ */
 import Submit, { TYPE_NORMAL, TYPE_LOADING, TYPE_ERROR, TYPE_SUCCESS } from 'components/Assets/Icons/Submit';
 import { STATE_NORMAL, STATE_LOADING, STATE_ERROR, STATE_SUCCESS } from '../..';
 
-export default function Desktop(props) {
+function Desktop(props) {
     const { handleChange, name, email, message, handleSubmit, handleDefaultSubmit, state } = props;
 
     let submitProps = {};
@@ -95,6 +109,10 @@ export default function Desktop(props) {
     );
 }
 
+/**
+ * [CPT]
+ * Component prop types
+ */
 Desktop.propTypes = {
     handleChange: PropTypes.func.isRequired,
     handleSubmit: PropTypes.func.isRequired,
@@ -104,3 +122,9 @@ Desktop.propTypes = {
     message: PropTypes.string.isRequired,
     state: PropTypes.string.isRequired
 };
+
+/**
+ * [IE]
+ * Export
+ */
+export default Desktop;
