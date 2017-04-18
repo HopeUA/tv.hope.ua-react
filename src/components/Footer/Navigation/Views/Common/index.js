@@ -13,11 +13,11 @@ import Vk from 'components/Assets/Social/Vk';
 import Top from 'components/Assets/Icons/Top';
 
 export default function Common(props) {
-    const { mediaType } = props;
+    const { mediaType, t } = props;
 
     const info = (
         <section className={ Styles.information }>
-            <h1>Информация</h1>
+            <h1>{ t('Shared.Footer.information') }</h1>
             <ul>
                 <li><a href="#">Где нас смотреть?</a></li>
                 <li><a href="#">О Телеканале</a></li>
@@ -33,7 +33,7 @@ export default function Common(props) {
                 BreakPoints.phonePortrait.name,
                 BreakPoints.phoneLandscape.name
             ].indexOf(mediaType) === -1 ? (
-                <h1>Соц. сети</h1>
+                <h1>{ t('Shared.Footer.social') }</h1>
                ) : null }
             <div>
                 <a href="#" className={ Styles.youtubeIcon }><YouTube color={ Palette.tempColor8 }/></a>
@@ -48,19 +48,20 @@ export default function Common(props) {
 
     const rights = (
         <section className={ Styles.rights }>
-            <h1>Права</h1>
-            <span><a href="#">Інформація про структуру власності</a></span>
+            <h1>{ t('Shared.Footer.law') }</h1>
+            <span><a href="#">{ t('Shared.Footer.ownershipStructure') }</a></span>
         </section>
     );
 
     const copyright = (
         <footer>
             <div className={ Styles.container }>
-                <div className={ Styles.copyright }><strong>2009-2017</strong> Телеканал
-                    <strong> «Надія»</strong>
-                    . Всі права захищені.
+                <div className={ Styles.copyright }><strong>{ t('Shared.Footer.copy.1') }</strong>
+                    { t('Shared.Footer.copy.2') }
+                    <strong>{ t('Shared.Footer.copy.3') }</strong>
+                    { t('Shared.Footer.copy.4') }
                 </div>
-                <div className={ Styles.designer }>Дизайн: Мирослав Джулай</div>
+                <div className={ Styles.designer }>{ t('Shared.Footer.design') }</div>
             </div>
             { [
                 BreakPoints.phonePortrait.name,
@@ -76,7 +77,7 @@ export default function Common(props) {
             <div className={ Grids.container }>
                 <div className={ Styles.mainContent }>
                     <section className={ Styles.menu }>
-                        <h1>Меню</h1>
+                        <h1>{ t('Shared.Footer.menu') }</h1>
                         <ul>
                             <li><a href="#">Все Программы</a></li>
                             <li><a href="#">ТВ Программа</a></li>
@@ -91,10 +92,10 @@ export default function Common(props) {
                     ].indexOf(mediaType) === -1 ? info : null }
 
                     <section className={ Styles.connection }>
-                        <h1>Связь</h1>
+                        <h1>{ t('Shared.Footer.communications') }</h1>
                         <ul>
-                            <li><a href="#">Позвонить нам сейчас</a></li>
-                            <li><a href="#">Написать в онлайн чат</a></li>
+                            <li><a href="#">{ t('Shared.Footer.call') }</a></li>
+                            <li><a href="#">{ t('Shared.Footer.write') }</a></li>
                         </ul>
                     </section>
 
@@ -103,8 +104,8 @@ export default function Common(props) {
                     ].indexOf(mediaType) === -1 ? networks : null }
 
                     <section className={ Styles.phoneNumber }>
-                        <h1>0 (800) 50 157 80</h1>
-                        <span>Киев, 04071, а/я 36</span>
+                        <h1>{ t('Shared.Footer.phoneNumber') }</h1>
+                        <span>{ t('Shared.Footer.address') }</span>
                     </section>
 
                     { [
@@ -143,5 +144,6 @@ export default function Common(props) {
 }
 
 Common.propTypes = {
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    t: PropTypes.string.isRequired
 };

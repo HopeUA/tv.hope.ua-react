@@ -10,7 +10,7 @@ import Arrow from 'components/Assets/Icons/Arrow';
 Moment.locale('ru');
 
 export default function Mobile(props) {
-    const { items } = props;
+    const { items, t } = props;
     const [item] = items;
     const Date = Moment(item.publish);
 
@@ -21,7 +21,7 @@ export default function Mobile(props) {
     return (
         <section className={ Styles.topComponent }>
             <section className={ Styles.item }>
-                <h1>Актуально</h1>
+                <h1>{ t('Home.Top.title') }</h1>
                 <article className={ Styles.main }>
                     <div className={ Styles.image } style={ imageStyle }/>
                     <div className={ Styles.container }>
@@ -52,7 +52,8 @@ export default function Mobile(props) {
 }
 
 Mobile.propTypes = {
-    items: PropTypes.array
+    items: PropTypes.array,
+    t: PropTypes.func.isRequired
 };
 Mobile.defaultProps = {
     items: []
