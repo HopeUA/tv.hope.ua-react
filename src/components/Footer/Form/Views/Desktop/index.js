@@ -18,7 +18,7 @@ import Submit, { TYPE_NORMAL, TYPE_LOADING, TYPE_ERROR, TYPE_SUCCESS } from 'com
 import { STATE_NORMAL, STATE_LOADING, STATE_ERROR, STATE_SUCCESS } from '../..';
 
 function Desktop(props) {
-    const { handleChange, name, email, message, handleSubmit, handleDefaultSubmit, state, t } = props;
+    const { handleChange, name, email, message, handleSubmit, handleDefaultSubmit, state } = props;
 
     let submitProps = {};
     const styles = {
@@ -32,14 +32,14 @@ function Desktop(props) {
             submitProps = {
                 type: TYPE_NORMAL,
                 color: '#2793b2',
-                buttonText: t('Footer.Form.button.normal')
+                buttonText: 'Отправить письмо'
             };
             break;
         case STATE_LOADING:
             submitProps = {
                 type: TYPE_LOADING,
                 color: '#fff',
-                buttonText: t('Footer.Form.button.loading')
+                buttonText: 'Отправка письма'
             };
             styles.background = '#b7c3c4';
             styles.color = '#fff';
@@ -49,7 +49,7 @@ function Desktop(props) {
             submitProps = {
                 type: TYPE_ERROR,
                 color: '#fff',
-                buttonText: t('Footer.Form.button.error')
+                buttonText: 'Ошибка отправки'
             };
             styles.background = '#a9473f';
             styles.color = '#fff';
@@ -59,7 +59,7 @@ function Desktop(props) {
             submitProps = {
                 type: TYPE_SUCCESS,
                 color: '#fff',
-                buttonText: t('Footer.Form.button.success')
+                buttonText: 'Письмо отправлено'
             };
             styles.background = '#4ec27f';
             styles.color = '#fff';
@@ -71,14 +71,14 @@ function Desktop(props) {
     return (
         <section className={ Styles.formComponent }>
             <header>
-                <h1>{ t('Footer.Form.title') }</h1>
+                <h1>Контакт Центр «Надія»</h1>
             </header>
             <form onSubmit={ handleDefaultSubmit }>
                 <input
                     name="name"
                     type="text"
                     className={ Styles.name }
-                    placeholder={ t('Footer.Form.name') }
+                    placeholder="Ваше имя"
                     onChange={ handleChange }
                     value={ name }
                     required
@@ -87,7 +87,7 @@ function Desktop(props) {
                     name="email"
                     type="email"
                     className={ Styles.email }
-                    placeholder={ t('Footer.Form.email') }
+                    placeholder="Ваш E-MAIL:"
                     onChange={ handleChange }
                     value={ email }
                     required
@@ -95,7 +95,7 @@ function Desktop(props) {
                 <textarea
                     name="message"
                     type="text"
-                    placeholder={ t('Footer.Form.message') }
+                    placeholder="Текст сообщения..."
                     onChange={ handleChange }
                     value={ message }
                     required
@@ -120,8 +120,7 @@ Desktop.propTypes = {
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     message: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired,
-    t: PropTypes.func.isRequired
+    state: PropTypes.string.isRequired
 };
 
 /**
