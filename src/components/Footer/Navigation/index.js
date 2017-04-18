@@ -70,11 +70,14 @@ class Navigation extends Component {
 
         if (BP.isMobile(mediaType)) {
             view = (
-                <Mobile mediaType={ mediaType }/>
+                <Mobile
+                    mediaType={ mediaType }
+                    t={ t }
+                />
             );
         } else {
             view = (
-                <Desktop/>
+                <Desktop t={ t }/>
             );
         }
 

@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 
 /**
  * [IV]
@@ -33,6 +34,7 @@ import items from './Mock/data.json';
  * [IRDX]
  * Redux connect (optional)
  */
+@translate(['common'])
 @connect((state) => {
     return {
         mediaType: state.browser.mediaType
@@ -44,7 +46,8 @@ class Shows extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        t: PropTypes.func.isRequired
     };
 
     /**
@@ -62,14 +65,18 @@ class Shows extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, t } = this.props;
 
         /**
          * [RV]
          * View
          */
         const view = BP.isMobile(mediaType) ? null : (
-            <Desktop mediaType={ mediaType } items={ items }/>
+            <Desktop
+                mediaType={ mediaType }
+                items={ items }
+                t={ t }
+            />
         );
 
         /**

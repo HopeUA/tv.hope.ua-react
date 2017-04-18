@@ -5,6 +5,7 @@
 import React, { PropTypes, Component } from 'react';
 import Fetch from 'isomorphic-fetch';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 
 /**
  * [IV]
@@ -33,6 +34,7 @@ export const STATE_SUCCESS = 'success';
  * [IRDX]
  * Redux connect (optional)
  */
+@translate(['common'])
 @connect((state) => {
     return {
         mediaType: state.browser.mediaType
@@ -44,7 +46,8 @@ class Form extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        t: PropTypes.func.isRequired
     };
 
     /**
@@ -127,7 +130,7 @@ class Form extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, t } = this.props;
 
         /**
          * [RV]
@@ -140,6 +143,7 @@ class Form extends Component {
                 handleDefaultSubmit={ this.handleDefaultSubmit }
                 state={ this.state.form }
                 { ...this.state }
+                t={ t }
             />
         );
 
