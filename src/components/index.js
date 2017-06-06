@@ -13,3 +13,4 @@ export * as Home from './Home';
 export * as Footer from './Footer';
 export * as Contacts from './Contacts';
 export * as WatchUs from './WatchUs';
+export * as Show from './Show';
