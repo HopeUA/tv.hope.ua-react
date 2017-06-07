@@ -2,8 +2,8 @@
     .title {
         margin-top: px(124);
         margin-left: px(94);
-        font-size: px(48);
         color: $commonColor1;
+        font-size: px(48);
     }
 
     .content {
@@ -15,9 +15,9 @@
             height: px(512);
             margin-top: px(84);
             margin-right: px(96);
+            border-radius: 2px;
             background-image: url('../../../Assets/banner.jpg');
             background-size: cover;
-            border-radius: 2px;
         }
 
         .text {
@@ -33,10 +33,10 @@
 
             .description {
                 margin-top: px(46);
-                font-size: px(32);
-                line-height: px(40);
                 color: $tempColor32;
                 font-family: Georgia;
+                font-size: px(32);
+                line-height: px(40);
             }
         }
     }
