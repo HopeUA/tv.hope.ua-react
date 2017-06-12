@@ -2,7 +2,7 @@
  * [IL]
  * Library Import
  */
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 /**
  * [IS]
@@ -11,21 +11,27 @@ import React from 'react';
 import Styles from './Styles/main.scss';
 import Grid from 'theme/Grid.scss';
 
-function Common() {
+function Common(props) {
+    const { show } = props;
+
+    const imageStyle = show.images.cover ? {
+        backgroundImage: `url('${show.images.cover}')`
+    } : null;
+
+    const title = show.title ? show.title : null;
+
+    const description = show.description.medium ? show.description.medium : null;
+
     return (
         <section className={ Grid.container }>
             <section className={ Styles.aboutComponent }>
                 <h1 className={ Styles.title }>О программе</h1>
                 <div className={ Styles.content }>
-                    <div className={ Styles.image }/>
+                    <div className={ Styles.image } style={ imageStyle }/>
                     <div className={ Styles.text }>
-                        <h2 className={ Styles.showName }>Хліб щоденний</h2>
+                        <h2 className={ Styles.showName }>{ title }</h2>
                         <p className={ Styles.description }>
-                            На следующее утро с болью в сердце пророк вышел, чтобы встретить заблуждающегося царя.
-                            Самуил лелеял в сердце надежду, что, одумавшись, Саул признает свой грех, раскается,
-                            смирится и вновь обретет Божественную благосклонность. Но когда сделан первый шаг по стезе
-                            беззакония, остальной путь становится легким. Развращенный своим непослушанием, Саул вышел
-                            встречать Самуила с ложью на устах.
+                            { description }
                         </p>
                     </div>
                 </div>
@@ -33,6 +39,10 @@ function Common() {
         </section>
     );
 }
+
+Common.propTypes = {
+    show: PropTypes.object.isRequired
+};
 
 /**
  * [IE]

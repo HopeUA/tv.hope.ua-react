@@ -5,6 +5,8 @@ import * as Show from 'components/Show';
 import Meta from './Meta';
 import Helmet from 'react-helmet';
 
+import ShowItem from './data.json';
+
 /* eslint-disable react/prefer-stateless-function */
 @translate(['common'])
 @connect(({ browser }) => {
@@ -19,7 +21,7 @@ export default class Page extends Component {
         return (
             <section>
                 <Helmet { ...Meta() }/>
-                <Show.About/>
+                <Show.About show={ ShowItem }/>
             </section>
         );
     }

@@ -27,7 +27,7 @@ class About extends Component {
      * Component prop types
      */
     static propTypes = {
-        text: PropTypes.string.isRequired
+        show: PropTypes.object.isRequired
     };
 
     /**
@@ -35,13 +35,13 @@ class About extends Component {
      * Render function
      */
     render = () => {
-        const { text } = this.props;
+        const { show } = this.props;
 
         /**
          * [RV]
          * View
          */
-        const view = (<Common text={ text }/>);
+        const view = (<Common show={ show }/>);
 
         /**
          * [RR]

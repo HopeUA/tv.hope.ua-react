@@ -32,11 +32,14 @@
             }
 
             .description {
+                height: px(356);
                 margin-top: px(46);
                 color: $tempColor32;
                 font-family: Georgia;
                 font-size: px(32);
                 line-height: px(40);
+                overflow: hidden;
+
             }
         }
     }
