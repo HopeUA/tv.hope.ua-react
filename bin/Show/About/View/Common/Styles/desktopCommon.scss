@@ -1,0 +1,43 @@
+& {
+    .title {
+        margin-top: px(124);
+        margin-left: px(94);
+        color: $commonColor1;
+        font-size: px(48);
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+
+        .image {
+            width: px(928);
+            height: px(512);
+            margin-top: px(84);
+            margin-right: px(96);
+            border-radius: 2px;
+            background-image: url('../../../Assets/banner.jpg');
+            background-size: cover;
+        }
+
+        .text {
+            width: px(790);
+            margin-right: px(42);
+
+            .showName {
+                margin-top: px(112);
+                color: $tempColor32;
+                font-size: px(48);
+                font-weight: bold;
+            }
+
+            .description {
+                margin-top: px(46);
+                color: $tempColor32;
+                font-family: Georgia;
+                font-size: px(32);
+                line-height: px(40);
+            }
+        }
+    }
+}
