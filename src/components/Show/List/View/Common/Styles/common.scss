@@ -1,0 +1,68 @@
+& {
+    padding-left: px(24);
+
+    .title {
+        margin-top: px(52);
+        color: $commonColor1;
+        font-size: px(38);
+    }
+
+    .list {
+        margin-top: px(46);
+
+        .item {
+            display: flex;
+            margin-bottom: px(40);
+
+            .image {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                width: px(248);
+                height: px(136);
+                margin-right: px(24);
+                border-radius: 2px;
+                background-image: url('../../../Assets/banner.png');
+                background-size: cover;
+
+                .time {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: px(72);
+                    height: px(32);
+                    margin: 0 px(12) px(12) 0;
+                    padding-top: 1px;
+                    border-radius: 2px;
+                    background: $tempColor33;
+                    color: $mainColor1;
+                    font-size: px(20);
+                }
+            }
+
+            .info {
+                padding-top: px(4);
+
+                .theme {
+                    width: px(270);
+                    height: px(90);
+                    color: $tempColor32;
+                    font-size: px(28);
+                    font-weight: normal;
+                    line-height: px(30);
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+
+                .date {
+                    display: inline-block;
+                    margin-top: px(16);
+                    color: $tempColor2;
+                    font-size: px(22);
+                }
+            }
+        }
+    }
+}

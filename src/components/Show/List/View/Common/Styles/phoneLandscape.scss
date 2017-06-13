@@ -1,0 +1,24 @@
+@import 'common';
+
+& {
+    .title {
+        margin-top: px(52);
+    }
+
+    .list {
+        margin-top: px(46);
+
+        .item {
+            .info {
+                padding-top: px(12);
+
+                .theme {
+                    display: block;
+                    width: px(728);
+                    height: auto;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
