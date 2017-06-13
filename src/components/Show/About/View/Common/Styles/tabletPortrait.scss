@@ -1,0 +1,31 @@
+@import './common';
+
+& {
+    .title {
+        margin-left: px(94);
+        font-size: px(42);
+    }
+
+    .content {
+        .image {
+            width: px(1344);
+            height: px(752);
+            margin-top: px(82);
+        }
+
+        .text {
+            width: px(1344);
+
+            .showName {
+                margin-top: px(72);
+                font-size: px(64);
+            }
+
+            .description {
+                margin-top: px(62);
+                font-size: px(34);
+                line-height: px(46);
+            }
+        }
+    }
+}
