@@ -8,7 +8,7 @@
 
     .content {
         display: flex;
-        justify-content: center;
+        padding-left: px(96);
 
         .image {
             width: px(928);
@@ -22,7 +22,6 @@
 
         .text {
             width: px(790);
-            margin-right: px(42);
 
             .showName {
                 margin-top: px(112);
