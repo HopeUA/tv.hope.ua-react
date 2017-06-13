@@ -5,6 +5,8 @@ import * as Show from 'components/Show';
 import Meta from './Meta';
 import Helmet from 'react-helmet';
 
+import episodes from './Mock/episodes.json';
+
 /* eslint-disable react/prefer-stateless-function */
 @translate(['common'])
 @connect(({ browser }) => {
@@ -19,7 +21,7 @@ export default class Page extends Component {
         return (
             <section>
                 <Helmet { ...Meta() }/>
-                <Show.List/>
+                <Show.List episodes={ episodes }/>
                 <Show.About/>
             </section>
         );

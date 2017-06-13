@@ -1,5 +1,11 @@
 @import 'desktopCommon';
 
-.title {
-    margin-left: px(114);
+& {
+    .title {
+        margin-left: px(114);
+    }
+
+    .list {
+        padding-left: px(118);
+    }
 }

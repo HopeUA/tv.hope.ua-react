@@ -27,7 +27,8 @@ class List extends Component {
      * Component prop types
      */
     static propTypes = {
-        text: PropTypes.string.isRequired
+        episodes: PropTypes.array.isRequired,
+        mediaType: PropTypes.string.isRequired
     };
 
     /**
@@ -35,13 +36,13 @@ class List extends Component {
      * Render function
      */
     render = () => {
-        const { text } = this.props;
+        const { episodes, mediaType } = this.props;
 
         /**
          * [RV]
          * View
          */
-        const view = (<Common text={ text }/>);
+        const view = (<Common mediaType={ mediaType } episodes={ episodes }/>);
 
         /**
          * [RR]
