@@ -1,1 +1,2 @@
-export About from './About/tpl';
+export About from './About';
+export List from './List';

@@ -15,6 +15,7 @@ const componentRoutes = (
     <Route>
         <IndexRoute component={ Home }/>
         <Route path="contacts" component={ Contacts }/>
+        <Route path="show" component={ Show }/>
         <Route path="watchUs" component={ WatchUs }/>
         <Route path="about" component={ About }/>
         <Route path="show" component={ Show }/>
