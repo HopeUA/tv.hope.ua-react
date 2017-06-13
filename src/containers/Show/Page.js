@@ -22,7 +22,6 @@ export default class Page extends Component {
             <section>
                 <Helmet { ...Meta() }/>
                 <Show.List episodes={ episodes }/>
-                <Show.About/>
             </section>
         );
     }
