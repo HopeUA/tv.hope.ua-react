@@ -5,7 +5,7 @@ import * as Show from 'components/Show';
 import Meta from './Meta';
 import Helmet from 'react-helmet';
 
-import ShowItem from './data.json';
+import ShowItem from './Mock/show.json';
 import episodes from './Mock/episodes.json';
 
 /* eslint-disable react/prefer-stateless-function */
