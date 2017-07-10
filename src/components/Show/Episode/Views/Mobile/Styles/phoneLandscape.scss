@@ -1,0 +1,21 @@
+@import 'common';
+
+& {
+    .cover {
+        width: px(1056);
+        background-color: $mainColor2;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .info {
+        width: px(1056);
+        padding-left: 0;
+    }
+
+    .list {
+        margin-top: px(78);
+        margin-left: px(0);
+    }
+}

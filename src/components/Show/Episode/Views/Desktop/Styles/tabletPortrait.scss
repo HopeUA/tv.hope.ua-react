@@ -1,0 +1,105 @@
+@import 'common';
+
+& {
+    padding-top: px(72);
+
+    .cover {
+        width: px(1392);
+        height: px(780);
+
+        .play {
+            width: px(132);
+        }
+    }
+
+    .info {
+        width: px(1392);
+        margin-top: px(52);
+
+        .title {
+            font-size: px(42);
+        }
+
+        .date {
+            margin-top: px(28);
+            font-size: px(24);
+        }
+
+        .description {
+            margin-top: px(14);
+            font-size: px(27);
+            line-height: px(40);
+        }
+    }
+
+    .slider {
+        .arrowLeft {
+            width: px(40);
+            height: px(354);
+            padding-top: px(104);
+
+            .arrow {
+                width: px(18);
+                transform: rotate(180deg);
+            }
+        }
+
+        .arrowRight {
+            width: px(40);
+            height: px(354);
+            padding-top: px(104);
+
+            .arrow {
+                width: px(18);
+                margin-top: 0;
+            }
+        }
+
+        .wrap {
+            display: flex;
+            position: relative;
+
+            .list {
+                width: px(1440);
+                margin-top: px(46);
+
+                .item {
+                    width: px(360);
+                    height: px(354);
+                    padding-top: px(24);
+
+                    .image {
+                        width: px(312);
+                        height: px(180);
+
+                        .playSmall {
+                            width: px(48);
+                        }
+
+                        .time {
+                            right: px(12);
+                            bottom: px(12);
+                            width: px(72);
+                            height: px(36);
+                            font-size: px(20);
+                        }
+                    }
+
+                    .description {
+                        width: px(312);
+                        height: px(70);
+                        margin-top: px(24);
+                        font-size: px(27);
+                        line-height: px(32);
+                    }
+                }
+
+                .active {
+                    .description {
+                        font-size: px(27);
+                    }
+                }
+            }
+        }
+    }
+}
