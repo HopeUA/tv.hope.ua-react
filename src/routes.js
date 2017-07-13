@@ -8,6 +8,7 @@ import {
     WatchUs,
     About,
     Show,
+    Episode,
     NotFound
 } from 'containers';
 
@@ -15,10 +16,10 @@ const componentRoutes = (
     <Route>
         <IndexRoute component={ Home }/>
         <Route path="contacts" component={ Contacts }/>
-        <Route path="show" component={ Show }/>
+        <Route path="shows/:id" component={ Show }/>
+        <Route path="shows/:id/:id" component={ Episode }/>
         <Route path="watchUs" component={ WatchUs }/>
         <Route path="about" component={ About }/>
-        <Route path="show" component={ Show }/>
         <Route path="*" component={ NotFound } status={ 404 }/>
     </Route>
 );
