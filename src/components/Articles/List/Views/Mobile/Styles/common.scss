@@ -1,0 +1,81 @@
+& {
+    margin-top: px(96);
+
+    .list {
+        padding-left: px(24);
+
+        .item {
+            display: flex;
+            margin-bottom: px(40);
+
+            .image {
+                width: px(248);
+                height: px(136);
+                margin-right: px(24);
+                border-radius: 1px;
+                background-size: cover;
+            }
+
+            .info {
+                width: px(300);
+                height: px(86);
+
+                .description {
+                    height: px(92);
+                    margin-top: px(2);
+                    color: $tempColor32;
+                    font-family: 'Exo 2';
+                    font-size: px(28);
+                    line-height: px(30);
+                    overflow: hidden;
+                }
+
+                .date {
+                    display: inline-block;
+                    margin-top: px(16);
+                    color: $tempColor39;
+                    font-family: 'Exo 2';
+                    font-size: px(22);
+                }
+            }
+        }
+    }
+
+    .showMore {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: px(60);
+
+        .shown {
+            display: inline-flex;
+            color: $tempColor39;
+            font-family: 'Exo 2';
+            font-size: px(22);
+        }
+
+        .download {
+            display: inline-flex;
+            margin-top: px(10);
+            color: $tempColor34;
+            font-family: 'Exo 2';
+            font-size: px(32);
+        }
+
+        .circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: px(40);
+            height: px(40);
+            margin-top: px(20);
+            transform: rotate(90deg);
+            border: 1px solid $tempColor2;
+            border-radius: 50%;
+
+            .arrow {
+                width: px(10);
+            }
+        }
+    }
+}

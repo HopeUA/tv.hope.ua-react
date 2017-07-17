@@ -1,0 +1,95 @@
+& {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: px(176);
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: px(1856);
+
+        .item {
+            flex-shrink: 0;
+            width: px(592);
+            margin-bottom: px(40);
+            border-radius: px(6);
+            overflow: hidden;
+
+            .image {
+                height: px(320);
+                background-size: cover;
+            }
+
+            .info {
+                height: px(368);
+                padding: px(44) px(46) 0;
+                background: $mainColor1;
+                color: $tempColor2;
+                font-family: 'Exo 2';
+                font-size: px(28);
+
+                .title {
+                    margin-top: px(26);
+                    color: $tempColor32;
+                    font-family: 'Exo 2';
+                    font-size: px(36);
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                .description {
+                    height: px(154);
+                    margin-top: px(26);
+                    color: $tempColor32;
+                    font-family: 'Exo 2';
+                    font-size: px(28);
+                    line-height: px(40);
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    .showMore {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: px(46);
+        cursor: pointer;
+
+        .shown {
+            display: inline-flex;
+            color: $tempColor39;
+            font-family: 'Exo 2';
+            font-size: px(28);
+            font-weight: bold;
+        }
+
+        .download {
+            display: inline-flex;
+            margin-top: px(16);
+            color: $tempColor34;
+            font-family: 'Exo 2';
+            font-size: px(40);
+        }
+
+        .circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: px(48);
+            height: px(48);
+            margin-top: px(24);
+            transform: rotate(90deg);
+            border: 1px solid $tempColor2;
+            border-radius: 50%;
+
+            .arrow {
+                width: px(14);
+            }
+        }
+    }
+}
