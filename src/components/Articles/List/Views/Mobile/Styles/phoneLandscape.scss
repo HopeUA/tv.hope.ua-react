@@ -1,0 +1,19 @@
+@import 'common';
+
+& {
+    .list {
+        .item {
+            .info {
+                width: px(800);
+
+                .description {
+                    height: auto;
+                    margin-top: px(10);
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
