@@ -1,0 +1,39 @@
+@import 'common';
+
+& {
+    padding: px(48) px(180) 0;
+
+    .title {
+        font-size: px(42);
+        line-height: px(50);
+    }
+
+    .date {
+        margin-top: px(26);
+        font-size: px(22);
+    }
+
+    .containerContent {
+        margin-top: px(40);
+
+        .initialLetter {
+            margin-right: px(10);
+            font-size: px(78);
+            font-weight: normal;
+        }
+
+        .content {
+            .image {
+                width: px(902);
+                height: px(492);
+                margin-top: px(42);
+            }
+
+            p {
+                margin-top: px(46);
+                font-size: px(28);
+                line-height: px(42);
+            }
+        }
+    }
+}

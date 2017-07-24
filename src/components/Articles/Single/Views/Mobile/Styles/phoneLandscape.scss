@@ -1,0 +1,13 @@
+@import 'common';
+
+& {
+    padding-top: px(40);
+
+    .image {
+        width: px(1056);
+        height: px(392);
+        margin-top: px(64);
+        background: center no-repeat $tempColor1;
+        background-size: px(592);
+    }
+}
