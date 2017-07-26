@@ -1,0 +1,60 @@
+& {
+    padding: px(80) px(242) 0;
+
+    .title {
+        color: $tempColor32;
+        font-family: 'Exo 2';
+        font-size: px(56);
+        line-height: px(68);
+    }
+
+    .date {
+        display: inline-block;
+        margin-top: px(36);
+        color: $tempColor39;
+        font-family: 'Exo 2';
+        font-size: px(28);
+    }
+
+    .containerContent {
+        display: flex;
+        margin-top: px(52);
+
+        .initialLetter {
+            margin-right: px(14);
+            color: $tempColor32;
+            font-family: 'Exo 2';
+            font-size: px(104);
+        }
+
+        .content {
+            .image {
+                width: px(1200);
+                height: px(656);
+                margin-top: px(58);
+                background-size: cover;
+            }
+
+            p {
+                margin-top: px(62);
+                color: $tempColor32;
+                font-family: 'Exo 2';
+                font-size: px(36);
+                line-height: px(56);
+
+                &:first-child {
+                    margin-top: px(0);
+                }
+
+                a {
+                    color: $tempColor34;
+                    font-weight: bold;
+                }
+            }
+
+            div {
+                margin-top: px(50);
+            }
+        }
+    }
+}

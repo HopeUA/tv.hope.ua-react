@@ -20,6 +20,7 @@ export default class Page extends Component {
         return (
             <section>
                 <Helmet { ...Meta() }/>
+                <Articles.Single item={ items[0] }/>
                 <Articles.List items={ items }/>
             </section>
         );
