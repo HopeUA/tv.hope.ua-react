@@ -1,0 +1,60 @@
+@import 'common';
+
+& {
+    .slider {
+        .arrowLeft {
+            width: px(40);
+            height: px(108);
+            padding-top: px(44);
+            padding-right: px(32);
+
+            .arrow {
+                width: px(10);
+                transform: rotate(180deg);
+            }
+        }
+
+        .arrowRight {
+            width: px(40);
+            height: px(108);
+            padding-top: px(44);
+            padding-left: px(32);
+
+            .arrow {
+                width: px(10);
+                margin-top: 0;
+            }
+        }
+
+        .wrap {
+            display: flex;
+            position: relative;
+
+            .list {
+                width: px(1242);
+
+                .day {
+                    width: px(136);
+                    height: px(108);
+                    padding-top: px(20);
+
+                    .dayOfWeek {
+                        font-size: px(36);
+                    }
+
+                    .date {
+                        margin-top: px(6);
+                        font-size: px(22);
+                    }
+                }
+
+                .today {
+                    .date {
+                        width: px(96);
+                        height: px(25);
+                    }
+                }
+            }
+        }
+    }
+}

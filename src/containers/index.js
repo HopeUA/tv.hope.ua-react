@@ -6,4 +6,5 @@ export About from './About/Page';
 export Show from './Show/Page';
 export Episode from './Episode/Page';
 export Articles from './Articles/Page';
+export Scheduler from './Scheduler/Page';
 export NotFound from './NotFound/NotFound';
