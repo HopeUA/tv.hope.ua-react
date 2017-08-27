@@ -1,0 +1,79 @@
+& {
+    display: flex;
+    justify-content: center;
+    height: px(128);
+    background-color: $tempColor18;
+    background-image: url('../../../Assets/BG.jpg');
+    background-size: cover;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .days {
+        display: flex;
+        list-style: none;
+
+        .day {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: center;
+            width: px(144);
+            height: px(128);
+            padding-top: px(24);
+
+            .dayOfWeek {
+                color: $mainColor1;
+                font-family: 'Exo 2';
+                font-size: px(40);
+                text-transform: uppercase;
+                opacity: .4;
+            }
+
+            .date {
+                margin-top: px(6);
+                color: $mainColor1;
+                font-family: 'Exo 2';
+                font-size: px(26);
+                opacity: .8;
+            }
+        }
+
+        .today {
+            .date {
+                color: $tempColor36;
+            }
+        }
+        // scss-lint:disable all
+        .today.active.day {
+            // scss-lint:enable all
+            background: none;
+
+            .dayOfWeek {
+                color: $mainColor1;
+                opacity: .4;
+            }
+
+            .date {
+                color: $tempColor36;
+                opacity: .8;
+            }
+        }
+
+        .active {
+            background: $tempColor36;
+
+            .dayOfWeek {
+                color: $tempColor32;
+                opacity: 1;
+            }
+
+            .date {
+                color: $tempColor32;
+                opacity: 1;
+            }
+        }
+    }
+}

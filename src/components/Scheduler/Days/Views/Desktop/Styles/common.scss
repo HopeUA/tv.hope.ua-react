@@ -1,0 +1,120 @@
+& {
+    background-image: url('../../../Assets/BG.jpg');
+
+    .slider {
+        display: flex;
+        align-items: flex-end;
+
+        .arrowLeft {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            width: px(216);
+            height: px(144);
+            padding-top: px(60);
+            padding-right: px(40);
+            cursor: pointer;
+
+            .arrow {
+                width: px(14);
+                transform: rotate(180deg);
+            }
+        }
+
+        .arrowRight {
+            display: flex;
+            align-items: flex-start;
+            width: px(216);
+            height: px(144);
+            padding-top: px(60);
+            padding-left: px(40);
+            cursor: pointer;
+
+            .arrow {
+                width: px(14);
+            }
+        }
+
+        .wrap {
+            display: flex;
+            position: relative;
+            justify-content: center;
+
+            .list {
+                display: flex;
+                justify-content: center;
+                width: px(1918);
+                transition: all .3s cubic-bezier(.15, .46, .61, 1);
+                background-size: 0;
+
+                .day {
+                    display: flex;
+                    flex-direction: column;
+                    flex-shrink: 0;
+                    align-items: center;
+                    width: px(190);
+                    height: px(144);
+                    padding-top: px(28);
+
+                    .dayOfWeek {
+                        color: $mainColor1;
+                        font-family: 'Exo 2';
+                        font-size: px(48);
+                        text-transform: uppercase;
+                        opacity: .4;
+                    }
+
+                    .date {
+                        margin-top: px(6);
+                        color: $mainColor1;
+                        font-family: 'Exo 2';
+                        font-size: px(28);
+                        opacity: .8;
+                    }
+                }
+
+                .today {
+                    .date {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: px(128);
+                        height: px(32);
+                        border-radius: 2px;
+                        background-color: $tempColor36;
+                        color: $tempColor32;
+                    }
+                }
+
+                .active.day.today {
+                    background: none;
+
+                    .dayOfWeek {
+                        color: $mainColor1;
+                        opacity: .4;
+                    }
+
+                    .date {
+                        color: $tempColor32;
+                        opacity: .8;
+                    }
+                }
+                // scss-lint:disable all
+                .active {
+                    // scss-lint:enable all
+                    background: $tempColor36;
+
+                    .dayOfWeek {
+                        color: $tempColor32;
+                        opacity: 1;
+                    }
+
+                    .date {
+                        color: $tempColor32;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

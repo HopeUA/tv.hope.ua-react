@@ -1,0 +1,278 @@
+[
+  {
+    "id": "5975a5370f57e80011f03105",
+    "date": "2017-07-31T21:00:00.000Z",
+    "show": {
+      "uid": "VELU",
+      "title": "Біблія, як вона є",
+      "description": {
+        "short": "Вічні сторінки написані для Вас"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/VELU/VELU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/VELU/VELU-background.jpg"
+      },
+      "code": "VELU"
+    },
+    "episode": {
+      "uid": "VELU05214",
+      "title": "Послання до Римлян 6:1-23",
+      "description": "Хто вмер для гріха, той житиме в Бозі.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/VELU/episodes/05214/VELU05214-cover.jpg",
+      "code": "VELU05214"
+    }
+  },
+  {
+    "id": "5975a5370f57e80011f03106",
+    "date": "2017-07-31T21:30:00.000Z",
+    "show": {
+      "uid": "VKLU",
+      "title": "В контексті",
+      "description": {
+        "short": "\"Заглиблюйся в себе та у вчення...\""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/VKLU/VKLU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/VKLU/VKLU-background.jpg"
+      },
+      "code": "VKLU"
+    },
+    "episode": {
+      "language": "",
+      "image": "",
+      "description": "",
+      "title": "",
+      "code": "VKLU03117",
+      "uid": ""
+    }
+  },
+  {
+    "id": "5975a5370f57e80011f03108",
+    "date": "2017-07-31T22:30:00.000Z",
+    "show": {
+      "uid": "DOCU",
+      "title": "Дивовижнi  вiдкриття",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/DOCU/DOCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/DOCU/DOCU-background.jpg"
+      },
+      "code": "DOCU"
+    },
+    "episode": {
+      "uid": "DOCU00216",
+      "title": "Чи є Бог?",
+      "description": "Доктор філософії Джон Хаммонд на прикладі свого життя ілюструє наявність Господа та Його реальне існування.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/DOCU/episodes/00216/DOCU00216-cover.jpg",
+      "code": "DOCU00216"
+    }
+  },
+  {
+    "id": "5975a5370f57e80011f03107",
+    "date": "2017-07-31T23:30:00.000Z",
+    "show": {
+      "uid": "CGCU",
+      "title": "В гостях у Клиффа Гольдштейна",
+      "description": {
+        "short": "Неординарные исследования"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/CGCU/CGCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/CGCU/CGCU-background.jpg"
+      },
+      "code": "CGCU"
+    },
+    "episode": {
+      "uid": "CGCU00710",
+      "title": "Философия и вера",
+      "description": "Без вмешательства свыше люди, сами по себе, ограниченные своими чувствами, логикой и разумом, обязательно придут к неправильным выводам. Поэтому, чтобы найти истину, нам нужен источник извне; источник, превосходящий нас. Библия является единственно верной отправной точкой для наших поисков.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/CGCU/episodes/00710/CGCU00710-cover.jpg",
+      "code": "CGCU00710"
+    }
+  },
+  {
+    "id": "5975a5370f57e80011f03109",
+    "date": "2017-08-01T00:00:00.000Z",
+    "show": {
+      "uid": "RCCU",
+      "title": "Дорогами християнства",
+      "description": {
+        "short": "Що якщо копнути глибше?"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/RCCU/RCCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/RCCU/RCCU-background.jpg"
+      },
+      "code": "RCCU"
+    },
+    "episode": {
+      "uid": "RCCU01816",
+      "title": "Спадок Реформації: Біблійні принципи управління фінансами",
+      "description": "Реформація була колосальним поштовхом не тільки до духовних, але й до культурних, соціальних, політичних і навіть економічних змін європейського суспільства. Вірніше сказати, в цей час зароджується суспільство нового типу, де підприємництво відіграє все більшу і більшу роль. Саме в епоху Реформації з усією гостротою прозвучало питання: якими повинні бути економічні відносини з точки зору християнських цінностей? Про те, які відповіді були на нього дані, піде мова у цій передачі.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/RCCU/episodes/01816/RCCU01816-cover.jpg",
+      "code": "RCCU01816"
+    }
+  },
+  {
+    "id": "5975a5380f57e80011f0310a",
+    "date": "2017-08-01T00:40:00.000Z",
+    "show": {
+      "uid": "MBCU",
+      "title": "Музична скринька",
+      "description": {
+        "short": "Відкрийте для себе світ прекрасних звуків"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/MBCU/MBCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/MBCU/MBCU-background.jpg"
+      },
+      "code": "MBCU"
+    },
+    "episode": {
+      "uid": "MBCU03815",
+      "title": "Він здійснить бажання",
+      "description": "Як двоє інвалідів спасли селище від паводків? \"Бог спасає, навіть через музику! Так сталось і в моєму житті\" — розповідає Ангеліна Кормош. Гість програми \"Музична скринька\". Не пропустіть цікаві історії з життя реальних людей, та добірку християнських пісень у черговому випуску програми \"Музична скринька\".",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/MBCU/episodes/03815/MBCU03815-cover.jpg",
+      "code": "MBCU03815"
+    }
+  },
+  {
+    "id": "5975a5380f57e80011f0310b",
+    "date": "2017-08-01T01:20:00.000Z",
+    "show": {
+      "uid": "ATCU",
+      "title": "На перехресті",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ATCU/ATCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ATCU/ATCU-background.jpg"
+      },
+      "code": "ATCU"
+    },
+    "episode": {
+      "uid": "ATCU00716",
+      "title": "Знак від Бога",
+      "description": "Коли приймаєш рішення слідувати за Христом, легше жити не стає, навпаки, випробування приходять зненацька, коли їх не очікуєш. Але Бог своїх дітей ніколи не залишає, навпаки любими способими повертає їх до себе. Це довела наша героїня.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/ATCU/episodes/00716/ATCU00716-cover.jpg",
+      "code": "ATCU00716"
+    }
+  },
+  {
+    "id": "5975a5380f57e80011f0310c",
+    "date": "2017-08-01T01:30:00.000Z",
+    "show": {
+      "uid": "JMLU",
+      "title": "ДЖЕМ",
+      "description": {
+        "short": "Жива християнська музика на будь-який смак"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/JMLU/JMLU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/JMLU/JMLU-background.jpg"
+      },
+      "code": "JMLU"
+    },
+    "episode": {
+      "uid": "JMLU01715",
+      "title": "Леся та Олександр Лупулишени — Серце на двох",
+      "description": "Кажуть, що якщо ти вмієш любити, то ти любиш усіх. <br />Якби не було, в цьому випуску \"ДЖЕМу\" навіть через екрани можна відчути якою є справжня любов! <br />В нас у гостях велике серце на двох -Лесі та Олександра Лупулишених!",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/JMLU/episodes/01715/JMLU01715-cover.jpg",
+      "trailers": {
+        "today": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/JMLU/episodes/01715/JMLU01715-trailer-today.mov"
+          }
+        },
+        "main": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/JMLU/episodes/01715/JMLU01715-trailer-main.mov"
+          }
+        }
+      },
+      "code": "JMLU01715"
+    }
+  },
+  {
+    "id": "5975a5380f57e80011f0310d",
+    "date": "2017-08-01T02:30:00.000Z",
+    "show": {
+      "uid": "NHUU",
+      "title": "Вісті Надії",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/NHUU/NHUU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/NHUU/NHUU-background.jpg"
+      },
+      "code": "NHUU"
+    },
+    "episode": {
+      "uid": "NHUU00417",
+      "title": "Світ відзначив оригінальне свято — «День без Інтернету»",
+      "description": "З початку 2000-х років в останню неділю січня щорічно увесь світ відзначає оригінальне свято “День без інтернету”. Головна ціль — перемістити увагу людей від всесвітної мережі інтернет хоча б на один день і закцентувати їхню увагу на спілкуванні в реальному світі, виключно “вживу”, присвятивши себе родині, друзям та улюбленим хобі.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/NHUU/episodes/00417/NHUU00417-cover.jpg",
+      "code": "NHUU00417"
+    }
+  },
+  {
+    "id": "5975a5380f57e80011f0310e",
+    "date": "2017-08-01T03:00:00.000Z",
+    "show": {
+      "uid": "DOCU",
+      "title": "Дивовижнi  вiдкриття",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/DOCU/DOCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/DOCU/DOCU-background.jpg"
+      },
+      "code": "DOCU"
+    },
+    "episode": {
+      "uid": "DOCU00216",
+      "title": "Чи є Бог?",
+      "description": "Доктор філософії Джон Хаммонд на прикладі свого життя ілюструє наявність Господа та Його реальне існування.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/DOCU/episodes/00216/DOCU00216-cover.jpg",
+      "code": "DOCU00216"
+    }
+  },
+  {
+    "id": "5975a5380f57e80011f0310f",
+    "date": "2017-08-01T04:00:00.000Z",
+    "show": {
+      "uid": "ILEU",
+      "title": "Истории вечной любви",
+      "description": {
+        "short": "Эта сила не подвластна времени"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ILEU/ILEU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "ILEU"
+    },
+    "episode": {
+      "uid": "ILEU02213",
+      "title": "Грешник нуждается в Спасителе",
+      "description": "проповедует: Михаил Каминский",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/ILEU/episodes/02213/ILEU02213-cover.jpg",
+      "code": "ILEU02213"
+    }
+  }
+]
