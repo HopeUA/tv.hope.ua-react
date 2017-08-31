@@ -4,7 +4,7 @@ import { translate } from 'react-i18next';
 import * as Scheduler from 'components/Scheduler';
 import Meta from './Meta';
 import Helmet from 'react-helmet';
-import items from './Mock/articles.json';
+import items from './Mock/schedule.json';
 
 /* eslint-disable react/prefer-stateless-function */
 @translate(['common'])
@@ -20,7 +20,8 @@ export default class Page extends Component {
         return (
             <section>
                 <Helmet { ...Meta() }/>
-                <Scheduler.Days items={ items }/>
+                <Scheduler.Days/>
+                <Scheduler.Schedule items={ items }/>
             </section>
         );
     }
