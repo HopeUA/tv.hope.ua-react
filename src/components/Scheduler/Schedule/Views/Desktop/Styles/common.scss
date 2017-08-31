@@ -37,6 +37,7 @@
                     color: $tempColor32;
                     font-family: 'Exo 2';
                     font-size: px(56);
+                    font-weight: 500;
                 }
 
                 .label {
@@ -55,6 +56,8 @@
                     color: $tempColor32;
                     font-family: 'Exo 2';
                     font-size: px(48);
+                    font-weight: 600;
+                    line-height: px(58);
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
@@ -62,10 +65,11 @@
 
                 .subtitle {
                     width: px(1000);
-                    margin-top: px(14);
                     color: $tempColor32;
                     font-family: 'Exo 2';
                     font-size: px(32);
+                    font-weight: 600;
+                    line-height: px(38);
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     opacity: .6;
@@ -119,6 +123,8 @@
     .now.item {
         position: relative;
         height: px(200);
+        margin: px(36) 0;
+        cursor: pointer;
 
         &::before {
             position: absolute;
@@ -180,6 +186,8 @@
     }
 
     .archive.item {
+        cursor: pointer;
+
         .info {
             &::before {
                 background-color: $tempColor34;
