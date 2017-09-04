@@ -1,0 +1,90 @@
+@import 'common';
+
+& {
+    padding: px(40) px(72);
+
+    .item {
+        height: px(120);
+        padding-right: px(30);
+
+        &:hover {
+            background: none;
+            background-size: cover;
+
+            .info {
+                &::before {
+                    opacity: 0;
+                }
+            }
+
+            .buttonArchive {
+                display: none;
+            }
+        }
+
+        .info {
+            &::before {
+                width: px(9);
+            }
+
+            .timeBlock {
+                width: px(198);
+                padding-left: px(52);
+
+                .time {
+                    font-size: px(38);
+                }
+            }
+
+            .flag {
+                width: px(28);
+                margin-right: px(30);
+            }
+
+            .titles {
+                .title {
+                    width: px(600);
+                    font-size: px(34);
+                    line-height: px(36);
+                }
+
+                .subtitle {
+                    width: px(600);
+                    margin-top: px(6);
+                    font-size: px(24);
+                    line-height: px(26);
+                }
+            }
+        }
+
+        .buttonOnline {
+            width: px(300);
+            height: px(72);
+            font-size: px(28);
+        }
+    }
+
+    .now.item {
+        height: px(132);
+        margin: px(20) 0 px(18);
+
+        &:hover {
+            .info {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .info {
+            .timeBlock {
+                .label {
+                    width: px(98);
+                    height: px(24);
+                    border-radius: px(6);
+                    font-size: px(20);
+                }
+            }
+        }
+    }
+}

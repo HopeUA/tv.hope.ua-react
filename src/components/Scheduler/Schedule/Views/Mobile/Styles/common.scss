@@ -1,0 +1,114 @@
+& {
+    padding-top: px(24);
+
+    .item {
+        display: flex;
+        position: relative;
+        align-items: center;
+        height: px(96);
+        background-size: cover;
+
+        .timeBlock {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: px(136);
+            padding-left: px(6);
+
+            .time {
+                color: $tempColor32;
+                font-family: 'Exo 2';
+                font-size: px(38);
+            }
+
+            .label {
+                display: none;
+            }
+        }
+
+        .flag {
+            width: px(26);
+            margin-right: px(18);
+            border-radius: 50%;
+        }
+
+        .titles {
+            .title {
+                width: px(420);
+                color: $tempColor32;
+                font-family: 'Exo 2';
+                font-size: px(32);
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .subtitle {
+                width: px(420);
+                color: $tempColor2;
+                font-family: 'Exo 2';
+                font-size: px(24);
+                font-weight: normal;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .now.item {
+        height: px(132);
+        margin-top: px(24);
+        margin-bottom: px(12);
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $mainColor2;
+            content: '';
+            opacity: .3;
+            z-index: 0;
+        }
+
+        .titles {
+            z-index: 1;
+
+            .title {
+                color: $mainColor1;
+            }
+
+            .subtitle {
+                color: $mainColor1;
+            }
+        }
+
+        .flag {
+            z-index: 1;
+        }
+
+        .timeBlock {
+            z-index: 1;
+
+            .time {
+                color: $mainColor1;
+            }
+
+            .label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: px(92);
+                height: px(24);
+                margin-top: px(4);
+                border-radius: px(6);
+                background-color: $tempColor36;
+                color: $tempColor32;
+                font-family: 'Exo 2';
+                font-size: px(22);
+            }
+        }
+    }
+}
