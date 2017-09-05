@@ -40,7 +40,6 @@ import * as actions from './reducer';
 }, (dispatch) => {
     return bindActionCreators({ ...actions }, dispatch);
 })
-
 class Articles extends Component {
     /**
      * [CPT]
@@ -60,6 +59,7 @@ class Articles extends Component {
     static loader = (params) => ({ store: { dispatch } }) => {
         return dispatch(actions.fetchItems(params.type));
     };
+
     /**
      * [CR]
      * Render function

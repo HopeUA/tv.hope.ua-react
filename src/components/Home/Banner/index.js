@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 /**
  * [IV]
@@ -23,21 +24,21 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
-
-/**
- * [IDATA]
- * Data Import (optional)
- */
-import items from './Mock/data.json';
+import * as actions from './reducer';
 
 /**
  * [IRDX]
  * Redux connect (optional)
  */
 @connect((state) => {
+    const localState = state[config.id] ? state[config.id] : {};
+
     return {
-        mediaType: state.browser.mediaType
+        mediaType: state.browser.mediaType,
+        items: localState.items ? localState.items : []
     };
+}, (dispatch) => {
+    return bindActionCreators({ ...actions }, dispatch);
 })
 class Banner extends Component {
     /**
@@ -45,7 +46,8 @@ class Banner extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        items: PropTypes.array.isRequired
     };
 
     /**
@@ -53,6 +55,9 @@ class Banner extends Component {
      * Component display name
      */
     static displayName = config.id;
+    static loader = () => ({ store: { dispatch } }) => {
+        return dispatch(actions.fetchItems());
+    };
 
     /**
      * [CR]
@@ -63,7 +68,7 @@ class Banner extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, items } = this.props;
 
         /**
          * [RV]

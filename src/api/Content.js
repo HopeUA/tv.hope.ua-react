@@ -20,6 +20,17 @@ class Content {
 
         return result.data;
     }
+
+    static async getBanners() {
+        const resource = 'banners';
+
+        const url = `${this.endpoint}/${resource}.json`;
+
+        const response = await fetch(url);
+        const result = await response.json();
+
+        return result.banners;
+    }
 }
 
 export default Content;

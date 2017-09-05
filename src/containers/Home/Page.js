@@ -45,6 +45,9 @@ const loaders = getAsyncLoaders([
         params: {
             type: 'news'
         }
+    },
+    {
+        component: Home.Banner
     }
 ]);
 /**
