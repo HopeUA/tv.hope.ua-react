@@ -5,6 +5,6 @@ export WatchUs from './WatchUs/Page';
 export About from './About/Page';
 export Show from './Show/Page';
 export Episode from './Episode/Page';
-export Articles from './Articles/Page';
+export ArticleSingle from './ArticleSingle/Page';
 export Scheduler from './Scheduler/Page';
 export NotFound from './NotFound/NotFound';
