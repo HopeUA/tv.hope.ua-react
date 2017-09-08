@@ -11,6 +11,7 @@ import {
     Episode,
     Articles,
     Scheduler,
+    Online,
     NotFound
 } from 'containers';
 
@@ -24,6 +25,7 @@ const componentRoutes = (
         <Route path="watchUs" component={ WatchUs }/>
         <Route path="about" component={ About }/>
         <Route path="scheduler" component={ Scheduler }/>
+        <Route path="online" component={ Online }/>
         <Route path="*" component={ NotFound } status={ 404 }/>
     </Route>
 );

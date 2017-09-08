@@ -1,0 +1,171 @@
+& {
+    padding: px(24);
+    background-color: $tempColor35;
+
+    .video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: px(592);
+        height: px(320);
+        border-radius: px(4);
+        background-image: url('../../../Assets/BG.jpg');
+        background-size: cover;
+
+        .play {
+            width: px(88);
+        }
+    }
+
+    .languages {
+        display: flex;
+        margin-top: px(16);
+        border-radius: px(6);
+        overflow: hidden;
+
+        .list {
+            width: px(494);
+            height: px(96);
+            margin-right: 1px;
+
+            .item {
+                display: flex;
+                align-items: center;
+                height: px(96);
+                padding-left: px(32);
+                background-color: $tempColor40;
+                color: $mainColor1;
+                font-family: 'Exo 2';
+                font-size: px(30);
+                font-style: italic;
+
+                .language {
+                    margin-top: px(-8);
+                }
+
+                .flag {
+                    width: px(48);
+                    margin-right: px(32);
+                }
+
+                &:last-child {
+                    border-radius: 0 0 px(6);
+                }
+            }
+        }
+
+        .arrowButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: px(96);
+            height: px(96);
+            border-radius: 0 0 px(6);
+            background-color: $tempColor40;
+
+            .arrow {
+                width: px(10);
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .info {
+        padding-left: px(12);
+
+        .title {
+            margin-top: px(28);
+            color: $mainColor1;
+            font-family: 'Exo 2';
+            font-size: px(42);
+            font-weight: normal;
+            line-height: px(50);
+        }
+
+        .subTitle {
+            margin-top: px(12);
+            margin-left: px(4);
+            color: $tempColor36;
+            font-family: 'Exo 2';
+            font-size: px(26);
+            font-weight: normal;
+        }
+
+        .bar {
+            display: flex;
+            margin-top: px(40);
+
+            .startTime {
+                color: $mainColor1;
+                font-family: 'Exo 2';
+                font-size: px(30);
+            }
+
+            .endTime {
+                color: $tempColor36;
+                font-family: 'Exo 2';
+                font-size: px(30);
+            }
+
+            .timeLineContainer {
+                display: flex;
+                align-items: center;
+                width: px(408);
+                margin: 0 px(16);
+
+                .scale {
+                    width: 100%;
+                    height: px(4);
+                    background-color: $tempColor36;
+
+                    .progress {
+                        display: flex;
+                        position: relative;
+                        align-items: center;
+                        height: 100%;
+                        background-color: $commonColor2;
+
+                        span {
+                            display: flex;
+                            position: absolute;
+                            right: 0;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: px(4);
+                            height: px(16);
+                            border-radius: px(2);
+                            background-color: $tempColor36;
+
+                            &::before {
+                                display: block;
+                                width: px(4);
+                                height: px(16);
+                                margin-left: px(-4);
+                                background-color: $tempColor35;
+                                content: '';
+                            }
+
+                            &::after {
+                                display: block;
+                                width: px(4);
+                                height: px(16);
+                                margin-right: px(-4);
+                                background-color: $tempColor35;
+                                content: '';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .description {
+            margin-top: px(38);
+            margin-left: px(4);
+            color: $tempColor41;
+            font-family: 'Exo 2';
+            font-size: px(30);
+            line-height: px(40);
+        }
+    }
+}
