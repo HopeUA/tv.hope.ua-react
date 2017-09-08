@@ -1,0 +1,15 @@
+& {
+    height: px(240);
+    padding-top: px(154);
+    padding-left: px(24);
+    background-image: url('../../../Assets/phoneImage.jpg');
+    background-position: center;
+    background-size: cover;
+
+    .title {
+        color: $mainColor1;
+        font-family: 'Exo 2';
+        font-size: px(42);
+        font-weight: normal;
+    }
+}
