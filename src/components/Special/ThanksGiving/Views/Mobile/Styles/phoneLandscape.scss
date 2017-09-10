@@ -1,0 +1,56 @@
+@import 'common';
+
+& {
+    .title {
+        width: px(1040);
+        margin-top: px(48);
+    }
+
+    .textContainer {
+        width: px(1056);
+        margin-top: px(48);
+    }
+
+    .banner {
+        width: px(1052);
+        height: px(302);
+        margin-top: px(34);
+        background-image: url('../../../Assets/thanksGiving.png');
+    }
+
+    .timetable {
+        width: px(1056);
+        padding: 0;
+
+        .event {
+            margin-top: px(30);
+
+            .time {
+                margin-left: px(0);
+            }
+
+            .subtitle {
+                margin-left: px(0);
+            }
+
+            .description {
+                margin-top: px(24);
+                margin-left: px(0);
+            }
+
+            .wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: px(1056);
+                margin-top: px(20);
+                padding: px(32) 0;
+                background-color: $tempColor1;
+
+                .cover {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

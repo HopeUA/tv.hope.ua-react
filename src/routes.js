@@ -12,6 +12,7 @@ import {
     Articles,
     Scheduler,
     Online,
+    ThanksGiving,
     NotFound
 } from 'containers';
 
@@ -26,6 +27,7 @@ const componentRoutes = (
         <Route path="about" component={ About }/>
         <Route path="scheduler" component={ Scheduler }/>
         <Route path="online" component={ Online }/>
+        <Route path="thanksGiving" component={ ThanksGiving }/>
         <Route path="*" component={ NotFound } status={ 404 }/>
     </Route>
 );

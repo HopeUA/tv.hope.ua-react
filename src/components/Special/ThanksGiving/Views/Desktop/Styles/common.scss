@@ -1,0 +1,101 @@
+& {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        width: px(1566);
+        margin-top: px(120);
+        color: $tempColor32;
+        font-family: 'Exo 2';
+        font-size: px(72);
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .textContainer {
+        width: px(1408);
+        margin-top: px(118);
+
+        .initialLetter {
+            margin-right: px(12);
+            margin-bottom: px(-6);
+            margin-left: px(-8);
+            float: left;
+            color: $tempColor32;
+            font-family: 'Exo 2';
+            font-size: px(104);
+        }
+
+        .paragraph {
+            margin-top: 0;
+            color: $tempColor32;
+            font-family: 'Exo 2';
+            font-size: px(36);
+            line-height: px(56);
+        }
+    }
+
+    .banner {
+        width: px(1390);
+        height: px(398);
+        margin-top: px(68);
+        background-image: url('../../../Assets/thanksGiving.png');
+        background-size: cover;
+    }
+
+    .timetable {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: px(1408);
+
+        .event {
+            margin-top: px(78);
+
+            .time {
+                color: $tempColor42;
+                font-family: 'Exo 2';
+                font-size: px(84);
+                font-weight: 600;
+            }
+
+            .subtitle {
+                margin-top: px(2);
+                color: $tempColor43;
+                font-family: 'Exo 2';
+                font-size: px(56);
+            }
+
+            .description {
+                margin-top: px(26);
+                color: $tempColor32;
+                font-family: 'Exo 2';
+                font-size: px(36);
+                line-height: px(56);
+            }
+
+            .cover {
+                width: px(1408);
+                height: px(784);
+                margin-top: px(48);
+                background-size: cover;
+            }
+
+            .andreyews {
+                background-image: url('../../../Assets/andreyews.jpg');
+            }
+
+            .philosophStone {
+                background-image: url('../../../Assets/r500.jpg');
+            }
+
+            .video {
+                width: px(1408);
+                height: px(716);
+                margin-top: px(60);
+                background-image: url('../../../Assets/r500.jpg'); //удалить когда будет видео
+            }
+        }
+    }
+}
