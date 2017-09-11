@@ -9,7 +9,7 @@ const componentRoutes = (
         <Route path="news/:id" component={ Page.ArticleSingle }/>
         <Route path="shows/:showId" component={ Page.Show }/>
         <Route path="shows/:showId/:episodeId" component={ Page.Episode }/>
-
+        <Route path="thanksgiving" component={ Page.ThanksGiving }/>
         <Route path="contacts" component={ Page.Contacts }/>
         <Route path="watchUs" component={ Page.WatchUs }/>
         <Route path="about" component={ Page.About }/>
