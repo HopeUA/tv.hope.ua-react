@@ -7,6 +7,7 @@ import Meta from './Meta';
 import Helmet from 'react-helmet';
 import * as Show from 'components/Show';
 import * as Shared from 'components/Shared';
+import * as Footer from 'components/Footer';
 
 /**
  * Async data loading
@@ -42,8 +43,15 @@ export default class Page extends Component {
         return (
             <section>
                 <Helmet { ...Meta() }/>
+                <Shared.Header/>
+                <Shared.Timeline/>
+                <Shared.Title title={ 'Архив выпусков' }/>
                 <Show.List showId={ params.showId }/>
                 <Show.About showId={ params.showId }/>
+                <Footer.Banners/>
+                <Footer.Shows/>
+                <Footer.Form/>
+                <Footer.Navigation/>
             </section>
         );
     }
