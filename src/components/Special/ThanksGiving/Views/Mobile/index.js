@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react';
-import { Ru, Uk } from './Locales';
+import Locales from './Locales';
 
 export default function Common(props) {
     const { locale } = props;
-    console.log(locale);
+
     let view;
     if (locale === 'uk') {
-        view = <Uk/>;
+        view = <Locales.Uk/>;
     } else {
-        view = <Ru/>;
+        view = <Locales.Ru/>;
     }
 
     return view;
