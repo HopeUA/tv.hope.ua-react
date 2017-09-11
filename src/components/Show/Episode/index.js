@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 /**
  * [IV]
@@ -23,17 +24,22 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
+import * as actions from './reducer';
 
 /**
  * [IRDX]
  * Redux connect (optional)
  */
 @connect((state) => {
-    return {
-        mediaType: state.browser.mediaType
-    };
-})
+    const localState = state[config.id] ? state[config.id] : {};
 
+    return {
+        mediaType: state.browser.mediaType,
+        items: localState ? localState : {}
+    };
+}, (dispatch) => {
+    return bindActionCreators({ ...actions }, dispatch);
+})
 class Episode extends Component {
     /**
      * [CPT]
@@ -41,7 +47,7 @@ class Episode extends Component {
      */
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
-        items: PropTypes.array.isRequired,
+        items: PropTypes.object.isRequired,
         current: PropTypes.string.isRequired
     };
 
@@ -50,6 +56,10 @@ class Episode extends Component {
      * Component display name
      */
     static displayName = config.id;
+
+    static loader = () => ({ store: { dispatch }, params }) => {
+        return dispatch(actions.fetchItems(`${params.showId}${params.episodeId}`));
+    };
     /**
      * [CR]
      * Render function
@@ -61,6 +71,16 @@ class Episode extends Component {
          */
         const { mediaType, items, current } = this.props;
 
+        const episodes = Object.values(items).sort((a, b) => {
+            if (a.publish < b.publish) {
+                return 1;
+            }
+            if (a.publish > b.publish) {
+                return -1;
+            }
+            return 0;
+        });
+
         /**
          * [RV]
          * View
@@ -69,11 +89,11 @@ class Episode extends Component {
 
         if (BP.isMobile(mediaType)) {
             view = (
-                <Mobile mediaType={ mediaType } items={ items } current={ current }/>
+                <Mobile mediaType={ mediaType } items={ episodes } current={ current }/>
             );
         } else {
             view = (
-                <Desktop items={ items } current={ current }/>
+                <Desktop items={ episodes } current={ current }/>
             );
         }
 

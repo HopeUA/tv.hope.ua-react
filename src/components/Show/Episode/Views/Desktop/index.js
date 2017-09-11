@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import cx from 'classnames';
 import Moment from 'moment';
+import YouTube from 'react-youtube';
 
 import Slider from 'vendor/Slider/SliderComponent';
 
@@ -55,10 +56,22 @@ export default function Common(props) {
         );
     });
 
+    const playerParams = {
+        playerVars: {
+            autoplay: 1,
+            rel: 0
+        }
+    };
+
     return (
         <section className={ Styles.episodeComponent }>
             <div className={ Styles.cover } style={ styles }>
-                <Play className={ Styles.play } color={ Palette.tempColor39 }/>
+                <YouTube
+                    videoId={ currentEpisode.source.youtube.id }
+                    className={ Styles.player }
+                    opts={ playerParams }
+                />
+                { /*<Play className={ Styles.play } color={ Palette.tempColor39 }/>*/ }
             </div>
             <div className={ Styles.info }>
                 <h1 className={ Styles.title }>{ currentEpisode.title }</h1>

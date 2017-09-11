@@ -1,5 +1,5 @@
 const config = {
-    id: 'Shows.Episode'
+    id: 'Show.Episode'
 };
 
 export default config;

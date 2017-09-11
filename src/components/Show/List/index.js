@@ -4,6 +4,14 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+/**
+ * [ICONF]
+ * Config Import
+ */
+import config from './config';
+import * as actions from './reducer';
 
 /**
  * [IV]
@@ -16,10 +24,14 @@ import Common from './View/Common';
  * Redux connect (optional)
  */
 @connect((state) => {
+    const localState = state[config.id] ? state[config.id] : {};
+
     return {
-        locale: state.locale,
-        mediaType: state.browser.mediaType
+        mediaType: state.browser.mediaType,
+        items: localState ? localState : {}
     };
+}, (dispatch) => {
+    return bindActionCreators({ ...actions }, dispatch);
 })
 class List extends Component {
     /**
@@ -27,8 +39,19 @@ class List extends Component {
      * Component prop types
      */
     static propTypes = {
-        episodes: PropTypes.array.isRequired,
-        mediaType: PropTypes.string.isRequired
+        items: PropTypes.object.isRequired,
+        mediaType: PropTypes.string.isRequired,
+        showId: PropTypes.string.isRequired
+    };
+
+    /**
+     * [CDN]
+     * Component display name
+     */
+    static displayName = config.id;
+
+    static loader = () => ({ store: { dispatch }, params }) => {
+        return dispatch(actions.fetchItems(params.showId));
     };
 
     /**
@@ -36,13 +59,20 @@ class List extends Component {
      * Render function
      */
     render = () => {
-        const { episodes, mediaType } = this.props;
+        const { items, mediaType, showId } = this.props;
+
+        if (!items[showId]) {
+            return null;
+        }
+        const episodes = items[showId].items;
 
         /**
          * [RV]
          * View
          */
-        const view = (<Common mediaType={ mediaType } episodes={ episodes }/>);
+        const view = (
+            <Common mediaType={ mediaType } episodes={ episodes }/>
+        );
 
         /**
          * [RR]

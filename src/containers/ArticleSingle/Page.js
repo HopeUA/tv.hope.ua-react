@@ -18,7 +18,7 @@ const loaders = getAsyncLoaders([
     },
     {
         component: Articles.Single
-    },
+    }
 ]);
 /**
  * END Async data loading

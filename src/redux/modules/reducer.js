@@ -13,6 +13,9 @@ import HomeShows from 'components/Home/Shows/reducer';
 import HomeArticles from 'components/Home/Articles/reducer';
 import HomeBanner from 'components/Home/Banner/reducer';
 import ArticlesSingle from 'components/Articles/Single/reducer';
+import ShowList from 'components/Show/List/reducer';
+import ShowAbout from 'components/Show/About/reducer';
+import ShowEpisode from 'components/Show/Episode/reducer';
 // import watchUs from './watchUs';
 
 export default combineReducers({
@@ -34,5 +37,8 @@ export default combineReducers({
     'Home.Shows': HomeShows,
     'Home.Articles': HomeArticles,
     'Home.Banner': HomeBanner,
-    'Articles.Single': ArticlesSingle
+    'Articles.Single': ArticlesSingle,
+    'Show.List': ShowList,
+    'Show.About': ShowAbout,
+    'Show.Episode': ShowEpisode
 });
