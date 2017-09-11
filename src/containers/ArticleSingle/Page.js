@@ -42,6 +42,7 @@ export default class Page extends Component {
                 <Helmet { ...Meta() }/>
                 <Shared.Header/>
                 <Shared.Timeline/>
+                <Shared.Title/>
                 <Articles.Single id={ params.id }/>
                 <Footer.Banners/>
                 <Footer.Shows/>
