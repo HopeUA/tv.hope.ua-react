@@ -129,7 +129,7 @@
     "redux-actions": "^1.2.1",
     "redux-connect": "^5.0.0",
     "redux-promise": "^0.5.3",
-    "redux-responsive": "^4.1.1",
+    "redux-responsive": "^4.3.1",
     "sass-loader": "^4.1.1",
     "scroll-behavior": "^0.3.4",
     "serialize-javascript": "^1.1.2",

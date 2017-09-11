@@ -4,6 +4,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 /**
  * [IV]
@@ -36,6 +37,8 @@ import config from './config';
         loaded: localState.loaded || false,
         mediaType: state.browser.mediaType
     };
+}, (dispatch) => {
+    return bindActionCreators({ ...actions }, dispatch);
 })
 class TimeLine extends Component {
     /**
@@ -64,13 +67,14 @@ class TimeLine extends Component {
     /**
      * [CLOAD]
      */
-    static loader = () => ({ store: { dispatch } }) => {
-        return dispatch(actions.fetchItems());
-    };
+    // static loader = () => ({ store: { dispatch } }) => {
+    //     return dispatch(actions.fetchItems());
+    // };
 
     timer = null;
 
     componentDidMount = () => {
+        this.props.fetchItems();
         this.timer = setInterval(this.updateTime, 1000 * 30);
     };
 

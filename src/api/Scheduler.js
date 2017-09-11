@@ -18,7 +18,7 @@ class Scheduler {
             url.addSearch('dateEnd', dateTo);
         }
 
-        const response = await fetch(url);
+        const response = await fetch(url.toString());
         const result = await response.json();
 
         return Array.isArray(result.data) ? result.data : [];
