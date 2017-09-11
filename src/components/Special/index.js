@@ -1,1 +1,1 @@
-export ThanksGiving from './ThanksGiving/tpl';
+export ThanksGiving from './ThanksGiving';

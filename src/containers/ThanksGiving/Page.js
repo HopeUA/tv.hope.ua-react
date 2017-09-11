@@ -38,7 +38,7 @@ export default class Page extends Component {
                 <Helmet { ...Meta() }/>
                 <Shared.Header/>
                 <Shared.Timeline/>
-                <Shared.Title/>
+                <Shared.Title title={ 'Свято подяки' }/>
                 <Special.ThanksGiving/>
                 <Footer.Banners/>
                 <Footer.Shows/>
