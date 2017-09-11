@@ -33,6 +33,7 @@ Moment.locale('ru');
  */
 @connect((state) => {
     return {
+        locale: state.locale,
         mediaType: state.browser.mediaType
     };
 })
@@ -43,6 +44,7 @@ class ThanksGiving extends Component {
      * Component prop types
      */
     static propTypes = {
+        locale: PropTypes.string.isRequired,
         mediaType: PropTypes.string.isRequired
     };
 
@@ -60,7 +62,7 @@ class ThanksGiving extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { locale, mediaType } = this.props;
 
         /**
          * [RV]
@@ -70,11 +72,11 @@ class ThanksGiving extends Component {
 
         if (BP.isMobile(mediaType)) {
             view = (
-                <Mobile/>
+                <Mobile locale={ locale }/>
             );
         } else {
             view = (
-                <Desktop/>
+                <Desktop locale={ locale }/>
             );
         }
 
