@@ -1,0 +1,62 @@
+@import 'common';
+
+& {
+    .title {
+        margin-top: px(90);
+        font-size: px(54);
+    }
+
+    .textContainer {
+        width: px(1058);
+        margin-top: px(90);
+
+        .initialLetter {
+            margin-right: px(8);
+            font-size: px(80);
+        }
+
+        .paragraph {
+            font-size: px(28);
+            line-height: px(42);
+        }
+    }
+
+    .banner {
+        width: px(1050);
+        height: px(300);
+        margin-top: px(52);
+    }
+
+    .timetable {
+        width: px(1058);
+
+        .event {
+            margin-top: px(58);
+
+            .time {
+                font-size: px(64);
+            }
+
+            .subtitle {
+                font-size: px(42);
+            }
+
+            .description {
+                margin-top: px(16);
+                font-size: px(28);
+                line-height: px(42);
+            }
+
+            .cover {
+                width: px(1056);
+                height: px(590);
+                margin-top: px(36);
+            }
+
+            .video {
+                width: px(1056);
+                height: px(540);
+            }
+        }
+    }
+}
