@@ -22,6 +22,10 @@ import BP from 'lib/breakpoints';
 function Timeline(props) {
     const { mediaType, serverTime, items } =  props;
 
+    if (!items) {
+        return null;
+    }
+
     let timelineStart;
 
     if (BP.isTabletLandscape(mediaType)) {
