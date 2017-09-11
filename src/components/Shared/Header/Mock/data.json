@@ -7,7 +7,7 @@
           "ru": "Все программы",
           "uk": "Всі програми"
         },
-        "url": "/shows",
+        "url": "https://tv.hope.ua/shows",
         "external": false
       },
       {
@@ -16,7 +16,7 @@
           "ru": "ТВ программа",
           "uk": "ТБ програма"
         },
-        "url": "/schedules",
+        "url": "https://tv.hope.ua/scheduler",
         "external": false
       },
       {
@@ -43,7 +43,7 @@
           "ru": "О телеканале",
           "uk": "Про телеканал"
         },
-        "url": "/about",
+        "url": "https://tv.hope.ua/about",
         "external": false
       },
       {
@@ -52,7 +52,7 @@
           "ru": "Новости",
           "uk": "Новини"
         },
-        "url": "/news",
+        "url": "https://tv.hope.ua/a/news",
         "external": false
       },
       {
@@ -61,7 +61,7 @@
           "ru": "Где нас смотреть?",
           "uk": "Де дивитися?"
         },
-        "url": "/watch-us",
+        "url": "https://tv.hope.ua/watch-us",
         "external": false
       },
       {
@@ -70,7 +70,7 @@
           "ru": "Контакты",
           "uk": "Контакти"
         },
-        "url": "/contacts",
+        "url": "https://tv.hope.ua/contacts",
         "external": false
       },
       {
@@ -104,7 +104,6 @@
   },
   "socialLinks": {
       "youtube": "https://www.youtube.com/user/HopeChannelUkraine",
-      "vk": "https://vk.com/hopechannel",
       "ok": "https://ok.ru/hopechannel",
       "facebook": "https://www.facebook.com/hope.ua/",
       "instagram": "https://www.instagram.com/tvhopeua/",

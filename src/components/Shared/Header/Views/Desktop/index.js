@@ -88,9 +88,6 @@ function Header(props) {
                             <a href={ socialLinks.twitter } className={ Styles.twitter }>
                                 <Twitter color={ Palette.tempColor22 }/>
                             </a>
-                            <a href={ socialLinks.vk } className={ Styles.vk }>
-                                <Vk color={ Palette.tempColor22 }/>
-                            </a>
                             <a href={ socialLinks.facebook } className={ Styles.fb }>
                                 <Facebook color={ Palette.tempColor22 }/>
                             </a>

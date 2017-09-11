@@ -81,7 +81,3 @@ export default function Common() {
         </section>
     );
 }
-
-Common.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
