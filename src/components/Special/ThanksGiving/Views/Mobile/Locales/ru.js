@@ -1,4 +1,5 @@
 import React from 'react';
+import YouTube from 'react-youtube';
 import cx from 'classnames';
 
 import Styles from '../Styles/main.scss';
@@ -13,6 +14,16 @@ export default function Ru() {
         [Styles.cover]: true,
         [Styles.philosophStone]: true
     });
+
+    const playerParams = {
+        playerVars: {
+            modestbranding: 1,
+            iv_load_policy: 3,
+            rel: 0
+        },
+        height: '390',
+        width: '640'
+    };
 
     return (
         <section className={ Styles.thanksGivingComponent }>
@@ -67,7 +78,11 @@ export default function Ru() {
                     <span className={ Styles.time }>19:30</span>
                     <h1 className={ Styles.subtitle }>Выступление мотиватора Ника Вуйчича</h1>
                     <div className={ Styles.wrap }>
-                        <div className={ Styles.video }/>
+                        <YouTube
+                            className={ Styles.video }
+                            opts={ playerParams }
+                            videoId="sCWff-SpAdo"
+                        />
                     </div>
                     <p className={ Styles.description }>
                         Медиа Группа «Надiя» приготовила мега-подарки для тебя и твоей семьи. Мы сделаем все

@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Locales from './Locales';
+import * as Locales from './Locales';
 
 export default function Common(props) {
     const { locale } = props;

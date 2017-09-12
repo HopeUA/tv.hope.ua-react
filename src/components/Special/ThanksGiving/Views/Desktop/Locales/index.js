@@ -1,1 +1,2 @@
-export * as Locales from './ru.js';
+export Ru from './ru';
+export Uk from './uk';
