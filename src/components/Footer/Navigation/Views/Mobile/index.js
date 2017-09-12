@@ -88,7 +88,7 @@ function Mobile(props) {
     const rights = (
         <div className={ Styles.rights }>
             <h1 className={ Styles.title }>Права</h1>
-            <a href="#" className={ Styles.link }>Інформація про структуру власності</a>
+            <a href="https://cdn.hope.ua/docs/tkn/structure-31.12.2016.pdf" className={ Styles.link }>Інформація про структуру власності</a>
         </div>
     );
 

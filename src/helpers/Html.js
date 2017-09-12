@@ -26,14 +26,7 @@ export default function Html(props) {
                 { head.link.toComponent() }
                 { head.script.toComponent() }
 
-                <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico"/>
-                <link rel="apple-touch-icon" type="image/png" href="/favicon.png"/>
-                <link
-                    rel="apple-touch-icon"
-                    type="image/png"
-                    href="/favicon-152.png"
-                    sizes="152x152"
-                />
+                <link rel="apple-touch-icon" type="image/png" href="/static/favicon.png"/>
 
                 { /* styles (will be present only in production with webpack extract text plugin) */ }
                 { Object.keys(assets.styles).map((style) =>

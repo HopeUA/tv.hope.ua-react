@@ -1,6 +1,6 @@
 & {
     width: 100%;
-    margin-top: px(52);
+    //margin-top: px(52);
     padding: px(74) px(78) px(74) px(80);
     border-top: solid 2px $commonColor4;
     background-color: $mainColor1;
@@ -132,6 +132,7 @@
 
                 a {
                     transition: color .2s;
+                    margin-right: px(32);
 
                     i {
                         width: px(48);
@@ -141,7 +142,7 @@
                 .row {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    justify-content: flex-start;
 
                     .twitterIcon {
                         order: 1;
