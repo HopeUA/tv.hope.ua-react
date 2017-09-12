@@ -93,9 +93,9 @@ function Header(props) {
                             </a>
                         </div>
                         <div className={ Styles.languages }>
-                            <a href="/ru" className={ ruClass }>Рус</a>
+                            <a href="/ru/thanksgiving" className={ ruClass }>Рус</a>
                             <span className={ Styles.slash }>/</span>
-                            <a href="/uk" className={ ukClass }>Укр</a>
+                            <a href="/uk/thanksgiving" className={ ukClass }>Укр</a>
                         </div>
                     </div>
                 </div>

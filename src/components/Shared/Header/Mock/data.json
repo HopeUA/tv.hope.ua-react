@@ -85,19 +85,19 @@
     ],
     "position": {
       "phonePortrait": {
-        "main": ["shows", "scheduler", "donate", "live"],
+        "main": ["shows", "scheduler", "donate"],
         "sub": ["news", "watch-us", "about", "contacts"]
       },
       "phoneLandscape": {
-        "main": ["shows", "scheduler", "donate", "live"],
+        "main": ["shows", "scheduler", "donate"],
         "sub": ["news", "watch-us", "about", "contacts"]
       },
       "tabletPortrait": {
-        "main": ["shows", "scheduler", "live"],
+        "main": ["shows", "scheduler"],
         "sub": ["news", "watch-us", "donate", "contacts", "about"]
       },
       "default": {
-        "main": ["shows", "scheduler", "donate", "news", "live"],
+        "main": ["shows", "scheduler", "donate", "news"],
         "sub": ["watch-us", "contacts", "about"]
       }
     }
