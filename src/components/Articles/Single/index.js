@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 /**
  * [IV]
@@ -23,17 +24,22 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
+import * as actions from './reducer';
 
 /**
  * [IRDX]
  * Redux connect (optional)
  */
 @connect((state) => {
-    return {
-        mediaType: state.browser.mediaType
-    };
-})
+    const localState = state[config.id] ? state[config.id] : {};
 
+    return {
+        mediaType: state.browser.mediaType,
+        items: localState ? localState : {}
+    };
+}, (dispatch) => {
+    return bindActionCreators({ ...actions }, dispatch);
+})
 class Single extends Component {
     /**
      * [CPT]
@@ -41,7 +47,8 @@ class Single extends Component {
      */
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
-        item: PropTypes.object.isRequired
+        items: PropTypes.object.isRequired,
+        id: PropTypes.string.isRequired,
     };
 
     /**
@@ -49,6 +56,11 @@ class Single extends Component {
      * Component display name
      */
     static displayName = config.id;
+
+    static loader = () => ({ store: { dispatch }, params }) => {
+        return dispatch(actions.fetchItem(params.id));
+    };
+
     /**
      * [CR]
      * Render function
@@ -58,8 +70,12 @@ class Single extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType, item } = this.props;
+        const { mediaType, items, id } = this.props;
 
+        const item = items[id];
+        if (!item) {
+            return null;
+        }
         /**
          * [RV]
          * View

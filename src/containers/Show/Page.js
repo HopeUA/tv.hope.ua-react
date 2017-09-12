@@ -1,29 +1,57 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import { asyncConnect } from 'redux-connect';
 import { translate } from 'react-i18next';
-import * as Show from 'components/Show';
+import getAsyncLoaders from 'lib/getAsyncLoaders';
+
 import Meta from './Meta';
 import Helmet from 'react-helmet';
+import * as Show from 'components/Show';
+import * as Shared from 'components/Shared';
+import * as Footer from 'components/Footer';
 
-import ShowItem from './Mock/show.json';
-import episodes from './Mock/episodes.json';
+/**
+ * Async data loading
+ */
+const loaders = getAsyncLoaders([
+    {
+        component: Shared.Timeline
+    },
+    {
+        component: Show.List
+    },
+    {
+        component: Show.About
+    }
+]);
+/**
+ * END Async data loading
+ */
 
 /* eslint-disable react/prefer-stateless-function */
 @translate(['common'])
-@connect(({ browser }) => {
-    return { browser };
-})
+@asyncConnect(
+    loaders
+)
 export default class Page extends Component {
     static propTypes = {
         t: PropTypes.func.isRequired
     };
 
     render = () => {
+        const { params } = this.props;
+
         return (
             <section>
                 <Helmet { ...Meta() }/>
-                <Show.About show={ ShowItem }/>
-                <Show.List episodes={ episodes }/>
+                <Shared.Header/>
+                <Shared.Timeline/>
+                <Shared.Title title={ 'Архив выпусков' }/>
+                <Show.List showId={ params.showId }/>
+                <Show.About showId={ params.showId }/>
+                <Footer.Banners/>
+                <Footer.Shows/>
+                <Footer.Form/>
+                <Footer.Navigation/>
             </section>
         );
     }

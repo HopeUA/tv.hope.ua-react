@@ -83,8 +83,8 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loaders: [
-                    'babel?' + JSON.stringify(babelLoaderQuery),
-                    'eslint'
+                    'babel?' + JSON.stringify(babelLoaderQuery)
+                    // 'eslint'
                 ]
             },
             { test: /\.json$/, loader: 'json' },

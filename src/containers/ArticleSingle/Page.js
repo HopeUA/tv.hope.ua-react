@@ -4,11 +4,10 @@ import { translate } from 'react-i18next';
 import getAsyncLoaders from 'lib/getAsyncLoaders';
 import Helmet from 'react-helmet';
 
-import * as Special from 'components/Special';
-import * as Shared from 'components/Shared';
-import * as Footer from 'components/Footer';
-
 import Meta from './Meta';
+import * as Articles from 'components/Articles';
+import * as Footer from 'components/Footer';
+import * as Shared from 'components/Shared';
 
 /**
  * Async data loading
@@ -16,6 +15,9 @@ import Meta from './Meta';
 const loaders = getAsyncLoaders([
     {
         component: Shared.Timeline
+    },
+    {
+        component: Articles.Single
     }
 ]);
 /**
@@ -33,15 +35,18 @@ export default class Page extends Component {
     };
 
     render = () => {
+        const { params } = this.props;
+
         return (
             <section>
                 <Helmet { ...Meta() }/>
                 <Shared.Header/>
                 <Shared.Timeline/>
-                <Shared.Title title={ 'Свято подяки' }/>
-                <Special.ThanksGiving/>
+                <Shared.Title/>
+                <Articles.Single id={ params.id }/>
                 <Footer.Banners/>
                 <Footer.Shows/>
+                <Footer.Form/>
                 <Footer.Navigation/>
             </section>
         );

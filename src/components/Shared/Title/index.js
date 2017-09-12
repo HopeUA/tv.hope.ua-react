@@ -43,7 +43,11 @@ class Main extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        title: PropTypes.string
+    };
+    static defaultProps = {
+        title: ''
     };
 
     /**
@@ -60,7 +64,7 @@ class Main extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, title } = this.props;
 
         /**
          * [RV]
@@ -70,11 +74,11 @@ class Main extends Component {
 
         if (BP.isMobile(mediaType)) {
             view = (
-                <Mobile/>
+                <Mobile title={ title }/>
             );
         } else {
             view = (
-                <Desktop/>
+                <Desktop title={ title }/>
             );
         }
 

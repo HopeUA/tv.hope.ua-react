@@ -7,10 +7,15 @@ import locale from './locale';
 /**
  * Component reducers
  */
-import episodes from 'components/Home/Episodes/reducer';
-import timeline from 'components/Shared/Timeline/reducer';
-import shows from 'components/Home/Shows/reducer';
-import articles from 'components/Home/Articles/reducer';
+import HomeEpisodes from 'components/Home/Episodes/reducer';
+import SharedTimeline from 'components/Shared/Timeline/reducer';
+import HomeShows from 'components/Home/Shows/reducer';
+import HomeArticles from 'components/Home/Articles/reducer';
+import HomeBanner from 'components/Home/Banner/reducer';
+import ArticlesSingle from 'components/Articles/Single/reducer';
+import ShowList from 'components/Show/List/reducer';
+import ShowAbout from 'components/Show/About/reducer';
+import ShowEpisode from 'components/Show/Episode/reducer';
 // import watchUs from './watchUs';
 
 export default combineReducers({
@@ -27,8 +32,13 @@ export default combineReducers({
     }),
     reduxAsyncConnect,
     locale,
-    'Home.Episodes': episodes,
-    'Shared.Timeline': timeline,
-    'Home.Shows': shows,
-    'Home.Articles': articles
+    'Home.Episodes': HomeEpisodes,
+    'Shared.Timeline': SharedTimeline,
+    'Home.Shows': HomeShows,
+    'Home.Articles': HomeArticles,
+    'Home.Banner': HomeBanner,
+    'Articles.Single': ArticlesSingle,
+    'Show.List': ShowList,
+    'Show.About': ShowAbout,
+    'Show.Episode': ShowEpisode
 });
