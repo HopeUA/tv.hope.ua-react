@@ -15,6 +15,10 @@ export default function Ru() {
         [Styles.philosophStone]: true
     });
 
+    const galaConcert = cx({
+        [Styles.galaConcert]: true
+    });
+
     const playerParams = {
         playerVars: {
             modestbranding: 1,
@@ -72,6 +76,18 @@ export default function Ru() {
                         Если ты считаешь себя умным и начитанным, тогда участвуй в
                         интелект-шоу с ведущим программы «Фiлософський камiнь» - Артемом Щербанюком.
                         Лучшему знатоку он вручит путевку в тур по Европе «По следам Реформации».
+                    </p>
+                </div>
+                <div className={ Styles.event }>
+                    <span className={ Styles.time }>18:00</span>
+                    <h1 className={ Styles.subtitle }>Христианский гала-концерт</h1>
+                    <div className={ Styles.wrap }>
+                        <div className={ galaConcert }/>
+                    </div>
+                    <p className={ Styles.description }>
+                        В этот день на одной сцене своими талантами поделятся известные исполнители,
+                        среди которых Бриа Блессинг, Игорь Рудый, Сергей Брикса, Вячеслав Рыбиков,
+                        Аняня Удогво, Артем Банар, Оксана Козунь, Rulada, Анна Киндзерская.
                     </p>
                 </div>
                 <div className={ Styles.event }>
