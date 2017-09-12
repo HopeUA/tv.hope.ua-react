@@ -1,0 +1,90 @@
+// cyrillic
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Exo 2'), local('Exo2-Regular'),
+    url(Fonts/Exo2-Regular-cyrillic.woff2) format('woff2'),
+    url(Fonts/Exo2-Regular.woff) format('woff');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+// latin
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Exo 2'), local('Exo2-Regular'),
+    url(Fonts/Exo2-Regular-latin.woff2) format('woff2'),
+    url(Fonts/Exo2-Regular.woff) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+// cyrillic
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Exo 2 Medium'), local('Exo2-Medium'),
+    url(Fonts/Exo2-Medium-curillic.woff2) format('woff2'),
+    url(Fonts/Exo2-Medium.woff) format('woff');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+// latin
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Exo 2 Medium'), local('Exo2-Medium'),
+    url(Fonts/Exo2-Medium-latin.woff2) format('woff2'),
+    url(Fonts/Exo2-Medium.woff) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153,
+    U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+// cyrillic
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Exo 2 Semi Bold'), local('Exo2-SemiBold'),
+    url(Fonts/Exo2-Semi-Bold-curillic.woff2) format('woff2'),
+    url(Fonts/Exo2-Semi-Bold.woff) format('woff');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+// latin
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Exo 2 Semi Bold'), local('Exo2-SemiBold'),
+    url(Fonts/Exo2-Semi-Bold-latin.woff2) format('woff2'),
+    url(Fonts/Exo2-Semi-Bold.woff) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+//cyrillic
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Exo 2 Bold'), local('Exo2-Bold'),
+    url(Fonts/Exo2-Bold-cyrillic.woff2) format('woff2'),
+    url(Fonts/Exo2-Bold.woff) format('woff');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+//latin
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Exo 2 Bold'), local('Exo2-Bold'),
+    url(Fonts/Exo2-Bold-latin.woff2) format('woff2'),
+    url(Fonts/Exo2-Bold.woff) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC,
+    U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}

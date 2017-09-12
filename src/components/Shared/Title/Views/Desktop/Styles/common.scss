@@ -1,0 +1,15 @@
+& {
+    height: px(600);
+    padding-top: px(470);
+    background-image: url('../../../Assets/tabletImage.jpg');
+    background-position: center;
+    background-size: cover;
+
+    .title {
+        margin-left: px(96);
+        color: $mainColor1;
+        font-family: 'Exo 2';
+        font-size: px(56);
+        font-weight: normal;
+    }
+}

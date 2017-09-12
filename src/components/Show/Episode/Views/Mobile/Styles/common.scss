@@ -1,0 +1,130 @@
+& {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: px(24);
+    background: $tempColor35;
+    overflow: hidden;
+
+    .cover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: px(592);
+        height: px(320);
+        border-radius: px(4);
+        background-size: cover;
+
+        .play {
+            width: px(88);
+        }
+    }
+
+    .info {
+        width: px(592);
+        margin-top: px(24);
+        padding-left: px(14);
+
+        .title {
+            color: $mainColor1;
+            font-family: 'Exo 2';
+            font-size: px(42);
+            font-weight: normal;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .date {
+            display: inline-block;
+            margin-top: px(28);
+            color: $tempColor36;
+            font-family: 'Exo 2';
+            font-size: px(26);
+            font-weight: normal;
+        }
+
+        .description {
+            margin-top: px(16);
+            color: $commonColor2;
+            font-family: 'Exo 2';
+            font-size: px(30);
+            line-height: px(40);
+        }
+    }
+
+    .swipeable {
+        width: 100%;
+        margin-top: px(58);
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            align-items: center;
+            width: px(292);
+            height: px(284);
+            padding-top: px(20);
+            border-radius: 2px 2px 0 0;
+
+            .image {
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                width: px(252);
+                height: px(140);
+                border-radius: 2px;
+                background-size: cover;
+
+                .playSmall {
+                    width: px(56);
+                    opacity: 0;
+                }
+
+                .time {
+                    display: flex;
+                    position: absolute;
+                    right: px(12);
+                    bottom: px(12);
+                    align-items: center;
+                    justify-content: center;
+                    width: px(72);
+                    height: px(32);
+                    border-radius: 2px;
+                    background: $tempColor33;
+                    color: $mainColor1;
+                    font-family: 'Exo 2';
+                    font-size: px(20);
+                }
+            }
+
+            .description {
+                width: px(252);
+                height: px(60);
+                margin-top: px(10);
+                color: $mainColor1;
+                font-family: 'Exo 2';
+                font-size: px(28);
+                line-height: px(30);
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        .active {
+            background: $tempColor37;
+
+            .image {
+                .playSmall {
+                    opacity: 1;
+                }
+            }
+
+            .description {
+                color: $tempColor36;
+                font-size: px(28);
+            }
+        }
+    }
+}

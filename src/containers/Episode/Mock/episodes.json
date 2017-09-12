@@ -1,0 +1,455 @@
+[
+  {
+    "uid": "ADUU00717",
+    "title": "Фестиваль для всієї сім`ї від телеканалу \"Надія\"|Чернівці",
+    "description": "Це буде вперше в Україні!<br />Довгоочікувана зустріч глядачів з ведучими телеканалу \"Надія\". Без камер та гриму, з сюрпризами, веселощами та подарунками. <br />Зустрічаємось 3, 4, 5 березня о 18:00 в чернівецькому готелі \"Буковина\". <br />Реєструйте свою сім`ю на сайті http://hope.fest.ua або за номером телефона 0 800 30 20 20.<br />Кількість місць обмежена!<br /><br />Слідкуйте за підготовкою до Фестивалю:<br />https://www.facebook.com/events/1802347456696862/<br />https://vk.com/festhope",
+    "tags": [
+      "Чернівці",
+      "фестиваль",
+      "надія",
+      "дитячий майданчик",
+      "сім'я",
+      "фуршет",
+      "Боровий",
+      "джем",
+      "жива музика",
+      "ведучі",
+      "вивчення",
+      "Біблія",
+      "духовний стан",
+      "краще життя",
+      "Бог"
+    ],
+    "publish": "2017-02-16T22:00:00.000Z",
+    "language": "uk",
+    "author": "",
+    "hd": false,
+    "views": 0,
+    "source": {
+      "local": {
+        "url": "https://cdn.hope.ua/media/shows/ADUU/episodes/00717/ADUU00717-hopeua.mov"
+      },
+      "youtube": {
+        "id": "ozn7YVXGz50",
+        "channel": "hopeua"
+      }
+    },
+    "image": "https://cdn.hope.ua/media/shows/ADUU/episodes/00717/ADUU00717-cover.jpg",
+    "links": {
+      "prev": "ADUU00317"
+    },
+    "show": {
+      "uid": "ADUU",
+      "title": "Реклама",
+      "description": {
+        "short": "",
+        "medium": "Узнайте то, что сейчас актуально и полезно!",
+        "days": "",
+        "time": "",
+        "long": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ADUU/ADUU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ADUU/ADUU-background.jpg"
+      },
+      "category": {
+        "uid": "special",
+        "title": {
+          "ru": "Ролики",
+          "uk": "Ролики"
+        },
+        "sort": 13
+      }
+    }
+  },
+  {
+    "uid": "ADUU00317",
+    "title": "Ник Вуйчич: через 10 секунд прошло невероятное",
+    "description": "Что могло произойти в женщиной, которая несколько лет пролежала скрюченная на кровати?<br />Смотрите продолжение этой истории, рассказанной Ником Вуйчичем, здесь https://youtu.be/kvtlrgbT7nA",
+    "tags": [
+      "Ник Вуйчич",
+      "без конечностей",
+      "жизнь без границ",
+      "мотивационный спикер",
+      "благотворительный проект",
+      "инвалидность",
+      "телеканал Надия",
+      "психологическая травма",
+      "чудо",
+      "исцеление",
+      "дворец спорта",
+      "христианин",
+      "безграничность",
+      "депрессия",
+      "любовь",
+      "легенда"
+    ],
+    "publish": "2017-02-04T08:00:00.000Z",
+    "language": "ru",
+    "author": "",
+    "hd": false,
+    "views": 0,
+    "source": {
+      "local": {
+        "url": "https://cdn.hope.ua/media/shows/ADUU/episodes/00317/ADUU00317-hopeua.mov"
+      },
+      "youtube": {
+        "id": "JCRr6S6rFt0",
+        "channel": "hopeua"
+      }
+    },
+    "image": "https://cdn.hope.ua/media/shows/ADUU/episodes/00317/ADUU00317-cover.jpg",
+    "links": {
+      "prev": "ADUU00217",
+      "next": "ADUU00717"
+    },
+    "show": {
+      "uid": "ADUU",
+      "title": "Реклама",
+      "description": {
+        "short": "",
+        "medium": "Узнайте то, что сейчас актуально и полезно!",
+        "days": "",
+        "time": "",
+        "long": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ADUU/ADUU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ADUU/ADUU-background.jpg"
+      },
+      "category": {
+        "uid": "special",
+        "title": {
+          "ru": "Ролики",
+          "uk": "Ролики"
+        },
+        "sort": 13
+      }
+    }
+  },
+  {
+    "uid": "ADUU00217",
+    "title": "Ник Вуйчич: вам не нужны бицепсы",
+    "description": "\"В детстве я так накачал бицепсы, что они отвалились вместе с руками\", — смело завляет Ник Вуйчич, лучший мотиватор.<br />Смотрите полное видео выступления Ника Вуйчича здесь https://youtu.be/kvtlrgbT7nA",
+    "tags": [
+      "Ник Вуйчич",
+      "без конечностей",
+      "жизнь без границ",
+      "мотивационный спикер",
+      "благотворительный проект",
+      "инвалидность",
+      "телеканал Надия",
+      "психологическая травма",
+      "чудо",
+      "исцеление",
+      "дворец спорта",
+      "христианин",
+      "безграничность",
+      "депрессия",
+      "любовь",
+      "легенда"
+    ],
+    "publish": "2017-02-03T17:00:00.000Z",
+    "language": "ru",
+    "author": "",
+    "hd": false,
+    "views": 0,
+    "source": {
+      "local": {
+        "url": "https://cdn.hope.ua/media/shows/ADUU/episodes/00217/ADUU00217-hopeua.mov"
+      },
+      "youtube": {
+        "id": "S_DVX57Oxmk",
+        "channel": "hopeua"
+      }
+    },
+    "image": "https://cdn.hope.ua/media/shows/ADUU/episodes/00217/ADUU00217-cover.jpg",
+    "links": {
+      "prev": "ADUU00117",
+      "next": "ADUU00317"
+    },
+    "show": {
+      "uid": "ADUU",
+      "title": "Реклама",
+      "description": {
+        "short": "",
+        "medium": "Узнайте то, что сейчас актуально и полезно!",
+        "days": "",
+        "time": "",
+        "long": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ADUU/ADUU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ADUU/ADUU-background.jpg"
+      },
+      "category": {
+        "uid": "special",
+        "title": {
+          "ru": "Ролики",
+          "uk": "Ролики"
+        },
+        "sort": 13
+      }
+    }
+  },
+  {
+    "uid": "ADUU00117",
+    "title": "Ник Вуйчич: я много курил",
+    "description": "\"Когда дети видят меня впервые — они в ужасе\", — откровенно заявляет один из самых известных мотиваторов мира.<br />Смотрите полное видео выступления Ника Вуйчича здесь https://youtu.be/kvtlrgbT7nA",
+    "tags": [
+      "Ник Вуйчич",
+      "без конечностей",
+      "жизнь без границ",
+      "мотивационный спикер",
+      "благотворительный проект",
+      "инвалидность",
+      "телеканал Надия",
+      "психологическая травма",
+      "чудо",
+      "исцеление",
+      "дворец спорта",
+      "христианин",
+      "безграничность",
+      "депрессия",
+      "любовь",
+      "легенда"
+    ],
+    "publish": "2017-02-03T13:00:00.000Z",
+    "language": "ru",
+    "author": "",
+    "hd": false,
+    "views": 0,
+    "source": {
+      "local": {
+        "url": "https://cdn.hope.ua/media/shows/ADUU/episodes/00117/ADUU00117-hopeua.mov"
+      },
+      "youtube": {
+        "id": "FgmXeklodgg",
+        "channel": "hopeua"
+      }
+    },
+    "image": "https://cdn.hope.ua/media/shows/ADUU/episodes/00117/ADUU00117-cover.jpg",
+    "links": {
+      "prev": "ADUU02216",
+      "next": "ADUU00217"
+    },
+    "show": {
+      "uid": "ADUU",
+      "title": "Реклама",
+      "description": {
+        "short": "",
+        "medium": "Узнайте то, что сейчас актуально и полезно!",
+        "days": "",
+        "time": "",
+        "long": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ADUU/ADUU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ADUU/ADUU-background.jpg"
+      },
+      "category": {
+        "uid": "special",
+        "title": {
+          "ru": "Ролики",
+          "uk": "Ролики"
+        },
+        "sort": 13
+      }
+    }
+  },
+  {
+    "uid": "ADUU02216",
+    "title": "Леонід Падун | Всеукраїнський пісенний флешмоб",
+    "description": "Запрошуємо приєднатись до особливої події — всеукраїнський пісенний флешмоб — 25 грудня о 15-00 на Європейській площі столиці. Дійство, в якому приймуть участь 2017 хористів з усієї країни. <br />Ексклюзивну пряму трансляцію заходу дивіться на українському телеканалі \"Надія\".",
+    "tags": [
+      "Різдво",
+      "свято",
+      "Київ",
+      "Європейська площа",
+      "світ",
+      "всеукраїнський",
+      "пісенний флешмоб",
+      "телеканал",
+      "Надія",
+      "новий рік",
+      "депутат",
+      "сім'я",
+      "особлива подія",
+      "радість",
+      "пісні",
+      "щастя"
+    ],
+    "publish": "2016-12-22T22:00:00.000Z",
+    "language": "uk",
+    "author": "",
+    "hd": false,
+    "views": 0,
+    "source": {
+      "local": {
+        "url": "https://cdn.hope.ua/media/shows/ADUU/episodes/02216/ADUU02216-hopeua.mov"
+      },
+      "youtube": {
+        "id": "hBFmS74iCQ0",
+        "channel": "hopeua"
+      }
+    },
+    "image": "https://cdn.hope.ua/media/shows/ADUU/episodes/02216/ADUU02216-cover.jpg",
+    "links": {
+      "prev": "ADUU02116",
+      "next": "ADUU00117"
+    },
+    "show": {
+      "uid": "ADUU",
+      "title": "Реклама",
+      "description": {
+        "short": "",
+        "medium": "Узнайте то, что сейчас актуально и полезно!",
+        "days": "",
+        "time": "",
+        "long": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ADUU/ADUU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ADUU/ADUU-background.jpg"
+      },
+      "category": {
+        "uid": "special",
+        "title": {
+          "ru": "Ролики",
+          "uk": "Ролики"
+        },
+        "sort": 13
+      }
+    }
+  },
+  {
+    "uid": "ADUU02116",
+    "title": "Михайло Паночко | Всеукраїнський пісенний флешмоб",
+    "description": "Запрошуємо приєднатись до особливої події — всеукраїнський пісенний флешмоб — 25 грудня о 15-00 на Європейській площі столиці. Дійство, в якому приймуть участь 2017 хористів з усієї країни. <br />Ексклюзивну пряму трансляцію заходу дивіться на українському телеканалі \"Надія\".",
+    "tags": [
+      "Різдво",
+      "свято",
+      "Київ",
+      "Європейська площа",
+      "світ",
+      "всеукраїнський",
+      "пісенний флешмоб",
+      "телеканал",
+      "Надія",
+      "новий рік",
+      "депутат",
+      "сім'я",
+      "особлива подія",
+      "радість",
+      "пісні",
+      "щастя"
+    ],
+    "publish": "2016-12-21T10:30:00.000Z",
+    "language": "uk",
+    "author": "",
+    "hd": false,
+    "views": 0,
+    "source": {
+      "local": {
+        "url": "https://cdn.hope.ua/media/shows/ADUU/episodes/02116/ADUU02116-hopeua.mov"
+      },
+      "youtube": {
+        "id": "BFPzoLUt97w",
+        "channel": "hopeua"
+      }
+    },
+    "image": "https://cdn.hope.ua/media/shows/ADUU/episodes/02116/ADUU02116-cover.jpg",
+    "links": {
+      "prev": "ADUU01916",
+      "next": "ADUU02216"
+    },
+    "show": {
+      "uid": "ADUU",
+      "title": "Реклама",
+      "description": {
+        "short": "",
+        "medium": "Узнайте то, что сейчас актуально и полезно!",
+        "days": "",
+        "time": "",
+        "long": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ADUU/ADUU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ADUU/ADUU-background.jpg"
+      },
+      "category": {
+        "uid": "special",
+        "title": {
+          "ru": "Ролики",
+          "uk": "Ролики"
+        },
+        "sort": 13
+      }
+    }
+  },
+  {
+    "uid": "ADUU01916",
+    "title": "Віктор Уколов|Всеукраїнський пісенний флешмоб",
+    "description": "Запрошуємо приєднатись до особливої події — всеукраїнський пісенний флешмоб — 25 грудня о 15-00 на Європейській площі столиці. Дійство, в якому приймуть участь 2017 хористів з усієї країни. <br />Ексклюзивну пряму трансляцію заходу дивіться на українському телеканалі \"Надія\".",
+    "tags": [
+      "Різдво",
+      "свято",
+      "Київ",
+      "Європейська площа",
+      "світ",
+      "всеукраїнський",
+      "пісенний флешмоб",
+      "телеканал",
+      "Надія",
+      "новий рік",
+      "депутат",
+      "сім'я",
+      "особлива подія",
+      "радість",
+      "пісні",
+      "щастя"
+    ],
+    "publish": "2016-12-21T10:00:00.000Z",
+    "language": "uk",
+    "author": "",
+    "hd": false,
+    "views": 0,
+    "source": {
+      "local": {
+        "url": "https://cdn.hope.ua/media/shows/ADUU/episodes/01916/ADUU01916-hopeua.mov"
+      },
+      "youtube": {
+        "id": "Nyng28lBrW0",
+        "channel": "hopeua"
+      }
+    },
+    "image": "https://cdn.hope.ua/media/shows/ADUU/episodes/01916/ADUU01916-cover.jpg",
+    "links": {
+      "prev": "ADUU01816",
+      "next": "ADUU02116"
+    },
+    "show": {
+      "uid": "ADUU",
+      "title": "Реклама",
+      "description": {
+        "short": "",
+        "medium": "Узнайте то, что сейчас актуально и полезно!",
+        "days": "",
+        "time": "",
+        "long": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ADUU/ADUU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ADUU/ADUU-background.jpg"
+      },
+      "category": {
+        "uid": "special",
+        "title": {
+          "ru": "Ролики",
+          "uk": "Ролики"
+        },
+        "sort": 13
+      }
+    }
+  }
+]

@@ -1,0 +1,10 @@
+@import 'common';
+
+& {
+    height: px(288);
+    padding-top: px(172);
+
+    .title {
+        margin-left: px(50);
+    }
+}

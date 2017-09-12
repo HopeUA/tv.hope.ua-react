@@ -1,0 +1,865 @@
+[
+  {
+    "id": "59831a81f73a670011be7716",
+    "date": "2017-08-30T18:40:00.000Z",
+    "show": {
+      "uid": "MBVU",
+      "title": "Мозаїка батьківства",
+      "description": {
+        "short": "Сім'я — це дар від Бога!"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/MBVU/MBVU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/MBVU/MBVU-background.jpg"
+      },
+      "code": "MBVU"
+    },
+    "episode": {
+      "uid": "MBVU03315",
+      "title": "Безпечне літо",
+      "description": "Як захистити дитину від таких \"літніх\" неприємностей, як тепловий удар, сонячні опіки, укуси комах та харчові отруєння, дивіться у програмі.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/MBVU/episodes/03315/MBVU03315-cover.jpg",
+      "trailers": {
+        "today": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/MBVU/episodes/03315/MBVU03315-trailer-today.mov"
+          }
+        },
+        "main": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/MBVU/episodes/03315/MBVU03315-trailer-main.mov"
+          }
+        }
+      },
+      "code": "MBVU03315"
+    }
+  },
+  {
+    "id": "59831a81f73a670011be7717",
+    "date": "2017-08-30T19:00:00.000Z",
+    "show": {
+      "uid": "JMLU",
+      "title": "ДЖЕМ",
+      "description": {
+        "short": "Жива християнська музика на будь-який смак"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/JMLU/JMLU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/JMLU/JMLU-background.jpg"
+      },
+      "code": "JMLU"
+    },
+    "episode": {
+      "uid": "JMLU02315",
+      "title": "Світлана Докаш",
+      "description": "Вона написала для свого тата не одну пісню, щоб розповісти, що на нас може чекати тільки щось ще краще! Коли чуєш як вона говорить — то таке враження і складається!<br />В гостях дівчина з маленького українського Парижу — Світлана Докаш.<br />Дивіться \"ДЖЕМ\"!",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/JMLU/episodes/02315/JMLU02315-cover.jpg",
+      "trailers": {
+        "today": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/JMLU/episodes/02315/JMLU02315-trailer-today.mov"
+          }
+        },
+        "main": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/JMLU/episodes/02315/JMLU02315-trailer-main.mov"
+          }
+        }
+      },
+      "code": "JMLU02315"
+    }
+  },
+  {
+    "id": "59831a81f73a670011be7718",
+    "date": "2017-08-30T20:00:00.000Z",
+    "show": {
+      "uid": "MMLR",
+      "title": "Музыка в моей жизни",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/MMLR/MMLR-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/MMLR/MMLR-background.jpg"
+      },
+      "code": "MMLR"
+    },
+    "episode": {
+      "uid": "MMLR00615",
+      "title": "Гирт Теп",
+      "description": "Наш гость Гирт Теп. Вместе мы проанализируем креативность в музыке, и поговорим о том, как музыка может стать лучшим способом проявления эмоций. <br />Гирт Теп играет на ударных.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/MMLR/MMLR-cover.jpg",
+      "code": "MMLR00615"
+    }
+  },
+  {
+    "id": "59831a81f73a670011be7719",
+    "date": "2017-08-30T20:30:00.000Z",
+    "show": {
+      "uid": "VCTR",
+      "title": "Вопрос служителю церкви",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/VCTR/VCTR-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "VCTR"
+    },
+    "episode": {
+      "uid": "VCTR00715",
+      "title": "Может ли наука опровергнуть истинность христианства?",
+      "description": "Наука часто предлагает теории, не согласующиеся с нашими религиозными убеждениями. Как реагировать на это? Что является мерилом истины для христианина?",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/VCTR/episodes/00715/VCTR00715-cover.jpg",
+      "code": "VCTR00715"
+    }
+  },
+  {
+    "id": "59831a81f73a670011be771a",
+    "date": "2017-08-30T20:50:00.000Z",
+    "show": {
+      "uid": "ATCU",
+      "title": "На перехресті",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ATCU/ATCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ATCU/ATCU-background.jpg"
+      },
+      "code": "ATCU"
+    },
+    "episode": {
+      "uid": "ATCU00317",
+      "title": "Вогняна пастка",
+      "description": "Що потрібно побачити людині, для того щоб зрозуміти що Бог завжди поруч? І навіть коли ми забуваємо про Нього, Він ніколи не забуває про нас. Саме про це розповідає наш герой у програмі На перехресті.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/ATCU/ATCU-cover.jpg",
+      "code": "ATCU00317"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be771b",
+    "date": "2017-08-30T21:00:00.000Z",
+    "show": {
+      "uid": "VELU",
+      "title": "Біблія, як вона є",
+      "description": {
+        "short": "Вічні сторінки написані для Вас"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/VELU/VELU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/VELU/VELU-background.jpg"
+      },
+      "code": "VELU"
+    },
+    "episode": {
+      "uid": "VELU06813",
+      "title": "Луки 18:18-43",
+      "description": "Ісус і багатий юнак. Нагорода апостолам. Ісус утретє провіщає. Уздоровлення сліпого.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/VELU/episodes/06813/VELU06813-cover.jpg",
+      "code": "VELU06813"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be771c",
+    "date": "2017-08-30T21:30:00.000Z",
+    "show": {
+      "uid": "PGBU",
+      "title": "Рожеві окуляри",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/PGBU/PGBU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/PGBU/PGBU-background.jpg"
+      },
+      "code": "PGBU"
+    },
+    "episode": {
+      "uid": "PGBU00917",
+      "title": "Вік",
+      "description": "\"Коханню кожен вік підвладний...\", — писав колись Пушкін. Так ось, ведучі Оля та Олесь зачеплять цю слизьку тему у стосунках. А допоможуть їм у цьому наші незмінні експерти, веселі перехожі та цікава героїня, яка не носить рожеві окуляри!<br /><br />!!!МИ В СОЦ,МЕРЕЖАХ!!!<br />-----------------------------------------<br />Instagram: https://www.instagram.com/rozhevi_okulary/<br />VK: https://vk.com/rozhevi.okulary<br />TVHope Ua: https://tv.hope.ua/shows/PGBU<br />YouTube: https://www.youtube.com/channel/UCBepfEfgDjaBISC0hhbP..<br /><br />#приколы #смешноевидео #программа #крутоевидео #любовь #свидания #розовыеочки #рожевіокуляри #советыпсихолога #психолог #телеканалнадия #телеканалнадія #християнство #подруга #друг #дружба #смішневідео #прикольневідео #пранк #відеопранк #пранки #розваги #побачення #секс #неймовірневідео #екстрим #тренінг #нейрохірург #АнтонШкіряк",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/PGBU/PGBU-cover.jpg",
+      "code": "PGBU00917"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be771d",
+    "date": "2017-08-30T22:00:00.000Z",
+    "show": {
+      "uid": "IWLU",
+      "title": "Біблія продовжує говорити",
+      "description": {
+        "short": "Книга від наймудрішого Автора"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/IWLU/IWLU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/IWLU/IWLU-background.jpg"
+      },
+      "code": "IWLU"
+    },
+    "episode": {
+      "uid": "IWLU03415",
+      "title": "Лаодикія — церква суду",
+      "description": "Згідно Біблії ми живемо в заключний період історії нашої цивілізації, в останній період історії християнства — Лаодикійський період. Тому-то сьогодні як ніколи раніше в історії Землі особливо актуально звучать слова Ісуса Христа, звернені до кожного з нас: “Я знаю діла твої, що ти не холодний, ані гарячий. Якби то холодний чи гарячий ти був!” Сьогодні в програмі “Біблія продовжує говорити” ми дізнаємось на досвіді християн з Лаодикії що необхідно робити, щоб бути гарячим християнином.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/IWLU/episodes/03415/IWLU03415-cover.jpg",
+      "trailers": {
+        "today": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/IWLU/episodes/03415/IWLU03415-trailer-today.mov"
+          }
+        },
+        "main": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/IWLU/episodes/03415/IWLU03415-trailer-main.mov"
+          }
+        }
+      },
+      "code": "IWLU03415"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be771e",
+    "date": "2017-08-30T22:30:00.000Z",
+    "show": {
+      "uid": "DOCU",
+      "title": "Дивовижнi  вiдкриття",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/DOCU/DOCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/DOCU/DOCU-background.jpg"
+      },
+      "code": "DOCU"
+    },
+    "episode": {
+      "uid": "DOCU00416",
+      "title": "Солодкі звуки",
+      "description": "Як це, коли сам Бог звертається до тебе? У проповіді Джон Хаммонд буде згадувати свою сім'ю, та біблійних героїв — Авраама та Сарру.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/DOCU/episodes/00416/DOCU00416-cover.jpg",
+      "code": "DOCU00416"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be771f",
+    "date": "2017-08-30T23:30:00.000Z",
+    "show": {
+      "uid": "RCCU",
+      "title": "Дорогами християнства",
+      "description": {
+        "short": "Що якщо копнути глибше?"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/RCCU/RCCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/RCCU/RCCU-background.jpg"
+      },
+      "code": "RCCU"
+    },
+    "episode": {
+      "uid": "RCCU02216",
+      "title": "Мрія, яка не збулася. Історія руху жидовствуючих",
+      "description": "Сьогодні на нас чекає цікава розмова, в якій ми дослідимо історію руху жидовствуючих, а також особливу увагу звернемо на кульмінаційний її момент — династичну боротьбу за московський престол наприкінці XV століття. Наскільки змінився б історичний поступ, якби жидовствуючі прийшли до влади? Про це ви дізнаєтесь в програмі \"Дорогами християнства\".",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/RCCU/episodes/02216/RCCU02216-cover.jpg",
+      "code": "RCCU02216"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7720",
+    "date": "2017-08-31T00:30:00.000Z",
+    "show": {
+      "uid": "CYCU",
+      "title": "Поспілкуймося",
+      "description": {
+        "short": "Обговорюємо гарячі молодіжні теми"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/CYCU/CYCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/CYCU/CYCU-background.jpg"
+      },
+      "code": "CYCU"
+    },
+    "episode": {
+      "uid": "CYCU01812",
+      "title": "Чому ми хворіємо?",
+      "description": "Навіть якщо ми намагаємось вести здоровий спосіб життя, ми все одно хворіємо. Виникає питання \"Чому?\". Чи є хвороби наслідком способу життя, чи передаються хвороби спадково, чи пов'язан наш душевний стан з фізичним здоров'ям? Відповіді на всі ці запитання ви можете отримати саме зараз. <br /><br /><i>Гості: Валентина Шабранська, Сергій Гаврюк</i>",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/CYCU/episodes/01812/CYCU01812-cover.jpg",
+      "code": "CYCU01812"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7721",
+    "date": "2017-08-31T01:30:00.000Z",
+    "show": {
+      "uid": "OLZU",
+      "title": "2Я - одне життя",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/OLZU/OLZU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/OLZU/OLZU-background.jpg"
+      },
+      "code": "OLZU"
+    },
+    "episode": {
+      "uid": "OLZU00417",
+      "title": "Заробітки за кордоном у сімейному житті",
+      "description": "Одружились і хочеться жити окремо, але немає коштів? Вихід є — поїхати за кордон і за певний час заробити на житло! Та чи справді це є безпечним виходом? Про це і поговоримо сьогодні з нашими героями та експертом.",
+      "language": "ru,uk",
+      "image": "https://cdn.hope.ua/media/shows/OLZU/OLZU-cover.jpg",
+      "code": "OLZU00417"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7722",
+    "date": "2017-08-31T02:30:00.000Z",
+    "show": {
+      "uid": "NHUU",
+      "title": "Вісті Надії",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/NHUU/NHUU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/NHUU/NHUU-background.jpg"
+      },
+      "code": "NHUU"
+    },
+    "episode": {
+      "uid": "NHUU14716",
+      "title": "Україна визнає дипломи духовних вишів",
+      "description": "Міністр освіти і науки України Лілія Гриневич вручила представникам духовних вишів свідоцтва про визнання державою документів про вищу освіту, наукові ступені та вчені звання, видані духовними навчальними закладами України. \"Я хочу, щоб ви розглядали отримання цих документів як момент, який має надихнути вас далі продовжувати свою роботу, свої дослідження, щоб утвердити справедливість цього кроку\" — зазначила міністр.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/NHUU/episodes/14716/NHUU14716-cover.jpg",
+      "code": "NHUU14716"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7723",
+    "date": "2017-08-31T03:00:00.000Z",
+    "show": {
+      "uid": "REFU",
+      "title": "Реформація.500",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/REFU/REFU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/REFU/REFU-background.jpg"
+      },
+      "code": "REFU"
+    },
+    "episode": {
+      "uid": "REFU00717",
+      "title": "Блаженні вбогі",
+      "description": "Разючий контраст між багатством та бідністю становив проблему за будь-якого часу і в будь-якій країні. Хто і коли визначив, що одні можуть мати доступ до всіх земних благ, а іншим залишаються жалюгідні рештки? Середньовіччя закріплювало станову та майнову нерівність, Реформація відкрила тип людини Нового часу, що у примноженні статків керувалася критеріями побожності, сміливості, чесності, працелюбства. В цій передачі зроблена спроба осмислити непросту проблему достатку та злиднів у історичному та теологічному контексті.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/REFU/REFU-cover.jpg",
+      "code": "REFU00717"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7724",
+    "date": "2017-08-31T04:00:00.000Z",
+    "show": {
+      "uid": "WHER",
+      "title": "Дорога к счастью. Дорога к звездам (спутник)",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "WHER"
+    },
+    "episode": {
+      "uid": "WHER00508",
+      "title": "Встреча пятая",
+      "description": "<u>Темы: Романтика за бортом, где спасательный круг?/Не влезай! Убьет!</u><br /><br />• <i>Дорога к счастью:</i> Романтика в браке. Романтика — это не события, но особые отношения. Чтобы романтика не исчезала необходим оптимистический настрой к жизни, забота об окружении и особое отношение к любимому человеку.<br />• <i>Дорога к звездам:</i> Размышление над 5 гл. Даниила:  Центральной темой 5 главы,  есть параллели между Навуходоносором и Валтасаром, а также между  Валтасаром царем и Валтасаром — Даниилом. В своей гордыне царь желал показать свое превосходство над Богом евреев, пренебрегая опытами прошлого. Но его участь уже была решена.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+      "code": "WHER00508"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7725",
+    "date": "2017-08-31T05:20:00.000Z",
+    "show": {
+      "uid": "RCCU",
+      "title": "Дорогами християнства",
+      "description": {
+        "short": "Що якщо копнути глибше?"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/RCCU/RCCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/RCCU/RCCU-background.jpg"
+      },
+      "code": "RCCU"
+    },
+    "episode": {
+      "uid": "RCCU02216",
+      "title": "Мрія, яка не збулася. Історія руху жидовствуючих",
+      "description": "Сьогодні на нас чекає цікава розмова, в якій ми дослідимо історію руху жидовствуючих, а також особливу увагу звернемо на кульмінаційний її момент — династичну боротьбу за московський престол наприкінці XV століття. Наскільки змінився б історичний поступ, якби жидовствуючі прийшли до влади? Про це ви дізнаєтесь в програмі \"Дорогами християнства\".",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/RCCU/episodes/02216/RCCU02216-cover.jpg",
+      "code": "RCCU02216"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7726",
+    "date": "2017-08-31T06:00:00.000Z",
+    "show": {
+      "uid": "FBNU",
+      "title": "Модная книга",
+      "description": {
+        "short": "Книга, в которой Вы найдете ответы буквально на все вопросы."
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/FBNU/FBNU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "FBNU"
+    },
+    "episode": {
+      "uid": "FBNU02313",
+      "title": "Если тебя обидели",
+      "description": "Вам нагрубили, обидели? Первая реакция — ответить тем же в порыве эмоций. Иногда мы, прислушиваясь к разуму, сдерживаемся. А Христос вообще предлагает подставить левую щёку, если ударили по правой. Так как же реагировать на обиды и обидчиков, рассказывает пастор Василий Дидковский и Константин, который до сих пор не оправился от побоев, нанесённых несколько лет назад.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/FBNU/episodes/02313/FBNU02313-cover.jpg",
+      "code": "FBNU02313"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7727",
+    "date": "2017-08-31T06:20:00.000Z",
+    "show": {
+      "uid": "PPCU",
+      "title": "Пазлы Паркера",
+      "description": {
+        "short": "Дети будут в восторге!"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/PPCU/PPCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/PPCU/PPCU-background.jpg"
+      },
+      "code": "PPCU"
+    },
+    "episode": {
+      "uid": "PPCU01210",
+      "title": "Музыка",
+      "description": "Сегодня у нас гости! Это наши друзья музыканты! Каждый из них в отдельности прекрасно владеет своим инструментом. Что же случилось, когда они решили сыграть вместе одну мелодию? У них не получилось! Но почему? Мистер Риччи расскажет нам о единстве и сплоченности. Кроме того мы будем делать зарядку, разгадывать загадки и кушать прекрасный фруктовый кебаб!",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/PPCU/episodes/01210/PPCU01210-cover.jpg",
+      "code": "PPCU01210"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7728",
+    "date": "2017-08-31T06:50:00.000Z",
+    "show": {
+      "uid": "EWLU",
+      "title": "Очима жінки",
+      "description": {
+        "short": "Погляд зі сторони"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/EWLU/EWLU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/EWLU/EWLU-background.jpg"
+      },
+      "code": "EWLU"
+    },
+    "episode": {
+      "uid": "EWLU01214",
+      "title": "Ідеальна жінка",
+      "description": "В останньому розділі книги Приповістей є опис ідеальної жінки. Звісно, в житті знайти ідеальну жінку просто неможливо, зате усім красуням є на кого рівнятися.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/EWLU/episodes/01214/EWLU01214-cover.jpg",
+      "code": "EWLU01214"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be7729",
+    "date": "2017-08-31T07:10:00.000Z",
+    "show": {
+      "uid": "MMLR",
+      "title": "Музыка в моей жизни",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/MMLR/MMLR-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/MMLR/MMLR-background.jpg"
+      },
+      "code": "MMLR"
+    },
+    "episode": {
+      "uid": "MMLR00615",
+      "title": "Гирт Теп",
+      "description": "Наш гость Гирт Теп. Вместе мы проанализируем креативность в музыке, и поговорим о том, как музыка может стать лучшим способом проявления эмоций. <br />Гирт Теп играет на ударных.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/MMLR/MMLR-cover.jpg",
+      "code": "MMLR00615"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be772a",
+    "date": "2017-08-31T07:40:00.000Z",
+    "show": {
+      "uid": "WHER",
+      "title": "Дорога к счастью. Дорога к звездам (спутник)",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "WHER"
+    },
+    "episode": {
+      "uid": "WHER00608",
+      "title": "Встреча шестая",
+      "description": "<u>Темы: Домашние НЛО./Два закона, два пути. Какой избрать?</u><br /><br />• <i>Дорога к счастью:</i> Насилие в семье.  Основная причина всех проблем в семье — эгоизм, который рождает гнев... Гнев опасен. Любовь не выживает в таких условиях.<br />• <i>Дорога к звездам:</i>  Размышление над 6 гл. Даниила: Эта глава раскрывает борьбу между законом Бога и законом Мидийским и Персидским. Даниил оказывается в эпицентре этой борьбы.  Царь Персидский не смог ему помочь, но Бог, которому  служил Даниил, спас Своего верного слугу.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+      "code": "WHER00608"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be772b",
+    "date": "2017-08-31T09:00:00.000Z",
+    "show": {
+      "uid": "DTNU",
+      "title": "Детонация",
+      "description": {
+        "short": "... для пап и мам"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/DTNU/DTNU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/DTNU/DTNU-background.jpg"
+      },
+      "code": "DTNU"
+    },
+    "episode": {
+      "uid": "DTNU01514",
+      "title": "Грудное вскармливание",
+      "description": "Когда малыш появляется на свет, счастливые и любящие родители сразу стремятся обеспечить его самым лучшим питанием — маминым молочком. Но тут же возникает множество вопросов и сомнений: бабушка советует одно, педиатр другое, а  жизнь предлагает третье. С какими трудностями могут столкнуться кормящие молодые мамы, знает программа \"Детонация\".<br />http://hope.ua/ua/video/DTNU<br />https://vk.com/detonatciya",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/DTNU/episodes/01514/DTNU01514-cover.jpg",
+      "trailers": {
+        "today": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/DTNU/episodes/01514/DTNU01514-trailer-today.mov"
+          }
+        },
+        "main": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/DTNU/episodes/01514/DTNU01514-trailer-main.mov"
+          }
+        }
+      },
+      "code": "DTNU01514"
+    }
+  },
+  {
+    "id": "59831a83f73a670011be772c",
+    "date": "2017-08-31T09:30:00.000Z",
+    "show": {
+      "uid": "SRTR",
+      "title": "Семинар по книге Откровение",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "SRTR"
+    },
+    "episode": {
+      "uid": "SRTR02008",
+      "title": "Программа № 20",
+      "description": "Несвятая (ложная) троица как антипод Божественной Троицы.  Сравнение 12-13 глав с 14-15 главами книги Откровение. Весть трех Ангелов из 14 главы как ответная реакция Бога на атаку и ложное учение сатаны.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+      "code": "SRTR02008"
+    }
+  },
+  {
+    "id": "59831a84f73a670011be772d",
+    "date": "2017-08-31T10:00:00.000Z",
+    "show": {
+      "uid": "PGBU",
+      "title": "Рожеві окуляри",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/PGBU/PGBU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/PGBU/PGBU-background.jpg"
+      },
+      "code": "PGBU"
+    },
+    "episode": {
+      "uid": "PGBU00917",
+      "title": "Вік",
+      "description": "\"Коханню кожен вік підвладний...\", — писав колись Пушкін. Так ось, ведучі Оля та Олесь зачеплять цю слизьку тему у стосунках. А допоможуть їм у цьому наші незмінні експерти, веселі перехожі та цікава героїня, яка не носить рожеві окуляри!<br /><br />!!!МИ В СОЦ,МЕРЕЖАХ!!!<br />-----------------------------------------<br />Instagram: https://www.instagram.com/rozhevi_okulary/<br />VK: https://vk.com/rozhevi.okulary<br />TVHope Ua: https://tv.hope.ua/shows/PGBU<br />YouTube: https://www.youtube.com/channel/UCBepfEfgDjaBISC0hhbP..<br /><br />#приколы #смешноевидео #программа #крутоевидео #любовь #свидания #розовыеочки #рожевіокуляри #советыпсихолога #психолог #телеканалнадия #телеканалнадія #християнство #подруга #друг #дружба #смішневідео #прикольневідео #пранк #відеопранк #пранки #розваги #побачення #секс #неймовірневідео #екстрим #тренінг #нейрохірург #АнтонШкіряк",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/PGBU/PGBU-cover.jpg",
+      "code": "PGBU00917"
+    }
+  },
+  {
+    "id": "59831a84f73a670011be772e",
+    "date": "2017-08-31T10:30:00.000Z",
+    "show": {
+      "uid": "IWLU",
+      "title": "Біблія продовжує говорити",
+      "description": {
+        "short": "Книга від наймудрішого Автора"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/IWLU/IWLU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/IWLU/IWLU-background.jpg"
+      },
+      "code": "IWLU"
+    },
+    "episode": {
+      "uid": "IWLU03415",
+      "title": "Лаодикія — церква суду",
+      "description": "Згідно Біблії ми живемо в заключний період історії нашої цивілізації, в останній період історії християнства — Лаодикійський період. Тому-то сьогодні як ніколи раніше в історії Землі особливо актуально звучать слова Ісуса Христа, звернені до кожного з нас: “Я знаю діла твої, що ти не холодний, ані гарячий. Якби то холодний чи гарячий ти був!” Сьогодні в програмі “Біблія продовжує говорити” ми дізнаємось на досвіді християн з Лаодикії що необхідно робити, щоб бути гарячим християнином.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/IWLU/episodes/03415/IWLU03415-cover.jpg",
+      "trailers": {
+        "today": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/IWLU/episodes/03415/IWLU03415-trailer-today.mov"
+          }
+        },
+        "main": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/IWLU/episodes/03415/IWLU03415-trailer-main.mov"
+          }
+        }
+      },
+      "code": "IWLU03415"
+    }
+  },
+  {
+    "id": "59831a84f73a670011be772f",
+    "date": "2017-08-31T11:00:00.000Z",
+    "show": {
+      "uid": "LPCU",
+      "title": "Малюваки",
+      "description": {
+        "short": "Відкрий в собі нові таланти!"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/LPCU/LPCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/LPCU/LPCU-background.jpg"
+      },
+      "code": "LPCU"
+    },
+    "episode": {
+      "uid": "LPCU02416",
+      "title": "Як Малюваки ходили по гриби",
+      "description": "Гошка та Їжачок вирішили в лісі пустувати, а не гриби збирати. Які ж  гриби вони все-таки назбирали? Професор Филипштейн — розповість  про правила безпеки та  які гриби їстівні, а які —  ні. Як із грибів можна приготувати смачний шашлик. Цікавий мультфільм про спокушення Христа в пустелі.",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/LPCU/LPCU-cover.jpg",
+      "code": "LPCU02416"
+    }
+  },
+  {
+    "id": "59831a84f73a670011be7730",
+    "date": "2017-08-31T11:20:00.000Z",
+    "show": {
+      "uid": "MBCU",
+      "title": "Музична скринька",
+      "description": {
+        "short": "Відкрийте для себе світ прекрасних звуків"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/MBCU/MBCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/MBCU/MBCU-background.jpg"
+      },
+      "code": "MBCU"
+    },
+    "episode": {
+      "uid": "MBCU00513",
+      "title": "Випуск №5 (13)",
+      "description": "Голос — величезний дар від Бога. Яким же був голос Христа? Що вкладав Ісус  в Свої уста, живучи на землі? Дар, який став доленосним: як в житті однієї дівчини спів став попередником дивовижного кохання. Про композитора  першого державного  гімну Росії, що за сумісництвом є одним з найулюбленіших християнських гімнів, а  також про царицю музичних інструментів ми розповімо вам . І нехай ноти вашого серця звучать в гармонії зі світлою  мелодією небес.<br /><br />Fernando Iglesias — Fur beyond<br />Лідія Патрашко, Юлія Бельська — Шалом<br />Оксана Скрипкарь, Зоя Ілющенко —  As water to the thirsty<br />Київський зведений Хор та Оркестр — Англійська мелодія<br />Олена, Наталя Гунько — Славлю Його Ім'я<br />Патмос — Я буду ждать и верить <br />А. Аренський — Он Муж скорбей",
+      "image": "https://cdn.hope.ua/media/shows/MBCU/episodes/00513/MBCU00513-cover.jpg",
+      "code": "MBCU00513"
+    }
+  },
+  {
+    "id": "59831a84f73a670011be7731",
+    "date": "2017-08-31T12:00:00.000Z",
+    "show": {
+      "uid": "PRJZ",
+      "title": "Притчи рабби Иисуса (сурдоперевод)",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "PRJZ"
+    },
+    "episode": {
+      "language": "",
+      "image": "",
+      "description": "",
+      "title": "Нужно ли ненавидеть родителей? ",
+      "code": "PRJZ01016",
+      "uid": ""
+    }
+  },
+  {
+    "id": "59831a84f73a670011be7732",
+    "date": "2017-08-31T12:40:00.000Z",
+    "show": {
+      "uid": "LMNZ",
+      "title": "ЛоМастер (сурдоперевод)",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "LMNZ"
+    },
+    "episode": {
+      "uid": "LMNZ02315",
+      "title": "Занимайся спортом",
+      "description": "Чтобы быть здоровым, нужно заниматься спортом. Про необычную игру с мячом футбэг, и о том, как соорудить гантели своими руками, узнаем в новом выпуске ЛоМастера. http://vk.com/lomacter",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/LMNZ/episodes/02315/LMNZ02315-cover.jpg",
+      "code": "LMNZ02315"
+    }
+  },
+  {
+    "id": "59831a84f73a670011be7733",
+    "date": "2017-08-31T13:00:00.000Z",
+    "show": {
+      "uid": "CGCU",
+      "title": "В гостях у Клиффа Гольдштейна",
+      "description": {
+        "short": "Неординарные исследования"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/CGCU/CGCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/CGCU/CGCU-background.jpg"
+      },
+      "code": "CGCU"
+    },
+    "episode": {
+      "uid": "CGCU00111",
+      "title": "Единожды — все  равно что никогда",
+      "description": "Есть старая поговорка, которая гласит: \"Жизнь одна\". Предположим, что вы могли бы прожить свою жизнь снова, снова и снова. Представьте только, что вы проживали бы ее бесконечное число раз. Какие перспективы будут ждать вас?  Придаст ли это смысл вашей жизни? И вообще, возможно ли такое?",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/CGCU/episodes/00111/CGCU00111-cover.jpg",
+      "code": "CGCU00111"
+    }
+  },
+  {
+    "id": "59831a84f73a670011be7734",
+    "date": "2017-08-31T13:30:00.000Z",
+    "show": {
+      "uid": "NSCU",
+      "title": "Непростое состояние",
+      "description": {
+        "short": "Построй свою семью правильно!"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/NSCU/NSCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/NSCU/NSCU-background.jpg"
+      },
+      "code": "NSCU"
+    },
+    "episode": {
+      "uid": "NSCU01813",
+      "title": "Путь к сердцу подростка",
+      "description": "Что делать, когда ваш ребенок отвергает вашу заботу о нём? Стоит ли проводить беседы со своими детьми? Обо всем этом и многом другом вы сможете узнать из советов психолога Лидии Нейкурс. Вместе с нашим ведущим Валерием Мехоношиным, Лидия Дмитриевна ответит на письма наших телезрителей, а так же прокомментирует нашу видео рубрику.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/shows/NSCU/episodes/01813/NSCU01813-cover.jpg",
+      "code": "NSCU01813"
+    }
+  },
+  {
+    "id": "59831a84f73a670011be7735",
+    "date": "2017-08-31T14:00:00.000Z",
+    "show": {
+      "uid": "RZZR",
+      "title": "Рожденные заново",
+      "description": {
+        "short": ""
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+        "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+      },
+      "code": "RZZR"
+    },
+    "episode": {
+      "uid": "RZZR00313",
+      "title": "История обращения к Богу",
+      "description": "Будучи турком, Тамер родился и вырос в Социалистической Болгарии. Впитав как светский стиль жизни, так и исламские традиции, он познакомился с человеком, который смог открыть для него христианские ценности. Вопреки желанию близких он принял Евангельское учение, после чего жизнь его обрела новый смысл. Переехав в Турцию он продолжает хранить свою веру.",
+      "language": "ru",
+      "image": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+      "code": "RZZR00313"
+    }
+  },
+  {
+    "id": "59831a84f73a670011be7737",
+    "date": "2017-08-31T14:30:00.000Z",
+    "show": {
+      "uid": "ILCU",
+      "title": "…є Любов",
+      "description": {
+        "short": "Його любов спасла світ"
+      },
+      "images": {
+        "cover": "https://cdn.hope.ua/media/shows/ILCU/ILCU-cover.jpg",
+        "background": "https://cdn.hope.ua/media/shows/ILCU/ILCU-background.jpg"
+      },
+      "code": "ILCU"
+    },
+    "episode": {
+      "uid": "ILCU01014",
+      "title": "“СТІНИ” ч.1 \"Не воля\"",
+      "description": "Галина народилася у партизанському краї — у Путивлі, на Сумщині. З дитинства любила грати у війну. У восьмирічному віці в аварії загинули її батьки. Рідна тітка забрала її до Харкова. Будучи єдиною в сім’ї, Галина не знала жодних обмежень. І тут раптом — стіни… з колючим дротом. Чому вона потрапила у виправну колонію? І що її чекало за тими стінами? Про це — у першій частині фільму «СТІНИ» — «НЕ ВОЛЯ»...",
+      "language": "uk",
+      "image": "https://cdn.hope.ua/media/shows/ILCU/episodes/01014/ILCU01014-cover.jpg",
+      "trailers": {
+        "today": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/ILCU/episodes/01014/ILCU01014-trailer-today.mov"
+          }
+        },
+        "main": {
+          "local": {
+            "url": "https://cdn.hope.ua/media/shows/ILCU/episodes/01014/ILCU01014-trailer-main.mov"
+          }
+        }
+      },
+      "code": "ILCU01014"
+    }
+  }
+]

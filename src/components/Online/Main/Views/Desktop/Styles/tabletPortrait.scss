@@ -1,0 +1,90 @@
+@import 'common';
+
+& {
+    padding-top: px(74);
+
+    .video {
+        width: px(1392);
+        height: px(780);
+
+        .play {
+            width: px(132);
+        }
+    }
+
+    .info {
+        width: px(1392);
+        margin-top: px(18);
+
+        .languages {
+            .item {
+                height: px(72);
+                font-size: px(22);
+
+                .flag {
+                    width: px(36);
+                }
+
+                .sings {
+                    width: px(24);
+                }
+            }
+        }
+
+        .title {
+            margin-top: px(50);
+            font-size: px(42);
+        }
+
+        .subTitle {
+            margin-top: px(18);
+            font-size: px(27);
+        }
+
+        .bar {
+            margin-top: px(38);
+
+            .startTime {
+                font-size: px(36);
+            }
+
+            .endTime {
+                font-size: px(36);
+            }
+
+            .timeLineContainer {
+                width: px(1190);
+                margin: 0 px(22);
+
+                .scale {
+                    height: px(4);
+
+                    .progress {
+                        span {
+                            width: px(4);
+                            height: px(24);
+
+                            &::before {
+                                width: px(4);
+                                height: px(24);
+                                margin-left: px(-4);
+                            }
+
+                            &::after {
+                                width: px(4);
+                                height: px(24);
+                                margin-right: px(-4);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .description {
+            margin-top: px(34);
+            font-size: px(28);
+            line-height: px(36);
+        }
+    }
+}

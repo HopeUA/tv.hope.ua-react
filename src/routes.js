@@ -7,6 +7,12 @@ import {
     Contacts,
     WatchUs,
     About,
+    Show,
+    Episode,
+    Articles,
+    Scheduler,
+    Online,
+    ThanksGiving,
     NotFound
 } from 'containers';
 
@@ -14,8 +20,14 @@ const componentRoutes = (
     <Route>
         <IndexRoute component={ Home }/>
         <Route path="contacts" component={ Contacts }/>
+        <Route path="shows/:id" component={ Show }/>
+        <Route path="shows/:id/:id" component={ Episode }/>
+        <Route path="articles" component={ Articles }/>
         <Route path="watchUs" component={ WatchUs }/>
         <Route path="about" component={ About }/>
+        <Route path="scheduler" component={ Scheduler }/>
+        <Route path="online" component={ Online }/>
+        <Route path="thanksGiving" component={ ThanksGiving }/>
         <Route path="*" component={ NotFound } status={ 404 }/>
     </Route>
 );

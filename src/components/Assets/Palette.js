@@ -60,5 +60,6 @@ export default {
     tempColor35: '#21778F',
     tempColor36: '#DFE0E1',
     tempColor37: '#1D788F',
-    tempColor38: '#52666A'
+    tempColor38: '#52666A',
+    tempColor39: '#fedd32'
 };
