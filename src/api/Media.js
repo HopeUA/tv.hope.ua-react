@@ -28,8 +28,8 @@ class Media {
                 throw new Error(`Media API: ${params.type} is not defined`);
         }
 
-        const url = params.type === 'show'
-            ? `${this.endpoint}/shows/${params.showId}/${resource}`
+        const url = params.type === 'show' ?
+            `${this.endpoint}/shows/${params.showId}/${resource}`
             : `${this.endpoint}/${resource}/${params.type}`;
 
         const response = await fetch(url);

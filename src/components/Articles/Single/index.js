@@ -48,7 +48,7 @@ class Single extends Component {
     static propTypes = {
         mediaType: PropTypes.string.isRequired,
         items: PropTypes.object.isRequired,
-        id: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired
     };
 
     /**

@@ -75,9 +75,11 @@ class Episode extends Component {
             if (a.publish < b.publish) {
                 return 1;
             }
+
             if (a.publish > b.publish) {
                 return -1;
             }
+
             return 0;
         });
 

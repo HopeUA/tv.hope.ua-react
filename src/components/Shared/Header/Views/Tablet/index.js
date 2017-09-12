@@ -22,8 +22,6 @@ import Instagram from 'components/Assets/Social/Instagram';
 import Facebook from 'components/Assets/Social/Fb';
 import Twitter from 'components/Assets/Social/Tw';
 import YouTube from 'components/Assets/Social/YouTube';
-import Ok from 'components/Assets/Social/Ok';
-import Vk from 'components/Assets/Social/Vk';
 import MenuLive from '../../Assets/MenuLive';
 
 function Header(props) {

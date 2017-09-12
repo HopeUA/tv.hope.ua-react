@@ -13,3 +13,8 @@ export default function Common(props) {
 
     return view;
 }
+
+Common.propTypes = {
+    locale: PropTypes.string.isRequired
+};
+
