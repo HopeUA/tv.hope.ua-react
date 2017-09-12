@@ -114,14 +114,11 @@ function Header(props) {
                         <a href={ socialLinks.facebook } className={ Styles.facebookIcon }>
                             <Facebook color={ Palette.tempColor6 }/>
                         </a>
-                        <a href={ socialLinks.ok } className={ Styles.okIcon }>
-                            <Ok color={ Palette.tempColor7 }/>
-                        </a>
                     </div>
                     <div className={ Styles.languages }>
                         <span className={ Styles.choose }>Язык сайта:</span>
-                        <a className={ ruClass } href="/ru">Русский</a>
-                        <a className={ ukClass } href="/uk">Украинский</a>
+                        <a className={ ruClass } href="/ru/thanksgiving">Русский</a>
+                        <a className={ ukClass } href="/uk/thanksgiving">Українська</a>
                     </div>
                 </div>
             </div>

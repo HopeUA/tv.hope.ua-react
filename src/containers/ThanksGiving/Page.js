@@ -42,7 +42,6 @@ export default class Page extends Component {
                 <Shared.Title title={ 'Свято подяки' }/>
                 <Special.ThanksGiving/>
                 <Footer.Banners/>
-                <Footer.Shows/>
                 <Footer.Navigation/>
             </section>
         );

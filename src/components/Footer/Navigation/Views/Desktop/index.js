@@ -96,9 +96,7 @@ function Desktop(props) {
             <h1 className={ Styles.title }>{ t('Footer.Navigation.networks') }</h1>
             <div className={ Styles.row } >
                 <a href="#" className={ Styles.twitterIcon }><Twitter color={ Palette.tempColor12 }/></a>
-                <a href="#" className={ Styles.vkIcon }><Vk color={ Palette.tempColor9 }/></a>
                 <a href="#" className={ Styles.facebookIcon }><Facebook color={ Palette.tempColor6 }/></a>
-                <a href="#" className={ Styles.okIcon }><Ok color={ Palette.tempColor7 }/></a>
                 <a href="#" className={ Styles.youtubeIcon }><YouTube color={ Palette.tempColor8 }/></a>
                 <a href="#" className={ Styles.instagramIcon }><Instagram color={ Palette.tempColor10 }/></a>
             </div>
@@ -108,7 +106,7 @@ function Desktop(props) {
     const rights = (
         <div className={ Styles.rights }>
             <h1 className={ Styles.title }>{ t('Footer.Navigation.rights.title') }</h1>
-            <a href="#" className={ Styles.link }>{ t('Footer.Navigation.rights.item') }</a>
+            <a href="https://cdn.hope.ua/docs/tkn/structure-31.12.2016.pdf" className={ Styles.link }>{ t('Footer.Navigation.rights.item') }</a>
         </div>
     );
 
