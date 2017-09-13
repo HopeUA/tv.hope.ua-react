@@ -20,7 +20,6 @@ import Instagram from '../../Assets/Social/Instagram';
 import Facebook from '../../Assets/Social/Fb';
 import Twitter from '../../Assets/Social/Tw';
 import YouTube from '../../Assets/Social/YouTube';
-import Vk from '../../Assets/Social/Vk';
 import Logo from '../../Assets/Logo';
 import MenuLive from '../../Assets/MenuLive';
 import Worldwide from '../../Assets/Worldwide';

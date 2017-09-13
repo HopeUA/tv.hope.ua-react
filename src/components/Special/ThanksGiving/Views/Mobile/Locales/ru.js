@@ -22,7 +22,7 @@ export default function Ru() {
     const playerParams = {
         playerVars: {
             modestbranding: 1,
-            iv_load_policy: 3,
+            iv_load_policy: 3, // eslint-disable-line
             rel: 0
         },
         height: '390',

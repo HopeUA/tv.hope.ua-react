@@ -31,7 +31,7 @@ const loaders = getAsyncLoaders([
 )
 export default class Page extends Component {
     static propTypes = {
-        t: PropTypes.func.isRequired
+        params: PropTypes.object.isRequired
     };
 
     render = () => {

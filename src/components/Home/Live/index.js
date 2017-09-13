@@ -63,7 +63,6 @@ class Live extends Component {
         t: PropTypes.func.isRequired
     };
 
-
     /**
      * [CDN]
      * Component display name

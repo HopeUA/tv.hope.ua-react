@@ -46,6 +46,7 @@ class TimeLine extends Component {
      * Component prop types
      */
     static propTypes = {
+        fetchItems: PropTypes.func.isRequired,
         items: PropTypes.array.isRequired,
         mediaType: PropTypes.string.isRequired
     };

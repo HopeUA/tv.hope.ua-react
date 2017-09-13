@@ -71,7 +71,7 @@ export default function Common(props) {
                     className={ Styles.player }
                     opts={ playerParams }
                 />
-                { /*<Play className={ Styles.play } color={ Palette.tempColor39 }/>*/ }
+                { /* <Play className={ Styles.play } color={ Palette.tempColor39 }/> */ }
             </div>
             <div className={ Styles.info }>
                 <h1 className={ Styles.title }>{ currentEpisode.title }</h1>
