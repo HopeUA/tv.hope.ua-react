@@ -15,8 +15,9 @@ import createHistory from 'react-router/lib/createMemoryHistory';
 import { Provider } from 'react-redux';
 import getRoutes from './routes';
 
-import { I18nextProvider } from 'react-i18next';
+import { I18nextProvider, loadNamespaces } from 'react-i18next';
 import i18n from './i18n-server';
+import { changeLanguage } from 'redux/modules/locale';
 
 const pretty = new PrettyError();
 const app = new Express();
@@ -80,45 +81,47 @@ app.use((req, res) => {
         routes: getRoutes(store),
         location: req.originalUrl
     }, (error, redirectLocation, renderProps) => {
-        if (redirectLocation) {
-            res.redirect(redirectLocation.pathname + redirectLocation.search);
-        } else if (error) {
-            console.error('ROUTER ERROR:', pretty.render(error));
-            res.status(500);
-            hydrateOnClient();
-        } else if (renderProps) {
-            loadOnServer({
-                ...renderProps,
-                store
-            }).then(() => {
-                const component = (
-                    <I18nextProvider i18n={ i18n }>
-                        <Provider store={ store } key="provider">
-                            <ReduxAsyncConnect { ...renderProps }/>
-                        </Provider>
-                    </I18nextProvider>
-                );
+        loadNamespaces({ ...renderProps, i18n: i18n }).then(() => {
+            if (redirectLocation) {
+                res.redirect(redirectLocation.pathname + redirectLocation.search);
+            } else if (error) {
+                console.error('ROUTER ERROR:', pretty.render(error));
+                res.status(500);
+                hydrateOnClient();
+            } else if (renderProps) {
+                loadOnServer({
+                    ...renderProps,
+                    store
+                }).then(() => {
+                    const component = (
+                        <I18nextProvider i18n={ i18n }>
+                            <Provider store={ store } key="provider">
+                                <ReduxAsyncConnect { ...renderProps }/>
+                            </Provider>
+                        </I18nextProvider>
+                    );
 
-                res.status(200);
+                    res.status(200);
 
-                global.navigator = { userAgent: req.headers['user-agent'] };
+                    global.navigator = { userAgent: req.headers['user-agent'] };
 
-                /* eslint-disable prefer-template */
-                res.send('<!doctype html>\n'
-                    + ReactDOM.renderToString(
-                        <Html
-                            assets={ webpackIsomorphicTools.assets() }
-                            component={ component }
-                            store={ store }
-                            i18n={ i18nClient }
-                        />
-                    )
-                );
-                /* eslint-enable prefer-template */
-            });
-        } else {
-            res.status(404).send('Not found');
-        }
+                    /* eslint-disable prefer-template */
+                    res.send('<!doctype html>\n'
+                        + ReactDOM.renderToString(
+                            <Html
+                                assets={ webpackIsomorphicTools.assets() }
+                                component={ component }
+                                store={ store }
+                                i18n={ i18nClient }
+                            />
+                        )
+                    );
+                    /* eslint-enable prefer-template */
+                });
+            } else {
+                res.status(404).send('Not found');
+            }
+        });
     });
 });
 

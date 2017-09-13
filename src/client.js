@@ -17,8 +17,8 @@ import getRoutes from './routes';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n-client';
 
-i18n.changeLanguage(window.__i18n.locale);
 i18n.addResourceBundle(window.__i18n.locale, 'common', window.__i18n.resources, true);
+i18n.changeLanguage(window.__i18n.locale);
 
 // const _browserHistory = useScroll(() => browserHistory)();
 const dest = document.getElementById('content');
