@@ -6,14 +6,14 @@ import * as Page from 'containers';
 const componentRoutes = (
     <Route>
         <IndexRoute component={ Page.Home }/>
-        {/*<Route path="news/:id" component={ Page.ArticleSingle }/>*/}
-        {/*<Route path="shows/:showId" component={ Page.Show }/>*/}
-        {/*<Route path="shows/:showId/:episodeId" component={ Page.Episode }/>*/}
+        {/* <Route path="news/:id" component={ Page.ArticleSingle }/> */}
+        {/* <Route path="shows/:showId" component={ Page.Show }/> */}
+        {/* <Route path="shows/:showId/:episodeId" component={ Page.Episode }/> */}
         <Route path="thanksgiving" component={ Page.ThanksGiving }/>
-        {/*<Route path="contacts" component={ Page.Contacts }/>*/}
-        {/*<Route path="watchUs" component={ Page.WatchUs }/>*/}
-        {/*<Route path="about" component={ Page.About }/>*/}
-        {/*<Route path="scheduler" component={ Page.Scheduler }/>*/}
+        {/* <Route path="contacts" component={ Page.Contacts }/> */}
+        {/* <Route path="watchUs" component={ Page.WatchUs }/> */}
+        {/* <Route path="about" component={ Page.About }/> */}
+        {/* <Route path="scheduler" component={ Page.Scheduler }/> */}
         <Route path="*" component={ Page.NotFound } status={ 404 }/>
     </Route>
 );
