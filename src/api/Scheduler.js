@@ -12,9 +12,11 @@ class Scheduler {
 
         const url = uri(`${this.endpoint}/${resource}`);
         if (dateFrom) {
+            dateFrom.seconds(0).milliseconds(0);
             url.addSearch('date', dateFrom);
         }
         if (dateTo) {
+            dateTo.seconds(0).milliseconds(0);
             url.addSearch('dateEnd', dateTo);
         }
 
