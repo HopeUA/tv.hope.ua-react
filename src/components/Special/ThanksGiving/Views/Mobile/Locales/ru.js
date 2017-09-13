@@ -55,7 +55,7 @@ export default function Ru() {
                 </div>
                 <div className={ Styles.event }>
                     <span className={ Styles.time }>13:00</span>
-                    <h1 className={ Styles.subtitle }>Встреча ведущими программы «2Я – одне життя»</h1>
+                    <h1 className={ Styles.subtitle }>Встреча с ведущими программы «2Я – одне життя»</h1>
                     <div className={ Styles.wrap }>
                         <div className={ andreyewsCover }/>
                     </div>
