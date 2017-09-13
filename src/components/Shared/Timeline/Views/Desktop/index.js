@@ -22,7 +22,7 @@ import BP from 'lib/breakpoints';
 function Timeline(props) {
     const { mediaType, serverTime, items } =  props;
 
-    if (!items) {
+    if (!items || items.length === 0) {
         return null;
     }
 
