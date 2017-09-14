@@ -1,6 +1,11 @@
 import fetch from 'isomorphic-fetch';
 import uri from 'urijs';
 
+function normalizeDate(date) {
+    date.setSeconds(0);
+    date.setMilliseconds(0);
+}
+
 /**
  * Список событий
  */
@@ -12,12 +17,12 @@ class Scheduler {
 
         const url = uri(`${this.endpoint}/${resource}`);
         if (dateFrom) {
-            dateFrom.seconds(0).milliseconds(0);
-            url.addSearch('date', dateFrom);
+            normalizeDate(dateFrom);
+            url.addSearch('date', dateFrom.toString());
         }
         if (dateTo) {
-            dateTo.seconds(0).milliseconds(0);
-            url.addSearch('dateEnd', dateTo);
+            normalizeDate(dateFrom);
+            url.addSearch('dateEnd', dateTo.toString());
         }
 
         const response = await fetch(url.toString());

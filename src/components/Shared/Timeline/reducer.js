@@ -23,10 +23,10 @@ const actions = {
 export const fetchItems = createAction(actions.FETCH, () => {
     const dateFrom = moment()
         .subtract(2, 'h')
-        .toISOString();
+        .toDate();
     const dateTo = moment()
         .add(6, 'h')
-        .toISOString();
+        .toDate();
 
     return SchedulerApi.getEvents({
         dateFrom,

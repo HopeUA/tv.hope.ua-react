@@ -108,7 +108,7 @@ function Timeline(props) {
                     <span className={ Styles.label }/>
                 </div>
                 { !BP.isTabletLandscape(mediaType) ? (
-                    <p className={ Styles.title }>{ element.episode.title }</p>
+                    <p className={ Styles.title }>{ element.show.title }</p>
                     ) : null }
             </div>
         );
