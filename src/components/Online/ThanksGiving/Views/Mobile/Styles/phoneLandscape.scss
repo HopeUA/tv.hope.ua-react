@@ -1,0 +1,31 @@
+@import 'common';
+
+& {
+    .video {
+        width: px(1056);
+        margin: 0 auto;
+        background-color: $mainColor2;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: px(592);
+    }
+
+    .languages {
+        width: px(1056);
+        margin: px(16) auto;
+
+        .list {
+            width: px(958);
+        }
+    }
+
+    .info {
+        .bar {
+            margin-top: px(42);
+
+            .timeLineContainer {
+                width: px(888);
+            }
+        }
+    }
+}

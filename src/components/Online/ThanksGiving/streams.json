@@ -1,0 +1,114 @@
+[
+  {
+    "id": "uk",
+    "title": "укр",
+    "sources": {
+      "youtube": {
+        "id": "IKkAGOqaEas"
+      },
+      "brightcove": {
+        "account": "5467539707001",
+        "player": "BJgK0Gh85Z",
+        "videoId": "5574859652001"
+      }
+    }
+  },
+  {
+    "id": "ru",
+    "title": "рус",
+    "sources": {
+      "youtube": {
+        "id": "irtAA_ulYQY"
+      },
+      "brightcove": {
+        "account": "5467539707001",
+        "player": "BJgK0Gh85Z",
+        "videoId": "5574865536001"
+      }
+    }
+  },
+  {
+    "id": "en",
+    "title": "english",
+    "sources": {
+      "youtube": {
+        "id": "vUn04UsHFIw"
+      },
+      "brightcove": {
+        "account": "5467539707001",
+        "player": "BJgK0Gh85Z",
+        "videoId": "5574873201001"
+      }
+    }
+  },
+  {
+    "id": "pl",
+    "title": "polish",
+    "sources": {
+      "youtube": {
+        "id": "p_olCTtqbNo"
+      },
+      "brightcove": {
+        "account": "5467539707001",
+        "player": "BJgK0Gh85Z",
+        "videoId": "5574855632001"
+      }
+    }
+  },
+  {
+    "id": "es",
+    "title": "spanish",
+    "sources": {
+      "youtube": {
+        "id": "Qz2TGhoJowI"
+      },
+      "brightcove": {
+        "account": "5467539707001",
+        "player": "BJgK0Gh85Z",
+        "videoId": "5574853565001"
+      }
+    }
+  },
+  {
+    "id": "ro",
+    "title": "romanian",
+    "sources": {
+      "youtube": {
+        "id": "zpXYfPwIXjM"
+      },
+      "brightcove": {
+        "account": "5467539707001",
+        "player": "BJgK0Gh85Z",
+        "videoId": "5574875541001"
+      }
+    }
+  },
+  {
+    "id": "fa",
+    "title": "farsi",
+    "sources": {
+      "youtube": {
+        "id": "5dqNWD7q8RA"
+      },
+      "brightcove": {
+        "account": "5467539707001",
+        "player": "BJgK0Gh85Z",
+        "videoId": "5574861031001"
+      }
+    }
+  },
+  {
+    "id": "signs",
+    "title": "сурдо",
+    "sources": {
+      "youtube": {
+        "id": "pRi71hEfC2c"
+      },
+      "brightcove": {
+        "account": "5467539707001",
+        "player": "BJgK0Gh85Z",
+        "videoId": "5574875546001"
+      }
+    }
+  }
+]
