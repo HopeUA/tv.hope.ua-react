@@ -5,7 +5,7 @@ import * as Page from 'containers';
 
 const componentRoutes = (
     <Route>
-        <IndexRoute component={ Page.Home }/>
+        {/*<IndexRoute component={ Page.Home }/>*/}
         {/* <Route path="news/:id" component={ Page.ArticleSingle }/> */}
         {/* <Route path="shows/:showId" component={ Page.Show }/> */}
         {/* <Route path="shows/:showId/:episodeId" component={ Page.Episode }/> */}
