@@ -59,7 +59,8 @@ class ThanksGiving extends Component {
 
     handleLanguageChange = (lang) => () => {
         this.setState({
-            lang
+            lang,
+            isOpened: false
         });
     };
 
@@ -92,14 +93,20 @@ class ThanksGiving extends Component {
 
         if (BP.isMobile(mediaType)) {
             view = (
-                <Mobile isOpened={ this.state.isOpened } handleMenu={ this.handleMenuOpen }/>
+                <Mobile
+                    handleLanguageChange={ this.handleLanguageChange }
+                    handleMenu={ this.handleMenuOpen }
+                    isOpened={ this.state.isOpened }
+                    language={ lang }
+                    streams={ config.streams }
+                />
             );
         } else {
             view = (
                 <Desktop
+                    handleLanguageChange={ this.handleLanguageChange }
                     language={ lang }
                     streams={ config.streams }
-                    handleLanguageChange={ this.handleLanguageChange }
                 />
             );
         }

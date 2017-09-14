@@ -2,11 +2,12 @@ import React, { PropTypes } from 'react';
 import Moment from 'moment';
 import cx from 'classnames';
 
-import Styles from './Styles/main.scss';
-import Play from 'components/Assets/Icons/Play';
 import Flag from 'components/Assets/Icons/Flag';
+import Play from 'components/Assets/Icons/Play';
+import SignsFlag from 'components/Assets/Icons/SignsFlag';
+
 import Palette from 'components/Assets/Palette';
-import Sings from 'components/Assets/Icons/Sings';
+import Styles from './Styles/main.scss';
 
 Moment.locale('ru');
 
@@ -21,14 +22,17 @@ export default function Common(props) {
     // };
 
     const {
-        streams,
         handleLanguageChange,
-        language
+        language,
+        streams
     } = props;
 
     const progressStile = {
         width: '76%'
     };
+
+    // const playerType = 'youtube'; // brightcove
+    // TODO 'youtube|brightcove' chooser
 
     const flags = streams.map((stream) => {
         const itemStyles = cx({
@@ -38,11 +42,21 @@ export default function Common(props) {
 
         return (
             <div className={ itemStyles } key={ stream.id } onClick={ handleLanguageChange(stream.id) }>
-                <Flag language={ stream.id } className={ Styles.flag }/>
+                {
+                    stream.id === 'signs' ? (
+                        <SignsFlag language={ stream.id } className={ Styles.signs }/>
+                    ) : (
+                        <Flag language={ stream.id } className={ Styles.flag }/>
+                    )
+                }
                 <span className={ Styles.language }>{ stream.title }</span>
             </div>
         );
     });
+
+    // const player = (
+    // TODO Player
+    // );
 
     return (
         <section className={ Styles.mainComponent }>
@@ -77,7 +91,7 @@ export default function Common(props) {
 }
 
 Common.propTypes = {
-    streams: PropTypes.array.isRequired,
     handleLanguageChange: PropTypes.func.isRequired,
-    language: PropTypes.string.isRequired
+    language: PropTypes.string.isRequired,
+    streams: PropTypes.array.isRequired
 };

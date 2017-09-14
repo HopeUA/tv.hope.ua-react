@@ -39,13 +39,19 @@
                 font-size: px(30);
                 font-style: italic;
 
-                .language {
-                    margin-top: px(-8);
-                }
-
                 .flag {
                     width: px(48);
                     margin-right: px(32);
+                }
+
+                .signs {
+                    width: px(32);
+                    margin-right: px(40);
+                    margin-left: px(8);
+                }
+
+                .language {
+                    margin-top: px(-8);
                 }
 
                 &:last-child {
@@ -66,6 +72,28 @@
             .arrow {
                 width: px(10);
                 transform: rotate(90deg);
+            }
+        }
+
+        &.opened {
+            .list {
+                height: auto;
+
+                .item {
+                    width: px(600);
+                    border-top: 1px solid $tempColor35;
+
+                    &:first-of-type {
+                        width: px(494);
+                        background-color: $tempColor44;
+                        border: 0;
+                    }
+                }
+            }
+
+            .arrowButton {
+                transform: rotate(180deg);
+                border-radius: 0;
             }
         }
     }

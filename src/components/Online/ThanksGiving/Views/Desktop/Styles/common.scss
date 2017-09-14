@@ -39,20 +39,24 @@
                 cursor: pointer;
                 flex-grow: 1;
 
+                &:hover {
+                    background-color: $tempColor35;
+                }
+
                 &.active {
-                    background-color: red;
+                    background-color: $tempColor44;
                 }
 
                 .flag {
                     width: px(48);
                 }
 
-                .language {
-                    margin-top: px(-4);
+                .signs {
+                    width: px(32);
                 }
 
-                .sings {
-                    width: px(32);
+                .language {
+                    margin-top: px(-4);
                 }
 
                 i {

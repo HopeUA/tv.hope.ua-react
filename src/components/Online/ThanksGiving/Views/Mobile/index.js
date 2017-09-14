@@ -1,48 +1,88 @@
 import React, { PropTypes } from 'react';
+import cx from 'classnames';
 
-import Play from 'components/Assets/Icons/Play';
-import Flag from 'components/Assets/Icons/Flag';
 import Arrow from 'components/Assets/Icons/Arrow';
-import Palette from 'components/Assets/Palette';
+import Flag from 'components/Assets/Icons/Flag';
+import Play from 'components/Assets/Icons/Play';
+import SignsFlag from 'components/Assets/Icons/SignsFlag';
 
+import Palette from 'components/Assets/Palette';
 import Styles from './Styles/main.scss';
 
 export default function Common(props) {
-    const { isOpened, handleMenu } = props;
+    const {
+        handleLanguageChange,
+        handleMenu,
+        isOpened,
+        language,
+        streams
+    } = props;
 
     const videoStyle = {
         backgroundImage: 'url(https://cdn.hope.ua/web/tv.hope.ua/banners/ban1-mobile.jpg)'
     };
 
-    const listStyle = {
-        height: isOpened ? 'auto' : null
-    };
-
-    const progressStile = {
+    const progressStyle = {
         width: '76%'
     };
 
-    const arrowStyle = {
-        transform: isOpened ? 'rotate(180deg)' : null
-    };
+    const languagesStyle = cx({
+        [Styles.languages]: true,
+        [Styles.opened]: isOpened
+    });
+
+    // const active = streams.find((stream) => stream.id === language);
+    const items = streams.sort((a, b) => {
+        if (b.id === language) {
+            return 1;
+        }
+
+        return 0;
+    })
+    .map((stream) => {
+        let title = '';
+
+        switch (stream.title) {
+            case 'укр':
+                title = 'українська';
+                break;
+            case 'рус':
+                title = 'русский';
+                break;
+            default:
+                ({ title } = stream);
+        }
+
+        return (
+            <div
+                className={ Styles.item }
+                key={ stream.id }
+                onClick={ handleLanguageChange(stream.id) }
+            >
+                {
+                    stream.id === 'signs' ? (
+                        <SignsFlag language={ stream.id } className={ Styles.signs }/>
+                    ) : (
+                        <Flag language={ stream.id } className={ Styles.flag }/>
+                    )
+                }
+                <span className={ Styles.language }>
+                    { title }
+                </span>
+            </div>
+        );
+    });
 
     return (
         <section className={ Styles.mainComponent }>
             <div className={ Styles.video } style={ videoStyle }>
                 <Play className={ Styles.play } color={ Palette.tempColor39 }/>
             </div>
-            <div className={ Styles.languages }>
-                <ul className={ Styles.list } style={ listStyle }>
-                    <li className={ Styles.item }>
-                        <Flag language={ 'uk' } className={ Styles.flag }/>
-                        <span className={ Styles.language }>українська</span>
-                    </li>
-                    <li className={ Styles.item }>
-                        <Flag language={ 'ru' } className={ Styles.flag }/>
-                        <span className={ Styles.language }>русский</span>
-                    </li>
+            <div className={ languagesStyle }>
+                <ul className={ Styles.list }>
+                    { items }
                 </ul>
-                <div className={ Styles.arrowButton } onClick={ handleMenu } style={ arrowStyle }>
+                <div className={ Styles.arrowButton } onClick={ handleMenu }>
                     <Arrow color={ Palette.mainColor1 } className={ Styles.arrow }/>
                 </div>
             </div>
@@ -53,7 +93,7 @@ export default function Common(props) {
                     <span className={ Styles.startTime }>16:30</span>
                     <div className={ Styles.timeLineContainer }>
                         <div className={ Styles.scale }>
-                            <div className={ Styles.progress } style={ progressStile }>
+                            <div className={ Styles.progress } style={ progressStyle }>
                                 <span/>
                             </div>
                         </div>
@@ -71,6 +111,9 @@ export default function Common(props) {
 }
 
 Common.propTypes = {
+    handleLanguageChange: PropTypes.func.isRequired,
+    handleMenu: PropTypes.func.isRequired,
     isOpened: PropTypes.bool.isRequired,
-    handleMenu: PropTypes.func.isRequired
+    language: PropTypes.string.isRequired,
+    streams: PropTypes.array.isRequired
 };

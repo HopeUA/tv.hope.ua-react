@@ -17,6 +17,18 @@
         .list {
             width: px(958);
         }
+
+        &.opened {
+            .list {
+                .item {
+                    width: px(1060);
+
+                    &:first-of-type {
+                        width: px(958);
+                    }
+                }
+            }
+        }
     }
 
     .info {
