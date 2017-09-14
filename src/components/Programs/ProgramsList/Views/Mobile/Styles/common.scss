@@ -1,0 +1,59 @@
+& {
+    .mainTitle {
+        margin-top: px(62);
+        margin-left: px(22);
+        color: $tempColor32;
+        font-family: 'Exo 2';
+        font-size: px(42);
+        font-weight: 600;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: px(56);
+
+        .item {
+            width: px(592);
+            margin-top: px(24);
+            border-radius: px(4);
+            overflow: hidden;
+
+            .image {
+                height: px(160);
+                background-size: cover;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: px(232);
+                padding: px(26) px(28) 0;
+                background-color: $mainColor1;
+
+                .title {
+                    color: $tempColor32;
+                    font-family: 'Exo 2';
+                    font-size: px(36);
+                    font-weight: 700;
+                }
+
+                .description {
+                    height: px(116);
+                    margin-top: px(20);
+                    color: $tempColor32;
+                    font-size: px(30);
+                    line-height: px(40);
+                    text-align: center;
+                    overflow: hidden;
+                }
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}

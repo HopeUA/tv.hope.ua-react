@@ -1,0 +1,50 @@
+@import 'common';
+
+& {
+    padding-left: px(72);
+
+    .mainTitle {
+        margin-top: px(98);
+        color: $tempColor32;
+        font-family: 'Exo 2';
+        font-size: px(42);
+    }
+
+    .list {
+        margin-top: px(72);
+
+        .item {
+            width: px(444);
+            height: px(420);
+            margin-right: px(30);
+            margin-bottom: px(34);
+            border-radius: px(6);
+
+            .image {
+                width: px(444);
+                height: px(240);
+            }
+
+            .info {
+                height: px(180);
+                padding: px(20) px(32) px(32);
+
+                .title {
+                    font-size: px(30);
+                }
+
+                .description {
+                    margin-top: px(16);
+                    font-size: px(24);
+                    line-height: px(30);
+                }
+            }
+
+            &:hover {
+                .info {
+                    height: px(312);
+                }
+            }
+        }
+    }
+}

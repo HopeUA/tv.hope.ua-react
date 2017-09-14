@@ -1,0 +1,67 @@
+& {
+    padding-left: px(94);
+
+    .mainTitle {
+        margin-top: px(134);
+        color: $tempColor32;
+        font-family: 'Exo 2';
+        font-size: px(56);
+        font-weight: 600;
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: px(98);
+
+        .item {
+            position: relative;
+            width: px(592);
+            height: px(560);
+            margin-right: px(40);
+            margin-bottom: px(38);
+            border-radius: px(8);
+            overflow: hidden;
+
+            &:hover {
+                .info {
+                    height: px(416);
+                }
+            }
+
+            .image {
+                width: px(592);
+                height: px(320);
+                background-size: cover;
+            }
+
+            .info {
+                display: flex;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                flex-direction: column;
+                align-items: center;
+                height: px(240);
+                padding: px(36) px(40) px(44);
+                background-color: $mainColor1;
+
+                .title {
+                    color: $tempColor32;
+                    font-family: 'Exo 2';
+                    font-size: px(40);
+                    font-weight: 700;
+                    line-height: px(48);
+                }
+
+                .description {
+                    margin-top: px(30);
+                    font-size: px(32);
+                    line-height: px(40);
+                    text-align: center;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
