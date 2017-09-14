@@ -115,7 +115,7 @@
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.0.1",
     "react-dom": "^15.4.2",
-    "react-google-tag-manager": "^1.1.0",
+    "react-google-tag-manager": "^2.1.0",
     "react-helmet": "^4.0.0",
     "react-i18next": "^5.3.0",
     "react-inline-css": "^2.0.0",

@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom/server';
 import serialize from 'serialize-javascript';
 import Helmet from 'react-helmet';
+import gtmParts from 'react-google-tag-manager';
 
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
@@ -17,6 +18,12 @@ export default function Html(props) {
     const content = component ? ReactDOM.renderToString(component) : '';
     const head = Helmet.rewind();
 
+
+    const gtm = gtmParts({
+        id: 'GTM-MDFP6GM',
+        dataLayerName: 'dataLayer'
+    });
+
     return (
         <html lang="ru">
             <head>
@@ -28,6 +35,7 @@ export default function Html(props) {
 
                 <link rel="apple-touch-icon" type="image/png" href="/static/favicon.png"/>
 
+                { gtm.scriptAsReact() }
                 { /* styles (will be present only in production with webpack extract text plugin) */ }
                 { Object.keys(assets.styles).map((style) =>
                     <link
@@ -41,6 +49,7 @@ export default function Html(props) {
                 ) }
             </head>
             <body>
+                { gtm.noScriptAsReact() }
                 <div id="content" dangerouslySetInnerHTML={ { __html: content } }/>
                 <script
                     dangerouslySetInnerHTML={ { __html: `window.__data=${serialize(store.getState())};` } }
