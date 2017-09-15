@@ -1,69 +1,45 @@
 import React, { Component, PropTypes } from 'react';
-import Moment from 'moment';
+import moment from 'moment';
 import cx from 'classnames';
 
 import Flag from 'components/Assets/Icons/Flag';
-import Brightcove from '../../../Brightcove';
+import Brightcove from 'components/Assets/Brightcove';
 import Youtube from 'react-youtube';
 import SignsFlag from 'components/Assets/Icons/SignsFlag';
 
 import Styles from './Styles/main.scss';
 
-Moment.locale('ru');
-
-export default class Common extends Component {
-    // в episodeProgress нужно передать, начало программы, текущее время и конец программы
-
-    // const episodeProgress = (100 / (Moment(next.date).unix() - Moment(current.date).unix())
-    // * (Moment(currentTime).unix() - Moment(current.date).unix()));
-    //
-    // const progressStyle = {
-    //     width: `${episodeProgress}%`
-    // };
+class Common extends Component {
     static propTypes = {
+        eventId: PropTypes.string.isRequired,
+        events: PropTypes.array.isRequired,
         handleLanguageChange: PropTypes.func.isRequired,
         language: PropTypes.string.isRequired,
+        locale: PropTypes.string.isRequired,
         streams: PropTypes.array.isRequired,
         playerType: PropTypes.string
     };
 
     static defaultProps = {
-        playerType: 'brightcove'
+        playerType: 'youtube'
     };
 
     render() {
         const {
+            eventId,
+            events,
             handleLanguageChange,
             language,
+            locale,
             streams,
             playerType
         } = this.props;
 
-        const progressStyle = {
-            width: '76%'
-        };
+        const currentEvent = events.find((event) => event.id === eventId);
 
-        const flags = streams.map((stream) => {
-            const itemStyles = cx({
-                [Styles.item]: true,
-                [Styles.active]: stream.id === language
-            });
-
-            return (
-                <div className={ itemStyles } key={ stream.id } onClick={ handleLanguageChange(stream.id) }>
-                    {
-                        stream.id === 'signs' ? (
-                            <SignsFlag language={ stream.id } className={ Styles.signs }/>
-                        ) : (
-                            <Flag language={ stream.id } className={ Styles.flag }/>
-                        )
-                    }
-                    <span className={ Styles.language }>{ stream.title }</span>
-                </div>
-            );
-        });
-
-        const currentStream = streams.find((stream) => stream.id === language);
+        const currentStream = currentEvent.id === 'nick' ?
+            streams.find((stream) => stream.id === language)
+            : streams.find((stream) => stream.id === currentEvent.streamId);
 
         const {
             sources: {
@@ -94,21 +70,25 @@ export default class Common extends Component {
         switch (playerType) {
             case 'brightcove':
                 player = (
-                    <Brightcove
-                        accountId={ accountId }
-                        playerId={ playerId }
-                        videoId={ brightcoveId }
-                    />
+                    <div className={ Styles.video }>
+                        <Brightcove
+                            accountId={ accountId }
+                            playerId={ playerId }
+                            videoId={ brightcoveId }
+                        />
+                    </div>
                 );
                 break;
 
             case 'youtube':
                 player = (
-                    <Youtube
-                        className={ Styles.video }
-                        opts={ playerParams }
-                        videoId={ youtubeId }
-                    />
+                    <div className={ Styles.video }>
+                        <Youtube
+                            className={ Styles.video }
+                            opts={ playerParams }
+                            videoId={ youtubeId }
+                        />
+                    </div>
                 );
                 break;
 
@@ -116,35 +96,145 @@ export default class Common extends Component {
                 break;
         }
 
-        return (
-            <section className={ Styles.mainComponent }>
-                <div className={ Styles.video }>
-                    { player }
-                </div>
-                <div className={ Styles.info }>
-                    <div className={ Styles.languages }>
-                        { flags }
-                    </div>
-                    <h1 className={ Styles.title }>Свято Подяки: Нік Вуйчич</h1>
-                    <h2 className={ Styles.subTitle }>Хліб щоденний</h2>
-                    <div className={ Styles.bar }>
-                        <span className={ Styles.startTime }>16:30</span>
-                        <div className={ Styles.timeLineContainer }>
-                            <div className={ Styles.scale }>
-                                <div className={ Styles.progress } style={ progressStyle }>
-                                    <span/>
+        const languages = currentEvent.streamId === 'all' ? (
+            <div className={ Styles.languages }>
+                {
+                    streams.reduce((result, stream) => {
+                        const itemStyles = cx({
+                            [Styles.item]: true,
+                            [Styles.active]: stream.id === language
+                        });
+
+                        if (!stream.hidden) {
+                            result.push(
+                                <div
+                                    className={ itemStyles }
+                                    key={ stream.id }
+                                    onClick={ handleLanguageChange(stream.id) }
+                                >
+                                    {
+                                        stream.id === 'signs' ? (
+                                            <SignsFlag language={ stream.id } className={ Styles.signs }/>
+                                        ) : (
+                                            <Flag language={ stream.id } className={ Styles.flag }/>
+                                        )
+                                    }
+                                    <span className={ Styles.language }>{ stream.title }</span>
                                 </div>
+                            );
+                        }
+
+                        return result;
+                    }, [])
+                }
+            </div>
+        ) : null;
+
+        let width = (
+            moment().unix() - moment(currentEvent.timeline.start).unix()
+        ) / (
+            moment(currentEvent.timeline.end).unix() - moment(currentEvent.timeline.start).unix()
+        ) * 100;
+        if (width > 100) {
+            width = 100;
+        } else if (width < 0) {
+            width = 0;
+        }
+
+        const progressStyle = {
+            width: `${width}%`
+        };
+
+        const event = (
+            <div className={ Styles.event }>
+                <h1 className={ Styles.title }>
+                    {
+                        locale === 'uk' ?
+                            currentEvent.meta.title.uk
+                            : currentEvent.meta.title.ru
+                    }
+                </h1>
+                <h2 className={ Styles.subtitle }>
+                    {
+                        locale === 'uk' ?
+                            currentEvent.meta.subtitle.uk
+                            : currentEvent.meta.subtitle.ru
+                    }
+                </h2>
+                <div className={ Styles.bar }>
+                    <span className={ Styles.startTime }>
+                        { moment(currentEvent.timeline.start).format('LT') }
+                    </span>
+                    <div className={ Styles.timeLineContainer }>
+                        <div className={ Styles.scale }>
+                            <div className={ Styles.progress } style={ progressStyle }>
+                                <span/>
                             </div>
                         </div>
-                        <span className={ Styles.endTime }>17:30</span>
                     </div>
-                    <p className={ Styles.description }>
-                        Австралийский мотивационный оратор, меценат, писатель и певец, рождённый с
-                        редким наследственным заболеванием, приводящим к отсутствию всех четырёх конечностей.
-                        «Моя миссия — помочь людям найти свой путь в жизни», — говорит он.
-                    </p>
+                    <span className={ Styles.endTime }>
+                        { moment(currentEvent.timeline.end).format('LT') }
+                    </span>
+                </div>
+                {
+                    currentEvent.id === 'nick' ? (
+                        <p className={ Styles.description }>
+                            {
+                                locale === 'uk' ? currentEvent.meta.description.uk
+                                    : currentEvent.meta.description.ru
+                            }
+
+                        </p>
+                    ) : null
+                }
+            </div>
+        );
+
+        const schedule = (
+            <ul className={ Styles.schedule }>
+                <h1>
+                    {
+                        locale === 'uk' ? 'Розклад подій' : 'Расписание событий'
+                    }
+                </h1>
+                {
+                    events.map((event) => {
+                        const timeStart = moment(event.timeline.start).format('LT');
+                        const timeEnd = moment(event.timeline.end).format('LT');
+
+                        return (
+                            <li
+                                className={ Styles.item }
+                                key={ event.id }
+                            >
+                                <span className={ Styles.time }>{ timeStart }</span>
+                                <span className={ Styles.time }>-</span>
+                                <span className={ Styles.time }>{ timeEnd }</span>
+                                <span className={ Styles.title }>
+                                    {
+                                        locale === 'uk' ?
+                                            event.meta.title.uk
+                                            : event.meta.title.ru
+                                    }
+                                </span>
+                            </li>
+                        );
+                    })
+                }
+            </ul>
+        );
+
+        return (
+            <section className={ Styles.mainComponent }>
+                { player }
+                <div className={ Styles.info }>
+                    { languages }
+                    { event }
+                    { schedule }
                 </div>
             </section>
         );
     }
 }
+
+export default Common;

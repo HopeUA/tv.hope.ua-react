@@ -29,11 +29,15 @@
     }
 
     .info {
-        .bar {
-            margin-top: px(42);
+        padding-left: px(8);
 
-            .timeLineContainer {
-                width: px(888);
+        .event {
+            .bar {
+                margin-top: px(42);
+
+                .timeLineContainer {
+                    width: px(888);
+                }
             }
         }
     }

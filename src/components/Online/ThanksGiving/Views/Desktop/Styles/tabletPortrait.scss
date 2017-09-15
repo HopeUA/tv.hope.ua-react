@@ -1,7 +1,7 @@
 @import 'common';
 
 & {
-    padding-top: px(74);
+    padding: px(74) 0;
 
     .video {
         width: px(1392);
@@ -31,52 +31,75 @@
             }
         }
 
-        .title {
-            margin-top: px(50);
-            font-size: px(42);
-        }
-
-        .subTitle {
-            margin-top: px(18);
-            font-size: px(27);
-        }
-
-        .bar {
-            margin-top: px(38);
-
-            .startTime {
-                font-size: px(36);
+        .event {
+            .title {
+                margin-top: px(50);
+                font-size: px(42);
             }
 
-            .endTime {
-                font-size: px(36);
+            .subtitle {
+                margin-top: px(18);
+                font-size: px(27);
             }
 
-            .timeLineContainer {
-                width: px(1190);
-                margin: 0 px(22);
+            .bar {
+                margin-top: px(38);
 
-                .scale {
-                    height: px(4);
+                .startTime {
+                    font-size: px(36);
+                }
 
-                    .progress {
-                        span {
-                            width: px(4);
-                            height: px(24);
+                .endTime {
+                    font-size: px(36);
+                }
 
-                            &::before {
+                .timeLineContainer {
+                    width: px(1190);
+                    margin: 0 px(22);
+
+                    .scale {
+                        height: px(4);
+
+                        .progress {
+                            span {
                                 width: px(4);
                                 height: px(24);
-                                margin-left: px(-4);
-                            }
 
-                            &::after {
-                                width: px(4);
-                                height: px(24);
-                                margin-right: px(-4);
+                                &::before {
+                                    width: px(4);
+                                    height: px(24);
+                                    margin-left: px(-4);
+                                }
+
+                                &::after {
+                                    width: px(4);
+                                    height: px(24);
+                                    margin-right: px(-4);
+                                }
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .schedule {
+            h1 {
+                margin: px(50) 0 px(42);
+                font-size: px(42);
+            }
+
+            .item {
+                height: px(50);
+                grid-template-columns: px(85) px(25) px(85) px(1040);
+
+                .time {
+                    font-size: px(27);
+                }
+
+                .title {
+                    margin-left: px(40);
+                    font-size: px(27);
                 }
             }
         }

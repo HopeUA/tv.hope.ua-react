@@ -4,7 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import Moment from 'moment';
+import moment from 'moment';
 
 /**
  * [IV]
@@ -24,8 +24,7 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
-
-Moment.locale('ru');
+import events from './schedule.json';
 
 /**
  * [IRDX]
@@ -33,6 +32,7 @@ Moment.locale('ru');
  */
 @connect((state) => {
     return {
+        locale: state.locale,
         mediaType: state.browser.mediaType
     };
 })
@@ -43,12 +43,38 @@ class ThanksGiving extends Component {
      * Component prop types
      */
     static propTypes = {
+        locale: PropTypes.string.isRequired,
         mediaType: PropTypes.string.isRequired
     };
 
     state = {
         isOpened: false,
-        lang: 'uk'
+        lang: 'uk',
+        eventId: 'concert'
+    };
+
+    timer = null;
+
+    // componentDidMount() {
+    //     this.updateEvent();
+    //     this.timer = setInterval(this.updateEvent, 1000 * 30);
+    // }
+
+    updateEvent = () => {
+        const currentTime = moment();
+
+        let event;
+        for (const item of events) {
+            if (currentTime.isAfter(moment(item.eventStart))) {
+                event = Object.assign({}, item);
+            }
+        }
+
+        if (event) {
+            this.setState({
+                eventId: event.id
+            });
+        }
     };
 
     handleMenuOpen = () => {
@@ -78,12 +104,12 @@ class ThanksGiving extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
-        const { lang } = this.state;
+        const { locale, mediaType } = this.props;
+        const { lang, eventId } = this.state;
 
-        // const stream = config.streams.find((stream) => {
-        //     return stream.id === lang;
-        // });
+        if (!eventId) {
+            return null;
+        }
 
         /**
          * [RV]
@@ -94,18 +120,24 @@ class ThanksGiving extends Component {
         if (BP.isMobile(mediaType)) {
             view = (
                 <Mobile
+                    eventId={ eventId }
+                    events={ events }
                     handleLanguageChange={ this.handleLanguageChange }
                     handleMenu={ this.handleMenuOpen }
                     isOpened={ this.state.isOpened }
                     language={ lang }
+                    locale={ locale }
                     streams={ config.streams }
                 />
             );
         } else {
             view = (
                 <Desktop
+                    eventId={ eventId }
+                    events={ events }
                     handleLanguageChange={ this.handleLanguageChange }
                     language={ lang }
+                    locale={ locale }
                     streams={ config.streams }
                 />
             );

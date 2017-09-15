@@ -1,11 +1,11 @@
 & {
-    padding: px(24);
+    padding: px(24) px(24) px(36) px(24);
     background-color: $tempColor35;
 
     .wrapVideo {
         display: flex;
         justify-content: center;
-        border-radius: px(4);
+        border-radius: px(2);
         overflow: hidden;
 
         .video {
@@ -98,88 +98,122 @@
     .info {
         padding-left: px(12);
 
-        .title {
-            margin-top: px(28);
-            color: $mainColor1;
-            font-family: 'Exo 2';
-            font-size: px(42);
-            font-weight: normal;
-            line-height: px(50);
-        }
-
-        .subTitle {
-            margin-top: px(12);
-            margin-left: px(4);
-            color: $tempColor36;
-            font-family: 'Exo 2';
-            font-size: px(26);
-            font-weight: normal;
-        }
-
-        .bar {
-            display: flex;
-            margin-top: px(40);
-
-            .startTime {
+        .event {
+            .title {
+                margin-top: px(28);
                 color: $mainColor1;
                 font-family: 'Exo 2';
-                font-size: px(30);
+                font-size: px(42);
+                font-weight: normal;
+                line-height: px(50);
             }
 
-            .endTime {
+            .subtitle {
+                margin-top: px(12);
+                margin-left: px(4);
                 color: $tempColor36;
                 font-family: 'Exo 2';
-                font-size: px(30);
+                font-size: px(26);
+                font-weight: normal;
             }
 
-            .timeLineContainer {
+            .bar {
                 display: flex;
-                align-items: center;
-                width: px(408);
-                margin: 0 px(16);
+                margin-top: px(40);
 
-                .scale {
-                    width: 100%;
-                    height: px(4);
-                    background-color: $tempColor36;
+                .startTime {
+                    color: $mainColor1;
+                    font-family: 'Exo 2';
+                    font-size: px(30);
+                }
 
-                    .progress {
-                        display: flex;
-                        position: relative;
-                        align-items: center;
-                        height: 100%;
-                        background-color: $commonColor2;
+                .endTime {
+                    color: $tempColor36;
+                    font-family: 'Exo 2';
+                    font-size: px(30);
+                }
 
-                        span {
+                .timeLineContainer {
+                    display: flex;
+                    align-items: center;
+                    width: px(408);
+                    margin: 0 px(16);
+
+                    .scale {
+                        width: 100%;
+                        height: px(4);
+                        background-color: $tempColor36;
+
+                        .progress {
                             display: flex;
-                            position: absolute;
-                            right: 0;
+                            position: relative;
                             align-items: center;
-                            justify-content: space-between;
-                            width: px(4);
-                            height: px(16);
-                            border-radius: px(2);
-                            background-color: $tempColor36;
+                            height: 100%;
+                            background-color: $commonColor2;
 
-                            &::before {
-                                display: block;
+                            span {
+                                display: flex;
+                                position: absolute;
+                                right: 0;
+                                align-items: center;
+                                justify-content: space-between;
                                 width: px(4);
                                 height: px(16);
-                                margin-left: px(-4);
-                                background-color: $tempColor35;
-                                content: '';
-                            }
+                                border-radius: px(2);
+                                background-color: $tempColor36;
 
-                            &::after {
-                                display: block;
-                                width: px(4);
-                                height: px(16);
-                                margin-right: px(-4);
-                                background-color: $tempColor35;
-                                content: '';
+                                &::before {
+                                    display: block;
+                                    width: px(4);
+                                    height: px(16);
+                                    margin-left: px(-4);
+                                    background-color: $tempColor35;
+                                    content: '';
+                                }
+
+                                &::after {
+                                    display: block;
+                                    width: px(4);
+                                    height: px(16);
+                                    margin-right: px(-4);
+                                    background-color: $tempColor35;
+                                    content: '';
+                                }
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .schedule {
+            margin-top: px(28);
+
+            h1 {
+                margin-bottom: px(18);
+                color: $mainColor1;
+                font-family: 'Exo 2';
+                font-size: px(42);
+                font-weight: normal;
+                line-height: px(50);
+            }
+
+            .item {
+                display: grid;
+                align-items: center;
+                justify-content: flex-start;
+                height: px(44);
+                grid-template-columns: px(70) px(20) px(70) px(420);
+
+                .time {
+                    font-size: px(26);
+                    color: $tempColor36;
+                }
+
+                .title {
+                    margin-left: px(20);
+                    color: $mainColor1;
+                    font-size: px(24);
                 }
             }
         }
