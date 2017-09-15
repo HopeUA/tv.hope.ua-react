@@ -1,4 +1,4 @@
-@import '../../../theme/Palette';
+@import '../../theme/Palette';
 
 .brightcoveComponent {
     display: block;
@@ -11,6 +11,7 @@
         margin: 0;
         padding: 0;
         width: inherit;
+        height: inherit;
 
         video {
             position: absolute;

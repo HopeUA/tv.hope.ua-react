@@ -1,10 +1,11 @@
 & {
-    padding: px(24) px(24) px(36) px(24);
+    padding: px(24) px(24) px(36);
     background-color: $tempColor35;
 
     .wrapVideo {
         display: flex;
         justify-content: center;
+        margin: 0 px(12);
         border-radius: px(2);
         overflow: hidden;
 

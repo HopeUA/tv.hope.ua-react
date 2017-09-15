@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import moment from 'moment';
 import cx from 'classnames';
+import moment from 'moment';
 
 import Flag from 'components/Assets/Icons/Flag';
-import Brightcove from 'components/Assets/Brightcove';
+import Brightcove from 'vendor/Brightcove';
 import Youtube from 'react-youtube';
 import SignsFlag from 'components/Assets/Icons/SignsFlag';
 
@@ -21,7 +21,7 @@ class Common extends Component {
     };
 
     static defaultProps = {
-        playerType: 'youtube'
+        playerType: 'brightcove'
     };
 
     render() {

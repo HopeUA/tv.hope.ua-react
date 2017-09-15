@@ -4,6 +4,7 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import load from 'load-script';
 import moment from 'moment';
 
 /**
@@ -50,23 +51,30 @@ class ThanksGiving extends Component {
     state = {
         isOpened: false,
         lang: 'uk',
-        eventId: 'concert'
+        eventId: 'nick'
     };
 
     timer = null;
 
-    // componentDidMount() {
-    //     this.updateEvent();
-    //     this.timer = setInterval(this.updateEvent, 1000 * 30);
-    // }
+    componentWillMount() {
+        const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
+
+        load(script);
+        this.updateEvent();
+        this.timer = setInterval(this.updateEvent, 1000 * 30);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timer);
+    }
 
     updateEvent = () => {
         const currentTime = moment();
 
         let event;
-        for (const item of events) {
-            if (currentTime.isAfter(moment(item.eventStart))) {
-                event = Object.assign({}, item);
+        for (const e of events) {
+            if (currentTime.isAfter(moment(e.eventStart))) {
+                event = Object.assign({}, e);
             }
         }
 
@@ -84,6 +92,9 @@ class ThanksGiving extends Component {
     };
 
     handleLanguageChange = (lang) => () => {
+        const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
+
+        load(script);
         this.setState({
             lang,
             isOpened: false
