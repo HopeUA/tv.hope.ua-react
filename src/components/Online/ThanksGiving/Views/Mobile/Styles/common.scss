@@ -2,18 +2,15 @@
     padding: px(24);
     background-color: $tempColor35;
 
-    .video {
+    .wrapVideo {
         display: flex;
-        align-items: center;
         justify-content: center;
-        width: px(592);
-        height: px(320);
         border-radius: px(4);
-        background-image: url('../../../Assets/BG.jpg');
-        background-size: cover;
+        overflow: hidden;
 
-        .play {
-            width: px(88);
+        .video {
+            width: px(592);
+            height: px(320);
         }
     }
 
