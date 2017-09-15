@@ -10,7 +10,7 @@ export default class Brightcove extends Component {
         videoId: PropTypes.string.isRequired
     };
 
-    render () {
+    render() {
         const {
             accountId,
             playerId,
