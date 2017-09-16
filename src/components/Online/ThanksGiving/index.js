@@ -25,7 +25,6 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
-import events from './schedule.json';
 
 /**
  * [IRDX]
@@ -51,25 +50,43 @@ class ThanksGiving extends Component {
     state = {
         isOpened: false,
         lang: 'uk',
+        loaded: false,
+        playerType: 'brightcove',
         eventId: 'nick',
-        playerType: 'youtube'
+        events: [],
+        streams: []
     };
 
     timer = null;
 
-    componentDidMount() {
+    componentDidMount = async () => {
         const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
         load(script);
 
-        // this.updateEvent();
-        // this.timer = setInterval(this.updateEvent, 1000 * 30);
-    }
+        const response = await fetch('https://s3-eu-west-1.amazonaws.com/thanksgivingday/settings.json');
+        const result = await response.json();
 
-    componentWillUnmount() {
+        this.setState({
+            loaded: true,
+            events: result.schedule,
+            // playerType: result.source,
+            streams: result.streams
+        });
+
+        this.updateEvent();
+        this.timer = setInterval(this.updateEvent, 1000 * 30);
+    };
+
+    componentWillUnmount = () => {
         clearInterval(this.timer);
-    }
+    };
 
     updateEvent = () => {
+        const { events, loaded } = this.state;
+        if (!loaded) {
+            return;
+        }
+
         const currentTime = moment();
 
         let event;
@@ -93,9 +110,11 @@ class ThanksGiving extends Component {
     };
 
     handleLanguageChange = (lang) => () => {
-        const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
+        if (this.state.playerType === 'brightcove') {
+            const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
+            load(script);
+        }
 
-        load(script);
         this.setState({
             lang,
             isOpened: false
@@ -117,9 +136,16 @@ class ThanksGiving extends Component {
          * Props destructuring
          */
         const { locale, mediaType } = this.props;
-        const { lang, eventId, playerType } = this.state;
+        const {
+            eventId,
+            events,
+            lang,
+            loaded,
+            playerType,
+            streams
+        } = this.state;
 
-        if (!eventId) {
+        if (!eventId || !loaded) {
             return null;
         }
 
@@ -139,7 +165,7 @@ class ThanksGiving extends Component {
                     isOpened={ this.state.isOpened }
                     language={ lang }
                     locale={ locale }
-                    streams={ config.streams }
+                    streams={ streams }
                     playerType={ playerType }
                 />
             );
@@ -151,7 +177,7 @@ class ThanksGiving extends Component {
                     handleLanguageChange={ this.handleLanguageChange }
                     language={ lang }
                     locale={ locale }
-                    streams={ config.streams }
+                    streams={ streams }
                     playerType={ playerType }
                 />
             );

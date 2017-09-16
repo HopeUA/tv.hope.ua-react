@@ -2,10 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import cx from 'classnames';
 import moment from 'moment';
 
-import Flag from 'components/Assets/Icons/Flag';
 import Brightcove from 'vendor/Brightcove';
-import Youtube from 'react-youtube';
+import Flag from 'components/Assets/Icons/Flag';
 import SignsFlag from 'components/Assets/Icons/SignsFlag';
+import Youtube from 'react-youtube';
 
 import Styles from './Styles/main.scss';
 
@@ -69,6 +69,7 @@ class Common extends Component {
                     <div className={ Styles.video }>
                         <Brightcove
                             accountId={ accountId }
+                            autoplay
                             playerId={ playerId }
                             videoId={ brightcoveId }
                         />
@@ -126,19 +127,19 @@ class Common extends Component {
             </div>
         ) : null;
 
-        let width = (
+        let eventProgress = (
             moment().unix() - moment(currentEvent.timeline.start).unix()
         ) / (
             moment(currentEvent.timeline.end).unix() - moment(currentEvent.timeline.start).unix()
         ) * 100;
-        if (width > 100) {
-            width = 100;
-        } else if (width < 0) {
-            width = 0;
+        if (eventProgress > 100) {
+            eventProgress = 100;
+        } else if (eventProgress < 0) {
+            eventProgress = 0;
         }
 
         const progressStyle = {
-            width: `${width}%`
+            width: `${eventProgress}%`
         };
 
         const event = (

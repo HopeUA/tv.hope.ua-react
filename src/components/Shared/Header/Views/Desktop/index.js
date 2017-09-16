@@ -65,6 +65,15 @@ function Header(props) {
     const mainMenuItems = getMenuItems('main').map(convertToComponent);
     const worldwideData = getWorldwideItem();
 
+    let url;
+    if (location) {
+        url = location.pathname.split('/')
+            .filter((item, idx) => {
+                return idx !== 1;
+            })
+            .join('/');
+    }
+
     return (
         <section className={ Grids.container }>
             <section className={ Styles.headerComponent }>
@@ -92,14 +101,16 @@ function Header(props) {
                             </a>
                         </div>
                         <div className={ Styles.languages }>
-                            <a href="/ru/thanksgiving" className={ ruClass }>Рус</a>
+                            <a href={ `/ru${url}` } className={ ruClass }>Рус</a>
                             <span className={ Styles.slash }>/</span>
-                            <a href="/uk/thanksgiving" className={ ukClass }>Укр</a>
+                            <a href={ `/uk${url}` } className={ ukClass }>Укр</a>
                         </div>
                     </div>
                 </div>
                 <div className={ Styles.main }>
-                    <Logo className={ Styles.logo } color={ Palette.mainColor1 }/>
+                    <a href="https://tv.hope.ua/">
+                        <Logo className={ Styles.logo } color={ Palette.mainColor1 }/>
+                    </a>
                     <ul className={ Styles.menu }>
                         { mainMenuItems }
                     </ul>

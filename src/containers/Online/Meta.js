@@ -1,7 +1,6 @@
 const Meta = () => {
     return {
-        title: 'ТВ онлайн',
-        description: 'Описание страницы'
+        title: 'ТВ онлайн'
     };
 };
 

@@ -68,10 +68,21 @@ function Header(props) {
     const subMenuItems = getMenuItems('sub').map(convertToComponent);
     const mainMenuItems = getMenuItems('main').map(convertToComponent);
 
+    let url;
+    if (location) {
+        url = location.pathname.split('/')
+            .filter((item, idx) => {
+                return idx !== 1;
+            })
+            .join('/');
+    }
+
     return (
         <section className={ Styles.headerComponent }>
             <div className={ Styles.header }>
-                <Logo className={ Styles.logo } color={ Palette.tempColor26 }/>
+                <a href="https://tv.hope.ua/">
+                    <Logo className={ Styles.logo } color={ Palette.tempColor26 }/>
+                </a>
                 <ul className={ Styles.menu }>
                     { mainMenuItems }
                 </ul>
@@ -104,8 +115,8 @@ function Header(props) {
                         </div>
                         <div className={ Styles.languages }>
                             <span className={ Styles.choose }>Язык сайта:</span>
-                            <a className={ ruClass } href="/ru/thanksgiving">Русский</a>
-                            <a className={ ukClass } href="/uk/thanksgiving">Українська</a>
+                            <a className={ ruClass } href={ `/ru${url}` }>Русский</a>
+                            <a className={ ukClass } href={ `/uk${url}` }>Українська</a>
                         </div>
                     </div>
                 </div>

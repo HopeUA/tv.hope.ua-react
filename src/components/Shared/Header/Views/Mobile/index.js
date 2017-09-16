@@ -81,10 +81,21 @@ function Header(props) {
     const subMenuItems = getMenuItems('sub').map(convertToComponent);
     const mainMenuItems = getMenuItems('main').map(convertToComponent);
 
+    let url;
+    if (location) {
+        url = location.pathname.split('/')
+            .filter((item, idx) => {
+                return idx !== 1;
+            })
+            .join('/');
+    }
+
     return (
         <section className={ Styles.headerComponent } style={ componentStyle }>
             <div className={ Styles.head }>
-                <a href="#"><Logo color={ Palette.mainColor1 }/></a>
+                <a href="https://tv.hope.ua/">
+                    <Logo color={ Palette.mainColor1 }/>
+                </a>
                 <span onClick={ handleMenu }>
                     <Hamburger isOpened={ isMenuVisible } color={ Palette.mainColor1 }/>
                 </span>
@@ -115,8 +126,8 @@ function Header(props) {
                     </div>
                     <div className={ Styles.languages }>
                         <span className={ Styles.choose }>Язык сайта:</span>
-                        <a className={ ruClass } href="/ru/thanksgiving">Русский</a>
-                        <a className={ ukClass } href="/uk/thanksgiving">Українська</a>
+                        <a className={ ruClass } href={ `/ru${url}` }>Русский</a>
+                        <a className={ ukClass } href={ `/uk${url}` }>Українська</a>
                     </div>
                 </div>
             </div>

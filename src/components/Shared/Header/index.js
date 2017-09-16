@@ -92,7 +92,15 @@ class Header extends Component {
 
     getMenuItems = (type) => {
         return Data.menu.items.filter(this.filterMenu(type))
-            .sort(this.sortMenu(type));
+            .sort(this.sortMenu(type))
+            .map((item) => {
+                const newUrl = item.url.substr(0, 1) === '/' ? `/${this.props.locale}${item.url}` : item.url;
+
+                return {
+                    ...item,
+                    url: newUrl
+                };
+            });
     };
 
     /**

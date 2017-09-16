@@ -76,9 +76,9 @@ class Common extends Component {
                         <div className={ Styles.video }>
                             <Brightcove
                                 accountId={ accountId }
+                                autoplay
                                 playerId={ playerId }
                                 videoId={ brightcoveId }
-                                autoplay={ true }
                             />
                         </div>
                     </div>
@@ -163,19 +163,19 @@ class Common extends Component {
             </div>
         ) : null;
 
-        let width = (
+        let eventProgress = (
             moment().unix() - moment(currentEvent.timeline.start).unix()
         ) / (
             moment(currentEvent.timeline.end).unix() - moment(currentEvent.timeline.start).unix()
         ) * 100;
-        if (width > 100) {
-            width = 100;
-        } else if (width < 0) {
-            width = 0;
+        if (eventProgress > 100) {
+            eventProgress = 100;
+        } else if (eventProgress < 0) {
+            eventProgress = 0;
         }
 
         const progressStyle = {
-            width: `${width}%`
+            width: `${eventProgress}%`
         };
 
         const event = (
