@@ -24,7 +24,7 @@ export default function Common(props) {
     let description = currentEpisode.episode.description === '' ?
         currentEpisode.show.description.short
         : currentEpisode.episode.description;
-    const index = description.text.indexOf('<');
+    const index = description.indexOf('<');
     description = description.slice(0, index - 1);
 
     let episodeProgress = (
