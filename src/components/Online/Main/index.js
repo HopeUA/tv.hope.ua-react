@@ -52,8 +52,10 @@ class Main extends Component {
     };
 
     componentDidMount = () => {
-        const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
-        load(script);
+        setTimeout(() => {
+            const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
+            load(script);
+        }, 0);
     };
 
     /**
@@ -76,8 +78,6 @@ class Main extends Component {
             return null;
         }
 
-        const liveUrl = 'https://live-tv.hope.ua/nadia-publish/smil:nadia.smil/playlist.m3u8';
-
         /**
          * [RV]
          * View
@@ -88,14 +88,12 @@ class Main extends Component {
             view = (
                 <Mobile
                     items={ items }
-                    url={ liveUrl }
                 />
             );
         } else {
             view = (
                 <Desktop
                     items={ items }
-                    url={ liveUrl }
                 />
             );
         }
