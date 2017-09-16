@@ -4,7 +4,8 @@
  */
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import Moment from 'moment';
+import load from 'load-script';
+import { translate } from 'react-i18next';
 
 /**
  * [IV]
@@ -24,36 +25,35 @@ import BP from 'lib/breakpoints';
  * Config Import
  */
 import config from './config';
-
-Moment.locale('ru');
+import timelineConfig from 'components/Shared/Timeline/config';
 
 /**
  * [IRDX]
  * Redux connect (optional)
  */
+@translate(['common'])
 @connect((state) => {
+    const localState = state[timelineConfig.id] ? state[timelineConfig.id] : {};
+    const timeLineItems = localState.items ? localState.items : [];
+
     return {
-        mediaType: state.browser.mediaType
+        mediaType: state.browser.mediaType,
+        items: timeLineItems
     };
 })
-
 class Main extends Component {
     /**
      * [CPT]
      * Component prop types
      */
     static propTypes = {
+        items: PropTypes.array.isRequired,
         mediaType: PropTypes.string.isRequired
     };
 
-    state = {
-        isOpened: false
-    };
-
-    handleMenuOpen = () => {
-        this.setState({
-            isOpened: !this.state.isOpened
-        });
+    componentDidMount = () => {
+        const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
+        load(script);
     };
 
     /**
@@ -70,7 +70,13 @@ class Main extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { items, mediaType } = this.props;
+
+        if (!items || items.length === 0) {
+            return null;
+        }
+
+        const liveUrl = 'https://live-tv.hope.ua/nadia-publish/smil:nadia.smil/playlist.m3u8';
 
         /**
          * [RV]
@@ -80,11 +86,17 @@ class Main extends Component {
 
         if (BP.isMobile(mediaType)) {
             view = (
-                <Mobile isOpened={ this.state.isOpened } handleMenu={ this.handleMenuOpen }/>
+                <Mobile
+                    items={ items }
+                    url={ liveUrl }
+                />
             );
         } else {
             view = (
-                <Desktop/>
+                <Desktop
+                    items={ items }
+                    url={ liveUrl }
+                />
             );
         }
 
