@@ -11,13 +11,14 @@ export default class Arrow extends Component {
     static propTypes = {
         color: PropTypes.string.isRequired,
         hoverColor: PropTypes.string,
-        state: PropTypes.string.isRequired,
+        state: PropTypes.string,
         isStatic: PropTypes.bool
     };
 
     static defaultProps = {
         isStatic: true,
-        hoverColor: ''
+        hoverColor: '',
+        state: ''
     };
 
     render() {

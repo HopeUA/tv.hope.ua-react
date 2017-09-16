@@ -1,13 +1,10 @@
 @import 'common';
 
 & {
-    .video {
+    .wrapVideo {
         width: px(1056);
         margin: 0 auto;
         background-color: $mainColor2;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: px(592);
     }
 
     .languages {
@@ -17,14 +14,30 @@
         .list {
             width: px(958);
         }
+
+        &.opened {
+            .list {
+                .item {
+                    width: px(1060);
+
+                    &:first-of-type {
+                        width: px(958);
+                    }
+                }
+            }
+        }
     }
 
     .info {
-        .bar {
-            margin-top: px(42);
+        padding-left: px(8);
 
-            .timeLineContainer {
-                width: px(888);
+        .event {
+            .bar {
+                margin-top: px(42);
+
+                .timeLineContainer {
+                    width: px(888);
+                }
             }
         }
     }

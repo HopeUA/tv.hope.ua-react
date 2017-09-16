@@ -1,6 +1,5 @@
 & {
-    padding-top: px(96);
-    padding-bottom: px(126);
+    padding: px(96) 0 px(104);
     background-color: $tempColor35;
 
     .video {
@@ -10,28 +9,22 @@
         width: px(1856);
         height: px(1040);
         margin: 0 auto;
-        background-image: url('../../../Assets/BG.jpg');
-        background-size: cover;
-
-        .play {
-            width: px(196);
-        }
+        background-color: $tempColor33;
     }
-
 
     .info {
         width: px(1856);
-        margin: px(24) auto;
+        margin: px(24) auto 0;
 
         .languages {
             display: flex;
 
             .item {
                 display: flex;
+                justify-content: center;
                 align-items: center;
                 height: px(94);
                 margin-right: 1px;
-                padding: 0 px(38);
                 background-color: $tempColor40;
                 font-family: 'Exo 2';
                 font-size: px(28);
@@ -39,20 +32,24 @@
                 cursor: pointer;
                 flex-grow: 1;
 
+                &:hover {
+                    background-color: $tempColor35;
+                }
+
                 &.active {
-                    background-color: red;
+                    background-color: $tempColor44;
                 }
 
                 .flag {
                     width: px(48);
                 }
 
-                .language {
-                    margin-top: px(-4);
+                .signs {
+                    width: px(32);
                 }
 
-                .sings {
-                    width: px(32);
+                .language {
+                    margin-top: px(-4);
                 }
 
                 i {
@@ -61,86 +58,118 @@
             }
         }
 
-        .title {
-            margin-top: px(72);
-            color: $mainColor1;
-            font-family: 'Exo 2';
-            font-size: px(56);
-            font-weight: normal;
-        }
-
-        .subTitle {
-            margin-top: px(20);
-            color: $tempColor36;
-            font-family: 'Exo 2';
-            font-size: px(36);
-            font-weight: normal;
-        }
-
-        .bar {
-            display: flex;
-            margin-top: px(48);
-
-            .startTime {
+        .event {
+            .title {
+                margin-top: px(72);
                 color: $mainColor1;
                 font-family: 'Exo 2';
-                font-size: px(48);
+                font-size: px(56);
+                font-weight: normal;
             }
 
-            .endTime {
+            .subtitle {
+                margin-top: px(20);
                 color: $tempColor36;
                 font-family: 'Exo 2';
-                font-size: px(48);
+                font-size: px(36);
+                font-weight: normal;
             }
 
-            .timeLineContainer {
+            .bar {
                 display: flex;
-                align-items: center;
-                width: px(1576);
-                margin: 0 px(30);
+                margin-top: px(48);
 
-                .scale {
-                    width: 100%;
-                    height: px(6);
-                    background-color: $tempColor36;
+                .startTime {
+                    color: $mainColor1;
+                    font-family: 'Exo 2';
+                    font-size: px(48);
+                }
 
-                    .progress {
-                        display: flex;
-                        position: relative;
-                        align-items: center;
-                        height: 100%;
-                        background-color: $commonColor2;
+                .endTime {
+                    color: $tempColor36;
+                    font-family: 'Exo 2';
+                    font-size: px(48);
+                }
 
-                        span {
+                .timeLineContainer {
+                    display: flex;
+                    align-items: center;
+                    width: px(1576);
+                    margin: 0 px(30);
+
+                    .scale {
+                        width: 100%;
+                        height: px(6);
+                        background-color: $tempColor36;
+
+                        .progress {
                             display: flex;
-                            position: absolute;
-                            right: 0;
+                            position: relative;
                             align-items: center;
-                            justify-content: space-between;
-                            width: px(6);
-                            height: px(32);
-                            border-radius: px(4);
-                            background-color: $tempColor36;
+                            height: 100%;
+                            background-color: $commonColor2;
 
-                            &::before {
-                                display: block;
+                            span {
+                                display: flex;
+                                position: absolute;
+                                right: 0;
+                                align-items: center;
+                                justify-content: space-between;
                                 width: px(6);
                                 height: px(32);
-                                margin-left: px(-6);
-                                background-color: $tempColor35;
-                                content: '';
-                            }
+                                border-radius: px(4);
+                                background-color: $tempColor36;
 
-                            &::after {
-                                display: block;
-                                width: px(6);
-                                height: px(32);
-                                margin-right: px(-6);
-                                background-color: $tempColor35;
-                                content: '';
+                                &::before {
+                                    display: block;
+                                    width: px(6);
+                                    height: px(32);
+                                    margin-left: px(-6);
+                                    background-color: $tempColor35;
+                                    content: '';
+                                }
+
+                                &::after {
+                                    display: block;
+                                    width: px(6);
+                                    height: px(32);
+                                    margin-right: px(-6);
+                                    background-color: $tempColor35;
+                                    content: '';
+                                }
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .schedule {
+            h1 {
+                margin: px(72) 0 px(48);
+                color: $mainColor1;
+                font-family: 'Exo 2';
+                font-size: px(56);
+                font-weight: normal;
+            }
+
+            .item {
+                display: grid;
+                align-items: center;
+                justify-content: flex-start;
+                height: px(70);
+                font-size: px(36);
+                grid-template-columns: px(115) px(35) px(115) px(1540);
+
+                .time {
+                    color: $tempColor36;
+                    font-family: 'Exo 2';
+                }
+
+                .title {
+                    margin-left: px(60);
+                    color: $mainColor1;
+                    font-family: 'Exo 2';
                 }
             }
         }
