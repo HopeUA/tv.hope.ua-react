@@ -21,11 +21,7 @@ class Common extends Component {
         language: PropTypes.string.isRequired,
         locale: PropTypes.string.isRequired,
         streams: PropTypes.array.isRequired,
-        playerType: PropTypes.string
-    };
-
-    static defaultProps = {
-        playerType: 'brightcove'
+        playerType: PropTypes.string.isRequired
     };
 
     render() {
@@ -82,6 +78,7 @@ class Common extends Component {
                                 accountId={ accountId }
                                 playerId={ playerId }
                                 videoId={ brightcoveId }
+                                autoplay={ true }
                             />
                         </div>
                     </div>

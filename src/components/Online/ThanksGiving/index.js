@@ -51,17 +51,18 @@ class ThanksGiving extends Component {
     state = {
         isOpened: false,
         lang: 'uk',
-        eventId: 'nick'
+        eventId: 'nick',
+        playerType: 'youtube'
     };
 
     timer = null;
 
-    componentWillMount() {
+    componentDidMount() {
         const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
-
         load(script);
-        this.updateEvent();
-        this.timer = setInterval(this.updateEvent, 1000 * 30);
+
+        // this.updateEvent();
+        // this.timer = setInterval(this.updateEvent, 1000 * 30);
     }
 
     componentWillUnmount() {
@@ -116,7 +117,7 @@ class ThanksGiving extends Component {
          * Props destructuring
          */
         const { locale, mediaType } = this.props;
-        const { lang, eventId } = this.state;
+        const { lang, eventId, playerType } = this.state;
 
         if (!eventId) {
             return null;
@@ -139,6 +140,7 @@ class ThanksGiving extends Component {
                     language={ lang }
                     locale={ locale }
                     streams={ config.streams }
+                    playerType={ playerType }
                 />
             );
         } else {
@@ -150,6 +152,7 @@ class ThanksGiving extends Component {
                     language={ lang }
                     locale={ locale }
                     streams={ config.streams }
+                    playerType={ playerType }
                 />
             );
         }

@@ -17,18 +17,17 @@ export default class Brightcove extends Component {
         } = this.props;
 
         return (
-            <section className={ Styles.brightcoveComponent }>
-                <div>
-                    <video
-                        controls
-                        data-application-id
-                        className="video-js"
-                        data-account={ accountId }
-                        data-embed="default"
-                        data-player={ playerId }
-                        data-video-id={ videoId }
-                    />
-                </div>
+            <section className={ Styles.brightcoveComponent } key={ videoId }>
+                <video
+                    controls
+                    autoPlay
+                    data-application-id
+                    className="video-js"
+                    data-account={ accountId }
+                    data-embed="default"
+                    data-player={ playerId }
+                    data-video-id={ videoId }
+                />
             </section>
         );
     }

@@ -17,11 +17,7 @@ class Common extends Component {
         language: PropTypes.string.isRequired,
         locale: PropTypes.string.isRequired,
         streams: PropTypes.array.isRequired,
-        playerType: PropTypes.string
-    };
-
-    static defaultProps = {
-        playerType: 'brightcove'
+        playerType: PropTypes.string.isRequired
     };
 
     render() {
