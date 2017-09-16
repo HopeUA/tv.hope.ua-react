@@ -51,8 +51,8 @@ class ThanksGiving extends Component {
         isOpened: false,
         lang: 'uk',
         loaded: false,
-        playerType: 'brightcove',
-        eventId: 'nick',
+        playerType: 'youtube',
+        eventId: null,
         events: [],
         streams: []
     };
@@ -69,7 +69,7 @@ class ThanksGiving extends Component {
         this.setState({
             loaded: true,
             events: result.schedule,
-            // playerType: result.source,
+            playerType: result.source,
             streams: result.streams
         });
 
