@@ -51,12 +51,10 @@ class Main extends Component {
         mediaType: PropTypes.string.isRequired
     };
 
-    componentDidMount = () => {
-        setTimeout(() => {
-            const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
-            load(script);
-        }, 0);
-    };
+    // componentDidMount = () => {
+    //     const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
+    //     load(script);
+    // };
 
     /**
      * [CDN]

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import load from 'load-script';
 
 import Styles from './styles.scss';
 
@@ -7,6 +8,11 @@ export default class Brightcove extends Component {
         accountId: PropTypes.string.isRequired,
         playerId: PropTypes.string.isRequired,
         videoId: PropTypes.string.isRequired
+    };
+
+    componentDidMount = () => {
+        const script = 'https://players.brightcove.net/5467539707001/BJgK0Gh85Z_default/index.min.js';
+        load(script);
     };
 
     render() {
