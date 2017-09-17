@@ -45,7 +45,7 @@ export default function Common(props) {
 
     const accountId = '5467539707001';
     const playerId = 'BJgK0Gh85Z';
-    const videoId = '5574859652001';
+    const videoId = '5468565950001';
 
     return (
         <section className={ Styles.mainComponent }>
