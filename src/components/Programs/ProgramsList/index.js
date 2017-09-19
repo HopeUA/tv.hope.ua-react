@@ -43,7 +43,8 @@ class ProgramsList extends Component {
      * Component prop types
      */
     static propTypes = {
-        mediaType: PropTypes.string.isRequired
+        mediaType: PropTypes.string.isRequired,
+        items: PropTypes.array.isRequired
     };
 
     /**
@@ -60,7 +61,51 @@ class ProgramsList extends Component {
          * [RPD]
          * Props destructuring
          */
-        const { mediaType } = this.props;
+        const { mediaType, items } = this.props;
+
+        const options = [
+            ['people'], ['history'],
+            ['bible'], ['family'],
+            ['health'], ['child'],
+            ['youth'], ['special'],
+            ['music'], ['everyday'],
+            ['sermons'], ['news'],
+            ['movie']
+        ];
+
+        const categoryGroups = [];
+        options.forEach((categoryGroup) => {
+            const group = [];
+            let title;
+            let id;
+            categoryGroup.forEach((categoryItem) => {
+                const category = {
+                    title: '',
+                    id: '',
+                    items: []
+                };
+
+                category.items = items.filter((item) => {
+                    return item.category.uid === categoryItem;
+                }).map((item) => {
+                    title = item.category.title.ru;
+                    id = item.uid;
+
+                    return {
+                        title: item.title,
+                        url: '#',
+                        id: item.uid,
+                        description: item.description.medium,
+                        image: item.images.cover
+                    };
+                });
+                category.title = title;
+                category.id = id;
+
+                group.push(category);
+            });
+            categoryGroups.push(group);
+        });
 
         /**
          * [RV]
@@ -70,11 +115,11 @@ class ProgramsList extends Component {
 
         if (BP.isMobile(mediaType)) {
             view = (
-                <Mobile/>
+                <Mobile items={ categoryGroups }/>
             );
         } else {
             view = (
-                <Desktop/>
+                <Desktop items={ categoryGroups }/>
             );
         }
 

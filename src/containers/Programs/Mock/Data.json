@@ -1,0 +1,2348 @@
+[
+  {
+    "uid": "ADUU",
+    "title": "Реклама",
+    "description": {
+      "short": "",
+      "medium": "Узнайте то, что сейчас актуально и полезно!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/ADUU/ADUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/ADUU/ADUU-background.jpg"
+    },
+    "category": {
+      "uid": "special",
+      "title": {
+        "ru": "Ролики",
+        "uk": "Ролики"
+      },
+      "sort": 13
+    }
+  },
+  {
+    "uid": "AFCU",
+    "title": "Удивительные факты",
+    "description": {
+      "short": "Удивительное рядом!",
+      "medium": "Программа, открывающая дверь в мир Библии, факты которой не перестают удивлять!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/AFCU/AFCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/AFCU/AFCU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "ALKU",
+    "title": "Аксіома кохання",
+    "description": {
+      "short": "Коли знаєш, як бути щасливим...",
+      "medium": "Секрети міцних стосунків, ознаки фальшивих відносин, загадки кохання без меж в одній формулі.",
+      "days": "вівторок, четвер",
+      "time": "07:00, 09:00 та 11:00",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/ALKU/ALKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "AMCU",
+    "title": "Миссионерские вести",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/AMCU/AMCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/AMCU/AMCU-background.jpg"
+    },
+    "category": {
+      "uid": "health",
+      "title": {
+        "ru": "Здоровье и отдых",
+        "uk": "Здоров'я та відпочинок"
+      },
+      "sort": 2
+    }
+  },
+  {
+    "uid": "ANKU",
+    "title": "Ангели Надії",
+    "description": {
+      "short": "",
+      "medium": "Проект партнерства: про людей в кадрі та поза ним. Про те як знімаються програми, та як вони змінюють життя глядачів!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/ANKU/ANKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "ANYU",
+    "title": "Так чи Інакше",
+    "description": {
+      "short": "",
+      "medium": "молодіжне ток-шоу, що зачіпає неоднозначні, спірні питання та шукає правильної відповіді в дискусії. На ток-шоу піднімаються 2 різні позиції з приводу питання, та аргументовано пояснюються; ведучий — модератор двох точок зору.\nОсновні питання, що піднімаються: громадянський шлюб; атеїзм; нетрадиційна медицина; заміж по любові чи з розрахунку і тд.\nОсобливості ток-шоу:в програмі приймають участь невіруючі молоді люди, які стоять на своїй позиції та відстоюють її на ток-шоу.                Програма орієнтована на невіруючу молодь 18-30р.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/ANYU/ANYU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/ANYU/ANYU-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "ATCU",
+    "title": "На перехресті",
+    "description": {
+      "short": "",
+      "medium": "Коли не все йде так солодко як би хотілося, коли в сім'ї негаразди і  непорозуміння, ти починаєш задумуватись над своїм життям, майбутнім, над собою. Ти на перехресті життєвого вибору.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/ATCU/ATCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/ATCU/ATCU-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "BACU",
+    "title": "По ту сторону пригод",
+    "description": {
+      "short": "Время для любителей путешествовать миром!",
+      "medium": "Увлекательный проект расскажет и покажет творение Бога под землей, на вершине горы, или под водой.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/BACU/BACU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/BACU/BACU-background.jpg"
+    },
+    "category": {
+      "uid": "health",
+      "title": {
+        "ru": "Здоровье и отдых",
+        "uk": "Здоров'я та відпочинок"
+      },
+      "sort": 2
+    }
+  },
+  {
+    "uid": "BILU",
+    "title": "Ваша думка",
+    "description": {
+      "short": "В пошуку правильного рішення...",
+      "medium": "Конфліктні ситуації, спірні питання, нагайні потреби суспільства та особистості зокрема розглядаються саме тут!\nМи шукаємо правильне рішення, тому нам цікава Ваша думка!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/BILU/BILU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/BILU/BILU-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "BSUU",
+    "title": "Біблія свідчить",
+    "description": {
+      "short": "Приєднуйтесь до надзвичайної правди!",
+      "medium": "Світ замовкаємо, коли Біблія свідчить! Приєднуйтесь до надзвичайної правди, приєднуйтесь до відкриттів!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/BSUU/BSUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/BSUU/BSUU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "BTSR",
+    "title": "По ту сторону поиска",
+    "description": {
+      "short": "",
+      "medium": "Ищем ответы на вопросы, которые беспокоят настоящего исследователя Библии",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/BTSR/BTSR-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/BTSR/BTSR-background.jpg"
+    },
+    "category": {
+      "uid": "health",
+      "title": {
+        "ru": "Здоровье и отдых",
+        "uk": "Здоров'я та відпочинок"
+      },
+      "sort": 2
+    }
+  },
+  {
+    "uid": "CGCU",
+    "title": "В гостях у Клиффа Гольдштейна",
+    "description": {
+      "short": "Неординарные исследования",
+      "medium": "В поиске верных жизненных выводов нам поможет энергичный и харизматичный Клифф Гольдштейн. Его методика детального и неординарного исследования открывает замки самых труднодоступных истин, которыми он готов поделиться!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/CGCU/CGCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/CGCU/CGCU-background.jpg"
+    },
+    "category": {
+      "uid": "history",
+      "title": {
+        "ru": "История и религия",
+        "uk": "Історія та релігія"
+      },
+      "sort": 9
+    }
+  },
+  {
+    "uid": "CLMU",
+    "title": "Клипы",
+    "description": {
+      "short": "Ликуйте небеса!",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/CLMU/CLMU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/CLMU/CLMU-background.jpg"
+    },
+    "category": {
+      "uid": "music",
+      "title": {
+        "ru": "Музыкальные",
+        "uk": "Музичні"
+      },
+      "sort": 6
+    }
+  },
+  {
+    "uid": "CPVU",
+    "title": "ЧП+",
+    "description": {
+      "short": "Все про життя невгамовних підлітків",
+      "medium": "Голова йде обертом від того, що відбувається в цікавий підлітковий період. \nЯк впоратись з собою та отримати справжнє задоволення від життя?",
+      "days": "неділя",
+      "time": "11:20",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/CPVU/CPVU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "CYCU",
+    "title": "Поспілкуймося",
+    "description": {
+      "short": "Обговорюємо гарячі молодіжні теми",
+      "medium": "Тут вдосталь аргументів та доводів, думок та заперечень. \nМи не сперечаємось, ми спілкуємось!\nМолодь про шлюб та СНІД, красу та етикет, фанатизм та забобони!\nПриєднуйтесь!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/CYCU/CYCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/CYCU/CYCU-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "DBLU",
+    "title": "Хліб щоденний",
+    "description": {
+      "short": "Коротко про духовне",
+      "medium": "Однохвилинні духовні роздуми зі Слова Божого на кожен день!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/DBLU/DBLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/DBLU/DBLU-background.jpg"
+    },
+    "category": {
+      "uid": "everyday",
+      "title": {
+        "ru": "На каждый день",
+        "uk": "Щоденні"
+      },
+      "sort": 1
+    }
+  },
+  {
+    "uid": "DHNU",
+    "title": "Диагноз: здоровье",
+    "description": {
+      "short": "Мечта каждого человека",
+      "medium": "Изучение современных проблем здоровья, исследование механизмов оздоровления и улучшения самочувствия.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/DHNU/DHNU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/DHNU/DHNU-background.jpg"
+    },
+    "category": {
+      "uid": "health",
+      "title": {
+        "ru": "Здоровье и отдых",
+        "uk": "Здоров'я та відпочинок"
+      },
+      "sort": 2
+    }
+  },
+  {
+    "uid": "DOCU",
+    "title": "Дивовижнi  вiдкриття",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/DOCU/DOCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/DOCU/DOCU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "DTNU",
+    "title": "Детонация",
+    "description": {
+      "short": "... для пап и мам",
+      "medium": "Дельные рекомендации и примеры от педагогов и психологов, личные советы от мам и пап с долголетним опытом, а также отрывки из мультфильмов и кино, обзор семейных фотографий и многое другое.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/DTNU/DTNU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/DTNU/DTNU-background.jpg"
+    },
+    "category": {
+      "uid": "family",
+      "title": {
+        "ru": "Семья",
+        "uk": "Сім'я"
+      },
+      "sort": 3
+    }
+  },
+  {
+    "uid": "EPLU",
+    "title": "Є проблема",
+    "description": {
+      "short": "Пошук вірного рішення",
+      "medium": "Розгляд різноманітних проблем, які стають перед нами особисто та перед нашим суспільством. Погляд через духовну призму не залежно від  релігійних, політичних чи національних вподобань.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/EPLU/EPLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "ESUU",
+    "title": "Урочисті події",
+    "description": {
+      "short": "",
+      "medium": "Дни, которые мы хотим особо отметить вместе с вами!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/ESUU/ESUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/ESUU/ESUU-background.jpg"
+    },
+    "category": {
+      "uid": "health",
+      "title": {
+        "ru": "Здоровье и отдых",
+        "uk": "Здоров'я та відпочинок"
+      },
+      "sort": 2
+    }
+  },
+  {
+    "uid": "EWLU",
+    "title": "Очима жінки",
+    "description": {
+      "short": "Погляд зі сторони",
+      "medium": "Якою є ідеальна жінка, як вона сприймає світ, яким багатогранним внутрішнім потенціалом наділив її Господь?",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/EWLU/EWLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/EWLU/EWLU-background.jpg"
+    },
+    "category": {
+      "uid": "family",
+      "title": {
+        "ru": "Семья",
+        "uk": "Сім'я"
+      },
+      "sort": 3
+    }
+  },
+  {
+    "uid": "FBLU",
+    "title": "Філософський камінь (відеоблог)",
+    "description": {
+      "short": "",
+      "medium": "Відеоблог ведучого програми \"Філософський камінь\"",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/FBLU/FBLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/FBLU/FBLU-background.jpg"
+    },
+    "category": {
+      "uid": "everyday",
+      "title": {
+        "ru": "На каждый день",
+        "uk": "Щоденні"
+      },
+      "sort": 1
+    }
+  },
+  {
+    "uid": "FBNU",
+    "title": "Модная книга",
+    "description": {
+      "short": "Книга, в которой Вы найдете ответы буквально на все вопросы.",
+      "medium": "Она прошла века, но при этом осталась современной, интересной и популярной!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/FBNU/FBNU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "FKLU",
+    "title": "Філософський камінь",
+    "description": {
+      "short": "",
+      "medium": "Розібратися в складних біблійних текстах, виявити істину та ствердитися в ній — надзвичайне відчуття щастя  ревного  шукача правди.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/FKLU/FKLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/FKLU/FKLU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "FLNU",
+    "title": "Дружболандия",
+    "description": {
+      "short": "Все дети должны побывать здесь",
+      "medium": "Дружболандия — это страна радости, где нет болезней, слез, а все жители счастливы и помогают друг другу.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/FLNU/FLNU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/FLNU/FLNU-background.jpg"
+    },
+    "category": {
+      "uid": "child",
+      "title": {
+        "ru": "Детские",
+        "uk": "Дитячі"
+      },
+      "sort": 5
+    }
+  },
+  {
+    "uid": "FMLU",
+    "title": "5 хвилин для вічності",
+    "description": {
+      "short": "Чи знайдете ви трохи часу для спасіння?",
+      "medium": "Щоденні духовні роздуми про вічне та дочасне, важливе та актуальне у світлі Слова Божого.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/FMLU/FMLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/FMLU/FMLU-background.jpg"
+    },
+    "category": {
+      "uid": "everyday",
+      "title": {
+        "ru": "На каждый день",
+        "uk": "Щоденні"
+      },
+      "sort": 1
+    }
+  },
+  {
+    "uid": "FOEU",
+    "title": "В будущее с надеждой (Островский)",
+    "description": {
+      "short": "Все лучшее впереди!",
+      "medium": "Простые и удивительные принципы духовного и физического здоровья, которые изменят вашу жизнь!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/FOEU/FOEU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/FOEU/FOEU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "GKNU",
+    "title": "Грани музыки. Клипы",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/GKNU/GKNU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "music",
+      "title": {
+        "ru": "Музыкальные",
+        "uk": "Музичні"
+      },
+      "sort": 6
+    }
+  },
+  {
+    "uid": "GKUU",
+    "title": "Генеральная Конференция 2015",
+    "description": {
+      "short": "Будь в курсе последних событий церкви",
+      "medium": "Юбилейная встреча, на которой будут обсуждаться вопросы, касающиеся фундаментальных библейских истин, а также приняты важные решения для жизни Церкви.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/GKUU/GKUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/GKUU/GKUU-background.jpg"
+    },
+    "category": {
+      "uid": "sermons",
+      "title": {
+        "ru": "Проповеди",
+        "uk": "Проповіді"
+      },
+      "sort": 12
+    }
+  },
+  {
+    "uid": "GMLU",
+    "title": "Guten Morgen з Ганнеле Отчофскі",
+    "description": {
+      "short": "Начни свой день правильно",
+      "medium": "Вдохновитесь на добрые и полезные дела. Эти духовные размышления заставят Вас задуматься о глубинах Вечного.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/GMLU/GMLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/GMLU/GMLU-background.jpg"
+    },
+    "category": {
+      "uid": "everyday",
+      "title": {
+        "ru": "На каждый день",
+        "uk": "Щоденні"
+      },
+      "sort": 1
+    }
+  },
+  {
+    "uid": "GMNU",
+    "title": "Грани музыки",
+    "description": {
+      "short": "Международный язык, понятный каждому",
+      "medium": "Музыка — как многогранный бриллиант, откройте для себя все ее стороны!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/GMNU/GMNU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/GMNU/GMNU-background.jpg"
+    },
+    "category": {
+      "uid": "music",
+      "title": {
+        "ru": "Музыкальные",
+        "uk": "Музичні"
+      },
+      "sort": 6
+    }
+  },
+  {
+    "uid": "HDVU",
+    "title": "В гостях у Добрячка",
+    "description": {
+      "short": "Завітайте до нас неодмінно!",
+      "medium": "Добрячок завжди радий вас вітати і в школі добрих порад буде вас навчати.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/HDVU/HDVU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/HDVU/HDVU-background.jpg"
+    },
+    "category": {
+      "uid": "child",
+      "title": {
+        "ru": "Детские",
+        "uk": "Дитячі"
+      },
+      "sort": 5
+    }
+  },
+  {
+    "uid": "HMCU",
+    "title": "Святковий марафон",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/HMCU/HMCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/HMCU/HMCU-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "ILCU",
+    "title": "…є Любов",
+    "description": {
+      "short": "Його любов спасла світ",
+      "medium": "Серія документальних фільмів про зворушливі невигадані історії наших співвітчизників. Бог є любов...",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/ILCU/ILCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/ILCU/ILCU-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "IRCU",
+    "title": "…есть Любовь",
+    "description": {
+      "short": "Его любовь спасла мир",
+      "medium": "Серия документальных фильмов о трогательных невыдуманных историях наших соотечественников. Бог есть любовь...",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/IRCU/IRCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "ISCU",
+    "title": "В центре внимания",
+    "description": {
+      "short": "В чем секрет успешных людей?",
+      "medium": "Узнайте что находится в центре жизни тех, кто преуспел во многом.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/ISCU/ISCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/ISCU/ISCU-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "ISLU",
+    "title": "Інша сторона",
+    "description": {
+      "short": "Знаєш, що приховано на звороті?",
+      "medium": "Успішні та впливові люди розкажуть про іншу сторону свого життя!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/ISLU/ISLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "IWCU",
+    "title": "Так промовляє Біблія",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/IWCU/IWCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/IWCU/IWCU-background.jpg"
+    },
+    "category": {
+      "uid": "sermons",
+      "title": {
+        "ru": "Проповеди",
+        "uk": "Проповіді"
+      },
+      "sort": 12
+    }
+  },
+  {
+    "uid": "IWLU",
+    "title": "Біблія продовжує говорити",
+    "description": {
+      "short": "Книга від наймудрішого Автора",
+      "medium": "На відміну від літератури, створеної людьми, яка актуальна лише тимчасово, Святе Письмо пройшло перевірку тисячоліть і досі змінює життя людей.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/IWLU/IWLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/IWLU/IWLU-background.jpg"
+    },
+    "category": {
+      "uid": "everyday",
+      "title": {
+        "ru": "На каждый день",
+        "uk": "Щоденні"
+      },
+      "sort": 1
+    }
+  },
+  {
+    "uid": "JCKU",
+    "title": "Иудаизм и Христианство в свете Торы и Евангелия",
+    "description": {
+      "short": "Взгляд иудеев и христиан на вопросы спасения",
+      "medium": "Две мировые религии имеют общие корни и рассмотрение важных вопросов с обеих сторон вдвойне интересно.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/JCKU/JCKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "history",
+      "title": {
+        "ru": "История и религия",
+        "uk": "Історія та релігія"
+      },
+      "sort": 9
+    }
+  },
+  {
+    "uid": "JKLU",
+    "title": "ДЖЕМ. Кліпи",
+    "description": {
+      "short": "Только лучшее для Вас",
+      "medium": "Собрание отборных клипов из музыкальной коллекции \"Джем\".",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/JKLU/JKLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/JKLU/JKLU-background.jpg"
+    },
+    "category": {
+      "uid": "music",
+      "title": {
+        "ru": "Музыкальные",
+        "uk": "Музичні"
+      },
+      "sort": 6
+    }
+  },
+  {
+    "uid": "JMLU",
+    "title": "ДЖЕМ",
+    "description": {
+      "short": "Жива християнська музика на будь-який смак",
+      "medium": "Веселе спілкування з гостями, які виконують чудові пісні, у тому числі і свої власні.",
+      "days": "воскресенье",
+      "time": "18:00",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/JMLU/JMLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/JMLU/JMLU-background.jpg"
+    },
+    "category": {
+      "uid": "music",
+      "title": {
+        "ru": "Музыкальные",
+        "uk": "Музичні"
+      },
+      "sort": 6
+    }
+  },
+  {
+    "uid": "KNUU",
+    "title": "Коментар",
+    "description": {
+      "short": "Думки експертів та відомих людей щодо актуальних проблем сьогодення",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/KNUU/KNUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/KNUU/KNUU-background.jpg"
+    },
+    "category": {
+      "uid": "news",
+      "title": {
+        "ru": "Новости",
+        "uk": "Новини"
+      },
+      "sort": 11
+    }
+  },
+  {
+    "uid": "KOMU",
+    "title": "Концерти",
+    "description": {
+      "short": "Почувствуй себя слушателем в зале",
+      "medium": "Не обязательно выходить из дому, чтобы услышать качественную музыку в приятном исполнении.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/KOMU/KOMU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/KOMU/KOMU-background.jpg"
+    },
+    "category": {
+      "uid": "music",
+      "title": {
+        "ru": "Музыкальные",
+        "uk": "Музичні"
+      },
+      "sort": 6
+    }
+  },
+  {
+    "uid": "LGVU",
+    "title": "Живой Бог",
+    "description": {
+      "short": "Везение или Божье проведение?",
+      "medium": "Откройте для себя удивительные жизненные опыты разных людей.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/LGVU/LGVU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "LLCU",
+    "title": "Лома линда 360°",
+    "description": {
+      "short": "Для Бога безвыходных ситуаций нет!",
+      "medium": "Эти изумительные истории исцеления и помощи людям не оставят вас равнодушными.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/LLCU/LLCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/LLCU/LLCU-background.jpg"
+    },
+    "category": {
+      "uid": "health",
+      "title": {
+        "ru": "Здоровье и отдых",
+        "uk": "Здоров'я та відпочинок"
+      },
+      "sort": 2
+    }
+  },
+  {
+    "uid": "LMCU",
+    "title": "Стиль жизни",
+    "description": {
+      "short": "Когда кажется, что вместе жить стало невозможно",
+      "medium": "Даже если у вас огромные проблемы в отношениях, есть тысячи шансов сделать вашу семью самой счастливой в мире!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/LMCU/LMCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "family",
+      "title": {
+        "ru": "Семья",
+        "uk": "Сім'я"
+      },
+      "sort": 3
+    }
+  },
+  {
+    "uid": "LMNU",
+    "title": "ЛоМастер",
+    "description": {
+      "short": "Чтобы сделать маленькие ручки умелыми",
+      "medium": "Детская сходка в мастерской \"Ломастера\": мастерим, играем, отгадываем и просто отдыхаем!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/LMNU/LMNU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/LMNU/LMNU-background.jpg"
+    },
+    "category": {
+      "uid": "child",
+      "title": {
+        "ru": "Детские",
+        "uk": "Дитячі"
+      },
+      "sort": 5
+    }
+  },
+  {
+    "uid": "LOUU",
+    "title": "Дитячі живі листівки",
+    "description": {
+      "short": "Подаруйте гарний настрій близьким!",
+      "medium": "Листівки, де герої і свята оживають!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/LOUU/LOUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "child",
+      "title": {
+        "ru": "Детские",
+        "uk": "Дитячі"
+      },
+      "sort": 5
+    }
+  },
+  {
+    "uid": "LPCU",
+    "title": "Малюваки",
+    "description": {
+      "short": "Відкрий в собі нові таланти!",
+      "medium": "Дитяча пізнавальна програма, де слухають захопливі історії, вчаться малювати, а ще співають щоразу нову пісеньку.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/LPCU/LPCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/LPCU/LPCU-background.jpg"
+    },
+    "category": {
+      "uid": "child",
+      "title": {
+        "ru": "Детские",
+        "uk": "Дитячі"
+      },
+      "sort": 5
+    }
+  },
+  {
+    "uid": "LSNU",
+    "title": "Под абажуром",
+    "description": {
+      "short": "Открывай истину без спешки",
+      "medium": "Без суеты, за чашечкой чая зритель сам найдет ответы на жизненные проблемы, размышляя, анализируя и строя логические выводы на текстах Священного Писания.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/LSNU/LSNU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/LSNU/LSNU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "MBCU",
+    "title": "Музична скринька",
+    "description": {
+      "short": "Відкрийте для себе світ прекрасних звуків",
+      "medium": "Музика має дивовижну силу. Вона спонукає і вабить, підносить і приносить мир, оживляє і піднімає дух, бо йде від серця.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/MBCU/MBCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/MBCU/MBCU-background.jpg"
+    },
+    "category": {
+      "uid": "music",
+      "title": {
+        "ru": "Музыкальные",
+        "uk": "Музичні"
+      },
+      "sort": 6
+    }
+  },
+  {
+    "uid": "MBKU",
+    "title": "Мессия: объективные доказательства",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/MBKU/MBKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/MBKU/MBKU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "MBVU",
+    "title": "Мозаїка батьківства",
+    "description": {
+      "short": "Сім'я — це дар від Бога!",
+      "medium": "Розглянемо разом переваги батьківства та проблеми виховання дітей.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/MBVU/MBVU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/MBVU/MBVU-background.jpg"
+    },
+    "category": {
+      "uid": "family",
+      "title": {
+        "ru": "Семья",
+        "uk": "Сім'я"
+      },
+      "sort": 3
+    }
+  },
+  {
+    "uid": "MHKU",
+    "title": "Ранок Надії",
+    "description": {
+      "short": "Почніть день з надією!",
+      "medium": "Отримайте заряд бадьорості та позитивної інформації на весь день!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/MHKU/MHKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "everyday",
+      "title": {
+        "ru": "На каждый день",
+        "uk": "Щоденні"
+      },
+      "sort": 1
+    }
+  },
+  {
+    "uid": "MMLR",
+    "title": "Музыка в моей жизни",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/MMLR/MMLR-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/MMLR/MMLR-background.jpg"
+    },
+    "category": {
+      "uid": "music",
+      "title": {
+        "ru": "Музыкальные",
+        "uk": "Музичні"
+      },
+      "sort": 6
+    }
+  },
+  {
+    "uid": "MSCU",
+    "title": "\"Кисть Мастера\" с Нилом Сколфилдом",
+    "description": {
+      "short": "",
+      "medium": "Библейские образы на полотнах известных художников мира.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/MSCU/MSCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/MSCU/MSCU-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "MVUU",
+    "title": "Фільми",
+    "description": {
+      "short": "Для тих, хто шукає смисл",
+      "medium": "Якщо вам цікаві глибокі та змістовні картини, то ви не витратете Ваш час даремно.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/MVUU/MVUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "movie",
+      "title": {
+        "ru": "Фильмы",
+        "uk": "Фільми"
+      },
+      "sort": 7
+    }
+  },
+  {
+    "uid": "NCUU",
+    "title": "Настав час",
+    "description": {
+      "short": "Ви готові змінити Ваше життя?",
+      "medium": "Зміни не відбудуться, якщо ми не наважимось на них. Прийшов час приймати рішення, про які не будемо шкодувати в майбутньому!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/NCUU/NCUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/NCUU/NCUU-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "NHCU",
+    "title": "Вісті Надії: тиждень",
+    "description": {
+      "short": "Надія є!",
+      "medium": "Про зміни в Україні та на планеті у світлі Біблії, про явища й події, які варто знати!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/NHCU/NHCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/NHCU/NHCU-background.jpg"
+    },
+    "category": {
+      "uid": "news",
+      "title": {
+        "ru": "Новости",
+        "uk": "Новини"
+      },
+      "sort": 11
+    }
+  },
+  {
+    "uid": "NHUU",
+    "title": "Вісті Надії",
+    "description": {
+      "short": "",
+      "medium": "Не відкладайте на потім. Про це варто дізнатись прямо зараз!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/NHUU/NHUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/NHUU/NHUU-background.jpg"
+    },
+    "category": {
+      "uid": "news",
+      "title": {
+        "ru": "Новости",
+        "uk": "Новини"
+      },
+      "sort": 11
+    }
+  },
+  {
+    "uid": "NSCU",
+    "title": "Непростое состояние",
+    "description": {
+      "short": "Построй свою семью правильно!",
+      "medium": "Что нужно знать каждому мужу и жене о принципах семейного счастья?",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/NSCU/NSCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/NSCU/NSCU-background.jpg"
+    },
+    "category": {
+      "uid": "family",
+      "title": {
+        "ru": "Семья",
+        "uk": "Сім'я"
+      },
+      "sort": 3
+    }
+  },
+  {
+    "uid": "NSUU",
+    "title": "Дышите свободно",
+    "description": {
+      "short": "Вдохните в Ваше тело здоровье",
+      "medium": "Эффективная методика, которая избавит вас от вредной привычки курения буквально за несколько дней!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/NSUU/NSUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/NSUU/NSUU-background.jpg"
+    },
+    "category": {
+      "uid": "health",
+      "title": {
+        "ru": "Здоровье и отдых",
+        "uk": "Здоров'я та відпочинок"
+      },
+      "sort": 2
+    }
+  },
+  {
+    "uid": "OBKU",
+    "title": "Открытая книга",
+    "description": {
+      "short": "Эти истины доступны всем!",
+      "medium": "Исследование пророческих книг Библии, и поиск исполнения пророчеств в современном мире.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/OBKU/OBKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/OBKU/OBKU-background.jpg"
+    },
+    "category": {
+      "uid": "sermons",
+      "title": {
+        "ru": "Проповеди",
+        "uk": "Проповіді"
+      },
+      "sort": 12
+    }
+  },
+  {
+    "uid": "OLZU",
+    "title": "2Я - одне життя",
+    "description": {
+      "short": "",
+      "medium": "Особливості відносин, та таємниці зміцнення стосунків.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/OLZU/OLZU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/OLZU/OLZU-background.jpg"
+    },
+    "category": {
+      "uid": "family",
+      "title": {
+        "ru": "Семья",
+        "uk": "Сім'я"
+      },
+      "sort": 3
+    }
+  },
+  {
+    "uid": "OVUU",
+    "title": "О Вечном",
+    "description": {
+      "short": "Открой истины в картинах",
+      "medium": "Настоящее искусство всегда современно, насущно и полезно.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/OVUU/OVUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/OVUU/OVUU-background.jpg"
+    },
+    "category": {
+      "uid": "history",
+      "title": {
+        "ru": "История и религия",
+        "uk": "Історія та релігія"
+      },
+      "sort": 9
+    }
+  },
+  {
+    "uid": "PGBU",
+    "title": "Рожеві окуляри",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/PGBU/PGBU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/PGBU/PGBU-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "PMKU",
+    "title": "Помолитесь за меня",
+    "description": {
+      "short": "Потому что Бог всегда слышит",
+      "medium": "Чрезвычайная важность молитвы в любой ситуации, при любых обстоятельствах.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/PMKU/PMKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/PMKU/PMKU-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "PMVU",
+    "title": "Пригоди Марка",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/PMVU/PMVU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "child",
+      "title": {
+        "ru": "Детские",
+        "uk": "Дитячі"
+      },
+      "sort": 5
+    }
+  },
+  {
+    "uid": "PNTR",
+    "title": "Познавая непостижимое",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/PNTR/PNTR-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/PNTR/PNTR-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "POCU",
+    "title": "Сила одного",
+    "description": {
+      "short": "Бог тот единственный, который может изменить все",
+      "medium": "Сильные личности о смелых и важных решениях принятых с Богом.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/POCU/POCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/POCU/POCU-background.jpg"
+    },
+    "category": {
+      "uid": "youth",
+      "title": {
+        "ru": "Молодежные",
+        "uk": "Молодіжні"
+      },
+      "sort": 4
+    }
+  },
+  {
+    "uid": "PPCU",
+    "title": "Пазлы Паркера",
+    "description": {
+      "short": "Дети будут в восторге!",
+      "medium": "Встречи неугомонной и любопытной детворы с харизматичным, веселым мистером Риччи и его другом Паркером.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/PPCU/PPCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/PPCU/PPCU-background.jpg"
+    },
+    "category": {
+      "uid": "child",
+      "title": {
+        "ru": "Детские",
+        "uk": "Дитячі"
+      },
+      "sort": 5
+    }
+  },
+  {
+    "uid": "PRJU",
+    "title": "\"Притчи рабби Иисуса\" с Александром Болотниковым",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/PRJU/PRJU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/PRJU/PRJU-background.jpg"
+    },
+    "category": {
+      "uid": "history",
+      "title": {
+        "ru": "История и религия",
+        "uk": "Історія та релігія"
+      },
+      "sort": 9
+    }
+  },
+  {
+    "uid": "PRUU",
+    "title": "Ролики",
+    "description": {
+      "short": "Коротко о главном",
+      "medium": "Разнообразные видео на темы, которые волнуют.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/PRUU/PRUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "special",
+      "title": {
+        "ru": "Ролики",
+        "uk": "Ролики"
+      },
+      "sort": 13
+    }
+  },
+  {
+    "uid": "PSCU",
+    "title": "Страницы для души",
+    "description": {
+      "short": "Это стоит прочитать",
+      "medium": "Если вы потерялись в горах бессмысленной макулатуры, то эта программа поможет вам выбрать действительно полезные книги.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/PSCU/PSCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "history",
+      "title": {
+        "ru": "История и религия",
+        "uk": "Історія та релігія"
+      },
+      "sort": 9
+    }
+  },
+  {
+    "uid": "PSKU",
+    "title": "Пророки говорят",
+    "description": {
+      "short": "Через них говорит Господь",
+      "medium": "Новый цикл передач о библейских пророках. В исследовании Священного Писания и понимании тем о пророках помогает Волкославский Р.Н.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/PSKU/PSKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "QACU",
+    "title": "Хочу Вас спросить",
+    "description": {
+      "short": "Есть вопросы? Спрашивайте!",
+      "medium": "Здесь гость студии (представитель руководства Церкви) даст ответ на все вопросы зрителей телеканала \"Надежда\".",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/QACU/QACU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/QACU/QACU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "RCCU",
+    "title": "Дорогами християнства",
+    "description": {
+      "short": "Що якщо копнути глибше?",
+      "medium": "Дізнайтеся невідомі та загадкові факти з історії християнства.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/RCCU/RCCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/RCCU/RCCU-background.jpg"
+    },
+    "category": {
+      "uid": "history",
+      "title": {
+        "ru": "История и религия",
+        "uk": "Історія та релігія"
+      },
+      "sort": 9
+    }
+  },
+  {
+    "uid": "REFU",
+    "title": "Реформація.500",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/REFU/REFU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/REFU/REFU-background.jpg"
+    },
+    "category": {
+      "uid": "history",
+      "title": {
+        "ru": "История и религия",
+        "uk": "Історія та релігія"
+      },
+      "sort": 9
+    }
+  },
+  {
+    "uid": "RILU",
+    "title": "Згадуючи найважливіше",
+    "description": {
+      "short": "Втамуй голод душі",
+      "medium": "Як ніколи не приїдається хліб, так Вічне Слово щодня наповнює нас вічним.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/RILU/RILU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/RILU/RILU-background.jpg"
+    },
+    "category": {
+      "uid": "sermons",
+      "title": {
+        "ru": "Проповеди",
+        "uk": "Проповіді"
+      },
+      "sort": 12
+    }
+  },
+  {
+    "uid": "RRCU",
+    "title": "10 дней в верхней горнице",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/RRCU/RRCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/RRCU/RRCU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "SCCU",
+    "title": "реклама Счастливой субботы",
+    "description": {
+      "short": "",
+      "medium": "рекламные ролики Счастливой субботы",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "special",
+      "title": {
+        "ru": "Ролики",
+        "uk": "Ролики"
+      },
+      "sort": 13
+    }
+  },
+  {
+    "uid": "SDKU",
+    "title": "Спасенні",
+    "description": {
+      "short": "Для тих, хто не хоче пропустити найважливіше",
+      "medium": "Дивіться унікальні досвіди звичайних людей.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/SDKU/SDKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/SDKU/SDKU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "SGCU",
+    "title": "Субботнее поздравление пастора",
+    "description": {
+      "short": "\"Помни день субботний...\"",
+      "medium": "Субботние пожелания и поздравления от служителей церкви в особенный День Господний!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/SGCU/SGCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/SGCU/SGCU-background.jpg"
+    },
+    "category": {
+      "uid": "special",
+      "title": {
+        "ru": "Ролики",
+        "uk": "Ролики"
+      },
+      "sort": 13
+    }
+  },
+  {
+    "uid": "SMKU",
+    "title": "Богослужіння",
+    "description": {
+      "short": "\"Не оставляйте собраний ваших...\"",
+      "medium": "Смотрите вдохновляющие утренние проповеди в храме на Подоле г.Киев. За основу берется Книга Книг — Библия.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/SMKU/SMKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/SMKU/SMKU-background.jpg"
+    },
+    "category": {
+      "uid": "sermons",
+      "title": {
+        "ru": "Проповеди",
+        "uk": "Проповіді"
+      },
+      "sort": 12
+    }
+  },
+  {
+    "uid": "SMLU",
+    "title": "Богослужіння у Львові",
+    "description": {
+      "short": "\"Не хлібом одним живе людина...\"",
+      "medium": "Дивіться богослужіння в центральній львівській громаді. З кафедри до глядачів промовляють служителі церкви — досвідчені богослови, пастори.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/SMLU/SMLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/SMLU/SMLU-background.jpg"
+    },
+    "category": {
+      "uid": "sermons",
+      "title": {
+        "ru": "Проповеди",
+        "uk": "Проповіді"
+      },
+      "sort": 12
+    }
+  },
+  {
+    "uid": "SRKU",
+    "title": "Познаем истину",
+    "description": {
+      "short": "\"Слово Твое — есть истина...\"",
+      "medium": "Вникните в глубину Слова Божьего вместе с богословами, а также обогатитесь яркими примерами и советами гостей программы.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/SRKU/SRKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/SRKU/SRKU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "SSCU",
+    "title": "Счастливой субботы",
+    "description": {
+      "short": "\"Суббота для человека, а не человек для субботы...\"",
+      "medium": "Хотите встретить День Господний в уютной и благоговейной атмосфере? Тогда присоединяйтесь к гостям программы.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/SSCU/SSCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/SSCU/SSCU-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "SSKU",
+    "title": "В пошуках iстини",
+    "description": {
+      "short": "",
+      "medium": "Подорож сторінками Біблії, знайомство з її героями, відкриття подій та явищ, що підтверджують надзвичайну любов Бога.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/SSKU/SSKU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "SVCU",
+    "title": "Счастье вопреки всему",
+    "description": {
+      "short": "Хочешь быть счастливым? Будь им!",
+      "medium": "Смотрите как найти счастье несмотря на препятствия и сложности!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/SVCU/SVCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/SVCU/SVCU-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "SVDU",
+    "title": "Спасены, чтобы спасать",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/SVDU/SVDU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/SVDU/SVDU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "THOU",
+    "title": "Вкус здоровья",
+    "description": {
+      "short": "Человек есть то, что он ест",
+      "medium": "Учимся готовить вкусную и самое главное полезную пищу. Это обязательно позитивно отразится на вашем весе и внешности!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/THOU/THOU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/THOU/THOU-background.jpg"
+    },
+    "category": {
+      "uid": "health",
+      "title": {
+        "ru": "Здоровье и отдых",
+        "uk": "Здоров'я та відпочинок"
+      },
+      "sort": 2
+    }
+  },
+  {
+    "uid": "TRUU",
+    "title": "Трейлеры",
+    "description": {
+      "short": "Выберите то, что будет интересно Вам!",
+      "medium": "Анонсы грядущих программ, которые стоит посмотреть!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/TRUU/TRUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/TRUU/TRUU-background.jpg"
+    },
+    "category": {
+      "uid": "special",
+      "title": {
+        "ru": "Ролики",
+        "uk": "Ролики"
+      },
+      "sort": 13
+    }
+  },
+  {
+    "uid": "UPCU",
+    "title": "Места надо знать",
+    "description": {
+      "short": "Это неповторимая страна!",
+      "medium": "Вы увидите потрясающие места, о которых вы даже не подозревали!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/UPCU/UPCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/UPCU/UPCU-background.jpg"
+    },
+    "category": {
+      "uid": "health",
+      "title": {
+        "ru": "Здоровье и отдых",
+        "uk": "Здоров'я та відпочинок"
+      },
+      "sort": 2
+    }
+  },
+  {
+    "uid": "VELU",
+    "title": "Біблія, як вона є",
+    "description": {
+      "short": "Вічні сторінки написані для Вас",
+      "medium": "\"... віра від слухання, а слухання через Слово Христове\".",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/VELU/VELU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/VELU/VELU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "VIVU",
+    "title": "Вечірні історії",
+    "description": {
+      "short": "Щоб сон був міцним та здоровим",
+      "medium": "Дивіться захоплюючі та повчальні історії для дітей від Добрячка.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/VIVU/VIVU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/VIVU/VIVU-background.jpg"
+    },
+    "category": {
+      "uid": "child",
+      "title": {
+        "ru": "Детские",
+        "uk": "Дитячі"
+      },
+      "sort": 5
+    }
+  },
+  {
+    "uid": "VKLU",
+    "title": "В контексті",
+    "description": {
+      "short": "\"Заглиблюйся в себе та у вчення...\"",
+      "medium": "Щоб зрозуміти зміст, слід вивчати Біблію в контексті всіх віршів та історичних фактів.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/VKLU/VKLU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/VKLU/VKLU-background.jpg"
+    },
+    "category": {
+      "uid": "bible",
+      "title": {
+        "ru": "Изучение Библии",
+        "uk": "Вивчення Біблії"
+      },
+      "sort": 10
+    }
+  },
+  {
+    "uid": "WNUU",
+    "title": "Світові новини",
+    "description": {
+      "short": "",
+      "medium": "Про події, які стались на земній кулі: дивовижні, неочікувані, приголомшливі!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/WNUU/WNUU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/WNUU/WNUU-background.jpg"
+    },
+    "category": {
+      "uid": "news",
+      "title": {
+        "ru": "Новости",
+        "uk": "Новини"
+      },
+      "sort": 11
+    }
+  },
+  {
+    "uid": "WRCU",
+    "title": "Выход рядом",
+    "description": {
+      "short": "С Богом возможно все!",
+      "medium": "Программа о людях, которые переживали невероятные трудности на пути к Богу, но даже в сложных ситуациях можно найти выход, если рядом Небесный Отец.",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/WRCU/WRCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/shows/WRCU/WRCU-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "WUCU",
+    "title": "Вихід поруч",
+    "description": {
+      "short": "",
+      "medium": "",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/shows/WUCU/WUCU-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "people",
+      "title": {
+        "ru": "Люди и мнения",
+        "uk": "Люди та їх думки"
+      },
+      "sort": 8
+    }
+  },
+  {
+    "uid": "ZOUU",
+    "title": "Живые открытки",
+    "description": {
+      "short": "Подарите настроение близким!",
+      "medium": "Открытки, где герои и праздники оживают!",
+      "days": "",
+      "time": "",
+      "long": ""
+    },
+    "images": {
+      "cover": "https://cdn.hope.ua/media/defaults/show-cover.jpg",
+      "background": "https://cdn.hope.ua/media/defaults/show-background.jpg"
+    },
+    "category": {
+      "uid": "special",
+      "title": {
+        "ru": "Ролики",
+        "uk": "Ролики"
+      },
+      "sort": 13
+    }
+  }
+]

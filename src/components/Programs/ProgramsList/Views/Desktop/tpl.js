@@ -11,94 +11,96 @@ export default function Common() {
     return (
         <section className={ Grid.container }>
             <div className={ Styles.programListComponent }>
-                <h1 className={ Styles.mainTitle }>На каждый день</h1>
-                <div className={ Styles.list }>
-                    <div className={ Styles.item }>
-                        <div className={ Styles.image } style={ imageStyle }/>
-                        <div className={ Styles.info }>
-                            <h3 className={ Styles.title }>Є проблема</h3>
-                            <p className={ Styles.description }>
-                                Малюваки — дитяча пізнавальна програма,
-                                де слухають захопливі історії, вчаться малювати,
-                                а ще співають щоразу нову пісеньку — караоке.
-                            </p>
+                <div className={ Styles.categoryContainer }>
+                    <h1 className={ Styles.mainTitle }>На каждый день</h1>
+                    <div className={ Styles.list }>
+                        <div className={ Styles.item }>
+                            <div className={ Styles.image } style={ imageStyle }/>
+                            <div className={ Styles.info }>
+                                <h3 className={ Styles.title }>Є проблема</h3>
+                                <p className={ Styles.description }>
+                                    Малюваки — дитяча пізнавальна програма,
+                                    де слухають захопливі історії, вчаться малювати,
+                                    а ще співають щоразу нову пісеньку — караоке.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className={ Styles.item }>
-                        <div className={ Styles.image } style={ imageStyle }/>
-                        <div className={ Styles.info }>
-                            <h3 className={ Styles.title }>Модная книга</h3>
-                            <p className={ Styles.description }>
-                                Малюваки — дитяча пізнавальна програма,
-                                де слухають захопливі історії, вчаться малювати,
-                                а ще співають щоразу нову пісеньку — караоке.
-                            </p>
+                        <div className={ Styles.item }>
+                            <div className={ Styles.image } style={ imageStyle }/>
+                            <div className={ Styles.info }>
+                                <h3 className={ Styles.title }>Модная книга</h3>
+                                <p className={ Styles.description }>
+                                    Малюваки — дитяча пізнавальна програма,
+                                    де слухають захопливі історії, вчаться малювати,
+                                    а ще співають щоразу нову пісеньку — караоке.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className={ Styles.item }>
-                        <div className={ Styles.image } style={ imageStyle }/>
-                        <div className={ Styles.info }>
-                            <h3 className={ Styles.title }>5 хвилин для вічності</h3>
-                            <p className={ Styles.description }>
-                                Малюваки — дитяча пізнавальна програма,
-                                де слухають захопливі історії, вчаться малювати,
-                                а ще співають щоразу нову пісеньку — караоке.
-                            </p>
+                        <div className={ Styles.item }>
+                            <div className={ Styles.image } style={ imageStyle }/>
+                            <div className={ Styles.info }>
+                                <h3 className={ Styles.title }>5 хвилин для вічності</h3>
+                                <p className={ Styles.description }>
+                                    Малюваки — дитяча пізнавальна програма,
+                                    де слухають захопливі історії, вчаться малювати,
+                                    а ще співають щоразу нову пісеньку — караоке.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className={ Styles.item }>
-                        <div className={ Styles.image } style={ imageStyle }/>
-                        <div className={ Styles.info }>
-                            <h3 className={ Styles.title }>Спасенні</h3>
-                            <p className={ Styles.description }>
-                                Малюваки — дитяча пізнавальна програма,
-                                де слухають захопливі історії, вчаться малювати,
-                                а ще співають щоразу нову пісеньку — караоке.
-                            </p>
+                        <div className={ Styles.item }>
+                            <div className={ Styles.image } style={ imageStyle }/>
+                            <div className={ Styles.info }>
+                                <h3 className={ Styles.title }>Спасенні</h3>
+                                <p className={ Styles.description }>
+                                    Малюваки — дитяча пізнавальна програма,
+                                    де слухають захопливі історії, вчаться малювати,
+                                    а ще співають щоразу нову пісеньку — караоке.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className={ Styles.item }>
-                        <div className={ Styles.image } style={ imageStyle }/>
-                        <div className={ Styles.info }>
-                            <h3 className={ Styles.title }>Є проблема</h3>
-                            <p className={ Styles.description }>
-                                Малюваки — дитяча пізнавальна програма,
-                                де слухають захопливі історії, вчаться малювати,
-                                а ще співають щоразу нову пісеньку — караоке.
-                            </p>
+                        <div className={ Styles.item }>
+                            <div className={ Styles.image } style={ imageStyle }/>
+                            <div className={ Styles.info }>
+                                <h3 className={ Styles.title }>Є проблема</h3>
+                                <p className={ Styles.description }>
+                                    Малюваки — дитяча пізнавальна програма,
+                                    де слухають захопливі історії, вчаться малювати,
+                                    а ще співають щоразу нову пісеньку — караоке.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className={ Styles.item }>
-                        <div className={ Styles.image } style={ imageStyle }/>
-                        <div className={ Styles.info }>
-                            <h3 className={ Styles.title }>Модная книга</h3>
-                            <p className={ Styles.description }>
-                                Малюваки — дитяча пізнавальна програма,
-                                де слухають захопливі історії, вчаться малювати,
-                                а ще співають щоразу нову пісеньку — караоке.
-                            </p>
+                        <div className={ Styles.item }>
+                            <div className={ Styles.image } style={ imageStyle }/>
+                            <div className={ Styles.info }>
+                                <h3 className={ Styles.title }>Модная книга</h3>
+                                <p className={ Styles.description }>
+                                    Малюваки — дитяча пізнавальна програма,
+                                    де слухають захопливі історії, вчаться малювати,
+                                    а ще співають щоразу нову пісеньку — караоке.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className={ Styles.item }>
-                        <div className={ Styles.image } style={ imageStyle }/>
-                        <div className={ Styles.info }>
-                            <h3 className={ Styles.title }>5 хвилин для вічності</h3>
-                            <p className={ Styles.description }>
-                                Малюваки — дитяча пізнавальна програма,
-                                де слухають захопливі історії, вчаться малювати,
-                                а ще співають щоразу нову пісеньку — караоке.
-                            </p>
+                        <div className={ Styles.item }>
+                            <div className={ Styles.image } style={ imageStyle }/>
+                            <div className={ Styles.info }>
+                                <h3 className={ Styles.title }>5 хвилин для вічності</h3>
+                                <p className={ Styles.description }>
+                                    Малюваки — дитяча пізнавальна програма,
+                                    де слухають захопливі історії, вчаться малювати,
+                                    а ще співають щоразу нову пісеньку — караоке.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className={ Styles.item }>
-                        <div className={ Styles.image } style={ imageStyle }/>
-                        <div className={ Styles.info }>
-                            <h3 className={ Styles.title }>Спасенні</h3>
-                            <p className={ Styles.description }>
-                                Малюваки — дитяча пізнавальна програма,
-                                де слухають захопливі історії, вчаться малювати,
-                                а ще співають щоразу нову пісеньку — караоке.
-                            </p>
+                        <div className={ Styles.item }>
+                            <div className={ Styles.image } style={ imageStyle }/>
+                            <div className={ Styles.info }>
+                                <h3 className={ Styles.title }>Спасенні</h3>
+                                <p className={ Styles.description }>
+                                    Малюваки — дитяча пізнавальна програма,
+                                    де слухають захопливі історії, вчаться малювати,
+                                    а ще співають щоразу нову пісеньку — караоке.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
