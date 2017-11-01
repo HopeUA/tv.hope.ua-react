@@ -1,18 +1,17 @@
 import React, { PropTypes } from 'react';
 
 import Styles from './Styles/main.scss';
-import Grid from 'theme/Grid.scss';
 
 export default function Common(props) {
     const { items } = props;
 
     const categoryContainerItems = items.map((item) => {
         return (
-            <div className={ Styles.categoryContainer } key={ item[0].id }>
-                <h1 className={ Styles.mainTitle }>{ item[0].title }</h1>
+            <div className={ Styles.categoryContainer } key={ item.id }>
+                <h1 className={ Styles.mainTitle }>{ item.title }</h1>
                 <div className={ Styles.list }>
                     {
-                        item[0].items.map((e) => {
+                        item.items.map((e) => {
                             const imageStyle = {
                                 backgroundImage: `url(${e.image})`
                             };
@@ -36,10 +35,8 @@ export default function Common(props) {
     });
 
     return (
-        <section className={ Grid.container }>
-            <div className={ Styles.programListComponent }>
-                { categoryContainerItems }
-            </div>
+        <section className={ Styles.programListComponent }>
+            { categoryContainerItems }
         </section>
     );
 }

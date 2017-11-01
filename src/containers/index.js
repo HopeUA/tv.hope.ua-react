@@ -9,5 +9,5 @@ export Articles from './Articles/Page';
 export Scheduler from './Scheduler/Page';
 export Online from './Online/Page';
 export ThanksGiving from './ThanksGiving/Page';
-export Programs from './Programs/Page';
+export Shows from './Shows/Page';
 export NotFound from './NotFound/NotFound';

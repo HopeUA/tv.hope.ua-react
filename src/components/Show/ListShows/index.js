@@ -75,21 +75,17 @@ class ProgramsList extends Component {
 
         const categoryGroups = [];
         options.forEach((categoryGroup) => {
-            const group = [];
-            let title;
-            let id;
+            const group = {
+                id: '',
+                title: '',
+                items: []
+            };
             categoryGroup.forEach((categoryItem) => {
-                const category = {
-                    title: '',
-                    id: '',
-                    items: []
-                };
-
-                category.items = items.filter((item) => {
+                group.items = items.filter((item) => {
                     return item.category.uid === categoryItem;
                 }).map((item) => {
-                    title = item.category.title.ru;
-                    id = item.uid;
+                    group.title = item.category.title.ru;
+                    group.id = item.category.uid;
 
                     return {
                         title: item.title,
@@ -99,10 +95,6 @@ class ProgramsList extends Component {
                         image: item.images.cover
                     };
                 });
-                category.title = title;
-                category.id = id;
-
-                group.push(category);
             });
             categoryGroups.push(group);
         });

@@ -1,1 +1,0 @@
-export ProgramsList from './ProgramsList';
