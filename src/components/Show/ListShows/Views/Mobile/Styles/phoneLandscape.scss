@@ -1,0 +1,33 @@
+@import 'common';
+
+& {
+    .categoryContainer {
+        .mainTitle {
+            margin-top: px(86);
+        }
+
+        .list {
+            .item {
+                display: flex;
+                width: px(1088);
+
+                .image {
+                    width: px(532);
+                    height: px(272);
+                }
+
+                .info {
+                    align-items: flex-start;
+                    width: px(556);
+                    height: px(272);
+                    padding: px(26) px(36) 0;
+
+                    .description {
+                        height: px(166);
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

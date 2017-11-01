@@ -1,3 +1,4 @@
 export About from './About';
-export List from './List';
+export List from './ListEpisodes';
+export ListShows from './ListShows';
 export Episode from './Episode';

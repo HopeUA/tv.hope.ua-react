@@ -13,6 +13,7 @@ import {
     Scheduler,
     Online,
     ThanksGiving,
+    Shows,
     NotFound
 } from 'containers';
 
@@ -28,6 +29,7 @@ const componentRoutes = (
         <Route path="scheduler" component={ Scheduler }/>
         <Route path="online" component={ Online }/>
         <Route path="thanksGiving" component={ ThanksGiving }/>
+        <Route path="shows" component={ Shows }/>
         <Route path="*" component={ NotFound } status={ 404 }/>
     </Route>
 );
